@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background: #fffaf5;
@@ -8,8 +8,12 @@ body {
 header {
   background: #8b5e3c;
   color: white;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
+}
+header .tagline {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 nav a {
   color: white;
@@ -19,10 +23,44 @@ nav a {
 main {
   padding: 2rem;
 }
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: #f2e9e0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin: 0 0 0.5rem;
+}
+.contact {
+  text-align: center;
+  margin-top: 2rem;
+}
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  background: #8b5e3c;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn.secondary {
+  background: #b39070;
+}
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
   margin-top: 2rem;
+  font-size: 0.9rem;
 }
-a { color: #8b5e3c; }
