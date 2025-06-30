@@ -119,4 +119,21 @@ footer {
 .lang-switch a:hover {
   text-decoration: underline;
 }
+.back-link {
+  display: inline-block;
+  margin-top: 1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: #442d0d;
+  background-color: #f3e1c2;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.back-link:hover {
+  background-color: #e5cfaf;
+}
+
 
