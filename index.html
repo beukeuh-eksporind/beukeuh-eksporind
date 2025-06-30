@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Ekspor</title>
   <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
     <h1>Beukeuh Ekspor</h1>
-    <p>Komoditas Alam, Menjangkau Dunia</p>
+    <p class="tagline">Komoditas Alam, Menjangkau Dunia</p>
     <nav>
-      <a href="../index.html">🇬🇧 English</a> | <a href="index.html">🇮🇩 Indonesia</a>
+      <a href="index.html">🇬🇧 English</a> | <a href="index.html">🇮🇩 Indonesia</a>
     </nav>
   </header>
+
   <main>
-    <section>
+    <section class="products">
       <h2>Produk Kami</h2>
-      <ul>
-        <li><strong>Bentonit</strong> – Tanah liat alami berkualitas industri</li>
-        <li><strong>Vanila</strong> – Vanili premium dari Indonesia</li>
-        <li><strong>Kayu Manis</strong> – Kulit kayu manis alami</li>
-        <li><strong>Kopi</strong> – Kopi dari dataran tinggi Indonesia</li>
-      </ul>
+      <div class="grid">
+        <div class="card"><h3>Bentonit</h3><p>Tanah liat alami berkualitas industri</p></div>
+        <div class="card"><h3>Vanila</h3><p>Vanili premium dari Indonesia</p></div>
+        <div class="card"><h3>Kayu Manis</h3><p>Kulit kayu manis alami</p></div>
+        <div class="card"><h3>Kopi</h3><p>Kopi dari dataran tinggi Indonesia</p></div>
+      </div>
     </section>
-    <section>
+
+    <section class="contact">
       <h2>Kontak</h2>
       <p>Email: export@beukeuh.com</p>
-      <p><a href="https://wa.me/6281234567890">Hubungi via WhatsApp</a></p>
-      <p><a href="../assets/brochure.pdf" download>Unduh Brosur (PDF)</a></p>
+      <a class="btn" href="https://wa.me/6281234567890" target="_blank">Hubungi via WhatsApp</a>
+      <a class="btn secondary" href="../assets/brochure.pdf" download>Unduh Brosur (PDF)</a>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Beukeuh Ekspor</p>
   </footer>
