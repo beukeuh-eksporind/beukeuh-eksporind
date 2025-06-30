@@ -16,7 +16,7 @@ Membawa komoditas alam Indonesia ke pasar dunia.
 📦 **Website Ekspor:**  
 🌐 [beukeuh-eksporind.github.io/beukeuh-eksporind](https://beukeuh-eksporind.github.io/beukeuh-eksporind)
 
-📧 Email: export@beukeuh.com  
+📧 Email: export@beukeuheksporind.com  
 💬 WhatsApp: [+62 812-8254-1982](https://wa.me/6281282541982)
 
 ---
