@@ -1,66 +1,59 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background: #fffaf5;
-  color: #2e2e2e;
+  line-height: 1.6;
+  background-color: #fffaf3;
+  color: #333;
 }
-header {
-  background: #8b5e3c;
-  color: white;
-  padding: 2rem;
+
+header, footer {
+  background-color: #442d0d;
+  color: #fff;
+  padding: 1em;
   text-align: center;
 }
-header .tagline {
-  font-size: 1.1rem;
-  font-weight: 400;
+
+h1 {
+  margin: 0.2em 0;
 }
-nav a {
-  color: white;
-  margin: 0 0.5rem;
-  text-decoration: underline;
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1em;
 }
+
+.lang-switch {
+  margin-top: 0.5em;
+}
+
 main {
-  padding: 2rem;
+  padding: 1em 2em;
 }
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
+
+.product-list {
+  list-style: none;
+  padding: 0;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+
+.product-list li {
+  margin-bottom: 0.5em;
 }
-.card {
-  background: #f2e9e0;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-.card h3 {
-  margin: 0 0 0.5rem;
-}
-.contact {
-  text-align: center;
-  margin-top: 2rem;
-}
-.btn {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.7rem 1.2rem;
-  background: #8b5e3c;
+
+.whatsapp-button {
+  background-color: #25D366;
   color: white;
-  border-radius: 6px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
   text-decoration: none;
+  display: inline-block;
 }
-.btn.secondary {
-  background: #b39070;
+
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
 }
+
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  margin-top: 2em;
 }
