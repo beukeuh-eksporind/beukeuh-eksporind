@@ -1,6 +1,6 @@
-# 🌍 Beukeuh Ekspor
+# 🌍 Beukeuh Eksporind
 
-**Natural Commodities, Global Reach**  
+**Natural Indonesian Commodities, Global Reach**  
 Membawa komoditas alam Indonesia ke pasar dunia.
 
 ---
