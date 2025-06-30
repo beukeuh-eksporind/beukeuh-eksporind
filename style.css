@@ -105,3 +105,18 @@ footer {
     max-width: 300px;
   }
 }
+.lang-switch {
+  margin-top: 0.5em;
+  font-size: 0.95em;
+}
+
+.lang-switch a {
+  color: #ffeabf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lang-switch a:hover {
+  text-decoration: underline;
+}
+
