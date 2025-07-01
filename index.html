@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahan agar tombol sejajar */
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+
+    .top-buttons a {
+      background-color: #f3e1c2;
+      color: #442d0d;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      display: inline-block;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .top-buttons a:hover {
+      background-color: #e5cfaf;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      .top-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-buttons a {
+        width: 90%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,16 +56,13 @@
   </header>
 
   <main>
-    <section>
-      <h2>Our Products</h2>
-      <div class="produk-grid">
-        <a href="produk/bentonit.html" class="produk-btn">🧱 Bentonite</a>
-        <a href="produk/vanila.html" class="produk-btn">🌿 Vanilla</a>
-        <a href="produk/kayu-manis.html" class="produk-btn">🌰 Cinnamon</a>
-        <a href="produk/kopi.html" class="produk-btn">☕ Coffee</a>
-        <a href="about.html" class="produk-btn">ℹ️ About Us</a>
-      </div>
-    </section>
+    <div class="top-buttons">
+      <a href="produk/bentonit.html">🧱 Bentonite</a>
+      <a href="produk/vanila.html">🌿 Vanilla</a>
+      <a href="produk/kayu-manis.html">🌰 Cinnamon</a>
+      <a href="produk/kopi.html">☕ Coffee</a>
+      <a href="about.html">ℹ️ About Us</a>
+    </div>
 
     <section>
       <h2>Contact</h2>
