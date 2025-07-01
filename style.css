@@ -1,7 +1,4 @@
 /* RESET */
-* {
-  box-sizing: border-box;
-}
 body {
   font-family: sans-serif;
   margin: 0;
@@ -42,7 +39,7 @@ h1 {
   font-size: 0.95em;
 }
 
-/* TOP BUTTONS - DITARUH DI LUAR HEADER */
+/* TOP BUTTONS (di luar header) */
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -50,7 +47,6 @@ h1 {
   gap: 10px;
   margin: 1em auto;
   max-width: 90%;
-  padding: 0 1em;
 }
 
 .top-buttons a {
@@ -70,7 +66,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* DROPDOWN */
+/* DROPDOWN MENU */
 .dropdown {
   position: relative;
 }
@@ -108,7 +104,6 @@ h1 {
   gap: 12px;
   justify-content: center;
   margin-top: 1em;
-  padding: 0 1em;
 }
 
 .produk-btn {
@@ -162,8 +157,16 @@ h1 {
   text-decoration: none;
   font-weight: bold;
 }
+
 .back-link:hover {
   text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em 1.5em;
 }
 
 /* FOOTER */
@@ -173,17 +176,11 @@ footer {
 }
 
 /* RESPONSIVE */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em 1.5em;
-}
-
 @media (max-width: 600px) {
-  main {
-    padding: 1em;
+  h1 {
+    font-size: 1.4em;
   }
-}
+
   .tagline {
     font-size: 0.95em;
   }
@@ -191,11 +188,10 @@ main {
   .top-buttons {
     flex-direction: column;
     align-items: center;
-    padding: 0 1em;
   }
 
   .top-buttons a {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     font-size: 1em;
     text-align: center;
@@ -204,15 +200,17 @@ main {
   .dropdown-content {
     position: static;
     box-shadow: none;
+    border-radius: 0;
     padding: 0;
   }
 
   .dropdown-content a {
+    font-size: 0.95em;
     padding: 10px;
   }
 
   .produk-btn {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
   }
 
@@ -224,5 +222,9 @@ main {
 
   .lang-switch {
     font-size: 0.9em;
+  }
+
+  main {
+    padding: 1em;
   }
 }
