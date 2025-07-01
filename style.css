@@ -8,7 +8,7 @@ body {
   color: #333;
 }
 
-/* HEADER & FOOTER */
+/* HEADER */
 header, footer {
   background-color: #442d0d;
   color: white;
@@ -39,14 +39,14 @@ h1 {
   font-size: 0.95em;
 }
 
-/* TOP BUTTONS (di luar header) */
+/* TOMBOL NAVIGASI DI BAWAH HEADER */
 .top-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   margin: 1em auto;
-  max-width: 90%;
+  max-width: 95%;
 }
 
 .top-buttons a {
@@ -66,7 +66,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* DROPDOWN MENU */
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
@@ -97,35 +97,7 @@ h1 {
   display: block;
 }
 
-/* PRODUK GRID */
-.produk-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 1em;
-}
-
-.produk-btn {
-  background-color: #f3e1c2;
-  color: #442d0d;
-  padding: 12px 18px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s, transform 0.2s;
-  display: inline-block;
-  min-width: 140px;
-  text-align: center;
-}
-
-.produk-btn:hover {
-  background-color: #e5cfaf;
-  transform: translateY(-2px);
-}
-
-/* BUTTONS: WHATSAPP & BROSUR */
+/* WHATSAPP & BROSUR */
 .whatsapp-button, .download-button {
   background-color: #25D366;
   color: white;
@@ -147,26 +119,6 @@ h1 {
 
 .download-button:hover {
   background-color: #006ad6;
-}
-
-/* BACK LINK */
-.back-link {
-  display: inline-block;
-  margin-top: 1em;
-  color: #442d0d;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* MAIN CONTENT */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1em 1.5em;
 }
 
 /* FOOTER */
@@ -193,25 +145,19 @@ footer {
   .top-buttons a {
     width: 90%;
     max-width: 300px;
-    font-size: 1em;
     text-align: center;
+    font-size: 1em;
   }
 
   .dropdown-content {
     position: static;
     box-shadow: none;
-    border-radius: 0;
     padding: 0;
   }
 
   .dropdown-content a {
-    font-size: 0.95em;
     padding: 10px;
-  }
-
-  .produk-btn {
-    width: 90%;
-    max-width: 300px;
+    font-size: 0.95em;
   }
 
   .whatsapp-button, .download-button {
@@ -223,36 +169,4 @@ footer {
   .lang-switch {
     font-size: 0.9em;
   }
-
-  main {
-    padding: 1em;
-  }
 }
-.dropdown-toggle {
-  background-color: #f3e1c2;
-  color: #442d0d;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.dropdown-toggle:hover {
-  background-color: #e5cfaf;
-  transform: translateY(-2px);
-}
-
-/* Untuk Mobile Tap */
-@media (hover: none) {
-  .dropdown:hover .dropdown-content {
-    display: none;
-  }
-
-  .dropdown:focus-within .dropdown-content {
-    display: block;
-  }
-}
-
