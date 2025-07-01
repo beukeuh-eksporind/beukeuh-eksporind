@@ -228,3 +228,31 @@ footer {
     padding: 1em;
   }
 }
+.dropdown-toggle {
+  background-color: #f3e1c2;
+  color: #442d0d;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
+}
+
+/* Untuk Mobile Tap */
+@media (hover: none) {
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+}
+
