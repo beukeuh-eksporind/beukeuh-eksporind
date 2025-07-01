@@ -142,3 +142,17 @@ footer {
     text-align: center;
   }
 }
+@media (max-width: 600px) {
+  .top-buttons a {
+    width: auto;
+    max-width: 90%;
+    padding: 10px 14px;
+    font-size: 0.95em;
+  }
+
+  .dropdown-content a {
+    font-size: 0.95em;
+    padding: 10px 12px;
+  }
+}
+
