@@ -31,11 +31,13 @@ h1 {
   margin-top: 0.5em;
   font-size: 0.95em;
 }
+
 main {
   padding: 1em 1.5em;
   max-width: 800px;
   margin: 0 auto;
 }
+
 /* LOGO */
 .logo {
   max-width: 120px;
@@ -118,70 +120,13 @@ footer {
   font-size: 0.9em;
 }
 
-/* RESPONSIVE MEDIA QUERY */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.4em;
-  }
-
-  .tagline {
-    font-size: 0.95em;
-  }
-
-  .produk-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .produk-btn {
-    width: 90%;
-    max-width: 300px;
-    font-size: 1em;
-  }
-
-  .whatsapp-button, .download-button {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    font-size: 1em;
-  }
-
-  .lang-switch {
-    font-size: 0.9em;
-  }
-}
-/* TOMBOL NAVIGASI TAMBAHAN (ABOUT) */
-.nav-links {
-  margin-top: 1.2em;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.nav-btn {
-  background-color: #f3e1c2;
-  color: #442d0d;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.nav-btn:hover {
-  background-color: #e5cfaf;
-  transform: translateY(-1px);
-}
-/* --- TOMBOL HORIZONTAL UNTUK PRODUK & ABOUT --- */
+/* TOMBOL NAVIGASI ATAS */
 .top-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 1em;
+  margin-top: 1.2em;
 }
 
 .top-buttons a {
@@ -200,19 +145,6 @@ footer {
   background-color: #e5cfaf;
   transform: translateY(-2px);
 }
-
-@media (max-width: 600px) {
-  .top-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .top-buttons a {
-    width: 90%;
-    text-align: center;
-  }
-}
-/* ...bagian sebelumnya di style.css ... */
 
 /* DROPDOWN MENU */
 .dropdown {
@@ -245,3 +177,45 @@ footer {
   display: block;
 }
 
+/* RESPONSIVE MEDIA QUERY */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .tagline {
+    font-size: 0.95em;
+  }
+
+  .produk-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produk-btn {
+    width: 90%;
+    max-width: 300px;
+    font-size: 1em;
+  }
+
+  .whatsapp-button, .download-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .lang-switch {
+    font-size: 0.9em;
+  }
+
+  .top-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-buttons a {
+    width: 90%;
+    text-align: center;
+  }
+}
