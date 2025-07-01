@@ -173,11 +173,17 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.4em;
-  }
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+}
 
+@media (max-width: 600px) {
+  main {
+    padding: 1em;
+  }
+}
   .tagline {
     font-size: 0.95em;
   }
