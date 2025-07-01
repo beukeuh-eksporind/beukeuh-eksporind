@@ -173,52 +173,55 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.4em;
-  }
-
-  .tagline {
-    font-size: 0.95em;
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .top-buttons {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .top-buttons > a,
   .top-buttons .dropdown {
     width: 90%;
-    max-width: 300px;
+    max-width: 320px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .top-buttons .dropdown > a {
+    display: block;
+    width: 100%;
+    font-size: 1em;
   }
 
   .dropdown-content {
+    width: 100%;
     position: static;
+    background-color: transparent;
     box-shadow: none;
     padding: 0;
-    border-radius: 0;
-    background-color: transparent;
   }
 
   .dropdown-content a {
-    width: 100%;
-    padding: 10px;
     background-color: #f3e1c2;
-    margin-top: 2px;
+    margin: 2px 0;
     border-radius: 6px;
-    font-size: 0.95em;
     text-align: center;
+    font-size: 0.95em;
   }
 
-  .produk-btn {
+  .produk-btn,
+  .whatsapp-button,
+  .download-button {
     width: 90%;
-    max-width: 300px;
-  }
-
-  .whatsapp-button, .download-button {
-    width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    box-sizing: border-box;
     text-align: center;
   }
 
