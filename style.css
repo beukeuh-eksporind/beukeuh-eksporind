@@ -175,4 +175,41 @@ footer {
   background-color: #e5cfaf;
   transform: translateY(-1px);
 }
+/* --- TOMBOL HORIZONTAL UNTUK PRODUK & ABOUT --- */
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.top-buttons a {
+  background-color: #f3e1c2;
+  color: #442d0d;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  display: inline-block;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.top-buttons a:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .top-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-buttons a {
+    width: 90%;
+    text-align: center;
+  }
+}
 
