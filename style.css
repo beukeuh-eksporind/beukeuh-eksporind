@@ -1,4 +1,5 @@
-/* RESET DASAR */
+<!-- style.css -->
+/* RESET */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -8,13 +9,20 @@ body {
   color: #333;
 }
 
-/* HEADER & FOOTER */
+/* HEADER */
 header, footer {
   background-color: #442d0d;
-  color: #fff;
+  color: white;
   padding: 1em;
   text-align: center;
-  max-width: 100%;
+}
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -32,52 +40,64 @@ h1 {
   font-size: 0.95em;
 }
 
-main {
-  padding: 1em 1.5em;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* LOGO */
-.logo {
-  max-width: 120px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* PRODUK LIST (jika dipakai) */
-.produk-grid {
+/* TOP BUTTONS */
+.top-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 1em;
 }
 
-.produk-btn {
+.top-buttons a {
   background-color: #f3e1c2;
   color: #442d0d;
-  padding: 12px 18px;
+  padding: 10px 16px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s, transform 0.2s;
   display: inline-block;
-  min-width: 140px;
-  text-align: center;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
-.produk-btn:hover {
+.top-buttons a:hover {
   background-color: #e5cfaf;
   transform: translateY(-2px);
 }
 
-/* WHATSAPP & BROSUR BUTTON */
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fffaf3;
+  min-width: 160px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: #442d0d;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #e5cfaf;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* BUTTONS */
 .whatsapp-button, .download-button {
   background-color: #25D366;
   color: white;
@@ -101,131 +121,24 @@ main {
   background-color: #006ad6;
 }
 
-/* BACK LINK */
-.back-link {
-  display: inline-block;
-  margin-top: 1em;
-  color: #442d0d;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* DROPDOWN MENU */
-.top-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 1em;
-}
-
-.top-buttons a {
-  background-color: #f3e1c2;
-  color: #442d0d;
-  padding: 10px 16px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-  display: inline-block;
-  transition: background-color 0.2s, transform 0.2s;
-}
-
-.top-buttons a:hover {
-  background-color: #e5cfaf;
-  transform: translateY(-2px);
-}
-
-/* Dropdown Structure */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fffaf3;
-  min-width: 160px;
-  box-shadow: 0px 8px 12px rgba(0,0,0,0.1);
-  z-index: 1;
-  border-radius: 6px;
-}
-
-.dropdown-content a {
-  color: #442d0d;
-  padding: 10px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #e5cfaf;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* FOOTER */
 footer {
   margin-top: 2em;
   font-size: 0.9em;
 }
 
-/* RESPONSIVE MEDIA QUERY */
+/* RESPONSIVE */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.4em;
   }
-
-  .tagline {
-    font-size: 0.95em;
-  }
-
-  .produk-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .produk-btn {
-    width: 90%;
-    max-width: 300px;
-    font-size: 1em;
-  }
-
-  .whatsapp-button, .download-button {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    font-size: 1em;
-  }
-
-  .lang-switch {
-    font-size: 0.9em;
-  }
-
   .top-buttons {
     flex-direction: column;
     align-items: center;
   }
-
   .top-buttons a {
     width: 90%;
+    max-width: 300px;
     text-align: center;
-  }
-
-  .dropdown-content {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
   }
 }
