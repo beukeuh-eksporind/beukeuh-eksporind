@@ -1,4 +1,3 @@
-<!-- style.css -->
 /* RESET */
 body {
   font-family: sans-serif;
@@ -9,7 +8,7 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* HEADER & FOOTER */
 header, footer {
   background-color: #442d0d;
   color: white;
@@ -40,13 +39,14 @@ h1 {
   font-size: 0.95em;
 }
 
-/* TOP BUTTONS */
+/* TOP BUTTONS - DITARUH DI LUAR HEADER */
 .top-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 1em;
+  margin: 1em auto;
+  max-width: 90%;
 }
 
 .top-buttons a {
@@ -97,7 +97,35 @@ h1 {
   display: block;
 }
 
-/* BUTTONS */
+/* PRODUK GRID */
+.produk-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.produk-btn {
+  background-color: #f3e1c2;
+  color: #442d0d;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s, transform 0.2s;
+  display: inline-block;
+  min-width: 140px;
+  text-align: center;
+}
+
+.produk-btn:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
+}
+
+/* BUTTONS: WHATSAPP & BROSUR */
 .whatsapp-button, .download-button {
   background-color: #25D366;
   color: white;
@@ -132,27 +160,45 @@ footer {
   h1 {
     font-size: 1.4em;
   }
+
+  .tagline {
+    font-size: 0.95em;
+  }
+
   .top-buttons {
     flex-direction: column;
     align-items: center;
   }
+
   .top-buttons a {
     width: 90%;
     max-width: 300px;
+    font-size: 1em;
     text-align: center;
   }
-}
-@media (max-width: 600px) {
-  .top-buttons a {
-    width: auto;
-    max-width: 90%;
-    padding: 10px 14px;
-    font-size: 0.95em;
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding: 0;
   }
 
   .dropdown-content a {
-    font-size: 0.95em;
-    padding: 10px 12px;
+    padding: 10px;
+  }
+
+  .produk-btn {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .whatsapp-button, .download-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .lang-switch {
+    font-size: 0.9em;
   }
 }
-
