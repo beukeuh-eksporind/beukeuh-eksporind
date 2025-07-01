@@ -4,15 +4,210 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fffaf3;
+      color: #333;
+    }
+    header, footer {
+      background-color: #442d0d;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    h1 {
+      margin: 0.2em 0;
+      font-size: 1.8em;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    .lang-switch {
+      margin-top: 0.5em;
+      font-size: 0.95em;
+    }
+    .logo {
+      max-width: 120px;
+      width: 100%;
+      height: auto;
+      margin: 10px auto;
+      display: block;
+    }
+    .header-buttons {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .main-button {
+      background-color: #f3e1c2;
+      color: #442d0d;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .main-button:hover {
+      background-color: #e5cfaf;
+      transform: translateY(-2px);
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fffaf3;
+      min-width: 180px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      z-index: 1;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .dropdown-content a {
+      color: #442d0d;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: bold;
+    }
+    .dropdown-content a:hover {
+      background-color: #f0e0c0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    main {
+      padding: 1em 1.5em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .produk-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 1em;
+    }
+
+    .produk-btn {
+      background-color: #f3e1c2;
+      color: #442d0d;
+      padding: 12px 18px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s, transform 0.2s;
+      display: inline-block;
+      min-width: 140px;
+      text-align: center;
+    }
+
+    .produk-btn:hover {
+      background-color: #e5cfaf;
+      transform: translateY(-2px);
+    }
+
+    .whatsapp-button, .download-button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5em 0;
+    }
+
+    .download-button {
+      background-color: #007bff;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    .download-button:hover {
+      background-color: #006ad6;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4em;
+      }
+
+      .tagline {
+        font-size: 0.95em;
+      }
+
+      .produk-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .produk-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 1em;
+      }
+
+      .whatsapp-button, .download-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        font-size: 1em;
+      }
+
+      .lang-switch {
+        font-size: 0.9em;
+      }
+
+      .header-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="../logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
+    <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
     <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
+    <p class="tagline">Komoditas Alam, Menjangkau Dunia</p>
+
     <div class="lang-switch">
-      <strong>🇮🇩 Indonesia</strong> | <a href="../index.html">🇬🇧 English</a>
+      <strong>🇮🇩 Indonesia</strong> | <a href="/beukeuh-eksporind/index.html">🇬🇧 English</a>
+    </div>
+
+    <div class="header-buttons">
+      <a href="about.html" class="main-button">📘 Tentang Kami</a>
+      <div class="dropdown">
+        <button class="main-button">📦 Produk Kami ▾</button>
+        <div class="dropdown-content">
+          <a href="produk/bentonit.html">🧱 Bentonit</a>
+          <a href="produk/vanila.html">🌿 Vanila</a>
+          <a href="produk/kayu-manis.html">🌰 Kayu Manis</a>
+          <a href="produk/kopi.html">☕ Kopi</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -20,11 +215,10 @@
     <section>
       <h2>Produk Kami</h2>
       <div class="produk-grid">
-        <a href="../produk/bentonit.html" class="produk-btn">🧱 Bentonit</a>
-        <a href="#" class="produk-btn">🌿 Vanila</a>
-        <a href="#" class="produk-btn">🌰 Kayu Manis</a>
-        <a href="#" class="produk-btn">☕ Kopi</a>
-        <a href="about.html" class="produk-btn">ℹ️ Tentang Kami</a>
+        <a href="produk/bentonit.html" class="produk-btn">🧱 Bentonit</a>
+        <a href="produk/vanila.html" class="produk-btn">🌿 Vanila</a>
+        <a href="produk/kayu-manis.html" class="produk-btn">🌰 Kayu Manis</a>
+        <a href="produk/kopi.html" class="produk-btn">☕ Kopi</a>
       </div>
     </section>
 
@@ -32,7 +226,7 @@
       <h2>Kontak</h2>
       <p>Email: export@beukeuheksporind.com</p>
       <p><a href="https://wa.me/6281282541982" class="whatsapp-button">💬 Hubungi via WhatsApp</a></p>
-      <p><a href="../brochure.pdf" class="download-button" target="_blank" download>📄 Unduh Brosur (PDF)</a></p>
+      <p><a href="brochure.pdf" class="download-button" target="_blank" download>📄 Unduh Brosur (PDF)</a></p>
     </section>
   </main>
 
