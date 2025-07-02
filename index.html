@@ -14,34 +14,43 @@
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
     <p class="lang-switch">
-      <a href="index.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
+      <a href="index-id.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
     </p>
-    
-    <!-- HAMBURGER BUTTON -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- NAVIGATION MENU -->
-  <nav id="nav-menu">
-    <a href="about.html">📘 About Us</a>
-    <div class="dropdown">
-      <a href="#">🍃 Our Products ▾</a>
-      <div class="dropdown-content">
-        <a href="produk/bentonit-en.html">🧱 Bentonite</a>
-        <a href="produk/vanilla-en.html">🌿 Vanilla</a>
-        <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
-        <a href="produk/coffee-en.html">☕ Coffee</a>
+  <!-- HAMBURGER MENU BUTTON -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <!-- NAVIGATION -->
+  <div id="menu-container">
+    <div class="top-buttons">
+      <a href="about.html">📘 About Us</a>
+
+      <div class="dropdown">
+        <a href="#">🍃 Our Products ▾</a>
+        <div class="dropdown-content">
+          <a href="produk/bentonit-en.html">🧱 Bentonite</a>
+          <a href="produk/vanilla-en.html">🌿 Vanilla</a>
+          <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
+          <a href="produk/coffee-en.html">☕ Coffee</a>
+        </div>
       </div>
+
+      <a href="gallery.html">🖼️ Gallery</a>
+      <a href="contact.html">📞 Contact Us</a>
     </div>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="contact.html">📞 Contact Us</a>
-  </nav>
+  </div>
 
   <!-- MAIN CONTENT -->
   <div class="container">
     <main>
       <h2>Welcome</h2>
-      <p>Beukeuh Eksporind is a trusted supplier of natural Indonesian commodities to the global market.</p>
+      <p>Beukeuh Eksporind is a provider of Indonesia’s natural commodities for the global market.</p>
+
+      <h3>Contact</h3>
+      <p>Email: export@beukeuheksporind.com</p>
+      <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
+      <a class="download-button" href="brochure.pdf" download>📄 Download Brochure (PDF)</a>
     </main>
   </div>
 
@@ -50,13 +59,12 @@
     © 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- SCRIPT FOR MENU TOGGLE -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById("nav-menu");
-      menu.classList.toggle("active");
+      const container = document.getElementById("menu-container");
+      container.classList.toggle("active");
     }
   </script>
-
 </body>
 </html>
