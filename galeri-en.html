@@ -7,20 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Beukeuh Eksporind Logo" />
+    <img src="logo.png" class="logo" alt="Beukeuh Ekspor Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <div class="lang-switch">
+    <p class="lang-switch">
       <a href="galeri.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
-    </div>
+    </p>
   </header>
 
+  <!-- HAMBURGER MENU -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
   <!-- NAVIGATION -->
-  <div class="container">
+  <div id="menu-container">
     <div class="top-buttons">
-      <a href="about.html">📘 About Us</a>
+      <a href="index.html">🏠 Home</a>
 
       <div class="dropdown">
         <a href="#">🍃 Our Products ▾</a>
@@ -35,18 +39,18 @@
       <a href="gallery.html">🖼️ Gallery</a>
       <a href="contact.html">📞 Contact Us</a>
     </div>
+  </div>
 
-    <!-- MAIN -->
+  <!-- MAIN CONTENT -->
+  <div class="container">
     <main>
       <h2>Product Gallery</h2>
       <div class="gallery-grid">
-        <img src="images/galeri.1.jpg" alt="Gallery 1" />
-        <img src="images/galeri.2.jpg" alt="Gallery 2" />
-        <img src="images/galeri.3.jpg" alt="Gallery 3" />
-        <img src="images/galeri.4.jpg" alt="Gallery 4" />
+        <img src="images/galeri.1.jpg" alt="Product Photo 1">
+        <img src="images/galeri.2.jpg" alt="Product Photo 2">
+        <img src="images/galeri.3.jpg" alt="Product Photo 3">
+        <img src="images/galeri.4.jpg" alt="Product Photo 4">
       </div>
-
-      <a class="back-link" href="index.html">⬅️ Back to Home</a>
     </main>
   </div>
 
@@ -54,5 +58,13 @@
   <footer>
     © 2025 Beukeuh Eksporind
   </footer>
+
+  <!-- TOGGLE SCRIPT -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu-container").classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>
