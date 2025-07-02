@@ -192,8 +192,8 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto;
+    text-align: center;
   }
 
   .top-buttons > a,
@@ -202,6 +202,7 @@ footer {
     max-width: 320px;
     box-sizing: border-box;
     text-align: center;
+    align-self: center;
   }
 
   .top-buttons .dropdown > a {
@@ -217,14 +218,15 @@ footer {
     background-color: transparent;
     box-shadow: none;
     padding: 0;
+    text-align: center;
   }
 
   .dropdown-content a {
     background-color: #f3e1c2;
     margin: 2px 0;
     border-radius: 6px;
-    text-align: center;
     font-size: 0.95em;
+    display: block;
   }
 
   .produk-btn,
@@ -234,9 +236,11 @@ footer {
     max-width: 320px;
     box-sizing: border-box;
     text-align: center;
+    align-self: center;
   }
 
   .lang-switch {
     font-size: 0.9em;
+    text-align: center;
   }
 }
