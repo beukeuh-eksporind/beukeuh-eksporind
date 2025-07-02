@@ -7,46 +7,43 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
     <img src="logo.png" class="logo" alt="Logo Beukeuh Eksporind" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
-    <p class="lang-switch">
+    <div class="lang-switch">
       🇮🇩 Indonesia | <a href="gallery.html" style="color: #fff;">🇬🇧 English</a>
-    </p>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
   </header>
 
-  <!-- NAVIGASI -->
-  <nav id="nav-menu">
-    <a href="index-id.html">🏠 Beranda</a>
-    <div class="dropdown">
-      <a href="#">🍃 Produk Kami ▾</a>
-      <div class="dropdown-content">
-        <a href="produk/bentonit.html">🧱 Bentonit</a>
-        <a href="produk/vanila.html">🌿 Vanila</a>
-        <a href="produk/kayu-manis.html">🌰 Kayu Manis</a>
-        <a href="produk/kopi.html">☕ Kopi</a>
-      </div>
-    </div>
-    <a href="galeri.html">🖼️ Galeri</a>
-    <a href="kontak.html">📞 Hubungi Kami</a>
-  </nav>
-
-  <!-- KONTEN UTAMA -->
+  <!-- NAVIGATION -->
   <div class="container">
-    <main>
-      <h2>Galeri Produk & Aktivitas</h2>
-      <p>Berikut adalah dokumentasi visual dari produk dan kegiatan ekspor kami:</p>
+    <div class="top-buttons">
+      <a href="about-id.html">📘 Tentang Kami</a>
 
+      <div class="dropdown">
+        <a href="#">🍃 Produk Kami ▾</a>
+        <div class="dropdown-content">
+          <a href="produk-bentonite.html">🧱 Bentonit</a>
+          <a href="produk-vanilla.html">🌿 Vanila</a>
+          <a href="produk-cinnamon.html">🌰 Kayu Manis</a>
+          <a href="produk-coffee.html">☕ Kopi</a>
+        </div>
+      </div>
+
+      <a href="galeri.html">🖼️ Galeri</a>
+      <a href="contact-id.html">📞 Hubungi Kami</a>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <h2>Galeri Produk</h2>
       <div class="gallery-grid">
-        <img src="images/produk1.jpg" alt="Produk 1">
-        <img src="images/produk2.jpg" alt="Produk 2">
-        <img src="images/aktivitas1.jpg" alt="Aktivitas 1">
-        <img src="images/aktivitas2.jpg" alt="Aktivitas 2">
-        <!-- Tambahkan lebih banyak gambar jika tersedia -->
+        <img src="images/galeri.1.jpg" alt="Galeri 1" />
+        <img src="images/galeri.2.jpg" alt="Galeri 2" />
+        <img src="images/galeri.3.jpg" alt="Galeri 3" />
+        <img src="images/galeri.4.jpg" alt="Galeri 4" />
       </div>
 
       <a class="back-link" href="index-id.html">⬅️ Kembali ke Beranda</a>
@@ -57,14 +54,5 @@
   <footer>
     © 2025 Beukeuh Eksporind
   </footer>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("nav-menu");
-      menu.classList.toggle("active");
-    }
-  </script>
-
 </body>
 </html>
