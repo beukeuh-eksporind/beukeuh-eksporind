@@ -10,7 +10,7 @@ body {
 
 /* ========== LAYOUT CONTAINER ========== */
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -21,6 +21,11 @@ header, footer {
   color: white;
   text-align: center;
   padding: 1em;
+}
+.logo {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 120px;
 }
 
 .logo {
