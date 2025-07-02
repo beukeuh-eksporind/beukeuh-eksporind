@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,7 +10,8 @@
 
   <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Beukeun Ekspor Logo" />
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="logo.png" class="logo" alt="Beukeun Ekspor Logo">
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
     <p class="lang-switch">
@@ -18,11 +19,8 @@
     </p>
   </header>
 
-  <!-- HAMBURGER MENU BUTTON -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-
-  <!-- NAVIGATION -->
-  <div id="menu-container">
+  <!-- NAV BUTTONS -->
+  <div class="container">
     <div class="top-buttons">
       <a href="about.html">📘 About Us</a>
 
@@ -36,21 +34,14 @@
         </div>
       </div>
 
-      <a href="gallery.html">🖼️ Gallery</a>
+      <a href="gallery-en.html">🖼️ Gallery</a>
       <a href="contact.html">📞 Contact Us</a>
     </div>
-  </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
+    <!-- MAIN CONTENT -->
     <main>
       <h2>Welcome</h2>
-      <p>Beukeuh Eksporind is a provider of Indonesia’s natural commodities for the global market.</p>
-
-      <h3>Contact</h3>
-      <p>Email: export@beukeuheksporind.com</p>
-      <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
-      <a class="download-button" href="brochure.pdf" download>📄 Download Brochure (PDF)</a>
+      <p>Beukeuh Eksporind is a supplier of natural Indonesian commodities for global markets.</p>
     </main>
   </div>
 
@@ -59,12 +50,28 @@
     © 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- SCRIPT FOR MENU TOGGLE -->
+  <!-- OVERLAY MENU -->
+  <div id="fullscreenMenu" class="fullscreen-menu">
+    <nav>
+      <a href="about.html">📘 About Us</a>
+      <div class="dropdown-full">
+        <span>🍃 Our Products</span>
+        <a href="produk/bentonit-en.html">- Bentonite</a>
+        <a href="produk/vanilla-en.html">- Vanilla</a>
+        <a href="produk/coffee-en.html">- Coffee</a>
+        <a href="produk/cinnamon-en.html">- Cinnamon</a>
+      </div>
+      <a href="gallery-en.html">🖼️ Gallery</a>
+      <a href="contact.html">📞 Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- SCRIPT TOGGLE -->
   <script>
     function toggleMenu() {
-      const container = document.getElementById("menu-container");
-      container.classList.toggle("active");
+      document.getElementById("fullscreenMenu").classList.toggle("show");
     }
   </script>
+
 </body>
 </html>
