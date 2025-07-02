@@ -1,4 +1,7 @@
 /* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: sans-serif;
   margin: 0;
@@ -10,7 +13,7 @@ body {
 
 /* ========== LAYOUT CONTAINER ========== */
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -22,7 +25,6 @@ header, footer {
   text-align: center;
   padding: 1em;
 }
-
 .logo {
   display: block;
   margin: 0 auto 10px;
@@ -33,24 +35,22 @@ h1 {
   margin: 0.2em 0;
   font-size: 1.8em;
 }
-
 .tagline {
   font-style: italic;
   font-size: 1.1em;
 }
-
 .lang-switch {
   margin-top: 0.5em;
   font-size: 0.95em;
 }
 
-/* ========== TOP NAVIGATION BUTTONS ========== */
+/* ========== TOP BUTTONS NAVIGATION ========== */
 .top-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 1.5em auto;
+  margin: 1em auto;
 }
 
 .top-buttons > a,
@@ -68,12 +68,16 @@ h1 {
   min-width: 140px;
 }
 
-/* Dropdown Button */
-.dropdown {
-  position: relative;
-  display: inline-block;
+.top-buttons > a:hover,
+.top-buttons .dropdown > a:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
 }
 
+/* ========== DROPDOWN ========== */
+.dropdown {
+  position: relative;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -81,38 +85,25 @@ h1 {
   box-shadow: 0 8px 12px rgba(0,0,0,0.1);
   border-radius: 6px;
   z-index: 1;
-  min-width: 180px;
+  min-width: 160px;
   top: 100%;
   left: 0;
 }
-
 .dropdown-content a {
   display: block;
   padding: 10px 16px;
   color: #442d0d;
   text-decoration: none;
   border-radius: 6px;
-  background-color: #f3e1c2;
-  margin: 2px 0;
-  font-size: 0.95em;
-  text-align: center;
 }
-
 .dropdown-content a:hover {
   background-color: #e5cfaf;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.top-buttons > a:hover,
-.top-buttons .dropdown > a:hover {
-  background-color: #e5cfaf;
-  transform: translateY(-2px);
-}
-
-/* ========== PRODUK BUTTON GRID ========== */
+/* ========== PRODUK GRID ========== */
 .produk-grid {
   display: flex;
   flex-wrap: wrap;
@@ -120,7 +111,6 @@ h1 {
   justify-content: center;
   margin-top: 1.5em;
 }
-
 .produk-btn {
   background-color: #f3e1c2;
   color: #442d0d;
@@ -134,20 +124,18 @@ h1 {
   min-width: 140px;
   text-align: center;
 }
-
 .produk-btn:hover {
   background-color: #e5cfaf;
   transform: translateY(-2px);
 }
 
-/* ========== GALLERY GRID ========== */
+/* ========== GALERI GRID ========== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
   margin-top: 1.5em;
 }
-
 .gallery-grid img {
   width: 100%;
   height: auto;
@@ -155,7 +143,7 @@ h1 {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== WHATSAPP & BROCHURE BUTTON ========== */
+/* ========== BUTTON WHATSAPP & BROSUR ========== */
 .whatsapp-button,
 .download-button {
   display: inline-block;
@@ -167,19 +155,15 @@ h1 {
   text-decoration: none;
   color: white;
 }
-
 .whatsapp-button {
   background-color: #25D366;
 }
-
 .download-button {
   background-color: #007bff;
 }
-
 .whatsapp-button:hover {
   background-color: #1ebe5d;
 }
-
 .download-button:hover {
   background-color: #006ad6;
 }
@@ -192,46 +176,67 @@ h1 {
   text-decoration: none;
   font-weight: bold;
 }
-
 .back-link:hover {
   text-decoration: underline;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* ========== HAMBURGER MENU (MOBILE) ========== */
+.menu-toggle {
+  display: none;
+  background-color: #f3e1c2;
+  color: #442d0d;
+  font-size: 20px;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1em auto;
+}
+.menu-toggle:focus {
+  outline: none;
+}
+#menu-container {
+  display: block;
+}
+
+/* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .top-buttons {
+    display: none;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
-
+  #menu-container.active .top-buttons {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
   .top-buttons > a,
   .top-buttons .dropdown > a {
     width: 90%;
     max-width: 320px;
+    text-align: center;
   }
-
   .dropdown-content {
     position: static;
-    box-shadow: none;
     background-color: transparent;
+    box-shadow: none;
+    width: 100%;
     padding: 0;
-    width: 100%;
   }
-
   .dropdown-content a {
-    width: 100%;
-    box-sizing: border-box;
+    background-color: #f3e1c2;
+    margin: 2px 0;
+    font-size: 0.95em;
   }
-
   .produk-btn,
   .whatsapp-button,
   .download-button {
     width: 90%;
     max-width: 320px;
     box-sizing: border-box;
-  }
-
-  .lang-switch {
-    font-size: 0.9em;
   }
 }
