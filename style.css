@@ -262,3 +262,34 @@ footer {
     font-size: 0.9em;
   }
 }
+/* ========== PERBAIKAN TAMPILAN DROPDOWN SUPAYA SERAGAM ========== */
+.top-buttons .dropdown {
+  flex: 1 1 auto;
+  max-width: 180px;
+}
+
+.top-buttons .dropdown > a {
+  padding: 12px 18px;
+  margin: 0;
+  font-size: 1em;
+  background-color: #f3e1c2;
+  color: #442d0d;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.top-buttons .dropdown > a:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
+}
+
+/* Pastikan isi dropdown tetap tampil rapi di HP */
+@media (max-width: 600px) {
+  .top-buttons .dropdown > a {
+    width: 100%;
+    max-width: 320px;
+  }
+}
