@@ -200,13 +200,13 @@ footer {
   .top-buttons .dropdown {
     width: 90%;
     max-width: 320px;
-    text-align: center;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .top-buttons .dropdown > a {
-    display: block;
     width: 100%;
+    display: block;
     font-size: 1em;
     padding: 10px 16px;
   }
