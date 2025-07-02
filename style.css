@@ -244,3 +244,38 @@ footer {
     text-align: center;
   }
 }
+.top-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 1em auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.top-buttons > a,
+.top-buttons .dropdown {
+  background-color: #f3e1c2;
+  color: #442d0d;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+  display: inline-block;
+  min-width: 160px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  align-self: center;
+}
+
+.top-buttons > a:hover,
+.top-buttons .dropdown > a:hover {
+  background-color: #e5cfaf;
+  transform: translateY(-2px);
+}
+
