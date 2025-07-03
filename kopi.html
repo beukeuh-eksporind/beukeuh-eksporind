@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopi | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <header>
+    <img class="logo" src="logo.png" alt="Logo" />
+    <h1>Kopi</h1>
+    <p class="tagline">Kopi Nusantara Berkualitas Ekspor</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="kopi.html">Indonesia</a> |
+      🇬🇧 <a href="coffee-en.html">English</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <p style="text-align: justify;">
+      Indonesia adalah salah satu penghasil kopi terbesar di dunia, dikenal dengan cita rasa kopi yang kaya dan beragam. Kami menyediakan berbagai jenis kopi, termasuk robusta dan arabika, yang diproses secara alami dan dikeringkan dengan standar tinggi.
+      <br><br>
+      Beukeuh Eksporind menawarkan kopi bubuk dan biji utuh yang siap ekspor, cocok untuk industri makanan, minuman, dan kebutuhan konsumen global. Mutu, aroma, dan keaslian produk selalu kami jaga.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
