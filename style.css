@@ -44,7 +44,7 @@ h1 {
   font-size: 0.95em;
 }
 
-/* ========== TOP BUTTONS NAVIGATION ========== */
+/* ========== TOP BUTTONS (DESKTOP) ========== */
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -52,7 +52,6 @@ h1 {
   gap: 10px;
   margin: 1em auto;
 }
-
 .top-buttons > a,
 .top-buttons .dropdown > a {
   background-color: #f3e1c2;
@@ -67,7 +66,6 @@ h1 {
   text-align: center;
   min-width: 140px;
 }
-
 .top-buttons > a:hover,
 .top-buttons .dropdown > a:hover {
   background-color: #e5cfaf;
@@ -180,28 +178,9 @@ h1 {
   text-decoration: underline;
 }
 
-/* ========== HAMBURGER MENU (MOBILE) ========== */
+/* ========== HAMBURGER MENU TOGGLE ========== */
 .menu-toggle {
-  display: none;
-  background-color: #f3e1c2;
-  color: #442d0d;
-  font-size: 20px;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 1em auto;
-}
-.menu-toggle:focus {
-  outline: none;
-}
-#menu-container {
-  display: block;
-}
-/* ========== OVERLAY MENU ========== */
-.menu-toggle {
-  position: absolute;
+  position: fixed;
   top: 16px;
   left: 16px;
   font-size: 1.8em;
@@ -210,73 +189,58 @@ h1 {
   color: white;
   cursor: pointer;
   z-index: 1001;
+  display: none;
 }
 
+/* ========== OVERLAY MENU ========== */
 .fullscreen-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
-  width: 100%;
-  background-color: rgba(146, 185, 34, 0.95); /* Hijau transparan */
+  width: 80%;
+  background-color: rgba(142, 190, 136, 0.88); /* Hijau lembut transparan */
   display: none;
   z-index: 999;
-  text-align: center;
-  padding-top: 80px;
+  padding: 60px 20px;
+  text-align: left;
 }
-
-.fullscreen-menu nav a,
-.fullscreen-menu .dropdown-full span {
+.fullscreen-menu.show {
   display: block;
-  font-size: 1.8em;
+}
+.fullscreen-menu nav a {
+  display: block;
+  font-size: 1.4em;
   color: white;
   text-decoration: none;
   margin: 12px 0;
   font-weight: bold;
+  padding-left: 12px;
 }
-
-.fullscreen-menu .dropdown-full a {
-  font-size: 1.4em;
+.fullscreen-menu .dropdown-full span {
+  font-size: 1.3em;
+  font-weight: bold;
   color: white;
-  margin-left: 16px;
-}
-
-.fullscreen-menu.show {
   display: block;
+  margin: 18px 0 6px;
+  padding-left: 12px;
 }
-
+.fullscreen-menu .dropdown-full a {
+  font-size: 1.1em;
+  color: white;
+  margin-left: 24px;
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .top-buttons {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  #menu-container.active .top-buttons {
-    display: flex;
   }
   .menu-toggle {
     display: block;
-  }
-  .top-buttons > a,
-  .top-buttons .dropdown > a {
-    width: 90%;
-    max-width: 320px;
-    text-align: center;
-  }
-  .dropdown-content {
-    position: static;
-    background-color: transparent;
-    box-shadow: none;
-    width: 100%;
-    padding: 0;
-  }
-  .dropdown-content a {
-    background-color: #f3e1c2;
-    margin: 2px 0;
-    font-size: 0.95em;
   }
   .produk-btn,
   .whatsapp-button,
