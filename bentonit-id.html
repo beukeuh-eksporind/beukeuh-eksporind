@@ -2,54 +2,50 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Produk - Bentonit | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Bentonit – Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
     <div class="submenu" id="submenu">
       <a href="bentonit-id.html">Bentonit</a>
-      <a href="vanila.html">Vanila</a>
-      <a href="kayu-manis.html">Kayu Manis</a>
-      <a href="kopi.html">Kopi</a>
+      <a href="vanila-id.html">Vanila</a>
+      <a href="cinnamon-id.html">Kayu Manis</a>
+      <a href="coffee-id.html">Kopi</a>
     </div>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
+    <a href="galeri-id.html">Galeri</a>
+    <a href="contact-id.html">Hubungi Kami</a>
   </div>
 
   <header>
-    <img class="logo" src="logo.png" alt="Logo" />
+    <img class="logo" src="logo.png" alt="Logo"/>
     <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alami Indonesia untuk Pasar Dunia</p>
+    <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
     <div class="lang-switch">
-      🇮🇩 <a href="bentonit-id.html">Indonesia</a> |
-      🇬🇧 <a href="produk/bentonit-en.html">English</a>
+      🇬🇧 <a href="bentonit-en.html">English</a> |
+      <strong>🇮🇩 Indonesia</strong>
     </div>
   </header>
 
   <div class="container">
-    <h2>Bentonit Bubuk Halus</h2>
-    <p class="justify">
-      Bentonit adalah jenis tanah liat dengan kandungan montmorillonit tinggi. Sangat berguna dalam berbagai industri seperti pengeboran minyak dan gas, pemurnian air, pertanian, serta kosmetik. 
-    </p>
-    <p class="justify">
-      Kami menyediakan bentonit alami asal Indonesia dalam bentuk bubuk halus berkualitas tinggi, dengan kandungan mineral murni dan performa stabil. Produk kami cocok untuk kebutuhan ekspor dalam jumlah besar dan jangka panjang.
+    <h2>Bentonit</h2>
+    <p style="text-align: justify;">
+      Bentonit adalah jenis tanah liat halus dengan kandungan montmorillonit tinggi, sangat berguna dalam industri pengeboran, pemurnian, pertanian, dan kosmetik. Kami menyediakan bentonit alami Indonesia berkualitas tinggi, kandungan mineral murni, performa stabil, cocok untuk kebutuhan ekspor dalam jumlah besar.
     </p>
   </div>
 
-  <footer>
-    &copy; 2025 Beukeuh Eksporind
-  </footer>
+  <footer>&copy; 2025 Beukeuh Eksporind</footer>
 
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
+      document.getElementById("submenu").classList.remove("show");
     }
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
