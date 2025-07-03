@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fffaf3;
@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
 }
 
-/* ========== CONTAINER ========== */
+/* ========== LAYOUT CONTAINER ========== */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -43,7 +43,7 @@ h1 {
   font-size: 0.95em;
 }
 
-/* ========== TOP BUTTON NAVIGATION ========== */
+/* ========== TOP BUTTONS NAVIGATION ========== */
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* ========== DROPDOWN ========== */
+/* ========== DROPDOWN (DESKTOP) ========== */
 .dropdown {
   position: relative;
 }
@@ -126,7 +126,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* ========== GALLERY GRID ========== */
+/* ========== GALERI GRID ========== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -140,7 +140,7 @@ h1 {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== WHATSAPP & DOWNLOAD BUTTON ========== */
+/* ========== BUTTON WHATSAPP & BROSUR ========== */
 .whatsapp-button,
 .download-button {
   display: inline-block;
@@ -177,7 +177,7 @@ h1 {
   text-decoration: underline;
 }
 
-/* ========== TOGGLE MENU ========== */
+/* ========== HAMBURGER TOGGLE ========== */
 .menu-toggle {
   position: absolute;
   top: 16px;
@@ -190,18 +190,21 @@ h1 {
   z-index: 1001;
 }
 
-/* ========== OVERLAY MENU ========== */
+/* ========== OVERLAY MENU (SIDEBAR STYLE) ========== */
 .fullscreen-menu {
   position: fixed;
-  top: 20px;
-  left: 6%;
-  width: 88%;
-  background-color: rgba(146, 185, 34, 0.93);
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  padding: 24px;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: rgba(154, 180, 142, 0.95); /* hijau lembut alami */
+  padding: 20px;
   z-index: 1000;
   display: none;
+  overflow-y: auto;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
 }
 
 .fullscreen-menu.show {
@@ -212,44 +215,52 @@ h1 {
   text-align: left;
 }
 
-.fullscreen-menu a,
+.fullscreen-menu nav a,
 .fullscreen-menu .dropdown-full span {
   display: block;
-  font-size: 1.4em;
-  color: white;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #222;
   text-decoration: none;
-  margin: 12px 0 6px;
+  margin: 14px 0 4px;
 }
 
 .fullscreen-menu .dropdown-full a {
-  font-size: 1.05em;
+  font-size: 1em;
   font-weight: normal;
-  margin-left: 24px;
-  margin-bottom: 6px;
+  margin-left: 18px;
+  color: #333;
 }
 
-/* ========== CLOSE BUTTON ========== */
 .close-menu {
   position: absolute;
-  top: 14px;
-  right: 18px;
-  font-size: 2em;
-  color: white;
+  top: 12px;
+  right: 14px;
+  font-size: 1.8em;
+  color: #ff4444;
   cursor: pointer;
-  font-weight: bold;
 }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .top-buttons {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-
+  #menu-container.active .top-buttons {
+    display: flex;
+  }
   .menu-toggle {
     display: block;
   }
-
+  .top-buttons > a,
+  .top-buttons .dropdown > a {
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+  }
   .produk-btn,
   .whatsapp-button,
   .download-button {
