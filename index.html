@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Beukeuh Eksporind</title>
+  <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Toggle Button -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="index.html">Home</a>
@@ -21,33 +23,36 @@
       <a href="coffee-en.html">Coffee</a>
     </div>
     <a href="galeri.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 
+  <!-- Header -->
   <header>
-    <img class="logo" src="logo.png" alt="Beukeuh Logo" />
+    <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
     <div class="lang-switch">
       🇮🇩 <a href="index-id.html">Indonesia</a> |
-      🇬🇧 English
+      🇬🇧 <a href="index.html">English</a>
     </div>
   </header>
 
+  <!-- Main Content -->
   <div class="container">
-    <h2 style="text-align: center;">Welcome</h2>
-    <p style="text-align: center;">
-      We are a dedicated exporter of natural Indonesian commodities, bringing the finest quality to the global market. Our main products include fine powder bentonite, dried vanilla, selected cinnamon, and coffee from top plantations.
+    <h2>Welcome to Beukeuh Eksporind</h2>
+    <p>
+      We are a trusted Indonesian exporter providing high-quality natural commodities such as bentonite, vanilla, cinnamon, and coffee. Our mission is to connect Indonesia's natural resources with global markets through sustainable and professional trade practices.
     </p>
-    <p style="text-align: center;">
-      Explore this site to learn more about our products, image gallery, and contact details. We are ready to be your trusted export partner.
-    </p>
+    <a class="whatsapp-button" href="https://wa.me/628123456789">💬 Contact via WhatsApp</a>
+    <a class="download-button" href="#">📄 Download Brochure (PDF)</a>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Beukeuh Eksporind
   </footer>
 
+  <!-- JS -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
