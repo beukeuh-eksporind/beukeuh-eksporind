@@ -38,7 +38,7 @@ h1 {
 
 /* TOGGLE BUTTON */
 .menu-toggle {
-  position: absolute;
+  position: fixed;
   top: 16px;
   left: 16px;
   font-size: 1.8em;
@@ -52,9 +52,10 @@ h1 {
 /* OVERLAY MENU */
 .overlay-menu {
   position: fixed;
-  top: 0;
+  top: 56px; /* muncul di bawah tombol toggle */
   left: 0;
-  height: 100%;
+  height: auto;
+  min-height: 280px;
   width: 70%;
   max-width: 300px;
   background-color: rgba(172, 202, 138, 0.94); /* hijau lembut alami */
@@ -63,6 +64,7 @@ h1 {
   transition: transform 0.3s ease-in-out;
   padding: 1.4em 1.2em;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 8px 8px 0;
 }
 .overlay-menu.show {
   transform: translateX(0);
@@ -85,6 +87,7 @@ h1 {
   text-decoration: none;
   color: #222;
   font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
 }
 .dropdown-toggle {
   cursor: pointer;
@@ -110,6 +113,12 @@ h1 {
   margin: 0 auto;
   padding: 0 16px;
 }
+.container p {
+  text-align: center;
+}
+.container h2 {
+  text-align: center;
+}
 footer {
   margin-top: 2em;
   font-size: 0.9em;
@@ -134,4 +143,17 @@ footer {
 }
 .download-button {
   background-color: #007bff;
+}
+.whatsapp-button:hover {
+  background-color: #1ebe5d;
+}
+.download-button:hover {
+  background-color: #006ad6;
+}
+
+/* RESPONSIVE (opsional kalau butuh) */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 12px;
+  }
 }
