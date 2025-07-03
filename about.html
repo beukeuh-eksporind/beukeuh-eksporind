@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Beukeuh Eksporind</title>
+  <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="overlay-menu" id="overlayMenu">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="about.html">About Us</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
@@ -21,47 +18,33 @@
     </div>
     <a href="galeri.html">Gallery</a>
     <a href="contact.html">Contact Us</a>
-  </div>
-
-  <header>
+  </div>  <header>
     <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
     <div class="lang-switch">
-      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇮🇩 <a href="id/index.html">Indonesia</a> |
       🇬🇧 <a href="index.html">English</a>
     </div>
-  </header>
+  </header>  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: 
+      <a href="mailto:export@beukeuheksprorind.com">export@beukeuheksprorind.com</a>
+    </p><a class="whatsapp-button" href="https://wa.me/628123456789">
+  💬 Contact via WhatsApp
+</a>
+<a class="download-button" href="#">
+  📄 Download Brochure (PDF)
+</a>
 
-  <div class="container">
-    <h2>About Us</h2>
-    <p>
-      <strong>Beukeuh Eksporind</strong> is a trusted export company specializing in high-quality natural commodities from Indonesia. 
-      We are committed to connecting Indonesia’s rich agricultural resources with the global market by providing reliable and sustainable supply chains.
-    </p>
-    <p>
-      Our core products include premium-grade <strong>vanilla, cinnamon, coffee,</strong> and <strong>bentonite</strong>, sourced directly from local farmers and processed under strict quality control.
-    </p>
-    <p>
-      With a strong foundation in integrity, consistency, and professionalism, we aim to build long-term partnerships with international buyers by delivering excellence in both product and service.
-    </p>
-    <p>
-      We believe in ethical business practices, environmental responsibility, and empowering local communities through fair trade. 
-      Beukeuh Eksporind is your reliable partner for sourcing authentic Indonesian commodities with a global standard.
-    </p>
-  </div>
-
-  <footer>
+  </div>  <footer>
     &copy; 2025 Beukeuh Eksporind
-  </footer>
-
-  <script>
+  </footer>  <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
     }
-  </script>
-</body>
+  </script></body>
 </html>
