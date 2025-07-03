@@ -2,63 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- HEADER -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="about.html">About Us</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="#">Bentonite</a>
+      <a href="#">Vanilla</a>
+      <a href="#">Cinnamon</a>
+      <a href="#">Coffee</a>
+    </div>
+    <a href="galeri.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
   <header>
-    <img src="logo.png" class="logo" alt="Beukeun Ekspor Logo" />
+    <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <p class="lang-switch">
-      <a href="about-id.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
-    </p>
+    <div class="lang-switch">
+      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇬🇧 <a href="index.html">English</a>
+    </div>
   </header>
 
-  <!-- HAMBURGER MENU -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-
-  <!-- NAVIGATION -->
-  <div id="menu-container">
-    <div class="top-buttons">
-      <a href="index.html">🏠 Home</a>
-
-      <div class="dropdown">
-        <a href="#">🍃 Our Products ▾</a>
-        <div class="dropdown-content">
-          <a href="produk/bentonit-en.html">🧱 Bentonite</a>
-          <a href="produk/vanilla-en.html">🌿 Vanilla</a>
-          <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
-          <a href="produk/coffee-en.html">☕ Coffee</a>
-        </div>
-      </div>
-
-      <a href="gallery.html">🖼️ Gallery</a>
-      <a href="contact.html">📞 Contact Us</a>
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT -->
   <div class="container">
-    <main>
-      <h2>About Us</h2>
-      <p>Beukeuh Eksporind is committed to exporting high-quality natural commodities from Indonesia such as spices, coffee, and minerals to the global market.</p>
-      <p>We emphasize sustainability, authenticity, and trust in every product delivered. Our mission is to bring the richness of Indonesia’s natural resources to international partners with integrity and dedication.</p>
-    </main>
+    <h2>About Us</h2>
+    <p>
+      <strong>Beukeuh Eksporind</strong> is a trusted export company specializing in high-quality natural commodities from Indonesia. 
+      We are committed to connecting Indonesia’s rich agricultural resources with the global market by providing reliable and sustainable supply chains.
+    </p>
+    <p>
+      Our core products include premium-grade <strong>vanilla, cinnamon, coffee,</strong> and <strong>bentonite</strong>, sourced directly from local farmers and processed under strict quality control.
+    </p>
+    <p>
+      With a strong foundation in integrity, consistency, and professionalism, we aim to build long-term partnerships with international buyers by delivering excellence in both product and service.
+    </p>
+    <p>
+      We believe in ethical business practices, environmental responsibility, and empowering local communities through fair trade. 
+      Beukeuh Eksporind is your reliable partner for sourcing authentic Indonesian commodities with a global standard.
+    </p>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- TOGGLE SCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("menu-container").classList.toggle("active");
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
     }
   </script>
 </body>
