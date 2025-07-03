@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kayu Manis | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <header>
+    <img class="logo" src="logo.png" alt="Logo" />
+    <h1>Kayu Manis</h1>
+    <p class="tagline">Rempah Alami dengan Aroma dan Rasa Kuat</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="kayu-manis.html">Indonesia</a> |
+      🇬🇧 <a href="cinnamon-en.html">English</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <p style="text-align: justify;">
+      Kayu manis Indonesia dikenal karena aroma khas dan cita rasa hangatnya, menjadikannya salah satu rempah yang paling diminati di pasar internasional. Produk kami berasal dari daerah penghasil kayu manis terbaik di Indonesia dan diolah secara higienis untuk menjaga kualitas, warna, dan kandungan minyak atsiri.
+      <br><br>
+      Beukeuh Eksporind menyediakan kayu manis dalam bentuk batang utuh dan bubuk halus, siap diekspor dalam jumlah besar dengan kualitas konsisten. Cocok untuk industri makanan, minuman, kosmetik, dan farmasi.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
