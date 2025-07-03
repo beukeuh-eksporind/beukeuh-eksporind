@@ -2,66 +2,62 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontak - Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- HEADER -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
   <header>
-    <img src="logo.png" class="logo" alt="Logo Beukeuh Eksporind" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
-    <p class="lang-switch">
-      🇮🇩 Indonesia | <a href="contact.html" style="color: #fff;">🇬🇧 English</a>
-    </p>
+    <img class="logo" src="logo.png" alt="Logo" />
+    <h1>Kontak</h1>
+    <p class="tagline">Hubungi Kami untuk Penawaran Terbaik</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="contact-id.html">Indonesia</a> |
+      🇬🇧 <a href="contact.html">English</a>
+    </div>
   </header>
 
-  <!-- HAMBURGER MENU -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-
-  <!-- NAVIGATION -->
-  <div id="menu-container">
-    <div class="top-buttons">
-      <a href="index-id.html">🏠 Beranda</a>
-
-      <div class="dropdown">
-        <a href="#">🍃 Produk Kami ▾</a>
-        <div class="dropdown-content">
-          <a href="produk/produk-bentonite.html">🧱 Bentonite</a>
-          <a href="produk/produk-vanilla.html">🌿 Vanilla</a>
-          <a href="produk/produk-cinnamon.html">🌰 Kayu Manis</a>
-          <a href="produk/produk-coffee.html">☕ Kopi</a>
-        </div>
-      </div>
-
-      <a href="galeri.html">🖼️ Galeri</a>
-      <a href="contact-id.html">📞 Hubungi Kami</a>
-    </div>
-  </div>
-
-  <!-- MAIN CONTENT -->
   <div class="container">
-    <main>
-      <h2>Hubungi Kami</h2>
-      <p>Email: <a href="mailto:export@beukeuheksporind.com">export@beukeuheksporind.com</a></p>
-      <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Hubungi via WhatsApp</a><br />
-      <a class="download-button" href="brochure.pdf" download>📄 Unduh Brosur (PDF)</a>
-    </main>
+    <p style="text-align: justify;">
+      Kami siap menjawab setiap pertanyaan Anda mengenai produk dan pengiriman. Hubungi kami melalui WhatsApp atau email untuk mendapatkan informasi detail, penawaran harga, dan kerja sama ekspor. Kami berkomitmen memberikan layanan cepat, profesional, dan terpercaya.
+    </p>
+
+    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">
+      📲 Hubungi via WhatsApp
+    </a>
+    <a class="download-button" href="brochure.pdf" target="_blank">
+      📄 Unduh Brosur Produk
+    </a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- TOGGLE SCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("menu-container").classList.toggle("active");
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
     }
   </script>
-
 </body>
 </html>
