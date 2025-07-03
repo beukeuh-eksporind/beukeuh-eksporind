@@ -1,23 +1,71 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; URL='home-id.html'" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mengalihkan ke Beranda</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        padding-top: 50px;
-        color: #555;
-      }
-    </style>
-  </head>
-  <body>
-    <p>Mengalihkan ke halaman <strong>Beranda</strong>...</p>
-    <script>
-      window.location.href = "home-id.html";
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Beranda | Beukeuh Eksporind</title>
+  <meta name="description" content="Komoditas alami Indonesia berkualitas tinggi untuk ekspor — bentonit, vanila, kayu manis, dan kopi." />
+  <meta name="keywords" content="ekspor Indonesia, bentonit, vanila, kayu manis, kopi, komoditas alami, Beukeuh Eksporind" />
+  <meta name="author" content="Beukeuh Eksporind" />
+
+  <meta property="og:title" content="Beranda | Beukeuh Eksporind" />
+  <meta property="og:description" content="Komoditas ekspor alami terbaik dari Indonesia." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/hero.jpg" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/index-id.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
+    <div class="lang-switch">
+      <a href="index.html">EN</a>
+    </div>
+  </header>
+
+  <!-- Overlay Menu -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main>
+    <img src="images/hero.jpg" alt="Hero Image" style="width: 100%; max-height: 420px; object-fit: cover;" />
+    <section class="container">
+      <h2 style="text-align: center;">Selamat Datang di Beukeuh Eksporind</h2>
+      <p style="text-align: justify;">
+        Kami adalah perusahaan eksportir produk alami asal Indonesia yang berkomitmen menghadirkan kualitas terbaik dari bumi Nusantara ke pasar global. Produk utama kami mencakup bentonit, vanila, kayu manis, dan kopi. Dengan standar mutu tinggi dan proses yang berkelanjutan, kami siap menjadi mitra terpercaya Anda dalam bisnis ekspor.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
 </html>
