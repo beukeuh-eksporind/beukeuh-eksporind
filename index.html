@@ -1,74 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Toggle Menu -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <!-- Overlay Menu -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanilla-en.html">Vanilla</a>
-      <a href="cinnamon-en.html">Cinnamon</a>
-      <a href="coffee-en.html">Coffee</a>
-    </div>
-    <a href="galeri.html">Gallery</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <div class="lang-switch">
-      🇮🇩 <a href="index-id.html">Indonesia</a> |
-      🇬🇧 <a href="index.html">English</a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="container">
-    <h2>Welcome to Beukeuh Eksporind</h2>
-    <p>
-      We are committed to exporting high-quality Indonesian natural products to the global market.  
-      Our focus includes bentonite, vanilla, cinnamon, and coffee, ensuring only the best for your business.
-    </p>
-    <p>
-      Explore our products and contact us for partnerships, bulk orders, and custom export solutions.
-    </p>
-
-    <a class="whatsapp-button" href="https://wa.me/628123456789">
-      💬 Contact via WhatsApp
-    </a>
-    <a class="download-button" href="#">
-      📄 Download Company Profile (PDF)
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Beukeuh Eksporind
-  </footer>
-
-  <!-- JS -->
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; URL='home.html'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting to Home</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 50px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Redirecting to <strong>Home</strong> page...</p>
+    <script>
+      window.location.href = "home.html";
+    </script>
+  </body>
 </html>
