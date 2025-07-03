@@ -2,80 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HAMBURGER TOGGLE BUTTON -->
+  <!-- Toggle Menu -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- SIDE MENU OVERLAY -->
-  <div class="fullscreen-menu" id="sideMenu">
-    <span class="close-btn" onclick="toggleMenu()">✖</span>
+  <!-- Overlay Menu -->
+  <div class="fullscreen-menu" id="overlayMenu">
+    <span class="close-menu" onclick="toggleMenu()">✖</span>
     <nav>
-      <a href="about.html">📘 About Us</a>
+      <a href="about.html">About Us</a>
       <div class="dropdown-full">
-        <span>🍃 Our Products</span>
-        <a href="produk/bentonit-en.html">🧱 Bentonite</a>
-        <a href="produk/vanilla-en.html">🌿 Vanilla</a>
-        <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
-        <a href="produk/coffee-en.html">☕ Coffee</a>
+        <span>Our Products ▾</span>
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="cinnamon.html">Cinnamon</a>
       </div>
-      <a href="gallery.html">🖼️ Gallery</a>
-      <a href="contact.html">📞 Contact Us</a>
+      <a href="galeri.html">Gallery</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </div>
 
   <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Beukeuh Ekspor Logo">
+    <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <p class="lang-switch">
-      <a href="index-id.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
-    </p>
+    <div class="lang-switch">
+      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇬🇧 <a href="#">English</a>
+    </div>
   </header>
 
-  <!-- NAVIGATION BUTTONS (Desktop only) -->
-  <div class="container">
-    <div class="top-buttons">
-      <a href="about.html">📘 About Us</a>
+  <!-- CONTENT -->
+  <main class="container">
+    <h2>Welcome</h2>
+    <p>Beukeuh Eksporind is your trusted supplier of Indonesian natural commodities for the global market.</p>
 
-      <div class="dropdown">
-        <a href="#">🍃 Our Products ▾</a>
-        <div class="dropdown-content">
-          <a href="produk/bentonit-en.html">🧱 Bentonite</a>
-          <a href="produk/vanilla-en.html">🌿 Vanilla</a>
-          <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
-          <a href="produk/coffee-en.html">☕ Coffee</a>
-        </div>
-      </div>
-
-      <a href="gallery.html">🖼️ Gallery</a>
-      <a href="contact.html">📞 Contact Us</a>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <main>
-      <h2>Welcome</h2>
-      <p>Beukeuh Eksporind is your trusted supplier of Indonesian natural commodities for the global market.</p>
-      <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
-      <a class="download-button" href="brochure.pdf" download>📄 Download Brochure (PDF)</a>
-    </main>
-  </div>
+    <a class="whatsapp-button" href="https://wa.me/6281234567890" target="_blank">
+      💬 Contact via WhatsApp
+    </a><br/>
+    <a class="download-button" href="brochure.pdf" download>
+      📄 Download Brochure (PDF)
+    </a>
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- JS Toggle Script -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      menu.classList.toggle('show');
+      document.getElementById('overlayMenu').classList.toggle('show');
     }
   </script>
 
