@@ -2,65 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bentonite - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product - Bentonite | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- HEADER -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="about.html">About Us</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="produk-bentonite-en.html">Bentonite</a>
+      <a href="produk-vanilla-en.html">Vanilla</a>
+      <a href="produk-cinnamon-en.html">Cinnamon</a>
+      <a href="produk-coffee-en.html">Coffee</a>
+    </div>
+    <a href="galeri.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
   <header>
-    <img src="../logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
+    <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <p class="lang-switch">
-      <a href="bentonit.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
-    </p>
+    <div class="lang-switch">
+      🇮🇩 <a href="produk-bentonite.html">Indonesia</a> |
+      🇬🇧 <a href="produk-bentonite-en.html">English</a>
+    </div>
   </header>
 
-  <!-- TOP BUTTONS -->
   <div class="container">
-  <div class="top-buttons">
-    <a href="../about.html">📘 About Us</a>
-
-    <div class="dropdown">
-      <a href="#">🍃 Our Products ▾</a>
-      <div class="dropdown-content">
-        <a href="bentonit-en.html">🧱 Bentonite</a>
-        <a href="vanilla-en.html">🌿 Vanilla</a>
-        <a href="cinnamon-en.html">🌰 Cinnamon</a>
-        <a href="coffee-en.html">☕ Coffee</a>
-      </div>
-    </div>
-
-    <a href="../gallery.html">🖼️ Gallery</a>
-    <a href="../contact.html">📞 Contact Us</a>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    <h2>🧱 Bentonite</h2>
+    <h2>Bentonite</h2>
     <p>
-      Bentonite is a natural mineral widely used in various industries such as oil drilling, water purification, and cosmetics. We supply high-quality bentonite sourced from Indonesian mines.
+      <strong>Bentonite</strong> is a type of natural clay with a high montmorillonite content, available in fine powder form. It is widely used in drilling, purification, agriculture, and cosmetics industries. We supply premium-quality Indonesian bentonite with high mineral purity and stable performance, ideal for large-scale export needs.
     </p>
-    <ul>
-      <li>Sodium & calcium activated bentonite</li>
-      <li>Packed in 25kg bags or jumbo bags</li>
-      <li>Ready for export with certification</li>
-      <li>Customizable to industrial requirements</li>
-    </ul>
 
-    <h3>Contact</h3>
-    <p>Email: export@beukeuheksporind.com</p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
-    <a class="download-button" href="../brochure.pdf" download>📄 Download Brochure (PDF)</a><br />
-    <a class="back-link" href="../index.html">⬅️ Back to Home</a>
-  </main>
+    <a class="whatsapp-button" href="https://wa.me/628123456789">
+      💬 Contact via WhatsApp
+    </a>
+    <a class="download-button" href="#">
+      📄 Download Brochure (PDF)
+    </a>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
   </div>
-  <!-- FOOTER -->
+
   <footer>
     &copy; 2025 Beukeuh Eksporind
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
