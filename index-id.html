@@ -1,58 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="index-id.html">Beranda</a>
-    <a href="about-id.html">Tentang Kami</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="produk/bentonit-id.html">Bentonit</a>
-      <a href="produk/vanila.html">Vanila</a>
-      <a href="produk/kayu-manis.html">Kayu Manis</a>
-      <a href="produk/kopi.html">Kopi</a>
-    </div>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alami Indonesia untuk Dunia</p>
-    <div class="lang-switch">
-      🇮🇩 <a href="index-id.html">Indonesia</a> |
-      🇬🇧 <a href="index.html">English</a>
-    </div>
-  </header>
-
-  <div class="hero-image">
-    <img src="hero.jpg" alt="Hero Image" />
-    <div class="hero-text">
-      <h2>Komoditas Alami Indonesia</h2>
-      <p>Menyediakan produk pertanian dan mineral berkualitas ekspor.</p>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Beukeuh Eksporind
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; URL='home-id.html'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mengalihkan ke Beranda</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 50px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Mengalihkan ke halaman <strong>Beranda</strong>...</p>
+    <script>
+      window.location.href = "home-id.html";
+    </script>
+  </body>
 </html>
