@@ -11,8 +11,9 @@
   <!-- HAMBURGER TOGGLE BUTTON -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- OVERLAY FULLSCREEN MENU -->
-  <div class="fullscreen-menu" id="overlayMenu">
+  <!-- SIDE MENU OVERLAY -->
+  <div class="fullscreen-menu" id="sideMenu">
+    <span class="close-btn" onclick="toggleMenu()">✖</span>
     <nav>
       <a href="about.html">📘 About Us</a>
       <div class="dropdown-full">
@@ -29,18 +30,19 @@
 
   <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Beukeun Ekspor Logo">
+    <img src="logo.png" class="logo" alt="Beukeuh Ekspor Logo">
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
     <p class="lang-switch">
-      <a href="index.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
+      <a href="index-id.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
     </p>
   </header>
 
-  <!-- NAVIGATION BUTTONS (Desktop Only) -->
+  <!-- NAVIGATION BUTTONS (Desktop only) -->
   <div class="container">
     <div class="top-buttons">
       <a href="about.html">📘 About Us</a>
+
       <div class="dropdown">
         <a href="#">🍃 Our Products ▾</a>
         <div class="dropdown-content">
@@ -50,14 +52,15 @@
           <a href="produk/coffee-en.html">☕ Coffee</a>
         </div>
       </div>
+
       <a href="gallery.html">🖼️ Gallery</a>
       <a href="contact.html">📞 Contact Us</a>
     </div>
 
     <!-- MAIN CONTENT -->
     <main>
-      <h2>Contact</h2>
-      <p>Email: export@beukeuheksporind.com</p>
+      <h2>Welcome</h2>
+      <p>Beukeuh Eksporind is your trusted supplier of Indonesian natural commodities for the global market.</p>
       <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
       <a class="download-button" href="brochure.pdf" download>📄 Download Brochure (PDF)</a>
     </main>
@@ -68,11 +71,13 @@
     © 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- TOGGLE MENU SCRIPT -->
+  <!-- JAVASCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('show');
     }
   </script>
+
 </body>
 </html>
