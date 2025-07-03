@@ -1,67 +1,3 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fffaf3;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* HEADER & FOOTER */
-header, footer {
-  background-color: #442d0d;
-  color: white;
-  text-align: center;
-  padding: 1em;
-}
-.logo {
-  display: block;
-  margin: 0 auto 10px;
-  max-width: 120px;
-}
-h1 {
-  margin: 0.2em 0;
-  font-size: 1.8em;
-}
-.tagline {
-  font-style: italic;
-  font-size: 1.1em;
-}
-.lang-switch {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-}
-.lang-switch a {
-  background-color: #fff;
-  color: #442d0d;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.9em;
-  text-decoration: none;
-}
-.lang-switch a:hover {
-  background-color: #ddd;
-}
-
-/* TOGGLE BUTTON */
-.menu-toggle {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
-
 /* OVERLAY MENU */
 .overlay-menu {
   position: fixed;
@@ -69,110 +5,76 @@ h1 {
   left: 0;
   height: 100%;
   width: 70%;
-  max-width: 300px;
-  background-color: rgba(172, 202, 138, 0.94);
+  max-width: 280px;
+  background-color: rgba(255, 255, 255, 0.97);
   z-index: 1000;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  padding: 80px 1.2em 1.2em;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease-in-out;
+  padding: 80px 1.5em 2em;
+  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #ccc;
 }
+
 .overlay-menu.show {
   transform: translateX(0);
 }
+
 .overlay-menu .close-btn {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 16px;
+  right: 18px;
   font-size: 1.8em;
   background: none;
   border: none;
   color: #d33;
   cursor: pointer;
 }
+
 .overlay-menu a,
 .overlay-menu .dropdown-toggle {
   display: block;
   font-size: 1.1em;
-  margin: 10px 0;
+  margin: 14px 0;
+  padding: 8px 4px;
   text-decoration: none;
-  color: #222;
+  color: #333;
   font-weight: 500;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+  border-radius: 4px;
 }
+
+.overlay-menu a:hover,
+.overlay-menu .dropdown-toggle:hover {
+  background-color: #f3f3f3;
+  padding-left: 10px;
+}
+
 .dropdown-toggle {
   cursor: pointer;
+  position: relative;
 }
+
+.dropdown-toggle::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  font-size: 0.8em;
+  color: #666;
+}
+
 .submenu {
   margin-left: 16px;
-  margin-top: 4px;
+  margin-top: 6px;
   font-size: 0.95em;
   display: none;
+  transition: max-height 0.3s ease;
 }
+
 .submenu a {
-  display: block;
-  margin: 4px 0;
+  margin: 6px 0;
+  padding-left: 6px;
   font-weight: normal;
 }
 .submenu.show {
   display: block;
-}
-
-/* CONTENT */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-footer {
-  margin-top: 2em;
-  font-size: 0.9em;
-}
-
-/* HERO IMAGE */
-.hero-img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  display: block;
-}
-
-/* BUTTONS */
-.whatsapp-button,
-.download-button {
-  display: block;
-  width: 90%;
-  max-width: 320px;
-  margin: 1em auto;
-  padding: 10px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-.whatsapp-button {
-  background-color: #25D366;
-}
-.whatsapp-button:hover {
-  background-color: #1ebe5d;
-}
-.download-button {
-  background-color: #007bff;
-}
-.download-button:hover {
-  background-color: #0062cc;
-}
-
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  padding: 1em 0;
-}
-.gallery-grid img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  object-fit: cover;
 }
