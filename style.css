@@ -17,6 +17,7 @@ header, footer {
   color: white;
   text-align: center;
   padding: 1em;
+  position: relative;
 }
 .logo {
   display: block;
@@ -31,9 +32,25 @@ h1 {
   font-style: italic;
   font-size: 1.1em;
 }
+
+/* LANGUAGE SWITCH BUTTON */
 .lang-switch {
-  margin-top: 0.5em;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   font-size: 0.95em;
+  z-index: 1002;
+}
+.lang-switch a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #5a8633;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.lang-switch a:hover {
+  background-color: #4a732b;
 }
 
 /* TOGGLE BUTTON */
@@ -61,7 +78,7 @@ h1 {
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  padding: 80px 1.2em 1.2em; /* agar isi tidak menabrak tombol toggle */
+  padding: 80px 1.2em 1.2em;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 .overlay-menu.show {
@@ -105,14 +122,14 @@ h1 {
   display: block;
 }
 
-/* CONTENT */
+/* CONTAINER & DESKRIPSI */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
 }
-.container p {
-  text-align: justify; /* Hanya paragraf deskripsi yang rata kiri-kanan */
+p, .container p, .container div, .container section {
+  text-align: justify;
 }
 footer {
   margin-top: 2em;
@@ -144,4 +161,31 @@ footer {
 }
 .download-button:hover {
   background-color: #0062cc;
+}
+
+/* GALERI */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 1em 0;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+/* SLIDESHOW */
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 1em auto;
+}
+.slideshow img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
 }
