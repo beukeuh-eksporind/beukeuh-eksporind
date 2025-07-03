@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beukeuh Eksporind - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Toggle Menu -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Overlay Navigation Menu -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-en.html">Bentonite</a>
+      <a href="vanilla-en.html">Vanilla</a>
+      <a href="cinnamon-en.html">Cinnamon</a>
+      <a href="coffee-en.html">Coffee</a>
+    </div>
+    <a href="galeri.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img class="logo" src="logo.png" alt="Beukeuh Logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇬🇧 <a href="index.html">English</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section style="background: url('hero.jpg') center/cover no-repeat; padding: 100px 20px; text-align: center; color: white;">
+    <h2 style="font-size: 2em; margin-bottom: 0.4em;">Explore Indonesia's Finest Natural Products</h2>
+    <p style="font-size: 1.2em;">Bentonite, Vanilla, Cinnamon, and Coffee — sustainably sourced and export-ready</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Produk Unggulan -->
+    <section style="margin-top: 2em; text-align: center;">
+      <h3>Our Main Products</h3>
+      <div class="produk-grid">
+        <a href="bentonit-en.html" class="produk-btn">Bentonite</a>
+        <a href="vanilla-en.html" class="produk-btn">Vanilla</a>
+        <a href="cinnamon-en.html" class="produk-btn">Cinnamon</a>
+        <a href="coffee-en.html" class="produk-btn">Coffee</a>
+      </div>
+    </section>
+
+    <!-- Tentang Singkat -->
+    <section style="margin-top: 3em; text-align: center;">
+      <h3>About Beukeuh Eksporind</h3>
+      <p style="max-width: 640px; margin: 0 auto;">
+        Beukeuh Eksporind is a dedicated exporter of premium Indonesian commodities.
+        We ensure quality, sustainability, and reliable delivery for clients around the world. 
+        Learn more about our mission and team on the About Us page.
+      </p>
+      <a href="about.html" class="download-button" style="margin-top: 1em; display: inline-block;">Learn More</a>
+    </section>
+
+    <!-- Kontak CTA -->
+    <section style="margin-top: 3em; text-align: center;">
+      <h3>Let’s Collaborate</h3>
+      <a class="whatsapp-button" href="https://wa.me/628123456789">
+        💬 Contact via WhatsApp
+      </a>
+      <a class="download-button" href="#">
+        📄 Download Brochure (PDF)
+      </a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+    </html>
