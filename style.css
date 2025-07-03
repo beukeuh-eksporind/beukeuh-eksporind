@@ -195,15 +195,15 @@ h1 {
 .fullscreen-menu {
   position: fixed;
   top: 20%;
-  left: 5%;
-  width: 90%;
-  max-width: 320px;
-  background-color: rgba(146, 185, 34, 0.95); /* Hijau adem transparan */
-  padding: 20px;
-  border-radius: 12px;
+  left: 8%;
+  width: 84%; /* jadi tidak full */
+  background-color: rgba(146, 185, 34, 0.95); /* Hijau adem */
+  padding: 24px 20px;
+  border-radius: 16px;
   z-index: 1000;
   display: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .fullscreen-menu.show {
@@ -212,7 +212,7 @@ h1 {
 
 .fullscreen-menu .close-btn {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: 16px;
   font-size: 1.5em;
   background: none;
@@ -224,19 +224,21 @@ h1 {
 .fullscreen-menu nav a,
 .fullscreen-menu .dropdown-full span {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: white;
   text-decoration: none;
-  margin: 10px 0;
-  font-weight: bold;
+  margin: 12px 0;
+  font-weight: 600;
   text-align: left;
 }
 
 .fullscreen-menu .dropdown-full a {
-  font-size: 1em;
+  font-size: 0.95em;
+  margin-left: 20px;
   color: white;
-  margin-left: 12px;
   font-weight: normal;
+  padding: 3px 0;
+  display: block;
 }
 
 /* ========== RESPONSIVE ========== */
