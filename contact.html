@@ -1,54 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kontak | Beukeuh Eksporind</title>
+  <meta name="description" content="Hubungi Beukeuh Eksporind untuk informasi lebih lanjut tentang produk ekspor alami Indonesia." />
+  <meta name="keywords" content="kontak, ekspor Indonesia, produk alami, Beukeuh Eksporind" />
+  <meta name="author" content="Beukeuh Eksporind" />
+
+  <meta property="og:title" content="Kontak | Beukeuh Eksporind" />
+  <meta property="og:description" content="Hubungi Beukeuh Eksporind untuk kerja sama dan pemesanan." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/contact-id.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanilla-en.html">Vanilla</a>
-      <a href="cinnamon-en.html">Cinnamon</a>
-      <a href="coffee-en.html">Coffee</a>
-    </div>
-    <a href="galeri-en.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
   <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <h1>Contact</h1>
-    <p class="tagline">Get in Touch for Inquiries</p>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
     <div class="lang-switch">
-      🇮🇩 <a href="contact-id.html">Indonesia</a> |
-      🇬🇧 <a href="contact.html">English</a>
+      <a href="contact.html">English</a>
     </div>
   </header>
 
-  <div class="container">
-    <p style="text-align: justify;">
-      We are ready to assist with any questions regarding our products and export process. Reach out via WhatsApp or email to receive detailed information, price quotes, and partnership opportunities. We commit to fast, professional, and trusted service.
-    </p>
-
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">
-      📲 Contact via WhatsApp
-    </a>
-    <a class="download-button" href="brochure.pdf" target="_blank">
-      📄 Download Product Brochure
-    </a>
+  <!-- Overlay Menu -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
   </div>
 
+  <main class="container">
+    <h2 style="text-align:center;">Hubungi Kami</h2>
+    <p style="text-align: justify;">
+      Untuk informasi produk, pemesanan, atau kerja sama ekspor, silakan hubungi kami melalui WhatsApp atau email. Kami siap melayani kebutuhan Anda dengan profesionalisme dan komitmen tinggi.
+    </p>
+    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">Hubungi via WhatsApp</a>
+    <p style="text-align: center;">Email: <a href="mailto:info@beukeuh-eksporind.com">info@beukeuh-eksporind.com</a></p>
+  </main>
+
   <footer>
-    &copy; 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
   </footer>
 
   <script>
