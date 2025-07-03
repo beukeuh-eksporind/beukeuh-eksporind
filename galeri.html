@@ -2,9 +2,32 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeri | Beukeuh Eksporind</title>
+  <meta name="description" content="Galeri visual produk ekspor unggulan Beukeuh Eksporind: bentonit, vanila, kayu manis, kopi." />
+  <meta name="keywords" content="galeri produk, ekspor Indonesia, Beukeuh Eksporind, komoditas alami" />
+  <meta name="author" content="Beukeuh Eksporind" />
+  <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-container {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -12,7 +35,6 @@
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang Kami</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
     <div class="submenu" id="submenu">
       <a href="bentonit-id.html">Bentonit</a>
@@ -21,27 +43,27 @@
       <a href="kopi.html">Kopi</a>
     </div>
     <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <a href="contact-id.html">Hubungi Kami</a>
   </div>
 
   <header>
     <img class="logo" src="logo.png" alt="Logo" />
-    <h1>Galeri</h1>
-    <p class="tagline">Dokumentasi Produk dan Kegiatan</p>
+    <p class="tagline">Komoditas Alami Premium dari Indonesia</p>
     <div class="lang-switch">
       🇮🇩 <a href="galeri.html">Indonesia</a> |
       🇬🇧 <a href="galeri-en.html">English</a>
     </div>
   </header>
 
-  <div class="container">
-    <p style="text-align: justify;">
-      Galeri ini menampilkan koleksi foto dari produk-produk ekspor kami serta aktivitas lapangan, proses produksi, dan pengemasan. Semua foto mencerminkan komitmen kami terhadap kualitas, kebersihan, dan profesionalisme dalam ekspor komoditas alami Indonesia.
-    </p>
-
-    <img src="images/gallery1.jpg" alt="Produk 1" style="width:100%;max-width:600px;margin:1em auto;display:block;">
-    <img src="images/gallery2.jpg" alt="Produk 2" style="width:100%;max-width:600px;margin:1em auto;display:block;">
-    <!-- Tambahkan lebih banyak gambar jika diperlukan -->
+  <div class="container gallery-container">
+    <h1>Galeri Produk</h1>
+    <div class="gallery">
+      <img src="images/galeri.1.jpg" alt="Produk 1" />
+      <img src="images/galeri.2.jpg" alt="Produk 2" />
+      <img src="images/galeri.3.jpg" alt="Produk 3" />
+      <img src="images/galeri.4.jpg" alt="Produk 4" />
+    </div>
   </div>
 
   <footer>
