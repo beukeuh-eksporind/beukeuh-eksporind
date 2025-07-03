@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bentonite – Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home.html">Home</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-en.html">Bentonite</a>
+      <a href="vanilla-en.html">Vanilla</a>
+      <a href="cinnamon-en.html">Cinnamon</a>
+      <a href="coffee-en.html">Coffee</a>
+    </div>
+    <a href="galeri-en.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <header>
+    <img class="logo" src="logo.png" alt="Beukeuh Eksporind Logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="bentonit-id.html">Indonesia</a> |
+      🇬🇧 <a href="bentonit-en.html">English</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Bentonite</h2>
+    <p style="text-align: justify;">
+      Bentonite is a type of clay rich in montmorillonite, known for its high absorption and swelling capacity. It plays a vital role in various industries including drilling, purification, agriculture, and cosmetics. <br /><br />
+      We supply premium-grade Indonesian natural bentonite in finely milled powder form. Our bentonite is characterized by its consistent performance and high mineral purity, making it ideal for large-scale export applications. Beukeuh Eksporind ensures strict quality standards for global supply chain needs.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
