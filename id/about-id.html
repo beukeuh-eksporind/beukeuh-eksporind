@@ -2,88 +2,66 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami - Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- TOMBOL MENU MOBILE -->
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- MENU OVERLAY -->
-  <div class="fullscreen-menu" id="sideMenu">
-    <span class="close-btn" onclick="toggleMenu()">✖</span>
-    <nav>
-      <a href="about-id.html">📘 Tentang Kami</a>
-      <div class="dropdown-full">
-        <span>🍃 Produk Kami</span>
-        <a href="produk-bentonite.html">🧱 Bentonite</a>
-        <a href="produk-vanilla.html">🌿 Vanili</a>
-        <a href="produk-cinnamon.html">🌰 Kayu Manis</a>
-        <a href="produk-coffee.html">☕ Kopi</a>
-      </div>
-      <a href="galeri.html">🖼️ Galeri</a>
-      <a href="contact-id.html">📞 Hubungi Kami</a>
-    </nav>
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="#">Bentonit</a>
+      <a href="#">Vanili</a>
+      <a href="#">Kayu Manis</a>
+      <a href="#">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact.html">Hubungi Kami</a>
   </div>
 
-  <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Logo Beukeuh Eksporind">
+    <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
     <div class="lang-switch">
-      🇮🇩 Indonesia | <a href="about.html" style="color: #fff;">🇬🇧 English</a>
+      🇮🇩 <a href="about-id.html">Indonesia</a> |
+      🇬🇧 <a href="about.html">English</a>
     </div>
   </header>
 
-  <!-- NAVIGASI DESKTOP -->
   <div class="container">
-    <div class="top-buttons">
-      <a href="about-id.html">📘 Tentang Kami</a>
-
-      <div class="dropdown">
-        <a href="#">🍃 Produk Kami ▾</a>
-        <div class="dropdown-content">
-          <a href="produk-bentonite.html">🧱 Bentonite</a>
-          <a href="produk-vanilla.html">🌿 Vanili</a>
-          <a href="produk-cinnamon.html">🌰 Kayu Manis</a>
-          <a href="produk-coffee.html">☕ Kopi</a>
-        </div>
-      </div>
-
-      <a href="galeri.html">🖼️ Galeri</a>
-      <a href="contact-id.html">📞 Hubungi Kami</a>
-    </div>
-
-    <!-- KONTEN UTAMA -->
-    <main>
-      <h2>Tentang Kami</h2>
-      <p>
-        Beukeuh Eksporind adalah perusahaan yang bergerak dalam bidang ekspor berbagai komoditas alami unggulan dari Indonesia, seperti bentonite, vanili, kayu manis, dan kopi.
-      </p>
-      <p>
-        Kami berkomitmen untuk menyediakan produk berkualitas tinggi yang memenuhi standar internasional dan menjangkau pasar global.
-      </p>
-      <p>
-        Dengan semangat kolaboratif, keberlanjutan, dan inovasi, Beukeuh Eksporind membangun hubungan jangka panjang bersama mitra di seluruh dunia.
-      </p>
-    </main>
+    <h2>Tentang Kami</h2>
+    <p>
+      <strong>Beukeuh Eksporind</strong> adalah perusahaan yang bergerak dalam bidang ekspor komoditas alam Indonesia
+      ke pasar internasional. Kami percaya bahwa kekayaan alam Indonesia memiliki potensi besar untuk dikenal dan
+      dimanfaatkan secara global.
+    </p>
+    <p>
+      Dengan dedikasi terhadap kualitas dan keberlanjutan, kami mengekspor berbagai produk unggulan seperti bentonit,
+      vanili, kayu manis, dan kopi dari dataran tinggi Indonesia. Kami bekerja sama dengan petani lokal dan mitra terpercaya
+      untuk memastikan setiap produk memenuhi standar kualitas internasional.
+    </p>
+    <p>
+      Visi kami adalah menjadi jembatan antara kekayaan alam Indonesia dan kebutuhan dunia, dengan misi mengangkat potensi
+      lokal melalui ekspor yang bertanggung jawab dan profesional.
+    </p>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    © 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- JAVASCRIPT -->
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('sideMenu');
-      menu.classList.toggle('show');
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
     }
   </script>
-
 </body>
 </html>
