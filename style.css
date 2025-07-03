@@ -199,6 +199,52 @@ h1 {
 #menu-container {
   display: block;
 }
+/* ========== OVERLAY MENU ========== */
+.menu-toggle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(146, 185, 34, 0.95); /* Hijau transparan */
+  display: none;
+  z-index: 999;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.fullscreen-menu nav a,
+.fullscreen-menu .dropdown-full span {
+  display: block;
+  font-size: 1.8em;
+  color: white;
+  text-decoration: none;
+  margin: 12px 0;
+  font-weight: bold;
+}
+
+.fullscreen-menu .dropdown-full a {
+  font-size: 1.4em;
+  color: white;
+  margin-left: 16px;
+}
+
+.fullscreen-menu.show {
+  display: block;
+}
+
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
