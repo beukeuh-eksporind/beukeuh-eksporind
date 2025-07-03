@@ -1,29 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Ini adalah contoh struktur dasar halaman HTML yang sudah disinkronkan --><!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-  <div class="overlay-menu" id="overlayMenu">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
     <div class="submenu" id="submenu">
-      <a href="#">Bentonite</a>
-      <a href="#">Vanilla</a>
-      <a href="#">Cinnamon</a>
-      <a href="#">Coffee</a>
+      <a href="bentonit-en.html">Bentonite</a>
+      <a href="vanilla-en.html">Vanilla</a>
+      <a href="cinnamon-en.html">Cinnamon</a>
+      <a href="coffee-en.html">Coffee</a>
     </div>
     <a href="galeri.html">Gallery</a>
     <a href="contact.html">Contact Us</a>
-  </div>
-
-  <header>
+  </div>  <header>
     <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
@@ -31,33 +27,18 @@
       🇮🇩 <a href="index-id.html">Indonesia</a> |
       🇬🇧 <a href="index.html">English</a>
     </div>
-  </header>
-
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: 
-      <a href="mailto:export@beukeuheksprorind.com">export@beukeuheksprorind.com</a>
-    </p>
-
-    <a class="whatsapp-button" href="https://wa.me/628123456789">
-      💬 Contact via WhatsApp
-    </a>
-    <a class="download-button" href="#">
-      📄 Download Brochure (PDF)
-    </a>
-  </div>
-
-  <footer>
+  </header>  <div class="container">
+    <!-- Konten khusus halaman di sini -->
+    <h2>Welcome</h2>
+    <p>This is a sample synced page structure.</p>
+  </div>  <footer>
     &copy; 2025 Beukeuh Eksporind
-  </footer>
-
-  <script>
+  </footer>  <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
     }
-  </script>
-</body>
+  </script></body>
 </html>
