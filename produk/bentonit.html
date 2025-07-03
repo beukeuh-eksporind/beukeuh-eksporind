@@ -2,65 +2,64 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bentonit - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produk - Bentonit | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-  <!-- HEADER -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="produk-bentonite.html">Bentonit</a>
+      <a href="produk-vanilla.html">Vanili</a>
+      <a href="produk-cinnamon.html">Kayu Manis</a>
+      <a href="produk-coffee.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Hubungi Kami</a>
+  </div>
+
   <header>
-    <img src="../logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <img class="logo" src="logo.png" alt="Logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
-    <p class="lang-switch">
-      🇮🇩 Indonesia | <a href="bentonit-en.html" style="color: #fff;">🇬🇧 English</a>
-    </p>
+    <div class="lang-switch">
+      🇮🇩 <a href="produk-bentonite.html">Indonesia</a> |
+      🇬🇧 <a href="produk-bentonite-en.html">English</a>
+    </div>
   </header>
 
-  <!-- TOMBOL NAVIGASI -->
   <div class="container">
-  <div class="top-buttons">
-    <a href="../id/about.html">📘 Tentang Kami</a>
-
-    <div class="dropdown">
-      <a href="#">🍃 Produk Kami ▾</a>
-      <div class="dropdown-content">
-        <a href="bentonit.html">🧱 Bentonit</a>
-        <a href="vanila.html">🌿 Vanila</a>
-        <a href="kayu-manis.html">🌰 Kayu Manis</a>
-        <a href="kopi.html">☕ Kopi</a>
-      </div>
-    </div>
-
-    <a href="../id/galeri.html">🖼️ Galeri</a>
-    <a href="../id/kontak.html">📞 Hubungi Kami</a>
-  </div>
-
-  <!-- ISI UTAMA -->
-  <main>
-    <h2>🧱 Bentonit</h2>
+    <h2>Bentonit</h2>
     <p>
-      Bentonit adalah mineral alami yang memiliki banyak kegunaan di industri, termasuk pengeboran minyak, pemurnian air, dan pembuatan kosmetik. Kami menyediakan bentonit kualitas tinggi dari tambang Indonesia.
+      <strong>Bentonit</strong> adalah jenis tanah liat alami dengan kandungan montmorillonit tinggi, tersedia dalam bentuk <em>bubuk halus</em>. Sangat berguna dalam industri pengeboran, pemurnian, pertanian, hingga kosmetik. Kami menyediakan bentonit alami Indonesia berkualitas tinggi dengan kandungan mineral murni dan performa stabil, ideal untuk kebutuhan ekspor dalam jumlah besar.
     </p>
-    <ul>
-      <li>Bentonit aktif sodium & kalsium</li>
-      <li>Dikemas dalam karung 25kg atau jumbo bag</li>
-      <li>Siap ekspor dengan sertifikasi</li>
-      <li>Dapat disesuaikan dengan kebutuhan industri</li>
-    </ul>
 
-    <h3>Kontak</h3>
-    <p>Email: export@beukeuheksporind.com</p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Hubungi via WhatsApp</a><br />
-    <a class="download-button" href="../brochure.pdf" download>📄 Unduh Brosur (PDF)</a><br />
-    <a class="back-link" href="../id/index.html">⬅️ Kembali ke Beranda</a>
-  </main>
+    <a class="whatsapp-button" href="https://wa.me/628123456789">
+      💬 Hubungi Kami via WhatsApp
+    </a>
+    <a class="download-button" href="#">
+      📄 Unduh Brosur (PDF)
+    </a>
+
+    <a class="back-link" href="index-id.html">← Kembali ke Beranda</a>
   </div>
-  <!-- FOOTER -->
+
   <footer>
     &copy; 2025 Beukeuh Eksporind
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
