@@ -1,62 +1,84 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Natural Indonesian Commodities | Beukeuh Eksporind</title>
   <meta name="description" content="Explore our premium natural products from Indonesia, including bentonite, vanilla, cinnamon, and coffee. Beukeuh Eksporind — bringing local excellence to global markets." />
   <meta name="keywords" content="Indonesia export, bentonite, vanilla, cinnamon, coffee, natural products, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />  <!-- Open Graph -->  <meta property="og:title" content="Natural Indonesian Commodities | Beukeuh Eksporind" />
+  <meta name="author" content="Beukeuh Eksporind" />
+
+  <meta property="og:title" content="Natural Indonesian Commodities | Beukeuh Eksporind" />
   <meta property="og:description" content="High-quality Indonesian commodities ready for export — explore bentonite, vanilla, cinnamon, and coffee." />
   <meta property="og:image" content="images/hero.jpg" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/home.html" />
-  <meta property="og:type" content="website" />  <link rel="icon" href="images/logo.png" type="image/png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Commodities from Indonesia</p>
+    <div class="header-content">
+      <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+      <div class="company-info">
+        <h1>Beukeuh Eksporind</h1>
+        <p class="tagline">Natural Commodities from Indonesia</p>
+      </div>
+    </div>
     <div class="lang-switch">
       <a href="home-id.html">Bahasa Indonesia</a>
     </div>
-  </header>  <div class="overlay-menu" id="overlayMenu">
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanilla-en.html">Vanilla</a>
-      <a href="cinnamon-en.html">Cinnamon</a>
-      <a href="coffee-en.html">Coffee</a>
-    </div>
-    <a href="galeri-en.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>  <main class="container">
-    <img src="images/hero.jpg" alt="Hero Image" style="width:100%; border-radius:12px; margin: 1em 0;" />
-    <h2 style="text-align: center;">Welcome to Beukeuh Eksporind</h2>
-    <p style="text-align: justify;">
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About Us</a>
+      <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+      <div class="submenu" id="submenu">
+        <a href="bentonit-en.html">Bentonite</a>
+        <a href="vanilla-en.html">Vanilla</a>
+        <a href="cinnamon-en.html">Cinnamon</a>
+        <a href="coffee-en.html">Coffee</a>
+      </div>
+      <a href="galeri-en.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main class="container">
+    <img src="images/hero.jpg" alt="Hero Image" class="hero-image" />
+    <h2 class="section-title">Welcome to Beukeuh Eksporind</h2>
+    <p class="text-justify">
       Beukeuh Eksporind is your trusted partner in sourcing and exporting high-quality natural commodities from Indonesia. We specialize in bentonite, vanilla, cinnamon, and coffee — products that represent the richness of Indonesia's natural resources and cultural heritage.
     </p>
-    <p style="text-align: justify;">
+    <p class="text-justify">
       With a commitment to sustainability and excellence, we ensure our products meet international standards. Our mission is to connect local farmers and producers to the global market with integrity and professionalism.
     </p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">
-      Contact Us via WhatsApp
-    </a>
-    <a class="download-button" href="brochure.pdf" target="_blank">
-      Download Company Profile
-    </a>
-  </main>  <footer>
+    <div class="button-group">
+      <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank" rel="noopener noreferrer">
+        Contact Us via WhatsApp
+      </a>
+      <a class="download-button" href="brochure.pdf" target="_blank" rel="noopener noreferrer">
+        Download Company Profile
+      </a>
+    </div>
+  </main>
+
+  <footer>
     &copy; 2025 Beukeuh Eksporind. All rights reserved.
-  </footer>  <script>
+  </footer>
+
+  <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
     }
-  </script></body>
+  </script>
+</body>
 </html>
