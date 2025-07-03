@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="index-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <header>
+    <img class="logo" src="logo.png" alt="Logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami Indonesia untuk Pasar Global</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇬🇧 <a href="index.html">English</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Selamat Datang</h2>
+    <p>Beukeuh Eksporind adalah perusahaan ekspor yang menyediakan berbagai komoditas alami terbaik dari Indonesia untuk pasar dunia. Produk kami dipilih secara ketat dan dikemas secara profesional untuk memastikan kualitas maksimal di setiap pengiriman.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
