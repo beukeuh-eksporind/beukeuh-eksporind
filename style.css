@@ -33,24 +33,24 @@ h1 {
   font-size: 1.1em;
 }
 
-/* LANGUAGE SWITCH BUTTON */
+/* LANGUAGE SWITCH */
 .lang-switch {
   position: absolute;
-  top: 16px;
+  top: 14px;
   right: 16px;
-  font-size: 0.95em;
+  font-size: 0.85em;
   z-index: 1002;
 }
 .lang-switch a {
   color: white;
   text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.15);
   font-weight: bold;
-  background-color: #5a8633;
-  padding: 6px 12px;
-  border-radius: 4px;
 }
 .lang-switch a:hover {
-  background-color: #4a732b;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* TOGGLE BUTTON */
@@ -74,7 +74,7 @@ h1 {
   height: 100%;
   width: 70%;
   max-width: 300px;
-  background-color: rgba(172, 202, 138, 0.94); /* hijau lembut alami */
+  background-color: rgba(172, 202, 138, 0.94);
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
@@ -122,13 +122,13 @@ h1 {
   display: block;
 }
 
-/* CONTAINER & DESKRIPSI */
+/* CONTENT */
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
 }
-p, .container p, .container div, .container section {
+main.container p {
   text-align: justify;
 }
 footer {
@@ -163,7 +163,7 @@ footer {
   background-color: #0062cc;
 }
 
-/* GALERI */
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -174,18 +174,5 @@ footer {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  object-fit: cover;
-}
-
-/* SLIDESHOW */
-.slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 720px;
-  margin: 1em auto;
-}
-.slideshow img {
-  width: 100%;
-  border-radius: 8px;
   object-fit: cover;
 }
