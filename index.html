@@ -2,218 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
-  <style>
-    /* RESET & BASE */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffaf3;
-      color: #333;
-      line-height: 1.6;
-    }
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
 
-    /* HEADER & FOOTER */
-    header, footer {
-      background-color: #442d0d;
-      color: white;
-      text-align: center;
-      padding: 1em;
-    }
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="about.html">About Us</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="#">Bentonite</a>
+      <a href="#">Vanilla</a>
+      <a href="#">Cinnamon</a>
+      <a href="#">Coffee</a>
+    </div>
+    <a href="galeri.html">Gallery</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
 
-    .logo {
-      display: block;
-      margin: 0 auto 10px;
-      max-width: 120px;
-    }
+  <header>
+    <img class="logo" src="logo.png" alt="Logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
+    <div class="lang-switch">
+      🇮🇩 <a href="index-id.html">Indonesia</a> |
+      🇬🇧 <a href="index.html">English</a>
+    </div>
+  </header>
 
-    h1 {
-      margin: 0.2em 0;
-      font-size: 1.8em;
-    }
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: 
+      <a href="mailto:export@beukeuheksprorind.com">export@beukeuheksprorind.com</a>
+    </p>
 
-    .tagline {
-      font-style: italic;
-      font-size: 1.1em;
-    }
+    <a class="whatsapp-button" href="https://wa.me/628123456789">
+      💬 Contact via WhatsApp
+    </a>
+    <a class="download-button" href="#">
+      📄 Download Brochure (PDF)
+    </a>
+  </div>
 
-    .lang-switch {
-      margin-top: 0.5em;
-      font-size: 0.95em;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* MENU TOGGLE */
-    .menu-toggle {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      font-size: 1.8em;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    /* OVERLAY MENU */
-    .fullscreen-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 90%;
-      max-width: 320px;
-      height: 100%;
-      background-color: rgba(146, 185, 34, 0.94);
-      display: none;
-      z-index: 999;
-      padding: 2em 1.2em;
-      box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .fullscreen-menu.show {
-      display: block;
-    }
-
-    .fullscreen-menu .close-btn {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: none;
-      border: none;
-      font-size: 1.8em;
-      color: white;
-      cursor: pointer;
-    }
-
-    .fullscreen-menu nav a {
-      display: block;
-      font-size: 1.2em;
-      color: white;
-      text-decoration: none;
-      margin: 12px 0;
-      font-weight: 600;
-    }
-
-    .fullscreen-menu .dropdown-full span {
-      display: block;
-      font-size: 1.1em;
-      margin-top: 14px;
-      color: #f9ffe3;
-      font-weight: bold;
-    }
-
-    .fullscreen-menu .dropdown-full a {
-      display: block;
-      font-size: 0.95em;
-      color: #f0f5df;
-      margin-left: 12px;
-      margin-top: 4px;
-      text-decoration: none;
-      font-weight: normal;
-    }
-
-    .fullscreen-menu a:hover {
-      text-decoration: underline;
-    }
-
-    /* MAIN CONTENT */
-    main {
-      padding: 1.5em 1em;
-      text-align: center;
-    }
-
-    .whatsapp-button, .download-button {
-      display: inline-block;
-      padding: 10px 16px;
-      margin: 8px;
-      border-radius: 6px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-    }
-
-    .whatsapp-button {
-      background-color: #25D366;
-    }
-
-    .download-button {
-      background-color: #007bff;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
-    }
-
-    .download-button:hover {
-      background-color: #006ad6;
-    }
-
-    footer {
-      font-size: 0.9em;
-      margin-top: 2em;
-    }
-  </style>
+  <footer>
+    &copy; 2025 Beukeuh Eksporind
+  </footer>
 
   <script>
     function toggleMenu() {
-      const menu = document.getElementById('fullscreenMenu');
-      menu.classList.toggle('show');
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
     }
   </script>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="logo.png" class="logo" alt="Beukeuh Ekspor Logo">
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Indonesian Commodities, Global Reach</p>
-    <p class="lang-switch">
-      <a href="index-id.html" style="color: #fff;">🇮🇩 Indonesia</a> | 🇬🇧 English
-    </p>
-  </header>
-
-  <!-- OVERLAY MENU -->
-  <div class="fullscreen-menu" id="fullscreenMenu">
-    <button class="close-btn" onclick="toggleMenu()">✕</button>
-    <nav>
-      <a href="about.html">📘 About Us</a>
-      <div class="dropdown-full">
-        <span>🍃 Our Products</span>
-        <a href="produk/bentonit-en.html">🧱 Bentonite</a>
-        <a href="produk/vanilla-en.html">🌿 Vanilla</a>
-        <a href="produk/cinnamon-en.html">🌰 Cinnamon</a>
-        <a href="produk/coffee-en.html">☕ Coffee</a>
-      </div>
-      <a href="gallery.html">🖼️ Gallery</a>
-      <a href="contact.html">📞 Contact Us</a>
-    </nav>
-  </div>
-
-  <!-- MAIN -->
-  <main class="container">
-    <h2>Contact</h2>
-    <p>Email: export@beukeuheksporind.com</p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">💬 Contact via WhatsApp</a><br />
-    <a class="download-button" href="brochure.pdf" download>📄 Download Brochure (PDF)</a>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Beukeuh Eksporind
-  </footer>
-
 </body>
 </html>
