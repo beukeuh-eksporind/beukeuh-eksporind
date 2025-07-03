@@ -8,45 +8,67 @@
 </head>
 <body>
 
+  <!-- TOMBOL MENU MOBILE -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- MENU OVERLAY -->
+  <div class="fullscreen-menu" id="sideMenu">
+    <span class="close-btn" onclick="toggleMenu()">✖</span>
+    <nav>
+      <a href="about-id.html">📘 Tentang Kami</a>
+      <div class="dropdown-full">
+        <span>🍃 Produk Kami</span>
+        <a href="produk-bentonite.html">🧱 Bentonite</a>
+        <a href="produk-vanilla.html">🌿 Vanili</a>
+        <a href="produk-cinnamon.html">🌰 Kayu Manis</a>
+        <a href="produk-coffee.html">☕ Kopi</a>
+      </div>
+      <a href="galeri.html">🖼️ Galeri</a>
+      <a href="contact-id.html">📞 Hubungi Kami</a>
+    </nav>
+  </div>
+
   <!-- HEADER -->
   <header>
-    <img src="logo.png" class="logo" alt="Logo Beukeun Ekspor" />
+    <img src="logo.png" class="logo" alt="Logo Beukeuh Eksporind">
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alam Indonesia, Menjangkau Dunia</p>
-    <p class="lang-switch">
+    <div class="lang-switch">
       🇮🇩 Indonesia | <a href="about.html" style="color: #fff;">🇬🇧 English</a>
-    </p>
+    </div>
   </header>
 
-  <!-- HAMBURGER MENU -->
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-
-  <!-- NAVIGATION -->
-  <div id="menu-container">
+  <!-- NAVIGASI DESKTOP -->
+  <div class="container">
     <div class="top-buttons">
-      <a href="index-id.html">🏠 Beranda</a>
+      <a href="about-id.html">📘 Tentang Kami</a>
 
       <div class="dropdown">
         <a href="#">🍃 Produk Kami ▾</a>
         <div class="dropdown-content">
-          <a href="produk/produk-bentonite.html">🧱 Bentonite</a>
-          <a href="produk/produk-vanilla.html">🌿 Vanilla</a>
-          <a href="produk/produk-cinnamon.html">🌰 Kayu Manis</a>
-          <a href="produk/produk-coffee.html">☕ Kopi</a>
+          <a href="produk-bentonite.html">🧱 Bentonite</a>
+          <a href="produk-vanilla.html">🌿 Vanili</a>
+          <a href="produk-cinnamon.html">🌰 Kayu Manis</a>
+          <a href="produk-coffee.html">☕ Kopi</a>
         </div>
       </div>
 
       <a href="galeri.html">🖼️ Galeri</a>
       <a href="contact-id.html">📞 Hubungi Kami</a>
     </div>
-  </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
+    <!-- KONTEN UTAMA -->
     <main>
       <h2>Tentang Kami</h2>
-      <p>Beukeuh Eksporind adalah perusahaan yang bergerak di bidang ekspor komoditas alam Indonesia seperti rempah-rempah, kopi, dan mineral berkualitas tinggi.</p>
-      <p>Kami berkomitmen untuk menyediakan produk terbaik dengan memperhatikan keberlanjutan dan kepercayaan mitra global. Visi kami adalah membawa kekayaan alam Indonesia ke dunia dengan integritas dan dedikasi.</p>
+      <p>
+        Beukeuh Eksporind adalah perusahaan yang bergerak dalam bidang ekspor berbagai komoditas alami unggulan dari Indonesia, seperti bentonite, vanili, kayu manis, dan kopi.
+      </p>
+      <p>
+        Kami berkomitmen untuk menyediakan produk berkualitas tinggi yang memenuhi standar internasional dan menjangkau pasar global.
+      </p>
+      <p>
+        Dengan semangat kolaboratif, keberlanjutan, dan inovasi, Beukeuh Eksporind membangun hubungan jangka panjang bersama mitra di seluruh dunia.
+      </p>
     </main>
   </div>
 
@@ -55,10 +77,11 @@
     © 2025 Beukeuh Eksporind
   </footer>
 
-  <!-- TOGGLE SCRIPT -->
+  <!-- JAVASCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("menu-container").classList.toggle("active");
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('show');
     }
   </script>
 
