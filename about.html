@@ -5,18 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>About Us | Beukeuh Eksporind</title>
-  <meta name="description" content="Learn more about Beukeuh Eksporind — trusted Indonesian exporter of premium natural commodities." />
-  <meta name="keywords" content="About Beukeuh Eksporind, Indonesian exporter, natural commodities, bentonite, vanilla, cinnamon, coffee" />
+  <meta name="description" content="Learn more about Beukeuh Eksporind – your trusted partner in exporting Indonesia’s finest natural products." />
+  <meta name="keywords" content="Beukeuh Eksporind, about us, Indonesian export company, natural products, bentonite, vanilla, cinnamon, coffee" />
   <meta name="author" content="Beukeuh Eksporind" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Us | Beukeuh Eksporind" />
+  <meta property="og:description" content="Trusted Indonesian exporter of natural products including bentonite, vanilla, cinnamon, and coffee." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/about.html" />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Natural Commodities from Indonesia</p>
+    <div class="lang-switch">
+      <a href="about-id.html">Bahasa Indonesia</a>
+    </div>
+  </header>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
     <div class="submenu" id="submenu">
       <a href="bentonit-en.html">Bentonite</a>
@@ -25,28 +43,25 @@
       <a href="coffee-en.html">Coffee</a>
     </div>
     <a href="galeri-en.html">Gallery</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <p class="tagline">Premium Natural Commodities from Indonesia</p>
-    <div class="lang-switch">
-      🇮🇩 <a href="about-id.html">Indonesia</a> |
-      🇬🇧 <a href="about.html">English</a>
-    </div>
-  </header>
-
-  <div class="container">
-    <h1>About Us</h1>
+  <main class="container">
+    <h2>About Us</h2>
     <p style="text-align: justify;">
-      Beukeuh Eksporind is a trusted export company based in Indonesia, dedicated to delivering the finest natural commodities to the world. Our mission is to build strong partnerships through transparency, quality assurance, and sustainable practices. With a focus on bentonite, vanilla, cinnamon, and coffee, we aim to promote Indonesian excellence in the global market.
+      Beukeuh Eksporind is an Indonesian company dedicated to delivering the best of our natural resources to the world. 
+      With a strong commitment to quality, sustainability, and global standards, we focus on exporting key Indonesian commodities 
+      including bentonite, vanilla, cinnamon, and coffee. Our team ensures every product meets international requirements while 
+      maintaining authenticity and local value.
     </p>
-  </div>
+    <p style="text-align: justify;">
+      We believe in long-term partnerships and transparent trade practices. Whether you're a global buyer or regional distributor, 
+      Beukeuh Eksporind is here to support your business needs with integrity and professionalism.
+    </p>
+  </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind. All rights reserved.
   </footer>
 
   <script>
