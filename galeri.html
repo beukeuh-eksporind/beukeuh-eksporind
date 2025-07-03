@@ -4,24 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Galeri Produk | Beukeuh Eksporind</title>
-  <meta name="description" content="Lihat galeri foto produk ekspor unggulan Indonesia dari Beukeuh Eksporind, termasuk bentonit, vanila, kayu manis, dan kopi." />
-  <meta name="keywords" content="Galeri produk, ekspor Indonesia, bentonit, vanila, kayu manis, kopi" />
+  <title>Galeri | Beukeuh Eksporind</title>
+  <meta name="description" content="Lihat galeri produk ekspor alami Indonesia dari Beukeuh Eksporind – bentonit, vanila, kayu manis, dan kopi." />
+  <meta name="keywords" content="galeri, ekspor Indonesia, produk alami, Beukeuh Eksporind, bentonit, vanila, kayu manis, kopi" />
   <meta name="author" content="Beukeuh Eksporind" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Galeri Produk | Beukeuh Eksporind" />
-  <meta property="og:description" content="Galeri produk alami ekspor dari Indonesia oleh Beukeuh Eksporind." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/hero.jpg" />
+  <meta property="og:title" content="Galeri | Beukeuh Eksporind" />
+  <meta property="og:description" content="Galeri produk ekspor alami Indonesia dari Beukeuh Eksporind." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/galeri.html" />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      padding: 1em 0;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
+    <div class="lang-switch">
+      <a href="galeri-en.html">English</a>
+    </div>
+  </header>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home-id.html">Beranda</a>
@@ -37,31 +59,20 @@
     <a href="contact-id.html">Kontak</a>
   </div>
 
-  <header>
-    <img class="logo" src="logo.png" alt="Logo Beukeuh Eksporind" />
-    <h1>Galeri Produk</h1>
-    <p class="tagline">Keindahan Komoditas Alami Indonesia</p>
-    <div class="lang-switch">
-      🇮🇩 <a href="galeri.html">Indonesia</a> |
-      🇬🇧 <a href="galeri-en.html">English</a>
-    </div>
-  </header>
-
-  <div class="container">
-    <p style="text-align: justify;">
-      Temukan keindahan dan kualitas produk alami unggulan kami melalui galeri ini. Setiap gambar mencerminkan komitmen kami terhadap standar ekspor tinggi dan keberlanjutan sumber daya alam Indonesia.
-    </p>
-
+  <main class="container">
+    <h2 style="text-align: center;">Galeri Produk</h2>
     <div class="gallery-grid">
-      <img src="images/galeri.1.jpg" alt="Bentonit Indonesia" />
-      <img src="images/galeri.2.jpg" alt="Vanila Kering" />
-      <img src="images/galeri.3.jpg" alt="Kayu Manis Batang" />
-      <img src="images/galeri.4.jpg" alt="Biji Kopi Alami" />
+      <img src="galeri.1.jpg" alt="Produk 1" />
+      <img src="galeri.2.jpg" alt="Produk 2" />
+      <img src="galeri.3.jpg" alt="Produk 3" />
+      <img src="galeri.4.jpg" alt="Produk 4" />
+      <img src="galeri.5.jpg" alt="Produk 5" />
+      <img src="galeri.6.jpg" alt="Produk 6" />
     </div>
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
   </footer>
 
   <script>
