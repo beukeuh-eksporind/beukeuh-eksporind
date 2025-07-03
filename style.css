@@ -1,9 +1,9 @@
-/* ========== RESET & BASE ========== */
+/* ========== RESET ========== */
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fffaf3;
@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
 }
 
-/* ========== LAYOUT CONTAINER ========== */
+/* ========== CONTAINER ========== */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -43,7 +43,7 @@ h1 {
   font-size: 0.95em;
 }
 
-/* ========== TOP NAVIGATION ========== */
+/* ========== TOP BUTTON NAVIGATION ========== */
 .top-buttons {
   display: flex;
   justify-content: center;
@@ -126,7 +126,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* ========== GALLERY ========== */
+/* ========== GALLERY GRID ========== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -140,7 +140,7 @@ h1 {
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== BUTTONS ========== */
+/* ========== WHATSAPP & DOWNLOAD BUTTON ========== */
 .whatsapp-button,
 .download-button {
   display: inline-block;
@@ -177,9 +177,8 @@ h1 {
   text-decoration: underline;
 }
 
-/* ========== MENU TOGGLE (MOBILE) ========== */
+/* ========== TOGGLE MENU ========== */
 .menu-toggle {
-  display: none;
   position: absolute;
   top: 16px;
   left: 16px;
@@ -191,57 +190,55 @@ h1 {
   z-index: 1001;
 }
 
-/* ========== OVERLAY MENU MOBILE ========== */
+/* ========== OVERLAY MENU ========== */
 .fullscreen-menu {
   position: fixed;
-  top: 12%;
+  top: 20px;
   left: 6%;
-  width: 88%; /* Tidak penuh, beri jarak kiri-kanan */
-  background-color: rgba(146, 185, 34, 0.95); /* Hijau adem transparan */
-  padding: 24px 20px;
-  border-radius: 18px;
+  width: 88%;
+  background-color: rgba(146, 185, 34, 0.93);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 24px;
   z-index: 1000;
   display: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .fullscreen-menu.show {
   display: block;
 }
 
-.fullscreen-menu .close-btn {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 1.6em;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.fullscreen-menu nav a,
-.fullscreen-menu .dropdown-full > span {
-  display: block;
-  font-size: 1.2em;
-  color: white;
-  text-decoration: none;
-  margin: 14px 0 6px;
-  font-weight: bold;
+.fullscreen-menu nav {
   text-align: left;
 }
 
-.fullscreen-menu .dropdown-full a {
-  font-size: 1em;
-  color: white;
-  margin-left: 24px;
-  margin-top: 4px;
-  text-decoration: none;
+.fullscreen-menu a,
+.fullscreen-menu .dropdown-full span {
   display: block;
-  font-weight: 500;
+  font-size: 1.4em;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 12px 0 6px;
 }
 
+.fullscreen-menu .dropdown-full a {
+  font-size: 1.05em;
+  font-weight: normal;
+  margin-left: 24px;
+  margin-bottom: 6px;
+}
+
+/* ========== CLOSE BUTTON ========== */
+.close-menu {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
