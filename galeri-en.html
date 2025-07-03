@@ -3,30 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Gallery | Beukeuh Eksporind</title>
-  <meta name="description" content="View our natural export product gallery from Indonesia – bentonite, vanilla, cinnamon, and coffee by Beukeuh Eksporind." />
-  <meta name="keywords" content="gallery, Indonesia export, natural products, Beukeuh Eksporind, bentonite, vanilla, cinnamon, coffee" />
+  <meta name="description" content="Explore our export product gallery: bentonite, vanilla, cinnamon, and coffee from Indonesia." />
+  <meta name="keywords" content="gallery, Indonesian exports, natural products, Beukeuh Eksporind, bentonite, vanilla, cinnamon, coffee" />
   <meta name="author" content="Beukeuh Eksporind" />
-
   <meta property="og:title" content="Gallery | Beukeuh Eksporind" />
-  <meta property="og:description" content="A showcase of Indonesia’s natural export products by Beukeuh Eksporind." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
+  <meta property="og:description" content="Natural product gallery from Beukeuh Eksporind." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/galeri-en.html" />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- SwiperJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      padding: 1em 0;
-    }
-    .gallery-grid img {
+    .swiper {
       width: 100%;
-      border-radius: 10px;
+      max-width: 800px;
+      margin: 1em auto;
+      padding-bottom: 30px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       object-fit: cover;
     }
@@ -35,7 +37,7 @@
 <body>
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
+    <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Commodities from Indonesia</p>
     <div class="lang-switch">
@@ -61,13 +63,18 @@
 
   <main class="container">
     <h2 style="text-align: center;">Product Gallery</h2>
-    <div class="gallery-grid">
-      <img src="galeri.1.jpg" alt="Product 1" />
-      <img src="galeri.2.jpg" alt="Product 2" />
-      <img src="galeri.3.jpg" alt="Product 3" />
-      <img src="galeri.4.jpg" alt="Product 4" />
-      <img src="galeri.5.jpg" alt="Product 5" />
-      <img src="galeri.6.jpg" alt="Product 6" />
+
+    <!-- Swiper Gallery -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/galeri.1.jpg" alt="Product 1"></div>
+        <div class="swiper-slide"><img src="images/galeri.2.jpg" alt="Product 2"></div>
+        <div class="swiper-slide"><img src="images/galeri.3.jpg" alt="Product 3"></div>
+        <div class="swiper-slide"><img src="images/galeri.4.jpg" alt="Product 4"></div>
+        <div class="swiper-slide"><img src="images/galeri.5.jpg" alt="Product 5"></div>
+        <div class="swiper-slide"><img src="images/galeri.6.jpg" alt="Product 6"></div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </main>
 
@@ -82,6 +89,15 @@
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
     }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      pagination: { el: ".swiper-pagination" },
+      autoplay: { delay: 3000 },
+    });
   </script>
 </body>
 </html>
