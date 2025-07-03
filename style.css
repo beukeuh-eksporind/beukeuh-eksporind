@@ -111,6 +111,12 @@ h1 {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+/* Justify all paragraph text inside container */
+.container p {
+  text-align: justify;
+}
+
 footer {
   margin-top: 2em;
   font-size: 0.9em;
