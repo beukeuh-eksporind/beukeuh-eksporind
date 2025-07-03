@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -18,46 +17,36 @@ header, footer {
   color: white;
   text-align: center;
   padding: 1em;
-  position: relative;
 }
-
 .logo {
   display: block;
   margin: 0 auto 10px;
   max-width: 120px;
 }
-
 h1 {
   margin: 0.2em 0;
   font-size: 1.8em;
 }
-
 .tagline {
   font-style: italic;
   font-size: 1.1em;
 }
-
 .lang-switch {
   position: absolute;
-  top: 12px;
+  top: 16px;
   right: 16px;
-  font-size: 0.9em;
 }
-
 .lang-switch a {
   background-color: #fff;
   color: #442d0d;
-  padding: 4px 10px;
-  margin-left: 4px;
-  border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  font-size: 0.85em;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  text-decoration: none;
 }
-
 .lang-switch a:hover {
-  background-color: #eee0c5;
+  background-color: #ddd;
 }
 
 /* TOGGLE BUTTON */
@@ -88,11 +77,9 @@ h1 {
   padding: 80px 1.2em 1.2em;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
-
 .overlay-menu.show {
   transform: translateX(0);
 }
-
 .overlay-menu .close-btn {
   position: absolute;
   top: 12px;
@@ -103,7 +90,6 @@ h1 {
   color: #d33;
   cursor: pointer;
 }
-
 .overlay-menu a,
 .overlay-menu .dropdown-toggle {
   display: block;
@@ -112,26 +98,21 @@ h1 {
   text-decoration: none;
   color: #222;
   font-weight: 500;
-  font-family: 'Segoe UI', sans-serif;
 }
-
 .dropdown-toggle {
   cursor: pointer;
 }
-
 .submenu {
   margin-left: 16px;
   margin-top: 4px;
   font-size: 0.95em;
   display: none;
 }
-
 .submenu a {
   display: block;
   margin: 4px 0;
   font-weight: normal;
 }
-
 .submenu.show {
   display: block;
 }
@@ -141,12 +122,18 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
-  text-align: justify;
 }
-
 footer {
   margin-top: 2em;
   font-size: 0.9em;
+}
+
+/* HERO IMAGE */
+.hero-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
 }
 
 /* BUTTONS */
@@ -163,48 +150,29 @@ footer {
   text-decoration: none;
   color: white;
 }
-
 .whatsapp-button {
   background-color: #25D366;
 }
-
 .whatsapp-button:hover {
   background-color: #1ebe5d;
 }
-
 .download-button {
   background-color: #007bff;
 }
-
 .download-button:hover {
   background-color: #0062cc;
 }
 
-/* GALERI */
+/* GALLERY */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   padding: 1em 0;
 }
-
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   object-fit: cover;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.4em;
-  }
-  .tagline {
-    font-size: 1em;
-  }
-  .lang-switch {
-    top: 8px;
-    right: 10px;
-  }
 }
