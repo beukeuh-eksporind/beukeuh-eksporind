@@ -3,31 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Beukeuh Eksporind</title>
-  <meta name="description" content="Gallery of our premium Indonesian export commodities including bentonite, vanilla, cinnamon, and coffee." />
-  <meta name="keywords" content="export gallery, Indonesian products, bentonite, vanilla, cinnamon, coffee, Beukeuh Eksporind" />
+
+  <title>Product Gallery | Beukeuh Eksporind</title>
+  <meta name="description" content="Browse the photo gallery of our premium Indonesian export products, including bentonite, vanilla, cinnamon, and coffee." />
+  <meta name="keywords" content="product gallery, Indonesian export, bentonite, vanilla, cinnamon, coffee" />
   <meta name="author" content="Beukeuh Eksporind" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Product Gallery | Beukeuh Eksporind" />
+  <meta property="og:description" content="Gallery of Indonesia's natural export products by Beukeuh Eksporind." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/hero.jpg" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/galeri-en.html" />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .gallery-container {
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -35,6 +25,7 @@
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
     <div class="submenu" id="submenu">
       <a href="bentonit-en.html">Bentonite</a>
@@ -43,26 +34,29 @@
       <a href="coffee-en.html">Coffee</a>
     </div>
     <a href="galeri-en.html">Gallery</a>
-    <a href="about.html">About Us</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <p class="tagline">Premium Natural Commodities from Indonesia</p>
+    <img class="logo" src="logo.png" alt="Beukeuh Eksporind Logo" />
+    <h1>Product Gallery</h1>
+    <p class="tagline">Showcasing Indonesia’s Natural Commodities</p>
     <div class="lang-switch">
       🇮🇩 <a href="galeri.html">Indonesia</a> |
       🇬🇧 <a href="galeri-en.html">English</a>
     </div>
   </header>
 
-  <div class="container gallery-container">
-    <h1>Product Gallery</h1>
-    <div class="gallery">
-      <img src="images/galeri.1.jpg" alt="Product 1" />
-      <img src="images/galeri.2.jpg" alt="Product 2" />
-      <img src="images/galeri.3.jpg" alt="Product 3" />
-      <img src="images/galeri.4.jpg" alt="Product 4" />
+  <div class="container">
+    <p style="text-align: justify;">
+      Discover the beauty and quality of our premium natural products through this gallery. Each photo reflects our commitment to high export standards and the sustainable richness of Indonesia’s natural resources.
+    </p>
+
+    <div class="gallery-grid">
+      <img src="images/galeri.1.jpg" alt="Indonesian Bentonite" />
+      <img src="images/galeri.2.jpg" alt="Dried Vanilla" />
+      <img src="images/galeri.3.jpg" alt="Cinnamon Sticks" />
+      <img src="images/galeri.4.jpg" alt="Natural Coffee Beans" />
     </div>
   </div>
 
