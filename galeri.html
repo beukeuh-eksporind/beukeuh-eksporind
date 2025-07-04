@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <header class="main-header">
@@ -24,7 +25,7 @@
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="kopi.html">Products</a>
+        <a href="bentonit-en.html">Products</a>
         <a href="galeri.html" class="active">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -32,14 +33,21 @@
   </header>
 
   <main class="container">
-    <section>
-      <h2>Photo Gallery</h2>
-      <p>Explore our products and export activities through our collection of images below.</p>
-      <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Coffee Beans" />
-        <img src="images/gallery2.jpg" alt="Vanilla Drying" />
-        <img src="images/gallery3.jpg" alt="Cinnamon Sticks" />
-        <img src="images/gallery4.jpg" alt="Bentonite Process" />
+    <section class="gallery-section">
+      <h2>Gallery</h2>
+      <p>Explore our products and activities through images below.</p>
+      <div class="swiper gallerySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/galeri.1.jpg" alt="Gallery 1" /></div>
+          <div class="swiper-slide"><img src="images/galeri.2.jpg" alt="Gallery 2" /></div>
+          <div class="swiper-slide"><img src="images/galeri.3.jpg" alt="Gallery 3" /></div>
+          <div class="swiper-slide"><img src="images/galeri.4.jpg" alt="Gallery 4" /></div>
+          <div class="swiper-slide"><img src="images/galeri.5.jpg" alt="Gallery 5" /></div>
+          <div class="swiper-slide"><img src="images/galeri.6.jpg" alt="Gallery 6" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
   </main>
@@ -48,6 +56,7 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("show");
@@ -56,6 +65,21 @@
       link.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('show');
       });
+    });
+    const swiper = new Swiper('.gallerySwiper', {
+      loop: true,
+      spaceBetween: 16,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      autoplay: { delay: 3000 },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
     });
   </script>
 </body>
