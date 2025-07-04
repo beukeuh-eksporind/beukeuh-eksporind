@@ -2,14 +2,26 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+          document.getElementById("navLinks").classList.remove("show");
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="main-header">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -19,51 +31,41 @@
       </div>
 
       <nav class="nav-links" id="navLinks">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <a href="bentonit-id.html">Produk</a>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="bentonit.html">Produk</a>
         <a href="galeri.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
+        <a href="contact.html">Kontak</a>
         <div class="lang-switch">
-          <a href="home-id.html" class="active">ID</a>
-          <a href="home.html">EN</a>
+          <a href="index-id.html" class="active">ID</a>
+          <a href="index.html">EN</a>
         </div>
       </nav>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <div class="hero-banner">
-    <img src="images/hero-banner.jpg" alt="Banner" />
+  <!-- HERO -->
+  <section class="hero-banner">
+    <img src="images/hero.jpg" alt="Hero Banner" />
     <div class="hero-text">
-      <h2>Solusi Ekspor Komoditas Alami</h2>
-      <p>Dari alam Indonesia untuk dunia</p>
+      <h2>Selamat Datang di Beukeuh Eksporind</h2>
+      <p>Eksportir Komoditas Alami dari Indonesia</p>
     </div>
-  </div>
+  </section>
 
+  <!-- CONTENT -->
   <main class="container">
-    <h2>Selamat Datang di Beukeuh Eksporind</h2>
-    <p>
-      Kami adalah penyedia dan eksportir komoditas alami dari Indonesia seperti bentonit, arang batok kelapa, dan banyak lagi.
-    </p>
-    <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">Hubungi via WhatsApp</a>
-    <a href="files/profil.pdf" class="download-button" target="_blank">Unduh Profil Perusahaan</a>
+    <p>Kami menyediakan produk alami seperti bentonit, rempah, dan lainnya dengan kualitas ekspor.</p>
+
+    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">
+      Hubungi Kami via WhatsApp
+    </a>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('show');
-    }
-
-    // Tutup menu saat link diklik
-    document.querySelectorAll('#navLinks a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
-      });
-    });
-  </script>
 </body>
 </html>
