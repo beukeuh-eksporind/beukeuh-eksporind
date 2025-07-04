@@ -2,92 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Beukeuh Eksporind</title>
-  <meta name="description" content="Contact us for export collaboration on Indonesia’s natural commodities — bentonite, vanilla, cinnamon, and coffee." />
-  <meta name="keywords" content="contact, Indonesian export, natural commodities, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Contact | Beukeuh Eksporind" />
-  <meta property="og:description" content="Contact Beukeuh Eksporind for more information." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/contact.html" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    input, textarea {
-      width: 100%;
-      margin: 0.5em 0;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-    }
-    button[type="submit"] {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button[type="submit"]:hover {
-      background-color: #555;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Commodities from Indonesia</p>
-    <div class="lang-switch">
-      <a href="contact-id.html">ID</a>
-      
+
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonit-en.html">Products</a>
+        <a href="galeri.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+        <div class="lang-switch">
+          <a href="contact-id.html">ID</a>
+          <a href="contact.html" class="active">EN</a>
+        </div>
+      </nav>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit.html">Bentonite</a>
-      <a href="vanila.html">Vanilla</a>
-      <a href="cinnamon.html">Cinnamon</a>
-      <a href="kopi.html">Coffee</a>
-    </div>
-    <a href="galeri-en.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
   <main class="container">
-    <h2 style="text-align: center;">Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <h2>Contact Us</h2>
+    <p>We're happy to assist with any inquiries regarding our products or partnership opportunities.</p>
+
+    <ul>
+      <li><strong>Email:</strong> info@beukeuh-eksporind.com</li>
+      <li><strong>Phone:</strong> +62 812-8254-1982</li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Chat Us</a></li>
+      <li><strong>Location:</strong> Bandung, West Java, Indonesia</li>
+    </ul>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact via WhatsApp</a>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
+
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
   </script>
+
 </body>
-  </html>
+</html>
