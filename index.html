@@ -1,63 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beukeuh Eksporind</title>
+  <meta name="description" content="Beukeuh Eksporind menjual komoditas alami Indonesia seperti bentonit, vanila, kayu manis, dan kopi." />
+  <meta name="keywords" content="ekspor Indonesia, produk alami, bentonit, vanila, kayu manis, kopi" />
+  <meta name="author" content="Beukeuh Eksporind" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-
-      <!-- TOGGLE BUTTON -->
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <!-- NAVIGATION LINKS -->
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="products.html">Products</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonit-id.html">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
         <div class="lang-switch">
-          <a href="index-id.html">ID</a>
-          <a href="index.html" class="active">EN</a>
+          <a href="home-id.html" class="active">ID</a>
+          <a href="home.html">EN</a>
         </div>
       </nav>
+      <button class="menu-toggle" onclick="toggleNav()">☰</button>
     </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="container">
-    <h2>Welcome to Beukeuh Eksporind</h2>
-    <p>
-      We specialize in exporting Indonesia's finest natural commodities including bentonite,
-      vanilla, cinnamon, and coffee. Our commitment is to quality, sustainability, and global distribution.
-    </p>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
+  </header>  <div class="hero-banner">
+    <img src="images/banner.jpg" alt="Banner Beukeuh" class="banner" />
+    <div class="hero-text">
+      <h2>Ekspor Alami dari Hati Indonesia</h2>
+      <p>Menjangkau dunia dengan kualitas alam terbaik</p>
+    </div>
+  </div>  <main class="container">
+    <h2>Selamat Datang di Beukeuh Eksporind</h2>
+    <p>Kami adalah eksportir komoditas alami dari Indonesia seperti bentonit, vanila, kayu manis, dan kopi. Kami percaya pada kekuatan alam dan pentingnya keberlanjutan dalam setiap produk yang kami ekspor.</p>
+  </main>  <footer>
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+  </footer>  <script>
+    function toggleNav() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('show');
     }
-  </script>
 
-</body>
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+  </script></body>
 </html>
