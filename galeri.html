@@ -35,18 +35,26 @@
       right: 1.5em;
       font-size: 0.9em;
     }
-    .lang-switch a {
+    .lang-switch a,
+    .lang-switch span {
       margin-left: 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      background-color: #e0e0e0;
       padding: 4px 8px;
       border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
       transition: background-color 0.3s;
+    }
+    .lang-switch a {
+      background-color: #e0e0e0;
+      color: #333;
     }
     .lang-switch a:hover {
       background-color: #ccc;
+    }
+    .lang-switch .active-lang {
+      background-color: #555;
+      color: white;
+      cursor: default;
     }
   </style>
 </head>
@@ -57,7 +65,7 @@
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alami dari Indonesia</p>
     <div class="lang-switch">
-      <a href="galeri.html">ID</a>
+      <span class="active-lang">ID</span>
       <a href="galeri-en.html">EN</a>
     </div>
   </header>
@@ -106,6 +114,7 @@
     function toggleSubmenu() {
       document.getElementById("submenu").classList.toggle("show");
     }
+
     const swiper = new Swiper(".swiper", {
       loop: true,
       autoplay: { delay: 3000 },
