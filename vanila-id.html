@@ -1,68 +1,66 @@
-<!-- vanila-id.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vanila | Beukeuh Eksporind</title>
-  <meta name="description" content="Vanila alami dari Indonesia berkualitas ekspor, harum, dan premium. Cocok untuk makanan, minuman, dan parfum." />
-  <meta name="keywords" content="vanila Indonesia, vanila ekspor, komoditas alami, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Vanila | Beukeuh Eksporind" />
-  <meta property="og:description" content="Vanila Indonesia berkualitas tinggi untuk industri makanan, minuman, dan parfum." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/vanila-banner.jpg" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/vanila-id.html" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alami dari Indonesia</p>
-    <div class="lang-switch">
-      <a href="vanila.html">EN</a>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="vanila-id.html" class="active">ID</a>
+        <a href="vanila-en.html">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="vanila-id.html" class="active">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang Kami</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-id.html">Bentonit</a>
-      <a href="vanila-id.html">Vanila</a>
-      <a href="kayu-manis.html">Kayu Manis</a>
-      <a href="kopi.html">Kopi</a>
-    </div>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <main>
-    <img src="images/vanila-banner.jpg" alt="Vanila Banner" class="banner" />
-    <section class="container">
-      <h2 style="text-align: center;">Vanila Indonesia Berkualitas Ekspor</h2>
-      <p style="text-align: justify;">
-        Vanila Indonesia dikenal dengan aroma khas dan kualitas premium yang dihasilkan dari proses budidaya yang alami dan penuh ketelatenan. Kami menghadirkan vanila yang telah dipilih secara selektif dari petani lokal, cocok untuk kebutuhan industri makanan, minuman, dan parfum alami.
-      </p>
+  <main class="container">
+    <section>
+      <h2>Vanila dari Indonesia</h2>
+      <p>Vanila kami berasal dari petani lokal Indonesia dengan aroma khas dan kandungan vanilin tinggi. Kami menyediakan vanila kering berkualitas ekspor sesuai permintaan pasar internasional.</p>
+      <ul>
+        <li><strong>Jenis:</strong> Vanila Planifolia (Grade A, B, dan C)</li>
+        <li><strong>Kadar air:</strong> 25–35%</li>
+        <li><strong>Panjang:</strong> 13–18 cm</li>
+        <li><strong>Kemasan:</strong> Vakum atau curah (sesuai permintaan)</li>
+        <li><strong>Asal:</strong> Indonesia</li>
+      </ul>
     </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Minta Penawaran</a>
+    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
   </script>
 </body>
 </html>
