@@ -1,71 +1,91 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("show");
-    }
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("#navLinks a").forEach(link => {
-        link.addEventListener("click", () => {
-          document.getElementById("navLinks").classList.remove("show");
-        });
-      });
-    });
-  </script>
 </head>
 <body>
+
   <header class="main-header">
     <div class="container">
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
 
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Beranda</a>
-        <a href="about.html">Tentang</a>
-        <a href="bentonit.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galeri.html">Gallery</a>
+        <a href="contact.html">Contact</a>
         <div class="lang-switch">
-          <a href="index-id.html" class="active">ID</a>
-          <a href="index.html">EN</a>
+          <a href="index-id.html">ID</a>
+          <a href="index.html" class="active">EN</a>
         </div>
       </nav>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero-banner">
-    <img src="images/hero.jpg" alt="Hero Banner" />
-    <div class="hero-text">
-      <h2>Selamat Datang di Beukeuh Eksporind</h2>
-      <p>Eksportir Komoditas Alami dari Indonesia</p>
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="galeri.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="lang-switch">
+      <a href="index-id.html">ID</a>
+      <a href="index.html" class="active">EN</a>
     </div>
-  </section>
+  </div>
 
-  <!-- CONTENT -->
   <main class="container">
-    <p>Kami menyediakan produk alami seperti bentonit, rempah, dan lainnya dengan kualitas ekspor.</p>
+    <section class="hero-banner">
+      <img src="images/banner.jpg" alt="Banner">
+      <div class="hero-text">
+        <h2>Beukeuh Eksporind</h2>
+        <p>Exporting Nature's Best from Indonesia</p>
+      </div>
+    </section>
 
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">
-      Hubungi Kami via WhatsApp
-    </a>
+    <section>
+      <h2>Welcome to Beukeuh Eksporind</h2>
+      <p>We specialize in sourcing and exporting premium-quality natural commodities including coffee, vanilla, cinnamon, and bentonite from the lush islands of Indonesia.</p>
+    </section>
+
+    <a href="https://wa.me/6281234567890" class="whatsapp-button">Contact via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Brochure (PDF)</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    menuToggle.addEventListener('click', () => {
+      overlayMenu.classList.add('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlayMenu.classList.remove('show');
+    });
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        overlayMenu.classList.remove('show');
+      });
+    });
+  </script>
+
 </body>
 </html>
