@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinnamon | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="kayu-manis-id.html">ID</a>
+        <a href="kayu-manis.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="kayu-manis.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Indonesian Cinnamon</h2>
+      <p>Our cinnamon is carefully harvested from plantations in Indonesia, offering warm aroma and premium flavor. We supply high-quality cassia cinnamon sticks, chips, and powder to meet export standards.</p>
+      <ul>
+        <li><strong>Type:</strong> Cassia Cinnamon (Stick / Chip / Powder)</li>
+        <li><strong>Moisture:</strong> &lt; 13%</li>
+        <li><strong>Color:</strong> Reddish-brown</li>
+        <li><strong>Packaging:</strong> PP bag or carton box</li>
+        <li><strong>Origin:</strong> Sumatra, Indonesia</li>
+      </ul>
+    </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Request Quotation</a>
+    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
