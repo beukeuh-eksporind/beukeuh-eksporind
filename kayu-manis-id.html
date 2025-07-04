@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayu Manis | Beukeuh Eksporind</title>
+  <meta name="description" content="Ekspor kayu manis alami dari Indonesia — berkualitas tinggi, aromatik, dan siap kirim ke pasar global.">
+  <meta name="keywords" content="kayu manis, ekspor Indonesia, rempah alami, Beukeuh Eksporind">
+  <meta name="author" content="Beukeuh Eksporind" />
+  <meta property="og:title" content="Kayu Manis | Beukeuh Eksporind" />
+  <meta property="og:description" content="Kayu manis premium dari Indonesia, siap ekspor.">
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/kayu-manis-banner.jpg" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/kayu-manis-id.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
+    <div class="lang-switch">
+      <a href="kayu-manis.html">EN</a>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila.html">Vanila</a>
+      <a href="kayu-manis-id.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main class="container">
+    <img src="images/kayu-manis-banner.jpg" alt="Banner Kayu Manis" class="banner-image" />
+    <h2 style="text-align: center;">Kayu Manis</h2>
+    <p style="text-align: justify;">
+      Kami menghadirkan kayu manis terbaik dari hutan Indonesia, dengan aroma kuat, rasa manis alami, dan kualitas ekspor yang terjamin. Tersedia dalam bentuk stik dan bubuk, cocok untuk industri makanan, kesehatan, dan kecantikan.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
