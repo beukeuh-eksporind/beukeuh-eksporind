@@ -1,17 +1,15 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
-  <meta name="description" content="Beukeuh Eksporind menjual komoditas alami Indonesia seperti bentonit, vanila, kayu manis, dan kopi." />
-  <meta name="keywords" content="ekspor Indonesia, produk alami, bentonit, vanila, kayu manis, kopi" />
-  <meta name="author" content="Beukeuh Eksporind" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
 </head>
 <body>
   <header class="main-header">
     <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -30,23 +28,34 @@
           <a href="home.html">EN</a>
         </div>
       </nav>
-      <button class="menu-toggle" onclick="toggleNav()">☰</button>
     </div>
-  </header>  <div class="hero-banner">
-    <img src="images/banner.jpg" alt="Banner Beukeuh" class="banner" />
+  </header>
+
+  <section class="hero-banner">
+    <img src="images/banner.jpg" alt="Banner Komoditas">
     <div class="hero-text">
-      <h2>Ekspor Alami dari Hati Indonesia</h2>
-      <p>Menjangkau dunia dengan kualitas alam terbaik</p>
+      <h2>Solusi Ekspor Alami dari Indonesia</h2>
+      <p>Kualitas, Keaslian, dan Kepercayaan</p>
     </div>
-  </div>  <main class="container">
+  </section>
+
+  <main class="container">
     <h2>Selamat Datang di Beukeuh Eksporind</h2>
-    <p>Kami adalah eksportir komoditas alami dari Indonesia seperti bentonit, vanila, kayu manis, dan kopi. Kami percaya pada kekuatan alam dan pentingnya keberlanjutan dalam setiap produk yang kami ekspor.</p>
-  </main>  <footer>
-    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
-  </footer>  <script>
-    function toggleNav() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('show');
+    <p>
+      Kami menyediakan komoditas alami seperti bentonit dan produk lainnya langsung dari Indonesia untuk kebutuhan ekspor internasional. Berkomitmen pada kualitas dan keberlanjutan, kami adalah mitra terpercaya Anda dalam rantai pasok global.
+    </p>
+    <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="download/catalog.pdf" class="download-button" download>Unduh Katalog</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
     }
 
     document.querySelectorAll('#navLinks a').forEach(link => {
@@ -54,5 +63,6 @@
         document.getElementById('navLinks').classList.remove('show');
       });
     });
-  </script></body>
+  </script>
+</body>
 </html>
