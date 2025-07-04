@@ -196,3 +196,90 @@ footer {
   object-fit: cover;
   display: block;
 }
+/* HEADER BARU: .main-header */
+.main-header {
+  background-color: #442d0d;
+  color: white;
+  padding: 0.8em 0;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand .logo {
+  max-width: 60px;
+  height: auto;
+}
+.brand-name h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+.brand-name .tagline {
+  font-size: 0.95em;
+  font-style: italic;
+  margin-top: 4px;
+}
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+.lang-switch {
+  display: flex;
+  gap: 6px;
+}
+.lang-switch a {
+  background-color: white;
+  color: #442d0d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+.lang-switch a.active {
+  background-color: #e6ddc4;
+}
+.menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE NAVIGATION (optional kalau mau menu collapse di mobile) */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1em;
+  }
+  .main-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
