@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="galeri-id.html">ID</a>
+        <a href="galeri.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="kopi.html">Products</a>
+        <a href="galeri.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Photo Gallery</h2>
+      <p>Explore our products and export activities through our collection of images below.</p>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Coffee Beans" />
+        <img src="images/gallery2.jpg" alt="Vanilla Drying" />
+        <img src="images/gallery3.jpg" alt="Cinnamon Sticks" />
+        <img src="images/gallery4.jpg" alt="Bentonite Process" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
