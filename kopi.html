@@ -4,18 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kopi | Beukeuh Eksporind</title>
-  <meta name="description" content="Kopi premium dari Indonesia untuk pasar ekspor global. Aroma khas, rasa kuat, dan kualitas terjaga." />
-  <meta name="keywords" content="kopi Indonesia, ekspor kopi, biji kopi, kopi robusta, kopi arabika, Beukeuh Eksporind" />
+  <meta name="description" content="Kopi Indonesia berkualitas tinggi dari Beukeuh Eksporind. Rasa otentik, aroma khas, dan pilihan terbaik untuk ekspor." />
+  <meta name="keywords" content="kopi Indonesia, ekspor kopi, kopi arabika, kopi robusta, Beukeuh Eksporind" />
   <meta name="author" content="Beukeuh Eksporind" />
-  <link rel="icon" href="logo.png" type="image/png" />
+  <meta property="og:title" content="Kopi | Beukeuh Eksporind" />
+  <meta property="og:description" content="Rasakan kekayaan rasa kopi Indonesia untuk pasar global." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/kopi-banner.jpg" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/kopi.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
+    <div class="lang-switch"><a href="coffee.html">EN</a></div>
+  </header>
 
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
     <div class="submenu" id="submenu">
       <a href="bentonit-id.html">Bentonit</a>
@@ -24,28 +36,21 @@
       <a href="kopi.html">Kopi</a>
     </div>
     <a href="galeri.html">Galeri</a>
-    <a href="about-id.html">Tentang Kami</a>
-    <a href="contact-id.html">Hubungi Kami</a>
+    <a href="contact-id.html">Kontak</a>
   </div>
 
-  <header>
-    <img class="logo" src="logo.png" alt="Logo" />
-    <p class="tagline">Komoditas Alami Premium dari Indonesia</p>
-    <div class="lang-switch">
-      🇮🇩 <a href="kopi.html">Indonesia</a> |
-      🇬🇧 <a href="coffee-en.html">English</a>
-    </div>
-  </header>
-
-  <div class="container">
-    <h1>Kopi</h1>
-    <p style="text-align: justify;">
-      Indonesia adalah salah satu produsen kopi terbaik dunia. Kami menyediakan kopi robusta dan arabika berkualitas tinggi langsung dari perkebunan terbaik di Indonesia. Dengan aroma khas dan rasa yang kuat, kopi kami ideal untuk ekspor ke pasar internasional dan memenuhi standar industri global.
-    </p>
-  </div>
+  <main>
+    <img src="images/kopi-banner.jpg" alt="Banner Kopi" style="width: 100%; max-height: 420px; object-fit: cover;" />
+    <section class="container">
+      <h2 style="text-align: center;">Kopi Indonesia</h2>
+      <p style="text-align: justify;">
+        Beukeuh Eksporind menyediakan kopi berkualitas tinggi dari berbagai daerah penghasil terbaik di Indonesia. Dengan rasa yang kaya, aroma yang kuat, dan karakteristik unik dari tanah tropis, kopi kami siap memenuhi kebutuhan pasar global. Kami menawarkan pilihan Arabika dan Robusta yang telah melalui proses seleksi dan pengolahan terbaik.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
   </footer>
 
   <script>
