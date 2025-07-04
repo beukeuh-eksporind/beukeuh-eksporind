@@ -2,67 +2,85 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tentang Kami | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('show');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#navLinks a').forEach(link => {
-        link.addEventListener('click', () => {
-          document.getElementById('navLinks').classList.remove('show');
-        });
-      });
-    });
-  </script>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
 
+      <div class="lang-switch">
+        <a href="about-id.html" class="active">ID</a>
+        <a href="about.html">EN</a>
+      </div>
+
       <nav class="nav-links" id="navLinks">
-        <a href="home-id.html">Beranda</a>
+        <a href="index-id.html">Beranda</a>
         <a href="about-id.html" class="active">Tentang</a>
         <a href="bentonit-id.html">Produk</a>
         <a href="galeri.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
-        <div class="lang-switch">
-          <a href="about-id.html" class="active">ID</a>
-          <a href="about.html">EN</a>
-        </div>
       </nav>
     </div>
   </header>
 
+  <!-- OVERLAY MENU (Mobile) -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="index-id.html">Beranda</a>
+    <a href="about-id.html" class="active">Tentang</a>
+    <a href="bentonit-id.html">Produk</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+    <div class="lang-switch">
+      <a href="about-id.html" class="active">ID</a>
+      <a href="about.html">EN</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
   <main class="container">
-    <h2>Tentang Kami</h2>
-    <p>
-      Beukeuh Eksporind adalah perusahaan yang berfokus pada ekspor komoditas alami berkualitas tinggi dari Indonesia ke pasar internasional. Kami percaya bahwa kekayaan alam Indonesia dapat menjadi kekuatan yang mendunia, jika dikelola dan dipasarkan dengan baik.
-    </p>
-    <p>
-      Kami berdedikasi untuk membangun hubungan bisnis yang berkelanjutan, transparan, dan saling menguntungkan dengan mitra dari berbagai negara. Produk utama kami meliputi bentonit, rempah-rempah, serta bahan baku alami lainnya.
-    </p>
-    <p>
-      Kami menjunjung tinggi nilai keaslian, keberlanjutan, dan kualitas dalam setiap proses bisnis kami.
-    </p>
+    <section>
+      <h2>Tentang Kami</h2>
+      <p>
+        Beukeuh Eksporind adalah perusahaan yang berkomitmen dalam mengekspor komoditas alami unggulan dari Indonesia — termasuk bentonit, arang, rempah-rempah, dan hasil bumi lainnya.
+      </p>
+      <p>
+        Kami menjunjung tinggi prinsip keberlanjutan, pemberdayaan lokal, serta kemitraan jangka panjang yang dibangun atas dasar kepercayaan dan pertumbuhan bersama. Dengan koneksi erat ke para produsen lokal dan visi global, kami hadir untuk membawa kekayaan alam Indonesia ke dunia.
+      </p>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      const overlay = document.getElementById("overlayMenu");
+      overlay.classList.toggle("show");
+    }
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
 
 </body>
 </html>
