@@ -2,23 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Beukeuh Eksporind</title>
-  <meta name="description" content="About Beukeuh Eksporind — Indonesian exporter of natural commodities such as bentonite, vanilla, cinnamon, and coffee." />
-  <meta name="keywords" content="about, Indonesian export, natural commodities, bentonite, coffee, vanilla, cinnamon" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="About Us | Beukeuh Eksporind" />
-  <meta property="og:description" content="Company profile of Indonesian natural commodity exporter." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/about.html" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -27,39 +18,41 @@
         </div>
       </div>
       <nav class="nav-links" id="navLinks">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
-        <a href="bentonit.html">Products</a>
-        <a href="galeri-en.html">Gallery</a>
+        <a href="bentonite.html">Products</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <div class="lang-switch">
           <a href="about-id.html">ID</a>
           <a href="about.html" class="active">EN</a>
         </div>
       </nav>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
   <main class="container">
-    <h2 style="text-align: center;">About Us</h2>
-    <p style="text-align: justify;">
-      Beukeuh Eksporind is an Indonesian company engaged in the export of natural commodities such as bentonite, vanilla, cinnamon, and coffee. We are committed to maintaining quality, sustainability, and integrity in every aspect of our business.
-    </p>
-    <p style="text-align: justify;">
-      With experience and a wide network, we serve as a bridge between local farmers and global markets. Our goal is to introduce Indonesia's natural wealth to the world through fairness, transparency, and sustainable practices.
-    </p>
+    <section>
+      <h2>About Us</h2>
+      <p>Beukeuh Eksporind is a company dedicated to exporting premium natural commodities from Indonesia, including Bentonite and other high-quality materials.</p>
+      <p>We prioritize sustainability, local empowerment, and long-term partnerships based on trust and mutual growth.</p>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("show");
     }
-  </script>
 
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+  </script>
 </body>
 </html>
