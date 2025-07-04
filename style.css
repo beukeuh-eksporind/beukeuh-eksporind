@@ -60,9 +60,10 @@ h1 {
   font-size: 1.8em;
   background: none;
   border: none;
-  color: white;
+  color: black;
   cursor: pointer;
   z-index: 1001;
+  display: none;
 }
 
 /* OVERLAY MENU */
@@ -73,7 +74,7 @@ h1 {
   height: 100%;
   width: 70%;
   max-width: 300px;
-  background-color: rgba(172, 202, 138, 0.94); /* hijau lembut alami */
+  background-color: rgba(172, 202, 138, 0.94);
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
@@ -196,6 +197,7 @@ footer {
   object-fit: cover;
   display: block;
 }
+
 /* HEADER BARU: .main-header */
 .main-header {
   background-color: #442d0d;
@@ -265,49 +267,24 @@ footer {
 .lang-switch a.active {
   background-color: #e6ddc4;
 }
-.menu-toggle {
-  display: block;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  z-index: 1001;
-}
-}
-/* Tombol toggle: muncul di mobile */
-.menu-toggle {
-  display: none;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  color: black; /* sudah kamu set */
-  cursor: pointer;
-  z-index: 1001;
-}
 
-/* Responsive: nav disembunyikan, tombol muncul */
+/* Responsive nav + opacity effect */
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
   .nav-links {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
-.nav-links.show {
-  opacity: 1;
-  pointer-events: auto;
-}
+
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
