@@ -32,20 +32,24 @@ h1 {
   font-size: 1.1em;
 }
 .lang-switch {
+  margin-top: 0.5em;
+  font-size: 0.95em;
   position: absolute;
-  top: 1em;
-  right: 1em;
-  font-size: 0.9em;
-  background-color: #fff;
-  color: #442d0d;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.2em 0.6em;
+  top: 1.2em;
+  right: 1.2em;
 }
 .lang-switch a {
-  text-decoration: none;
+  background-color: #fff;
   color: #442d0d;
+  padding: 4px 10px;
+  border-radius: 5px;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 0.9em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.lang-switch a:hover {
+  background-color: #f2e6d9;
 }
 
 /* TOGGLE BUTTON */
@@ -69,7 +73,7 @@ h1 {
   height: 100%;
   width: 70%;
   max-width: 300px;
-  background-color: rgba(172, 202, 138, 0.94);
+  background-color: rgba(172, 202, 138, 0.94); /* hijau lembut alami */
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
@@ -122,6 +126,7 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 16px;
+  text-align: justify;
 }
 footer {
   margin-top: 2em;
@@ -155,16 +160,33 @@ footer {
   background-color: #0062cc;
 }
 
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  padding: 1em 0;
-}
-.gallery-grid img {
+/* HERO BANNER */
+.hero-banner {
+  position: relative;
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  height: 320px;
+  overflow: hidden;
+}
+.hero-banner img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  filter: brightness(0.7);
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+.hero-text h2 {
+  font-size: 2em;
+  margin: 0;
+}
+.hero-text p {
+  margin-top: 0.3em;
+  font-size: 1.1em;
 }
