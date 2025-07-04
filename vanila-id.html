@@ -1,0 +1,68 @@
+<!-- vanila-id.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanila | Beukeuh Eksporind</title>
+  <meta name="description" content="Vanila alami dari Indonesia berkualitas ekspor, harum, dan premium. Cocok untuk makanan, minuman, dan parfum." />
+  <meta name="keywords" content="vanila Indonesia, vanila ekspor, komoditas alami, Beukeuh Eksporind" />
+  <meta name="author" content="Beukeuh Eksporind" />
+  <meta property="og:title" content="Vanila | Beukeuh Eksporind" />
+  <meta property="og:description" content="Vanila Indonesia berkualitas tinggi untuk industri makanan, minuman, dan parfum." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/vanila-banner.jpg" />
+  <meta property="og:url" content="https://beukeuh-eksporind.github.io/vanila-id.html" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <h1>Beukeuh Eksporind</h1>
+    <p class="tagline">Komoditas Alami dari Indonesia</p>
+    <div class="lang-switch">
+      <a href="vanila.html">EN</a>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang Kami</a>
+    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
+    <div class="submenu" id="submenu">
+      <a href="bentonit-id.html">Bentonit</a>
+      <a href="vanila-id.html">Vanila</a>
+      <a href="kayu-manis.html">Kayu Manis</a>
+      <a href="kopi.html">Kopi</a>
+    </div>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main>
+    <img src="images/vanila-banner.jpg" alt="Vanila Banner" class="banner" />
+    <section class="container">
+      <h2 style="text-align: center;">Vanila Indonesia Berkualitas Ekspor</h2>
+      <p style="text-align: justify;">
+        Vanila Indonesia dikenal dengan aroma khas dan kualitas premium yang dihasilkan dari proses budidaya yang alami dan penuh ketelatenan. Kami menghadirkan vanila yang telah dipilih secara selektif dari petani lokal, cocok untuk kebutuhan industri makanan, minuman, dan parfum alami.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    function toggleSubmenu() {
+      document.getElementById("submenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
