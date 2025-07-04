@@ -3,33 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Kontak | Beukeuh Eksporind</title>
-  <meta name="description" content="Hubungi Beukeuh Eksporind untuk informasi lebih lanjut tentang produk ekspor alami Indonesia." />
-  <meta name="keywords" content="kontak, ekspor Indonesia, produk alami, Beukeuh Eksporind" />
+  <meta name="description" content="Hubungi kami untuk kerja sama ekspor produk alami dari Indonesia — bentonit, vanila, kayu manis, dan kopi." />
+  <meta name="keywords" content="kontak, ekspor Indonesia, komoditas alami, Beukeuh Eksporind" />
   <meta name="author" content="Beukeuh Eksporind" />
-
   <meta property="og:title" content="Kontak | Beukeuh Eksporind" />
-  <meta property="og:description" content="Hubungi Beukeuh Eksporind untuk kerja sama dan pemesanan." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
+  <meta property="og:description" content="Hubungi Beukeuh Eksporind untuk informasi lebih lanjut." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/contact-id.html" />
   <meta property="og:type" content="website" />
-
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 0.5em 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
+    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alami dari Indonesia</p>
     <div class="lang-switch">
-      <a href="contact.html">English</a>
+      <span class="active-lang">ID</span>
+      <a href="contact.html">EN</a>
     </div>
   </header>
 
-  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home-id.html">Beranda</a>
@@ -46,12 +68,13 @@
   </div>
 
   <main class="container">
-    <h2 style="text-align:center;">Hubungi Kami</h2>
-    <p style="text-align: justify;">
-      Untuk informasi produk, pemesanan, atau kerja sama ekspor, silakan hubungi kami melalui WhatsApp atau email. Kami siap melayani kebutuhan Anda dengan profesionalisme dan komitmen tinggi.
-    </p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">Hubungi via WhatsApp</a>
-    <p style="text-align: center;">Email: <a href="mailto:info@beukeuh-eksporind.com">info@beukeuh-eksporind.com</a></p>
+    <h2 style="text-align: center;">Hubungi Kami</h2>
+    <form>
+      <input type="text" placeholder="Nama Anda" required />
+      <input type="email" placeholder="Email Anda" required />
+      <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
   </main>
 
   <footer>
