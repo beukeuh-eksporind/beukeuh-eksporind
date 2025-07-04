@@ -3,24 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beranda | Beukeuh Eksporind</title>
-  <meta name="description" content="Komoditas ekspor alami berkualitas tinggi dari Indonesia — bentonit, vanila, kayu manis, dan kopi." />
-  <meta name="keywords" content="ekspor Indonesia, bentonit, vanila, kayu manis, kopi, komoditas alami, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Beranda | Beukeuh Eksporind" />
-  <meta property="og:description" content="Produk ekspor alami terbaik dari Indonesia." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/hero.jpg" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/home-id.html" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
+  <title>Beukeuh Eksporind - Beranda</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
@@ -37,34 +29,45 @@
           <a href="home.html">EN</a>
         </div>
       </nav>
+      <!-- TOMBOL TOGGLE -->
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <main>
-    <div class="hero-banner">
-      <img src="images/hero.jpg" alt="Hero Banner" />
-      <div class="hero-text">
-        <h2>Selamat Datang di Beukeuh Eksporind</h2>
-        <p>Mitra Ekspor Alami Tepercaya dari Indonesia</p>
-      </div>
+  <!-- MENU MOBILE -->
+  <div class="overlay-menu" id="mobileMenu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonit-id.html">Produk</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+    <div class="submenu">
+      <a href="home-id.html">ID</a>
+      <a href="home.html">EN</a>
     </div>
+  </div>
 
-    <section class="container">
-      <h2 style="text-align: center;">Komitmen Kami</h2>
-      <p style="text-align: justify;">
-        Kami adalah perusahaan eksportir produk alami asal Indonesia yang berkomitmen menghadirkan kualitas terbaik dari bumi Nusantara ke pasar global. Produk utama kami mencakup bentonit, vanila, kayu manis, dan kopi. Dengan standar mutu tinggi dan proses berkelanjutan, kami siap menjadi mitra ekspor terpercaya Anda.
-      </p>
-    </section>
-  </main>
+  <!-- KONTEN UTAMA -->
+  <div class="container">
+    <h2>Tentang Kami</h2>
+    <p>
+      Beukeuh Eksporind adalah perusahaan Indonesia yang bergerak di bidang ekspor komoditas alami seperti bentonit, vanila, kayu manis, dan kopi. Kami berkomitmen untuk menjaga kualitas, keberlanjutan, dan integritas dalam setiap proses bisnis kami.
+    </p>
+    <p>
+      Dengan pengalaman dan jaringan luas, kami hadir sebagai jembatan antara petani lokal dan pasar global.
+    </p>
+  </div>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+    &copy; 2025 Beukeuh Eksporind. Semua Hak Dilindungi.
   </footer>
 
+  <!-- SCRIPT TOGGLE MENU -->
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      document.getElementById("mobileMenu").classList.toggle("show");
     }
   </script>
 
