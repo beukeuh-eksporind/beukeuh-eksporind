@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -17,42 +20,67 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
+
+      <div class="lang-switch">
+        <a href="about-id.html">ID</a>
+        <a href="about.html" class="active">EN</a>
+      </div>
+
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="bentonite.html">Products</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
-        <div class="lang-switch">
-          <a href="about-id.html">ID</a>
-          <a href="about.html" class="active">EN</a>
-        </div>
       </nav>
     </div>
   </header>
 
+  <!-- OVERLAY MENU (Mobile) -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="bentonite.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <div class="lang-switch">
+      <a href="about-id.html">ID</a>
+      <a href="about.html" class="active">EN</a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section>
       <h2>About Us</h2>
-      <p>Beukeuh Eksporind is a company dedicated to exporting premium natural commodities from Indonesia, including Bentonite and other high-quality materials.</p>
-      <p>We prioritize sustainability, local empowerment, and long-term partnerships based on trust and mutual growth.</p>
+      <p>
+        Beukeuh Eksporind is a company committed to exporting premium natural commodities from Indonesia — including Bentonite, charcoal, spices, and other agricultural products.
+      </p>
+      <p>
+        We prioritize sustainability, local empowerment, and long-term partnerships rooted in trust and mutual growth. With deep ties to local producers and a global outlook, our mission is to bring the best of Indonesia’s nature to the world.
+      </p>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      const overlay = document.getElementById("overlayMenu");
+      overlay.classList.toggle("show");
     }
 
-    document.querySelectorAll('#navLinks a').forEach(link => {
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
+
 </body>
 </html>
