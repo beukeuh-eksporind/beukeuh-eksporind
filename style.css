@@ -278,18 +278,34 @@ footer {
   z-index: 1001;
 }
 }
+/* Tombol toggle: muncul di mobile */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: black; /* sudah kamu set */
+  cursor: pointer;
+  z-index: 1001;
+}
 
-/* RESPONSIVE NAVIGATION (optional kalau mau menu collapse di mobile) */
+/* Responsive: nav disembunyikan, tombol muncul */
 @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
     margin-top: 1em;
   }
-  .main-header .container {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .nav-links.show {
+    display: flex;
   }
 }
-
