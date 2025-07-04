@@ -2,68 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bentonite | Beukeuh Eksporind</title>
-  <meta name="description" content="High-quality bentonite export from Indonesia for industrial use. Beukeuh Eksporind is your trusted global partner." />
-  <meta name="keywords" content="bentonite, bentonite export, Indonesia, natural products, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Bentonite | Beukeuh Eksporind" />
-  <meta property="og:description" content="Export-grade bentonite from Indonesia. Discover our premium product." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/bentonit-banner.jpg" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/bentonit-en.html" />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Commodities from Indonesia</p>
-    <div class="lang-switch">
-      <a href="bentonit-id.html">ID</a>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="bentonit-id.html">ID</a>
+        <a href="bentonite.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonite.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanila.html">Vanilla</a>
-      <a href="kayu-manis.html">Cinnamon</a>
-      <a href="kopi.html">Coffee</a>
-    </div>
-    <a href="galeri-en.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <main>
-    <img src="images/bentonit-banner.jpg" alt="Bentonite Export" class="banner" />
-    <section class="container">
-      <h2 style="text-align: center;">Indonesian Bentonite</h2>
-      <p style="text-align: justify;">
-        Bentonite is a natural mineral with numerous industrial applications, from oil drilling to wastewater treatment and cosmetics. Beukeuh Eksporind provides premium-grade bentonite sourced from Indonesia, ensuring purity, consistency, and reliable supply to meet global demands.
+  <main class="container">
+    <section>
+      <h2>Bentonite Products</h2>
+      <p>
+        Our Bentonite is sourced from trusted mining locations in Indonesia and processed to meet the export-quality standards required by global industries.
       </p>
+      <ul>
+        <li><strong>Applications:</strong> Drilling mud, binder in iron ore pelletizing, foundry sands, cat litter, and agriculture.</li>
+        <li><strong>Type:</strong> Sodium Bentonite & Calcium Bentonite</li>
+        <li><strong>Packaging:</strong> 25 kg, 50 kg sacks or jumbo bags (1 ton)</li>
+        <li><strong>Origin:</strong> Indonesia</li>
+      </ul>
     </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Request Quotation</a>
+    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
   </script>
 </body>
 </html>
