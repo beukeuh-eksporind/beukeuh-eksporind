@@ -29,8 +29,24 @@
       object-fit: cover;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-    h2 {
-      margin-top: 1.5em;
+    .lang-switch {
+      position: absolute;
+      top: 1.2em;
+      right: 1.5em;
+      font-size: 0.9em;
+    }
+    .lang-switch a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      background-color: #e0e0e0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .lang-switch a:hover {
+      background-color: #ccc;
     }
   </style>
 </head>
@@ -41,6 +57,7 @@
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Komoditas Alami dari Indonesia</p>
     <div class="lang-switch">
+      <a href="galeri.html">ID</a>
       <a href="galeri-en.html">EN</a>
     </div>
   </header>
