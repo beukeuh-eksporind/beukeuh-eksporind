@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -28,19 +29,20 @@
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonite.html">Products</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="bentonit-en.html">Products</a>
+        <a href="galeri-en.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
+  <!-- OVERLAY MENU (Mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="bentonite.html">Products</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="bentonit-en.html">Products</a>
+    <a href="galeri-en.html">Gallery</a>
     <a href="contact.html">Contact</a>
     <div class="lang-switch">
       <a href="home-id.html">ID</a>
@@ -48,6 +50,7 @@
     </div>
   </div>
 
+  <!-- HERO -->
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
@@ -57,24 +60,33 @@
       </div>
     </section>
 
+    <!-- CONTENT -->
     <section>
       <h2>Welcome to Beukeuh Eksporind</h2>
       <p>
-        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods. 
+        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.
       </p>
       <p>
         With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.
       </p>
     </section>
 
+    <!-- BUTTONS -->
     <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
     <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp">
+    <img src="images/wa-icon.png" alt="WhatsApp Button">
+  </a>
+
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
