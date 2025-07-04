@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopi | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="kopi-id.html" class="active">ID</a>
+        <a href="kopi.html">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="kopi-id.html" class="active">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Kopi Indonesia</h2>
+      <p>Indonesia merupakan salah satu produsen kopi terbesar di dunia. Kami menyediakan biji kopi hijau maupun kopi sangrai dari Sumatra dan Jawa, dengan cita rasa khas yang diakui secara global.</p>
+      <ul>
+        <li><strong>Jenis:</strong> Arabika, Robusta</li>
+        <li><strong>Bentuk:</strong> Green Bean atau Sangrai</li>
+        <li><strong>Kadar Air:</strong> &lt; 12%</li>
+        <li><strong>Kemasan:</strong> Karung goni 60 kg atau sesuai permintaan</li>
+        <li><strong>Asal:</strong> Sumatra, Jawa, Indonesia</li>
+      </ul>
+    </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Minta Penawaran</a>
+    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
