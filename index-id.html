@@ -21,21 +21,36 @@
         </div>
       </div>
 
+      <div class="lang-switch">
+        <a href="index-id.html" class="active">ID</a>
+        <a href="index.html">EN</a>
+      </div>
+
       <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
         <a href="bentonit-id.html">Produk</a>
         <a href="galeri.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
-        <div class="lang-switch">
-          <a href="index-id.html" class="active">ID</a>
-          <a href="index.html">EN</a>
-        </div>
       </nav>
     </div>
   </header>
 
-  <!-- HERO BANNER -->
+  <!-- OVERLAY MENU (untuk mobile) -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonit-id.html">Produk</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+    <div class="lang-switch">
+      <a href="index-id.html" class="active">ID</a>
+      <a href="index.html">EN</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
   <section class="hero-banner">
     <img src="images/hero.jpg" alt="Hero Banner" />
     <div class="hero-text">
@@ -50,26 +65,25 @@
     <p>
       Kami adalah perusahaan ekspor yang fokus pada produk-produk alami unggulan dari Indonesia seperti bentonit, arang, rempah, dan hasil bumi lainnya.
     </p>
-    <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">Hubungi Kami di WhatsApp</a>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Hubungi Kami di WhatsApp</a>
     <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    &copy; 2025 Beukeuh Eksporind. All rights reserved.
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <!-- SCRIPT: Toggle Menu -->
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
+      const overlayMenu = document.getElementById("overlayMenu");
+      overlayMenu.classList.toggle("show");
     }
 
-    // Tutup menu saat klik link (untuk mobile)
-    document.querySelectorAll('#navLinks a').forEach(link => {
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
