@@ -2,68 +2,66 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bentonit | Beukeuh Eksporind</title>
-  <meta name="description" content="Ekspor bentonit berkualitas tinggi dari Indonesia untuk berbagai industri. Beukeuh Eksporind siap menjadi mitra global Anda." />
-  <meta name="keywords" content="bentonit, ekspor bentonit, Indonesia, produk alami, Beukeuh Eksporind" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Bentonit | Beukeuh Eksporind" />
-  <meta property="og:description" content="Bentonit berkualitas ekspor dari Indonesia. Temukan produk unggulan kami." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/bentonit-banner.jpg" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/bentonit-id.html" />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alami dari Indonesia</p>
-    <div class="lang-switch">
-      <a href="bentonit-en.html">EN</a>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="bentonit-id.html" class="active">ID</a>
+        <a href="bentonite.html">EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonit-id.html" class="active">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang Kami</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-id.html">Bentonit</a>
-      <a href="vanila.html">Vanila</a>
-      <a href="kayu-manis.html">Kayu Manis</a>
-      <a href="kopi.html">Kopi</a>
-    </div>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <main>
-    <img src="images/bentonit-banner.jpg" alt="Bentonit Indonesia" class="banner" />
-    <section class="container">
-      <h2 style="text-align: center;">Bentonit Indonesia</h2>
-      <p style="text-align: justify;">
-        Bentonit merupakan mineral alami yang memiliki banyak manfaat industri, mulai dari pengeboran minyak, pengolahan air, hingga kosmetik. Beukeuh Eksporind menyediakan bentonit dengan kualitas terbaik dari sumber terpercaya di Indonesia. Kami menjamin kemurnian, konsistensi, dan pasokan yang stabil untuk memenuhi kebutuhan pasar global.
+  <main class="container">
+    <section>
+      <h2>Produk Bentonit</h2>
+      <p>
+        Bentonit kami berasal dari tambang terpercaya di Indonesia dan diolah sesuai standar kualitas ekspor untuk memenuhi kebutuhan industri global.
       </p>
+      <ul>
+        <li><strong>Aplikasi:</strong> Lumpur pengeboran, bahan pengikat pelet bijih besi, pasir pengecoran, pasir kucing, dan pertanian.</li>
+        <li><strong>Jenis:</strong> Bentonit Natrium & Kalsium</li>
+        <li><strong>Kemasan:</strong> Karung 25 kg, 50 kg atau jumbo bag (1 ton)</li>
+        <li><strong>Asal:</strong> Indonesia</li>
+      </ul>
     </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Minta Penawaran</a>
+    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
   </main>
 
   <footer>
-    &copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
-    }
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('show');
+      });
+    });
   </script>
 </body>
 </html>
