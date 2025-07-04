@@ -19,16 +19,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Commodities from Indonesia</p>
-    <div class="lang-switch">
-      <a href="index-id.html">ID</a>
+<header class="main-header">
+  <div class="container">
+    <div class="brand">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <div class="brand-name">
+        <h1>Beukeuh Eksporind</h1>
+        <p class="tagline">Komoditas Alami dari Indonesia</p>
+      </div>
     </div>
-  </header>
-
+    <nav class="nav-links" id="navLinks">
+      <!-- Link menu -->
+      <a href="home-id.html">Beranda</a>
+      <a href="about-id.html">Tentang</a>
+      ...
+      <div class="lang-switch">
+        <a href="home-id.html" class="active">ID</a>
+        <a href="home.html">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
   <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
