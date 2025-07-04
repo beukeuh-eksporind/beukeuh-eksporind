@@ -266,7 +266,17 @@ footer {
   background-color: #e6ddc4;
 }
 .menu-toggle {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 1.8em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
 }
 
 /* RESPONSIVE NAVIGATION (optional kalau mau menu collapse di mobile) */
