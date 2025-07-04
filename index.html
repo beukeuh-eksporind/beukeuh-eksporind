@@ -2,20 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
-  <meta name="description" content="Exporting Indonesia’s natural commodities — bentonite, vanilla, cinnamon, and coffee." />
-  <meta name="keywords" content="bentonite, vanilla, cinnamon, coffee, Indonesia export" />
-  <meta name="author" content="Beukeuh Eksporind" />
-  <meta property="og:title" content="Beukeuh Eksporind" />
-  <meta property="og:description" content="Natural Commodities Export from Indonesia" />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
-  <meta property="og:url" content="https://beukeuh-eksporind.github.io/index.html" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <div class="brand">
@@ -26,38 +19,45 @@
         </div>
       </div>
 
+      <!-- TOGGLE BUTTON -->
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <!-- NAVIGATION LINKS -->
       <nav class="nav-links" id="navLinks">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonit-en.html">Products</a>
-        <a href="galeri-en.html">Gallery</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
         <div class="lang-switch">
           <a href="index-id.html">ID</a>
           <a href="index.html" class="active">EN</a>
         </div>
       </nav>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     <h2>Welcome to Beukeuh Eksporind</h2>
     <p>
-      We specialize in exporting Indonesia's finest natural commodities including bentonite, vanilla, cinnamon, and coffee. Our commitment is to quality, sustainability, and global distribution.
+      We specialize in exporting Indonesia's finest natural commodities including bentonite,
+      vanilla, cinnamon, and coffee. Our commitment is to quality, sustainability, and global distribution.
     </p>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     &copy; 2025 Beukeuh Eksporind. All rights reserved.
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById("navLinks");
       nav.classList.toggle("show");
     }
   </script>
+
 </body>
 </html>
