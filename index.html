@@ -17,6 +17,7 @@
           <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
+
       <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
@@ -31,21 +32,21 @@
     </div>
   </header>
 
-  <section class="hero-banner">
-    <img src="images/banner.jpg" alt="Banner Komoditas">
+  <div class="hero-banner">
+    <img src="images/hero-banner.jpg" alt="Banner" />
     <div class="hero-text">
-      <h2>Solusi Ekspor Alami dari Indonesia</h2>
-      <p>Kualitas, Keaslian, dan Kepercayaan</p>
+      <h2>Solusi Ekspor Komoditas Alami</h2>
+      <p>Dari alam Indonesia untuk dunia</p>
     </div>
-  </section>
+  </div>
 
   <main class="container">
     <h2>Selamat Datang di Beukeuh Eksporind</h2>
     <p>
-      Kami menyediakan komoditas alami seperti bentonit dan produk lainnya langsung dari Indonesia untuk kebutuhan ekspor internasional. Berkomitmen pada kualitas dan keberlanjutan, kami adalah mitra terpercaya Anda dalam rantai pasok global.
+      Kami adalah penyedia dan eksportir komoditas alami dari Indonesia seperti bentonit, arang batok kelapa, dan banyak lagi.
     </p>
-    <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-button">Hubungi via WhatsApp</a>
-    <a href="download/catalog.pdf" class="download-button" download>Unduh Katalog</a>
+    <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">Hubungi via WhatsApp</a>
+    <a href="files/profil.pdf" class="download-button" target="_blank">Unduh Profil Perusahaan</a>
   </main>
 
   <footer>
@@ -54,10 +55,10 @@
 
   <script>
     function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
+      document.getElementById('navLinks').classList.toggle('show');
     }
 
+    // Tutup menu saat link diklik
     document.querySelectorAll('#navLinks a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('show');
