@@ -3,51 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Tentang Kami | Beukeuh Eksporind</title>
-  <meta name="description" content="Tentang Beukeuh Eksporind – eksportir komoditas alami berkualitas dari Indonesia." />
-  <meta name="keywords" content="tentang Beukeuh Eksporind, ekspor Indonesia, komoditas alami, bentonit, vanila, kayu manis, kopi" />
+  <meta name="description" content="Tentang Beukeuh Eksporind — eksportir komoditas alami Indonesia seperti bentonit, vanila, kayu manis, dan kopi." />
+  <meta name="keywords" content="tentang, ekspor Indonesia, komoditas alami, bentonit, kopi, vanila, kayu manis" />
   <meta name="author" content="Beukeuh Eksporind" />
-
   <meta property="og:title" content="Tentang Kami | Beukeuh Eksporind" />
-  <meta property="og:description" content="Eksportir komoditas alami Indonesia yang berkelanjutan dan terpercaya." />
+  <meta property="og:description" content="Profil perusahaan eksportir komoditas alami Indonesia." />
   <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/about-id.html" />
   <meta property="og:type" content="website" />
-
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Logo" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Komoditas Alami dari Indonesia</p>
-    <div class="lang-switch">
-      <a href="about.html">EN</a>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html" class="active">Tentang</a>
+        <a href="bentonit-id.html">Produk</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+        <div class="lang-switch">
+          <a href="about-id.html" class="active">ID</a>
+          <a href="about.html">EN</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
-
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang Kami</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Produk Kami ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-id.html">Bentonit</a>
-      <a href="vanila.html">Vanila</a>
-      <a href="kayu-manis.html">Kayu Manis</a>
-      <a href="kopi.html">Kopi</a>
-    </div>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
 
   <main class="container">
     <h2 style="text-align: center;">Tentang Kami</h2>
     <p style="text-align: justify;">
-      Beukeuh Eksporind adalah perusahaan asal Indonesia yang bergerak di bidang ekspor komoditas alami. Kami berkomitmen untuk membawa kekayaan alam Nusantara ke pasar dunia melalui produk seperti bentonit, vanila, kayu manis, dan kopi. Dengan semangat berkelanjutan dan kemitraan adil dengan petani lokal, kami memastikan kualitas dan keberlanjutan dalam setiap produk yang kami ekspor.
+      Beukeuh Eksporind adalah perusahaan Indonesia yang bergerak di bidang ekspor komoditas alami seperti bentonit, vanila, kayu manis, dan kopi. Kami berkomitmen untuk menjaga kualitas, keberlanjutan, dan integritas dalam setiap proses bisnis kami. 
+    </p>
+    <p style="text-align: justify;">
+      Dengan pengalaman dan jaringan luas, kami hadir sebagai jembatan antara petani lokal dan pasar internasional. Tujuan kami adalah memperkenalkan kekayaan alam Indonesia ke dunia, dengan prinsip keadilan, transparansi, dan keberlanjutan.
     </p>
   </main>
 
@@ -57,11 +57,9 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
   </script>
+
 </body>
 </html>
