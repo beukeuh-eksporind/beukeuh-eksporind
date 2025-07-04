@@ -8,12 +8,13 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
       <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
@@ -35,6 +36,7 @@
     </div>
   </header>
 
+  <!-- OVERLAY MENU (Mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="index-id.html">Beranda</a>
@@ -48,33 +50,43 @@
     </div>
   </div>
 
+  <!-- HERO -->
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Hero Banner">
+      <img src="images/hero.jpg" alt="Banner Utama">
       <div class="hero-text">
         <h2>Kekayaan Alam Indonesia Siap Diekspor</h2>
-        <p>Bentonit, rempah, arang, dan hasil alam terpercaya.</p>
+        <p>Sumber terpercaya untuk bentonit, rempah, arang, dan lainnya.</p>
       </div>
     </section>
 
+    <!-- KONTEN -->
     <section>
       <h2>Selamat Datang di Beukeuh Eksporind</h2>
       <p>
-        Kami adalah perusahaan ekspor asal Indonesia yang menyediakan komoditas alami berkualitas seperti bentonit, vanili, kayu manis, arang, dan hasil pertanian lainnya.
+        Kami adalah perusahaan ekspor yang berbasis di Indonesia, fokus menyediakan komoditas alami berkualitas seperti bentonit, vanila, kayu manis, arang, dan hasil bumi lainnya.
       </p>
       <p>
-        Dengan komitmen pada mutu, keberlanjutan, dan kepuasan pelanggan, kami menjembatani kekayaan alam Indonesia ke pasar global melalui kemitraan jangka panjang yang terpercaya.
+        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menghubungkan kekayaan alam Indonesia ke pasar dunia melalui kemitraan jangka panjang yang terpercaya.
       </p>
     </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Hubungi via WhatsApp</a>
-    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
+    <!-- TOMBOL -->
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- TOMBOL WHATSAPP MELAYANG -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp">
+    <img src="images/wa-icon.png" alt="Tombol WhatsApp">
+  </a>
+
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
