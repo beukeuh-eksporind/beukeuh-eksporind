@@ -3,51 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>About Us | Beukeuh Eksporind</title>
-  <meta name="description" content="Learn more about Beukeuh Eksporind – an Indonesian exporter of high-quality natural commodities." />
-  <meta name="keywords" content="about Beukeuh Eksporind, Indonesian exporter, natural commodities, bentonite, vanilla, cinnamon, coffee" />
+  <meta name="description" content="About Beukeuh Eksporind — Indonesian exporter of natural commodities such as bentonite, vanilla, cinnamon, and coffee." />
+  <meta name="keywords" content="about, Indonesian export, natural commodities, bentonite, coffee, vanilla, cinnamon" />
   <meta name="author" content="Beukeuh Eksporind" />
-
   <meta property="og:title" content="About Us | Beukeuh Eksporind" />
-  <meta property="og:description" content="Committed to sustainable Indonesian natural commodity export." />
+  <meta property="og:description" content="Company profile of Indonesian natural commodity exporter." />
   <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/about.html" />
   <meta property="og:type" content="website" />
-
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="images/logo.png" alt="Logo" class="logo" />
-    <h1>Beukeuh Eksporind</h1>
-    <p class="tagline">Natural Commodities from Indonesia</p>
-    <div class="lang-switch">
-      <a href="about-id.html">ID</a>
+
+  <header class="main-header">
+    <div class="container">
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="bentonit.html">Products</a>
+        <a href="galeri-en.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <div class="lang-switch">
+          <a href="about-id.html">ID</a>
+          <a href="about.html" class="active">EN</a>
+        </div>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
   </header>
-
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">✖</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
-    <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanila.html">Vanilla</a>
-      <a href="kayu-manis.html">Cinnamon</a>
-      <a href="kopi.html">Coffee</a>
-    </div>
-    <a href="galeri-en.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
 
   <main class="container">
     <h2 style="text-align: center;">About Us</h2>
     <p style="text-align: justify;">
-      Beukeuh Eksporind is an Indonesian company dedicated to exporting high-quality natural commodities. With a strong focus on sustainability and quality, we bring Indonesia’s rich resources — such as bentonite, vanilla, cinnamon, and coffee — to the world. Our team works closely with local producers to ensure fair trade, environmental responsibility, and international standards.
+      Beukeuh Eksporind is an Indonesian company engaged in the export of natural commodities such as bentonite, vanilla, cinnamon, and coffee. We are committed to maintaining quality, sustainability, and integrity in every aspect of our business.
+    </p>
+    <p style="text-align: justify;">
+      With experience and a wide network, we serve as a bridge between local farmers and global markets. Our goal is to introduce Indonesia's natural wealth to the world through fairness, transparency, and sustainable practices.
     </p>
   </main>
 
@@ -57,11 +57,9 @@
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-    function toggleSubmenu() {
-      document.getElementById("submenu").classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
   </script>
+
 </body>
 </html>
