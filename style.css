@@ -17,15 +17,21 @@ header, footer {
   color: white;
   text-align: center;
   padding: 1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .logo {
   display: block;
   margin: 0 auto 10px;
   max-width: 120px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
 }
 h1 {
   margin: 0.2em 0;
   font-size: 1.8em;
+  transition: color 0.3s;
 }
 .tagline {
   font-style: italic;
@@ -47,6 +53,7 @@ h1 {
   font-weight: bold;
   font-size: 0.9em;
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
 }
 .lang-switch a:hover {
   background-color: #f2e6d9;
@@ -54,6 +61,7 @@ h1 {
 
 /* TOGGLE BUTTON */
 .menu-toggle {
+  display: block;
   position: absolute;
   top: 16px;
   left: 16px;
@@ -63,7 +71,10 @@ h1 {
   color: black;
   cursor: pointer;
   z-index: 1001;
-  display: none;
+  transition: color 0.3s;
+}
+.menu-toggle:hover {
+  color: #222;
 }
 
 /* OVERLAY MENU */
@@ -77,9 +88,9 @@ h1 {
   background-color: rgba(172, 202, 138, 0.94);
   z-index: 1000;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s;
   padding: 80px 1.2em 1.2em;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
 }
 .overlay-menu.show {
   transform: translateX(0);
@@ -103,6 +114,10 @@ h1 {
   color: #222;
   font-weight: 500;
   font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s;
+}
+.overlay-menu a:hover {
+  color: #111;
 }
 .dropdown-toggle {
   cursor: pointer;
@@ -128,6 +143,7 @@ h1 {
   margin: 0 auto;
   padding: 0 16px;
   text-align: justify;
+  animation: fadeIn 0.6s ease-in;
 }
 footer {
   margin-top: 2em;
@@ -147,6 +163,7 @@ footer {
   text-align: center;
   text-decoration: none;
   color: white;
+  transition: background-color 0.3s ease;
 }
 .whatsapp-button {
   background-color: #25D366;
@@ -173,6 +190,10 @@ footer {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
+  transition: transform 0.4s ease;
+}
+.hero-banner img:hover {
+  transform: scale(1.02);
 }
 .hero-text {
   position: absolute;
@@ -205,6 +226,7 @@ footer {
   padding: 0.8em 0;
   position: relative;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.5s ease;
 }
 .main-header .container {
   display: flex;
@@ -238,6 +260,7 @@ footer {
   gap: 16px;
   align-items: center;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
 .nav-links a {
   color: white;
@@ -246,10 +269,11 @@ footer {
   font-size: 0.95em;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 .nav-links a:hover {
   background-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
 }
 .lang-switch {
   display: flex;
@@ -263,28 +287,73 @@ footer {
   font-weight: bold;
   font-size: 0.85em;
   text-decoration: none;
+  transition: background 0.3s;
 }
 .lang-switch a.active {
   background-color: #e6ddc4;
 }
 
-/* Responsive nav + opacity effect */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
+  .main-header .container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    position: relative;
+  }
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: black;
   }
-
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .brand-name h1 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .brand-name .tagline {
+    font-size: 0.9em;
+    text-align: center;
+  }
   .nav-links {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    transform: translateY(-10px);
   }
-
   .nav-links.show {
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
