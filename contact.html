@@ -3,55 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Contact | Beukeuh Eksporind</title>
-  <meta name="description" content="Contact Beukeuh Eksporind for more information about Indonesia's natural export products." />
-  <meta name="keywords" content="contact, Indonesia export, natural products, Beukeuh Eksporind" />
+  <meta name="description" content="Contact us for export collaboration on Indonesia’s natural commodities — bentonite, vanilla, cinnamon, and coffee." />
+  <meta name="keywords" content="contact, Indonesian export, natural commodities, Beukeuh Eksporind" />
   <meta name="author" content="Beukeuh Eksporind" />
-
   <meta property="og:title" content="Contact | Beukeuh Eksporind" />
-  <meta property="og:description" content="Get in touch with Beukeuh Eksporind for collaboration and ordering." />
-  <meta property="og:image" content="https://beukeuh-eksporind.github.io/logo.png" />
+  <meta property="og:description" content="Contact Beukeuh Eksporind for more information." />
+  <meta property="og:image" content="https://beukeuh-eksporind.github.io/images/logo.png" />
   <meta property="og:url" content="https://beukeuh-eksporind.github.io/contact.html" />
   <meta property="og:type" content="website" />
-
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 0.5em 0;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button[type="submit"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
+    <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Commodities from Indonesia</p>
     <div class="lang-switch">
-      <a href="contact-id.html">Bahasa Indonesia</a>
+      <a href="contact-id.html">ID</a>
+      <span class="active-lang">EN</span>
     </div>
   </header>
 
-  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">✖</button>
     <a href="home.html">Home</a>
     <a href="about.html">About Us</a>
     <div class="dropdown-toggle" onclick="toggleSubmenu()">Our Products ▾</div>
     <div class="submenu" id="submenu">
-      <a href="bentonit-en.html">Bentonite</a>
-      <a href="vanilla-en.html">Vanilla</a>
-      <a href="cinnamon-en.html">Cinnamon</a>
-      <a href="coffee-en.html">Coffee</a>
+      <a href="bentonit.html">Bentonite</a>
+      <a href="vanila.html">Vanilla</a>
+      <a href="cinnamon.html">Cinnamon</a>
+      <a href="kopi.html">Coffee</a>
     </div>
     <a href="galeri-en.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="container">
-    <h2 style="text-align:center;">Contact Us</h2>
-    <p style="text-align: justify;">
-      For product inquiries, orders, or export partnerships, feel free to reach out via WhatsApp or email. We’re ready to assist your business with professionalism and commitment.
-    </p>
-    <a class="whatsapp-button" href="https://wa.me/6281282541982" target="_blank">Contact via WhatsApp</a>
-    <p style="text-align: center;">Email: <a href="mailto:info@beukeuh-eksporind.com">info@beukeuh-eksporind.com</a></p>
+    <h2 style="text-align: center;">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </main>
 
   <footer>
