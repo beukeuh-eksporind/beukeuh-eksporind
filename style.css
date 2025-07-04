@@ -190,3 +190,9 @@ footer {
   margin-top: 0.3em;
   font-size: 1.1em;
 }
+.banner {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
