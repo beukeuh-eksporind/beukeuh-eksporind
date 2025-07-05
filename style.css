@@ -535,12 +535,64 @@ footer {
   height: 180px;
   object-fit: cover;
 }
+/* DROPDOWN MENU */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.dropbtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #442d0d;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95em;
+  transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5eee2;
+}
+
+/* Show dropdown on hover (desktop only) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .product-card h3 {
   padding: 1em;
   margin: 0;
   font-size: 1.1em;
   background-color: #f9f5ec;
 }
+
 /* WHATSAPP FLOATING BUTTON */
 .wa-float {
   position: fixed;
