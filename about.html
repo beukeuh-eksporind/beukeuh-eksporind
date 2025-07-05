@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Beukeuh Eksporind</title>
+  <title>About Us | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -28,7 +27,7 @@
 
       <nav class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="about.html">About</a>
         <a href="bentonite.html">Products</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -36,7 +35,6 @@
     </div>
   </header>
 
-  <!-- OVERLAY MENU (Mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="index.html">Home</a>
@@ -50,29 +48,59 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT -->
   <main class="container">
-    <section>
-      <h2>About Us</h2>
+    <section class="hero-banner">
+      <img src="images/hero-about.jpg" alt="About Banner" />
+      <div class="hero-text">
+        <h2>About Beukeuh Eksporind</h2>
+        <p>Exporting Indonesia’s best to the world.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Who We Are</h2>
       <p>
-        Beukeuh Eksporind is a company committed to exporting premium natural commodities from Indonesia — including Bentonite, charcoal, spices, and other agricultural products.
+        Beukeuh Eksporind is a trusted Indonesian export company specializing in high-quality natural commodities. We work directly with farmers and producers across Indonesia to bring authentic, sustainable, and export-grade products to global buyers.
       </p>
       <p>
-        We prioritize sustainability, local empowerment, and long-term partnerships rooted in trust and mutual growth. With deep ties to local producers and a global outlook, our mission is to bring the best of Indonesia’s nature to the world.
+        With years of experience in international trade, we aim to deliver transparency, reliability, and excellence in every shipment.
       </p>
     </section>
+
+    <section class="product-highlights">
+      <h2>Why Choose Us</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/quality.jpg" alt="Quality First" />
+          <h3>Premium Quality</h3>
+        </div>
+        <div class="product-card">
+          <img src="images/sustainable.jpg" alt="Sustainable Sourcing" />
+          <h3>Sustainable Sourcing</h3>
+        </div>
+        <div class="product-card">
+          <img src="images/partnership.jpg" alt="Long-Term Partnership" />
+          <h3>Reliable Partnerships</h3>
+        </div>
+      </div>
+    </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT -->
+  <div class="wa-float">
+    <a href="https://wa.me/6281282541982" target="_blank">
+      <img src="images/wa-icon.png" alt="WhatsApp Button" />
+    </a>
+  </div>
+
   <script>
     function toggleMenu() {
-      const overlay = document.getElementById("overlayMenu");
-      overlay.classList.toggle("show");
+      document.getElementById("overlayMenu").classList.toggle("show");
     }
 
     document.querySelectorAll('#overlayMenu a').forEach(link => {
