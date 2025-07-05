@@ -95,6 +95,7 @@ header, footer {
   font-weight: bold;
   background: none;
   border: none;
+  padding: 2px 4px;
 }
 .lang-switch a.active {
   text-decoration: underline;
@@ -121,14 +122,31 @@ header, footer {
   text-align: center;
   color: white;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  animation: fadeUp 1s ease-out;
 }
 .hero-text h2 {
-  font-size: 1.3em;
+  font-size: 1.7em;
   margin: 0;
 }
 .hero-text p {
-  font-size: 0.7em;
+  font-size: 1em;
   margin-top: 0.5em;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 20px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 /* CONTENT */
@@ -197,43 +215,28 @@ section.intro {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 190px;
+  width: 240px;
   background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   box-shadow: 4px 0 20px rgba(0,0,0,0.2);
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
 }
-
 .overlay-menu.show {
   transform: translateX(0);
 }
-
 .overlay-menu a {
   display: block;
-  margin: 0.6em 0;
+  margin: 0.7em 0;
   text-decoration: none;
   font-weight: 500;
   color: #333;
   font-size: 1em;
 }
-
 .overlay-menu a:hover {
   color: #442d0d;
-}
-
-/* SUBMENU di dalam Overlay Menu */
-.overlay-menu .dropdown-content a {
-  padding: 2px 6px;
-  font-size: 0.95em;
-  margin-left: 24px;
-}
-
-/* SEMBUNYIKAN TOMBOL BAHASA DI DALAM OVERLAY */
-.overlay-menu .lang-switch {
-  display: none;
 }
 
 .close-btn {
@@ -248,37 +251,38 @@ section.intro {
   z-index: 1002;
 }
 
-/* DROPDOWN IN OVERLAY */
-.overlay-menu .dropdown {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.dropdown {
+  position: relative;
 }
-.overlay-menu .dropdown-toggle {
+.dropdown-toggle {
   background: none;
   border: none;
-  font-size: 1em;
   color: #333;
   font-weight: 500;
-  text-align: left;
-  padding: 0.7em 0;
+  font-size: 1em;
   cursor: pointer;
-}
-.overlay-menu .dropdown-content {
-  display: none;
-  flex-direction: column;
-  padding-left: 1em;
-}
-.overlay-menu .dropdown.open .dropdown-content {
+  padding: 6px 0;
   display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.overlay-menu .dropdown-content a {
+.dropdown-content {
+  display: none;
+  position: relative;
+  padding-left: 10px;
+  margin-top: 6px;
+}
+.dropdown.open .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
   color: #333;
   text-decoration: none;
   padding: 4px 0;
   font-size: 0.95em;
 }
-.overlay-menu .dropdown-content a:hover {
+.dropdown-content a:hover {
   text-decoration: underline;
 }
 
@@ -300,21 +304,4 @@ section.intro {
     display: none;
   }
 }
-/* GALLERY SWIPE STYLE */
-.gallery-swipe {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  padding: 1em 0;
-}
 
-.gallery-swipe img {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 180px;
-  border-radius: 10px;
-  object-fit: cover;
-  scroll-snap-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
