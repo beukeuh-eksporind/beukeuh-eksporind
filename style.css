@@ -287,12 +287,30 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.8em 1em;
+    padding-top: 0.5em;
+    position: relative;
   }
 
   .brand {
+    flex-direction: row;
+    align-items: center;
     gap: 8px;
+    text-align: left;
   }
+
+  .brand-name h1 {
+    font-size: 1.1em;
+  }
+
+  .brand-name .tagline {
+    font-size: 0.85em;
+  }
+
+  .menu-toggle {
+    top: 12px;
+    left: 12px;
+  }
+}
 
   .brand-name h1 {
     font-size: 1.3em;
