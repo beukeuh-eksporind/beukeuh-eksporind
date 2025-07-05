@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontak | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,16 +14,26 @@
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Komoditas Alam dari Indonesia</p>
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="contact-id.html" class="active">ID</a> | 🇬🇧<a href="contact.html">EN</a>
+        <a href="contact-id.html" class="active">🇮🇩 ID</a>
+        <a href="contact.html">🇬🇧 EN</a>
       </div>
       <nav class="nav-links">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html">Produk</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Produk ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite-id.html">Bentonit</a>
+            <a href="vanilla-id.html">Vanila</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html">Arang</a>
+          </div>
+        </div>
         <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html" class="active">Kontak</a>
       </nav>
@@ -34,50 +44,50 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html">Produk</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html">Vanila</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html" class="active">Kontak</a>
   </div>
 
   <main class="container">
-    <section class="intro">
-      <h2>Hubungi Kami</h2>
-      <p>
-        Tertarik dengan produk kami atau memiliki pertanyaan? Jangan ragu untuk menghubungi kami melalui informasi kontak di bawah ini atau langsung lewat WhatsApp.
-      </p>
-    </section>
-
-    <section class="contact-info">
-      <h3>Informasi Kontak</h3>
+    <h2>Hubungi Kami</h2>
+    <p>Silakan hubungi kami untuk pertanyaan, kerja sama ekspor, atau informasi produk:</p>
+    <div class="contact-info">
       <ul>
-        <li><strong>Email:</strong> info@beukeuheksporind.com</li>
-        <li><strong>Telepon:</strong> +62 812-8254-1982</li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Klik untuk Chat</a></li>
-        <li><strong>Lokasi:</strong> Bandung, Jawa Barat, Indonesia</li>
+        <li><strong>Email:</strong> info@beukeuh-eksporind.com</li>
+        <li><strong>Telepon:</strong> +62 812 8254 1982</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Klik di sini</a></li>
+        <li><strong>Alamat Kantor:</strong> Bandung, Indonesia</li>
       </ul>
-    </section>
-
+    </div>
     <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
+    <img src="images/wa-icon.png" alt="WhatsApp" />
   </a>
 
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
