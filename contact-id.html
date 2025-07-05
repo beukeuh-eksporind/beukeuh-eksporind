@@ -7,60 +7,77 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
+      <div class="lang-switch">
+        🇮🇩<a href="contact-id.html" class="active">ID</a> | 🇬🇧<a href="contact.html">EN</a>
+      </div>
+      <nav class="nav-links">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonit-id.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
+        <a href="bentonite-id.html">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html" class="active">Kontak</a>
-        <div class="lang-switch">
-          <a href="contact-id.html" class="active">ID</a>
-          <a href="contact.html">EN</a>
-        </div>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h2>Hubungi Kami</h2>
-    <p>Kami siap membantu kebutuhan Anda terkait produk atau peluang kerja sama.</p>
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html" class="active">Kontak</a>
+  </div>
 
-    <ul>
-      <li><strong>Email:</strong> info@beukeuh-eksporind.com</li>
-      <li><strong>Telepon:</strong> +62 812-8254-1982</li>
-      <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Hubungi Kami</a></li>
-      <li><strong>Lokasi:</strong> Bandung, Jawa Barat, Indonesia</li>
-    </ul>
+  <main class="container">
+    <section class="intro">
+      <h2>Hubungi Kami</h2>
+      <p>
+        Tertarik dengan produk kami atau memiliki pertanyaan? Jangan ragu untuk menghubungi kami melalui informasi kontak di bawah ini atau langsung lewat WhatsApp.
+      </p>
+    </section>
+
+    <section class="contact-info">
+      <h3>Informasi Kontak</h3>
+      <ul>
+        <li><strong>Email:</strong> info@beukeuheksporind.com</li>
+        <li><strong>Telepon:</strong> +62 812-8254-1982</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Klik untuk Chat</a></li>
+        <li><strong>Lokasi:</strong> Bandung, Jawa Barat, Indonesia</li>
+      </ul>
+    </section>
 
     <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
 
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    document.querySelectorAll('#navLinks a').forEach(link => {
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
-
 </body>
 </html>
