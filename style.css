@@ -85,11 +85,11 @@ header, footer {
 .lang-switch {
   font-size: 0.95em;
   display: flex;
-  gap: 12px; /* tambahkan jarak antar tombol bahasa */
+  gap: 12px;
   align-items: center;
   justify-content: center;
+  margin-top: 0.5em;
 }
-
 .lang-switch a {
   color: white;
   text-decoration: none;
@@ -98,7 +98,6 @@ header, footer {
   background: none;
   border: none;
 }
-
 .lang-switch a.active {
   text-decoration: underline;
 }
@@ -194,22 +193,10 @@ section.intro {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-
-
 /* DROPDOWN (PRODUCT MENU) */
-
-/* ... bagian awal tetap sama, lalu kita update bagian overlay-menu ... */
-
-/* OVERLAY MENU (MODERN SLIDE-IN + TRANSPARENT BLUR) */
-.overlay-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  he/* Untuk dropdown menu produk */
 .dropdown {
   position: relative;
 }
-
 .dropdown-toggle {
   background: none;
   border: none;
@@ -219,21 +206,18 @@ section.intro {
   cursor: pointer;
   padding: 6px 10px;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background: transparent;  /* hilangkan latar */
-  box-shadow: none;         /* hilangkan bayangan */
+  background: transparent;
+  box-shadow: none;
   padding: 0;
   margin-top: 4px;
   z-index: 1000;
 }
-
 .dropdown.open .dropdown-content {
   display: block;
 }
-
 .dropdown-content a {
   display: block;
   color: white;
@@ -241,24 +225,28 @@ section.intro {
   padding: 4px 0;
   font-size: 0.95em;
 }
-
 .dropdown-content a:hover {
   text-decoration: underline;
-}ight: 100vh;
+}
+
+/* OVERLAY MENU (MODERN SLIDE-IN + TRANSPARENT BLUR) */
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   width: 240px;
-  background-color: rgba(255, 255, 255, 0.5); /* transparan putih */
-  backdrop-filter: blur(10px); /* efek blur */
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
   box-shadow: 4px 0 20px rgba(0,0,0,0.2);
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
 }
-
 .overlay-menu.show {
   transform: translateX(0);
 }
-
 .overlay-menu a {
   display: block;
   margin: 1em 0;
@@ -267,15 +255,13 @@ section.intro {
   color: #333;
   font-size: 1em;
 }
-
 .overlay-menu a:hover {
   color: #442d0d;
 }
-
 .close-btn {
   position: absolute;
   top: 16px;
-  right: 16px; /* diposisikan di kanan atas */
+  right: 16px;
   background: none;
   border: none;
   font-size: 1.6em;
@@ -284,35 +270,6 @@ section.intro {
   z-index: 1002;
 }
 
-/* Tambahan opsional untuk estetika emoji */
-.lang-switch a {
-  background: none;
-  box-shadow: none;
-  padding: 4px 6px;
-  font-size: 0.95em;
-}
-
-/* LANGUAGE SWITCH (UPDATED WITH EMOJI) */
-.lang-switch {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9em;
-  margin-top: 0.5em;
-}
-
-.lang-switch a {
-  color: #442d0d;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95em;
-  padding: 4px 6px;
-}
-
-.lang-switch a.active {
-  text-decoration: underline;
-}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
@@ -331,3 +288,4 @@ section.intro {
     display: none;
   }
 }
+
