@@ -1,10 +1,9 @@
-<!-- Contoh Struktur Halaman Produk: bentonite.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bentonite | Beukeuh Eksporind</title>
+  <title>Bentonite - Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,41 +11,24 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="logo.png" alt="Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+          <div class="tagline">Natural Commodities from Indonesia</div>
         </div>
       </div>
-      <div class="lang-switch">
-        <a href="bentonite-id.html">🇮🇩 ID</a>
-        <a href="bentonite.html" class="active">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products &#x25BC;</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
     </div>
   </header>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <button class="close-btn" onclick="toggleMenu()">×</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Products &#x25BC;</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+        Products ▼
+      </button>
       <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
@@ -59,43 +41,30 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <main class="container">
-    <section class="intro">
+  <div class="container">
+    <section class="intro fade-up">
       <h2>Bentonite</h2>
-      <p>
-        Our Bentonite clay is a premium-quality natural mineral, widely used in
-        drilling, foundry, construction, and agriculture. It offers strong
-        bonding and absorption properties, sourced responsibly from Indonesia.
-      </p>
-      <p>
-        We provide Bentonite in various grades and packaging, customized to meet
-        international standards and client specifications.
-      </p>
+      <p>Bentonite is a naturally occurring clay mineral known for its absorbent and binding properties. It is widely used in industries such as agriculture, construction, pharmaceuticals, and cosmetics.</p>
+
+      <!-- Gambar bentonit -->
+      <img src="bentonite.ai.jpg" alt="Bentonite Export" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+
+      <p>Our Bentonite is sourced responsibly from Indonesia and processed to meet international standards. We ensure consistent quality and reliable supply for all your industrial needs.</p>
     </section>
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
-    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
-  </main>
+  </div>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp" />
-  </a>
-
   <script>
     function toggleMenu() {
-      const overlay = document.getElementById("overlayMenu");
-      overlay.classList.toggle("show");
+      document.getElementById('overlayMenu').classList.toggle('show');
     }
-    document.querySelectorAll('#overlayMenu .dropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', function () {
-        const parent = this.closest('.dropdown');
-        parent.classList.toggle('open');
-      });
-    });
+
+    function toggleDropdown(el) {
+      el.parentElement.classList.toggle('open');
+    }
   </script>
 </body>
 </html>
-
