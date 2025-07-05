@@ -83,66 +83,49 @@ h1 {
 .menu-toggle:hover {
   color: #222;
 }
-
-/* OVERLAY MENU */
+/* OVERLAY MENU (MODERN SLIDE-IN) */
 .overlay-menu {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 70%;
-  max-width: 300px;
-  background-color: rgba(172, 202, 138, 0.94);
-  z-index: 1000;
+  height: 100vh;
+  width: 240px;
+  background-color: #fff;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+  padding: 80px 1.5em 2em;
   transform: translateX(-100%);
-  transition: transform 0.4s ease-in-out, box-shadow 0.3s;
-  padding: 80px 1.2em 1.2em;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
+
 .overlay-menu.show {
   transform: translateX(0);
 }
-.overlay-menu .close-btn {
+
+.overlay-menu a {
+  display: block;
+  margin: 1em 0;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  font-size: 1em;
+}
+
+.overlay-menu a:hover {
+  color: #442d0d;
+}
+
+.close-btn {
   position: absolute;
-  top: 12px;
+  top: 16px;
   right: 16px;
-  font-size: 1.8em;
   background: none;
   border: none;
+  font-size: 1.6em;
   color: #d33;
   cursor: pointer;
 }
-.overlay-menu a,
-.overlay-menu .dropdown-toggle {
-  display: block;
-  font-size: 1.1em;
-  margin: 10px 0;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-  font-family: 'Segoe UI', sans-serif;
-  transition: color 0.3s;
-}
-.overlay-menu a:hover {
-  color: #111;
-}
-.dropdown-toggle {
-  cursor: pointer;
-}
-.submenu {
-  margin-left: 16px;
-  margin-top: 4px;
-  font-size: 0.95em;
-  display: none;
-}
-.submenu a {
-  display: block;
-  margin: 4px 0;
-  font-weight: normal;
-}
-.submenu.show {
-  display: block;
-}
+
 
 /* CONTENT */
 .container {
