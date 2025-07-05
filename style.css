@@ -300,3 +300,21 @@ section.intro {
     display: none;
   }
 }
+/* GALLERY SWIPE STYLE */
+.gallery-swipe {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 1em 0;
+}
+
+.gallery-swipe img {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
