@@ -7,12 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Tombol Toggle -->
   <header class="main-header">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
     <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
@@ -21,6 +18,21 @@
         </div>
       </div>
 
+      <nav class="nav-links" id="navLinks">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <div class="dropdown">
+          <button class="dropbtn">Produk ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonit</a>
+            <a href="#">Vanili</a>
+            <a href="#">Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+
       <div class="lang-switch">
         <a href="home-id.html" class="active">ID</a>
         <a href="home.html">EN</a>
@@ -28,7 +40,7 @@
     </div>
   </header>
 
-  <!-- Menu Overlay -->
+  <!-- Overlay menu mobile -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
@@ -36,29 +48,24 @@
     <a href="bentonite.html">Produk</a>
     <a href="gallery.html">Galeri</a>
     <a href="contact.html">Kontak</a>
-    <div class="lang-switch">
-      <a href="home-id.html" class="active">ID</a>
-      <a href="home.html">EN</a>
-    </div>
   </div>
 
-  <!-- Konten Utama -->
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Banner Utama">
+      <img src="images/hero.jpg" alt="Hero Banner">
       <div class="hero-text">
-        <h2>Kekayaan Alam Indonesia Siap Ekspor</h2>
-        <p>Sumber terpercaya bentonit, rempah, arang, dan lainnya.</p>
+        <h2>Kekayaan Alam Indonesia<br />Siap Diekspor</h2>
+        <p>Sumber terpercaya untuk bentonit, rempah, arang, dan lainnya.</p>
       </div>
     </section>
 
     <section>
       <h2>Selamat Datang di Beukeuh Eksporind</h2>
       <p>
-        Kami adalah perusahaan ekspor asal Indonesia yang fokus menyediakan komoditas alami berkualitas tinggi seperti bentonit, vanili, kayu manis, arang, dan produk pertanian lainnya.
+        Kami adalah perusahaan ekspor asal Indonesia yang berfokus menyediakan komoditas alami berkualitas tinggi seperti bentonit, vanili, kayu manis, arang, dan hasil pertanian lainnya.
       </p>
       <p>
-        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menghubungkan kekayaan alam Indonesia dengan pasar global melalui kemitraan jangka panjang yang terpercaya.
+        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menjembatani kekayaan alam Indonesia ke pasar global melalui kerja sama jangka panjang yang terpercaya.
       </p>
     </section>
 
@@ -66,17 +73,14 @@
     <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
 
-  <!-- Tombol WA Melayang -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- Script -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
@@ -88,6 +92,5 @@
       });
     });
   </script>
-
 </body>
 </html>
