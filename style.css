@@ -183,6 +183,33 @@ header, footer {
 .gallery img:hover {
   transform: scale(1.05);
 }
+.gallery-wrapper {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.gallery-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  padding: 1em;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll img {
+  flex: 0 0 auto;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-scroll img:hover {
+  transform: scale(1.05);
+}
 
 /* SECTIONS */
 section.intro {
