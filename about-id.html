@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang Kami | Beukeuh Eksporind</title>
+  <title>Tentang | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,72 +18,73 @@
         </div>
       </div>
 
-      <div class="lang-switch">
-        <a href="about-id.html" class="active">ID</a>
-        <a href="about.html">EN</a>
-      </div>
-
       <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html">Produk</a>
-        <a href="gallery-id.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
+        <a href="about-id.html" class="active">Tentang</a>
+        <div class="dropdown">
+          <button class="dropbtn">Produk ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonit</a>
+            <a href="#">Vanili</a>
+            <a href="#">Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
       </nav>
+
+      <div class="lang-switch">
+        <a href="home-id.html" class="active">ID</a>
+        <a href="home.html">EN</a>
+      </div>
     </div>
   </header>
 
+  <!-- Overlay Menu Mobile -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html">Produk</a>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-    <div class="lang-switch">
-      <a href="about-id.html" class="active">ID</a>
-      <a href="about.html">EN</a>
-    </div>
+    <a href="about-id.html" class="active">Tentang</a>
+    <a href="bentonite.html">Produk</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="contact.html">Kontak</a>
   </div>
 
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Banner Tentang Kami" />
+      <img src="images/hero.jpg" alt="Tentang Kami">
       <div class="hero-text">
-        <h2>Tentang Perjalanan Kami</h2>
-        <p>Beukeuh Eksporind — Menjembatani Alam & Kebutuhan Global</p>
+        <h2>Tentang Perusahaan Kami</h2>
+        <p>Komitmen terhadap kualitas dan keberlanjutan.</p>
       </div>
     </section>
 
-    <section class="intro">
-      <h2>Siapa Kami</h2>
+    <section>
+      <h2>Profil Beukeuh Eksporind</h2>
       <p>
-        Beukeuh Eksporind adalah perusahaan ekspor asal Indonesia yang berkomitmen membawa komoditas alami ke pasar global. Kami fokus pada produk seperti bentonit, vanila, kayu manis, arang kelapa, dan hasil bumi lainnya yang memenuhi standar internasional.
+        Beukeuh Eksporind adalah perusahaan ekspor yang bergerak dalam penyediaan komoditas alami terbaik dari Indonesia. Kami memprioritaskan kualitas, integritas, dan kepuasan pelanggan dalam setiap pengiriman.
+      </p>
+      <p>
+        Visi kami adalah menjadi jembatan antara kekayaan alam Indonesia dengan dunia, melalui kerja sama berkelanjutan dan terpercaya.
       </p>
     </section>
 
-    <section class="intro">
-      <h2>Visi Kami</h2>
-      <p>
-        Menjadi mitra terpercaya dalam rantai pasok global untuk produk alami terbaik dari Indonesia, dengan menjaga kualitas, transparansi, dan praktik berkelanjutan.
-      </p>
-    </section>
-
-    <section class="intro">
-      <h2>Komitmen Kami</h2>
-      <p>
-        Kami menjalin kemitraan langsung dengan petani, penambang, dan koperasi lokal. Setiap tahap — dari sumber hingga pengemasan — dirancang untuk menjaga kemurnian produk serta mendukung kesejahteraan para pelaku di baliknya.
-      </p>
+    <section>
+      <h2>Nilai-Nilai Kami</h2>
+      <ul>
+        <li><strong>Kualitas:</strong> Kami hanya memilih produk terbaik dari sumber terpercaya.</li>
+        <li><strong>Keberlanjutan:</strong> Berkomitmen pada praktik ramah lingkungan dan berkelanjutan.</li>
+        <li><strong>Kolaborasi:</strong> Membangun hubungan jangka panjang dengan mitra global.</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
 
-  <!-- Tombol WhatsApp -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp" />
+    <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
   <script>
