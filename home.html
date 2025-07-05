@@ -8,10 +8,11 @@
 </head>
 <body>
 
+  <!-- Toggle Menu di luar .container -->
   <header class="main-header">
-    <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+    <div class="container">
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -41,6 +42,7 @@
     </div>
   </div>
 
+  <!-- Main Content -->
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
@@ -68,17 +70,18 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- Tombol WhatsApp Melayang -->
+  <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- Script Toggle Menu -->
+  <!-- Script untuk Toggle Overlay Menu -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
+    // Tutup overlay saat klik link menu
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
