@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,38 +14,23 @@
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+          <div class="tagline">Natural Commodities from Indonesia</div>
         </div>
       </div>
       <div class="lang-switch">
         <a href="gallery-id.html">🇮🇩 ID</a>
         <a href="gallery.html" class="active">🇬🇧 EN</a>
       </div>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
     </div>
   </header>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <button class="close-btn" onclick="toggleMenu()">×</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▼</button>
       <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
@@ -59,16 +44,18 @@
   </div>
 
   <main class="container">
-    <h2>Gallery</h2>
-    <p>Explore photos of our natural products, harvesting process, and packaging for export.</p>
+    <section class="intro fade-up">
+      <h2>Gallery</h2>
+      <p>Explore a selection of our natural commodities and export activities.</p>
+    </section>
 
-    <div class="gallery-swipe">
-      <img src="images/gallery1.jpg" alt="Gallery 1" />
-      <img src="images/gallery2.jpg" alt="Gallery 2" />
-      <img src="images/gallery3.jpg" alt="Gallery 3" />
-      <img src="images/gallery4.jpg" alt="Gallery 4" />
-      <img src="images/gallery5.jpg" alt="Gallery 5" />
-    </div>
+    <section class="gallery">
+      <img src="images/gallery1.jpg" alt="Gallery Image 1">
+      <img src="images/gallery2.jpg" alt="Gallery Image 2">
+      <img src="images/gallery3.jpg" alt="Gallery Image 3">
+      <img src="images/gallery4.jpg" alt="Gallery Image 4">
+      <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+    </section>
   </main>
 
   <footer>
@@ -83,9 +70,19 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+
+    document.querySelectorAll('.overlay-menu .dropdown-toggle').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        this.parentElement.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
