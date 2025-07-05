@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -18,10 +17,13 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links">
+      <div class="lang-switch">
+        <a href="about-id.html">🇮🇩 ID</a>
+        <a href="about.html" class="active">🇬🇧 EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
         <a href="about.html" class="active">About</a>
-
         <div class="dropdown">
           <button class="dropdown-toggle">Products ▼</button>
           <div class="dropdown-content">
@@ -32,15 +34,9 @@
             <a href="charcoal.html">Charcoal</a>
           </div>
         </div>
-
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-
-      <div class="lang-switch">
-        <a href="about-id.html">🇮🇩 ID</a>
-        <a href="about.html" class="active">🇬🇧 EN</a>
-      </div>
     </div>
   </header>
 
@@ -68,15 +64,8 @@
   <main class="container">
     <section class="intro">
       <h2>About Beukeuh Eksporind</h2>
-      <p>
-        Beukeuh Eksporind is a trusted Indonesian export company that specializes in delivering the richness of nature through premium-quality commodities. From Bentonite to vanilla, cinnamon, coffee, and charcoal, we take pride in our local resources and sustainable practices.
-      </p>
-      <p>
-        Our mission is to connect Indonesian farmers and producers with the global market through fair trade, transparency, and long-term partnerships. We ensure consistent quality, ethical sourcing, and customer-focused service.
-      </p>
-      <p>
-        With a growing presence and reputation in the export industry, Beukeuh Eksporind aims to be your reliable partner in sourcing the best of Indonesia.
-      </p>
+      <p>Beukeuh Eksporind is a trusted export company based in Indonesia. We specialize in sourcing and delivering the finest natural commodities including Bentonite, vanilla, cinnamon, coffee, and charcoal to international markets.</p>
+      <p>Our mission is to connect Indonesia's rich natural resources with the world by ensuring the highest quality, sustainable practices, and reliable partnerships.</p>
     </section>
   </main>
 
@@ -93,13 +82,20 @@
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    // Tutup overlay saat salah satu link diklik
-    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
+    // Tutup menu saat klik link
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
-  </script>
 
+    // Dropdown di overlay
+    const dropdownToggles = document.querySelectorAll('.overlay-menu .dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+        this.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
