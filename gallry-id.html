@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeri | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,7 +11,7 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
@@ -25,10 +25,10 @@
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▼</button>
+          <button class="dropdown-toggle">Produk ▾</button>
           <div class="dropdown-content">
             <a href="bentonite-id.html">Bentonit</a>
-            <a href="vanilla-id.html">Vanila</a>
+            <a href="vanilla-id.html">Vanili</a>
             <a href="cinnamon-id.html">Kayu Manis</a>
             <a href="coffee-id.html">Kopi</a>
             <a href="charcoal-id.html">Arang</a>
@@ -45,10 +45,10 @@
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Produk ▼</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
       <div class="dropdown-content">
         <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanila</a>
+        <a href="vanilla-id.html">Vanili</a>
         <a href="cinnamon-id.html">Kayu Manis</a>
         <a href="coffee-id.html">Kopi</a>
         <a href="charcoal-id.html">Arang</a>
@@ -59,27 +59,20 @@
   </div>
 
   <main class="container">
-    <section class="intro">
-      <h2>Galeri Ekspor Kami</h2>
-      <p>Lihat koleksi foto produk komoditas dan aktivitas ekspor kami.</p>
-    </section>
+    <h2>Galeri</h2>
+    <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p>
 
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/gallery1.jpg" alt="Gambar Galeri 1">
-      </div>
-      <div class="product-card">
-        <img src="images/gallery2.jpg" alt="Gambar Galeri 2">
-      </div>
-      <div class="product-card">
-        <img src="images/gallery3.jpg" alt="Gambar Galeri 3">
-      </div>
-      <!-- Tambahkan gambar lainnya jika perlu -->
+    <div class="gallery-swipe">
+      <img src="images/gallery1.jpg" alt="Galeri 1" />
+      <img src="images/gallery2.jpg" alt="Galeri 2" />
+      <img src="images/gallery3.jpg" alt="Galeri 3" />
+      <img src="images/gallery4.jpg" alt="Galeri 4" />
+      <img src="images/gallery5.jpg" alt="Galeri 5" />
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
@@ -90,20 +83,9 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-
-    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-    dropdownToggles.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const parent = btn.parentElement;
-        parent.classList.toggle("open");
-      });
-    });
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
