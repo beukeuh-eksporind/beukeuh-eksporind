@@ -183,6 +183,29 @@ header, footer {
 .gallery img:hover {
   transform: scale(1.05);
 }
+.gallery-arrows {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  margin-top: -2.5em;
+  margin-bottom: -1em;
+}
+
+.arrow {
+  font-size: 2em;
+  color: #bbb;
+  padding: 0 0.5em;
+  user-select: none;
+  pointer-events: none; /* Tidak bisa diklik, hanya untuk petunjuk */
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 1.5em;
+  }
+}
 .gallery-wrapper {
   padding: 1em 0;
   text-align: center;
