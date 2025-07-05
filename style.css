@@ -75,7 +75,7 @@ h1 {
   font-size: 1.8em;
   background: none;
   border: none;
-  color: white;
+  color: red;
   cursor: pointer;
   z-index: 1001;
   transition: color 0.3s;
