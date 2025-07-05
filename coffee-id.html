@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopi | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="coffee-id.html" class="active">ID</a> | 🇬🇧<a href="coffee.html">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonite-id.html" class="active">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-coffee.jpg" alt="Kopi Indonesia">
+      <div class="hero-text">
+        <h2>Kopi Premium dari Indonesia</h2>
+        <p>Rasa kuat, aroma dalam – Dari kebun kami ke dunia</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tentang Kopi Kami</h2>
+      <p>
+        Kopi kami dipetik dari dataran tinggi yang subur di Sumatra dan Jawa. Ditanam dengan hati-hati, diproses dengan cermat, dan dipanggang untuk menghadirkan rasa yang khas dan aroma yang istimewa.
+      </p>
+      <p>
+        Tersedia dalam bentuk biji hijau (green bean) dan biji sangrai (roasted) untuk berbagai kebutuhan pasar.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Spesifikasi Produk</h3>
+      <ul>
+        <li>Jenis: Arabika & Robusta</li>
+        <li>Grade: Ekspor Grade A</li>
+        <li>Kadar Air: Maks. 12%</li>
+        <li>Kemasan: Karung goni 60 kg atau sesuai permintaan</li>
+        <li>Asal: Sumatra, Jawa, dan wilayah lain</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+      <a href="files/coffee-brochure.pdf" class="download-button" download>Unduh Brosur Kopi</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
