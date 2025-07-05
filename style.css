@@ -176,7 +176,7 @@ header, footer {
 }
 .gallery img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
