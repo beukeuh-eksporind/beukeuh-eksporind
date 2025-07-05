@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -19,13 +18,29 @@
         </div>
       </div>
 
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Products ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonite</a>
+            <a href="#">Vanilla</a>
+            <a href="#">Charcoal</a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
       <div class="lang-switch">
-        <a href="about-id.html">ID</a>
-        <a href="about.html" class="active">EN</a>
+        <a href="home-id.html">ID</a>
+        <a href="home.html" class="active">EN</a>
       </div>
     </div>
   </header>
 
+  <!-- Overlay menu (mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
@@ -33,36 +48,34 @@
     <a href="bentonite.html">Products</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-    <div class="lang-switch">
-      <a href="about-id.html">ID</a>
-      <a href="about.html" class="active">EN</a>
-    </div>
   </div>
 
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Hero Banner">
+      <img src="images/hero.jpg" alt="About Us">
       <div class="hero-text">
-        <h2>About Beukeuh Eksporind</h2>
-        <p>Connecting Indonesia's nature to the world.</p>
+        <h2>About Our Company</h2>
+        <p>Committed to quality and sustainability.</p>
       </div>
     </section>
 
-    <section class="intro">
-      <h2>Who We Are</h2>
+    <section>
+      <h2>Beukeuh Eksporind Profile</h2>
       <p>
-        Beukeuh Eksporind is an Indonesian export company specializing in high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and more.
+        Beukeuh Eksporind is an export company based in Indonesia, specializing in supplying high-quality natural commodities. Our priority is quality, integrity, and customer satisfaction in every shipment.
       </p>
       <p>
-        With strong principles of integrity and sustainability, we aim to connect Indonesia’s natural resources to global markets through long-term partnerships and professional service.
+        Our vision is to bridge Indonesia’s natural wealth with the world, through long-term and trusted partnerships.
       </p>
     </section>
 
-    <section class="intro">
-      <h2>Our Vision</h2>
-      <p>
-        To become a leading exporter and reliable partner that represents Indonesia’s natural wealth with trust, transparency, and excellence.
-      </p>
+    <section>
+      <h2>Our Values</h2>
+      <ul>
+        <li><strong>Quality:</strong> We select only the best products from trusted sources.</li>
+        <li><strong>Sustainability:</strong> Committed to environmentally friendly and sustainable practices.</li>
+        <li><strong>Collaboration:</strong> Building long-term relationships with global partners.</li>
+      </ul>
     </section>
   </main>
 
@@ -85,6 +98,5 @@
       });
     });
   </script>
-
 </body>
 </html>
