@@ -360,3 +360,7 @@ section.intro {
 body.overlay-open .lang-switch {
   display: none;
 }
+/* SEMBUNYIKAN BENDERA SAAT OVERLAY AKTIF */
+body.overlay-open .lang-switch {
+  display: none !important;
+}
