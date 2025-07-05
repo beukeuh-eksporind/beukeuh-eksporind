@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 </head>
 <body>
   <header class="main-header">
@@ -20,12 +18,22 @@
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="gallery-id.html">ID</a> | 🇬🇧<a href="gallery.html" class="active">EN</a>
+        <a href="gallery-id.html">🇮🇩 ID</a>
+        <a href="gallery.html" class="active">🇬🇧 EN</a>
       </div>
       <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonite.html">Products</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Products ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonite</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
+          </div>
+        </div>
         <a href="gallery.html" class="active">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -36,30 +44,38 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
-    <a href="bentonite.html">Products</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Products ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
     <a href="gallery.html" class="active">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="container">
-    <section class="gallery-section">
-      <h2>Our Export Products</h2>
-      <p>Browse through our export-quality natural commodities ready for the world market.</p>
-
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/gallery1.jpg" alt="Bentonite Sample"></div>
-          <div class="swiper-slide"><img src="images/gallery2.jpg" alt="Charcoal Packaging"></div>
-          <div class="swiper-slide"><img src="images/gallery3.jpg" alt="Cinnamon Sticks"></div>
-          <div class="swiper-slide"><img src="images/gallery4.jpg" alt="Vanilla Beans"></div>
-          <div class="swiper-slide"><img src="images/gallery5.jpg" alt="Coffee Export"></div>
-        </div>
-        <!-- Swiper Arrows -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+    <section class="intro">
+      <h2>Our Export Gallery</h2>
+      <p>Explore photos of our natural commodity products and export activities.</p>
     </section>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/gallery1.jpg" alt="Gallery Image 1">
+      </div>
+      <div class="product-card">
+        <img src="images/gallery2.jpg" alt="Gallery Image 2">
+      </div>
+      <div class="product-card">
+        <img src="images/gallery3.jpg" alt="Gallery Image 3">
+      </div>
+      <!-- Tambahkan gambar lainnya sesuai kebutuhan -->
+    </div>
   </main>
 
   <footer>
@@ -70,19 +86,7 @@
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: { delay: 3500 },
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
@@ -90,6 +94,15 @@
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+
+    // Dropdown toggle for overlay
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+    dropdownToggles.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const parent = btn.parentElement;
+        parent.classList.toggle("open");
       });
     });
   </script>
