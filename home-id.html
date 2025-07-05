@@ -8,15 +8,16 @@
 </head>
 <body>
 
+  <!-- Tombol Toggle -->
   <header class="main-header">
-    <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+    <div class="container">
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alam dari Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
 
@@ -24,22 +25,15 @@
         <a href="home-id.html" class="active">ID</a>
         <a href="home.html">EN</a>
       </div>
-
-      <nav class="nav-links" id="navLinks">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html">Produk</a>
-        <a href="gallery.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
-      </nav>
     </div>
   </header>
 
+  <!-- Menu Overlay -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html">Produk</a>
+    <a href="bentonite.html">Produk</a>
     <a href="gallery.html">Galeri</a>
     <a href="contact.html">Kontak</a>
     <div class="lang-switch">
@@ -48,55 +42,41 @@
     </div>
   </div>
 
+  <!-- Konten Utama -->
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Hero Banner">
+      <img src="images/hero.jpg" alt="Banner Utama">
       <div class="hero-text">
-        <h2>Kekayaan Alam Indonesia Siap Diekspor</h2>
-        <p>Sumber terpercaya Bentonite, rempah, arang, dan lainnya.</p>
+        <h2>Kekayaan Alam Indonesia Siap Ekspor</h2>
+        <p>Sumber terpercaya bentonit, rempah, arang, dan lainnya.</p>
       </div>
     </section>
 
-    <section class="intro">
-      <h2>Selamat datang di Beukeuh Eksporind</h2>
+    <section>
+      <h2>Selamat Datang di Beukeuh Eksporind</h2>
       <p>
-        Kami adalah perusahaan ekspor berbasis di Indonesia, fokus menyediakan komoditas alam berkualitas tinggi seperti Bentonite, vanili, kayu manis, arang, dan hasil pertanian lainnya.
+        Kami adalah perusahaan ekspor asal Indonesia yang fokus menyediakan komoditas alami berkualitas tinggi seperti bentonit, vanili, kayu manis, arang, dan produk pertanian lainnya.
       </p>
       <p>
-        Dengan komitmen pada kualitas, keberlanjutan, dan kepuasan pelanggan, kami menghubungkan kekayaan alam Indonesia ke pasar global melalui kemitraan jangka panjang yang terpercaya.
+        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menghubungkan kekayaan alam Indonesia dengan pasar global melalui kemitraan jangka panjang yang terpercaya.
       </p>
     </section>
 
-    <section class="product-highlights">
-      <h2>Produk Unggulan</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="images/bentonite1.jpg" alt="Bentonit">
-          <h3>Bentonit</h3>
-        </div>
-        <div class="product-card">
-          <img src="images/spices.jpg" alt="Rempah-rempah">
-          <h3>Rempah-rempah</h3>
-        </div>
-        <div class="product-card">
-          <img src="images/charcoal.jpg" alt="Arang">
-          <h3>Arang</h3>
-        </div>
-      </div>
-    </section>
-
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
     <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
 
+  <!-- Tombol WA Melayang -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
+  <!-- Script -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
