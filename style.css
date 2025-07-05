@@ -206,9 +206,11 @@ section.intro {
   transition: transform 0.3s ease;
   z-index: 1000;
 }
+
 .overlay-menu.show {
   transform: translateX(0);
 }
+
 .overlay-menu a {
   display: block;
   margin: 1em 0;
@@ -217,8 +219,21 @@ section.intro {
   color: #333;
   font-size: 1em;
 }
+
 .overlay-menu a:hover {
   color: #442d0d;
+}
+
+/* SUBMENU di dalam Overlay Menu */
+.overlay-menu .dropdown-content a {
+  padding: 4px 10px;
+  font-size: 0.95em;
+  margin-left: 10px;
+}
+
+/* SEMBUNYIKAN TOMBOL BAHASA DI DALAM OVERLAY */
+.overlay-menu .lang-switch {
+  display: none;
 }
 
 .close-btn {
