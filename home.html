@@ -10,8 +10,9 @@
 
   <header class="main-header">
     <div class="container">
-      <div class="header-row">
+      <div class="header-inner">
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
         <div class="brand">
           <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
           <div class="brand-name">
@@ -19,11 +20,11 @@
             <p class="tagline">Natural Commodities from Indonesia</p>
           </div>
         </div>
-      </div>
 
-      <div class="lang-switch">
-        <a href="home-id.html">ID</a>
-        <a href="home.html" class="active">EN</a>
+        <div class="lang-switch">
+          <a href="home-id.html">ID</a>
+          <a href="home.html" class="active">EN</a>
+        </div>
       </div>
 
       <nav class="nav-links" id="navLinks">
@@ -61,7 +62,7 @@
     <section>
       <h2>Welcome to Beukeuh Eksporind</h2>
       <p>
-        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.
+        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods. 
       </p>
       <p>
         With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.
@@ -76,12 +77,10 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- Script -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
