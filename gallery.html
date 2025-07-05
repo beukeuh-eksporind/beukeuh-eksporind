@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,7 +25,7 @@
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Products ▼</button>
+          <button class="dropdown-toggle">Products ▾</button>
           <div class="dropdown-content">
             <a href="bentonite.html">Bentonite</a>
             <a href="vanilla.html">Vanilla</a>
@@ -45,7 +45,7 @@
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Products ▼</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
       <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
@@ -59,22 +59,15 @@
   </div>
 
   <main class="container">
-    <section class="intro">
-      <h2>Our Export Gallery</h2>
-      <p>Explore photos of our natural commodity products and export activities.</p>
-    </section>
+    <h2>Gallery</h2>
+    <p>Explore photos of our natural products, harvesting process, and packaging for export.</p>
 
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/gallery1.jpg" alt="Gallery Image 1">
-      </div>
-      <div class="product-card">
-        <img src="images/gallery2.jpg" alt="Gallery Image 2">
-      </div>
-      <div class="product-card">
-        <img src="images/gallery3.jpg" alt="Gallery Image 3">
-      </div>
-      <!-- Tambahkan gambar lainnya sesuai kebutuhan -->
+    <div class="gallery-swipe">
+      <img src="images/gallery1.jpg" alt="Gallery 1" />
+      <img src="images/gallery2.jpg" alt="Gallery 2" />
+      <img src="images/gallery3.jpg" alt="Gallery 3" />
+      <img src="images/gallery4.jpg" alt="Gallery 4" />
+      <img src="images/gallery5.jpg" alt="Gallery 5" />
     </div>
   </main>
 
@@ -90,21 +83,9 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-
-    // Dropdown toggle for overlay
-    const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-    dropdownToggles.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const parent = btn.parentElement;
-        parent.classList.toggle("open");
-      });
-    });
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
