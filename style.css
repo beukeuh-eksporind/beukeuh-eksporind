@@ -83,16 +83,22 @@ header, footer {
 
 /* LANGUAGE SWITCH */
 .lang-switch {
-  font-size: 0.9em;
+  font-size: 0.95em;
   display: flex;
-  gap: 4px;
+  gap: 12px; /* tambahkan jarak antar tombol bahasa */
   align-items: center;
+  justify-content: center;
 }
+
 .lang-switch a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 2px 6px;
+  background: none;
+  border: none;
 }
+
 .lang-switch a.active {
   text-decoration: underline;
 }
@@ -191,36 +197,7 @@ section.intro {
 
 
 /* DROPDOWN (PRODUCT MENU) */
-.dropdown {
-  position: relative;
-}
-.dropdown .dropdown-toggle::after {
-  content: " ▼";
-  font-size: 0.7em;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #442d0d;
-  padding: 0.5em;
-  border-radius: 4px;
-  z-index: 999;
-}
-.dropdown-content a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 6px 10px;
-  font-size: 0.9em;
-}
-.dropdown-content a:hover {
-  background-color: rgba(255,255,255,0.15);
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
 /* ... bagian awal tetap sama, lalu kita update bagian overlay-menu ... */
 
 /* OVERLAY MENU (MODERN SLIDE-IN + TRANSPARENT BLUR) */
@@ -228,7 +205,46 @@ section.intro {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  he/* Untuk dropdown menu produk */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95em;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: transparent;  /* hilangkan latar */
+  box-shadow: none;         /* hilangkan bayangan */
+  padding: 0;
+  margin-top: 4px;
+  z-index: 1000;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 4px 0;
+  font-size: 0.95em;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}ight: 100vh;
   width: 240px;
   background-color: rgba(255, 255, 255, 0.5); /* transparan putih */
   backdrop-filter: blur(10px); /* efek blur */
