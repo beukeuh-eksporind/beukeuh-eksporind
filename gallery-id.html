@@ -58,23 +58,24 @@
     <a href="contact-id.html">Kontak</a>
   </div>
 
-  <main class="container">
-    <section class="gallery-wrapper">
+  <main class="container"
       <h2>Galeri</h2>
       <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p>
 <!-- Tanda panah -->
-  <div class="gallery-arrows">
-    <span class="arrow left">❮</span>
-    <span class="arrow right">❯</span>
+    <section class="gallery">
+  <button class="arrow left" onclick="scrollGallery(-1)">❮</button>
+  
+  <div class="gallery-track" id="galleryTrack">
+    <img src="images/gallery1.jpg" alt="Galeri 1" />
+    <img src="images/gallery2.jpg" alt="Galeri 2" />
+    <img src="images/gallery3.jpg" alt="Galeri 3" />
+    <img src="images/gallery4.jpg" alt="Galeri 4" />
+    <img src="images/gallery5.jpg" alt="Galeri 5" />
   </div>
-      <div class="gallery-scroll">
-        <img src="images/gallery1.jpg" alt="Galeri 1" />
-        <img src="images/gallery2.jpg" alt="Galeri 2" />
-        <img src="images/gallery3.jpg" alt="Galeri 3" />
-        <img src="images/gallery4.jpg" alt="Galeri 4" />
-        <img src="images/gallery5.jpg" alt="Galeri 5" />
-      </div>
-    </section>
+  
+  <button class="arrow right" onclick="scrollGallery(1)">❯</button>
+</section>
+      
   </main>
 
   <footer>
@@ -86,13 +87,19 @@
   </a>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
+  function toggleMenu() {
+    document.getElementById("overlayMenu").classList.toggle("show");
+  }
 
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
+  function toggleDropdown() {
+    document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+  }
+
+  function scrollGallery(direction) {
+    const track = document.getElementById("galleryTrack");
+    const scrollAmount = track.offsetWidth * 0.7;
+    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+  }
   </script>
 </body>
 </html>
