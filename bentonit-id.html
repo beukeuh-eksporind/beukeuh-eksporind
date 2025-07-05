@@ -14,19 +14,29 @@
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alam dari Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-      <div class="lang-switch">
-        🇮🇩<a href="bentonite-id.html" class="active">ID</a> | 🇬🇧<a href="bentonite.html">EN</a>
-      </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html" class="active">Produk</a>
-        <a href="gallery.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Produk ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite-id.html" class="active">Bentonit</a>
+            <a href="vanilla-id.html">Vanili</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html">Arang</a>
+          </div>
+        </div>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
       </nav>
+      <div class="lang-switch">
+        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
+        <a href="bentonite.html">🇬🇧 EN</a>
+      </div>
     </div>
   </header>
 
@@ -34,46 +44,51 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html" class="active">Produk</a>
-    <a href="gallery.html">Galeri</a>
-    <a href="contact.html">Kontak</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Produk ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html" class="active">Bentonit</a>
+        <a href="vanilla-id.html">Vanili</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
   </div>
 
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero-bentonite.jpg" alt="Bentonit Ekspor">
+      <img src="images/bentonite-banner.jpg" alt="Banner Bentonit">
       <div class="hero-text">
-        <h2>Bentonit Berkualitas Tinggi</h2>
-        <p>Pasokan terpercaya untuk kebutuhan industri dan pertanian</p>
+        <h2>Bentonit Berkualitas Ekspor</h2>
+        <p>Bahan alami dari Indonesia untuk berbagai industri</p>
       </div>
     </section>
 
-    <section>
-      <h2>Tentang Produk Bentonit Kami</h2>
+    <section class="intro">
+      <h2>Apa itu Bentonit?</h2>
       <p>
-        Bentonit kami berasal dari sumber alami terbaik di Indonesia. Kami menyediakan bentonit natrium dan kalsium, cocok untuk kebutuhan pengeboran, konstruksi, pertanian, dan lingkungan.
+        Bentonit adalah jenis tanah liat alami yang sangat berguna dalam berbagai industri seperti pengeboran minyak, pengolahan air, pembuatan kosmetik, hingga pertanian. 
+        Produk kami berasal dari sumber berkualitas di Indonesia dan telah melalui proses penyaringan ketat untuk menjamin kualitas terbaik.
       </p>
-    </section>
 
-    <section class="product-highlights">
-      <h3>Spesifikasi Produk</h3>
+      <h3>Spesifikasi:</h3>
       <ul>
-        <li>Kadar Air: &lt; 12%</li>
-        <li>Daya Mengembang: Sangat Baik</li>
-        <li>Ukuran Mesh: 100–200</li>
-        <li>pH: 8–10</li>
-        <li>Kemasan: Karung PP 25kg / 50kg atau jumbo bag</li>
+        <li>Kadar Montmorillonit tinggi</li>
+        <li>Kelembaban maksimal 12%</li>
+        <li>Ukuran partikel sesuai permintaan</li>
+        <li>Dikemas dalam karung 25kg / 50kg / jumbo bag</li>
       </ul>
-    </section>
 
-    <section>
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
-      <a href="files/bentonite-brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
+      <a href="brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
@@ -85,9 +100,16 @@
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
+    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        button.parentElement.classList.toggle('open');
       });
     });
   </script>
