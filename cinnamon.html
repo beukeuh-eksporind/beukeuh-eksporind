@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinnamon | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="cinnamon-id.html">ID</a> | 🇬🇧<a href="cinnamon.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonite.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="bentonite.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-cinnamon.jpg" alt="Indonesian Cinnamon">
+      <div class="hero-text">
+        <h2>Premium Indonesian Cinnamon</h2>
+        <p>Rich aroma and natural taste for global needs</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Our Cinnamon</h2>
+      <p>
+        Sourced from the highlands of Sumatra and Java, our cinnamon is rich in flavor, aroma, and essential oils. It’s carefully harvested and sun-dried to preserve its natural quality.
+      </p>
+      <p>
+        Suitable for food, beverages, pharmaceuticals, and cosmetics industries.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Product Specifications</h3>
+      <ul>
+        <li>Moisture Content: Max 13%</li>
+        <li>Form: Stick (rolled), powder, broken</li>
+        <li>Color: Natural brown to dark brown</li>
+        <li>Packaging: 25 kg/bag or as requested</li>
+        <li>Origin: Sumatra / Java, Indonesia</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+      <a href="files/cinnamon-brochure.pdf" class="download-button" download>Download Cinnamon Brochure</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
