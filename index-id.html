@@ -7,17 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Komoditas Alam dari Indonesia</p>
         </div>
       </div>
 
@@ -29,64 +26,53 @@
       <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonit-id.html">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
+        <div class="dropdown">
+          <button class="dropbtn">Produk ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonit</a>
+            <a href="#">Vanila</a>
+            <a href="#">Kayu Manis</a>
+            <a href="#">Kopi</a>
+            <a href="#">Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
       </nav>
     </div>
   </header>
 
-  <!-- OVERLAY MENU (untuk mobile) -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <a href="bentonit-id.html">Produk</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-    <div class="lang-switch">
-      <a href="index-id.html" class="active">ID</a>
-      <a href="index.html">EN</a>
-    </div>
-  </div>
-
-  <!-- HERO -->
-  <section class="hero-banner">
-    <img src="images/hero.jpg" alt="Hero Banner" />
-    <div class="hero-text">
-      <h2>Alam Indonesia, Dunia Menyambut</h2>
-      <p>Menghubungkan hasil bumi terbaik dengan dunia</p>
-    </div>
-  </section>
-
-  <!-- KONTEN UTAMA -->
   <main class="container">
-    <h2>Selamat Datang di Beukeuh Eksporind</h2>
-    <p>
-      Kami adalah perusahaan ekspor yang fokus pada produk-produk alami unggulan dari Indonesia seperti bentonit, arang, rempah, dan hasil bumi lainnya.
-    </p>
-    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Hubungi Kami di WhatsApp</a>
-    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
+    <section class="hero-banner">
+      <img src="images/hero.jpg" alt="Hero Banner">
+      <div class="hero-text">
+        <h2>Kekayaan Alam Indonesia<br>Siap Diekspor</h2>
+        <p>Sumber terpercaya Bentonite, rempah, arang, dan lainnya.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Selamat Datang di Beukeuh Eksporind</h2>
+      <p>Kami adalah perusahaan ekspor yang berbasis di Indonesia, menyediakan komoditas alam berkualitas seperti bentonit, vanila, kayu manis, kopi, arang, dan hasil pertanian lainnya.</p>
+      <p>Dengan komitmen tinggi terhadap kualitas dan keberlanjutan, kami menghubungkan kekayaan alam Indonesia ke pasar dunia melalui kerja sama jangka panjang dan terpercaya.</p>
+    </section>
+
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <!-- SCRIPT -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
   <script>
     function toggleMenu() {
-      const overlayMenu = document.getElementById("overlayMenu");
-      overlayMenu.classList.toggle("show");
+      document.getElementById("navLinks").classList.toggle("show");
     }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
   </script>
-
 </body>
 </html>
