@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,65 +17,56 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html" class="active">About</a>
         <div class="dropdown">
-          <button class="dropbtn">Products ▾</button>
+          <button class="dropdown-toggle">Products</button>
           <div class="dropdown-content">
             <a href="bentonite.html">Bentonite</a>
-            <a href="#">Vanilla</a>
-            <a href="#">Charcoal</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
           </div>
         </div>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-
       <div class="lang-switch">
-        <a href="home-id.html">ID</a>
-        <a href="home.html" class="active">EN</a>
+        <a href="about-id.html">🇮🇩 ID</a>
+        <a href="about.html" class="active">🇬🇧 EN</a>
       </div>
     </div>
   </header>
 
-  <!-- Overlay menu (mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html" class="active">About</a>
-    <a href="bentonite.html">Products</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Products</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero.jpg" alt="About Us">
-      <div class="hero-text">
-        <h2>About Our Company</h2>
-        <p>Committed to quality and sustainability.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Beukeuh Eksporind Profile</h2>
+    <section class="intro">
+      <h2>About Us</h2>
       <p>
-        Beukeuh Eksporind is an export company based in Indonesia, specializing in supplying high-quality natural commodities. Our priority is quality, integrity, and customer satisfaction in every shipment.
+        Beukeuh Eksporind is an Indonesian export company committed to delivering the richness of our archipelago’s natural resources to the global market. We specialize in Bentonite, vanilla, cinnamon, coffee, and charcoal – all cultivated or sourced with care and integrity.
       </p>
       <p>
-        Our vision is to bridge Indonesia’s natural wealth with the world, through long-term and trusted partnerships.
+        Our mission is to build sustainable, long-term partnerships by ensuring consistent quality, timely delivery, and deep respect for nature and people. With years of experience in agriculture and global trade, Beukeuh Eksporind is your reliable gateway to Indonesia’s finest commodities.
       </p>
-    </section>
-
-    <section>
-      <h2>Our Values</h2>
-      <ul>
-        <li><strong>Quality:</strong> We select only the best products from trusted sources.</li>
-        <li><strong>Sustainability:</strong> Committed to environmentally friendly and sustainable practices.</li>
-        <li><strong>Collaboration:</strong> Building long-term relationships with global partners.</li>
-      </ul>
     </section>
   </main>
 
@@ -97,6 +88,13 @@
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(button => {
+      button.addEventListener('click', function () {
+        this.parentElement.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
+
