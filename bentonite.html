@@ -94,24 +94,24 @@
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
-
   <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
+  function toggleMenu() {
+    document.getElementById("overlayMenu").classList.toggle("show");
+  }
 
-    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
+  // Hanya tutup overlay jika klik link biasa (bukan dropdown toggle)
+  document.querySelectorAll('#overlayMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('overlayMenu').classList.remove('show');
     });
+  });
 
-    document.querySelectorAll('.dropdown-toggle').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.stopPropagation();
-        button.parentElement.classList.toggle('open');
-      });
+  // Tangani klik pada dropdown di overlay
+  document.querySelectorAll('.overlay-menu .dropdown-toggle').forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.stopPropagation(); // Cegah klik ini menutup overlay
+      this.parentElement.classList.toggle('open');
     });
-  </script>
-</body>
-</html>
+  });
+</script>
+  <
