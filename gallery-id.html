@@ -88,17 +88,13 @@
 
   <script>
   function toggleMenu() {
-    document.getElementById("overlayMenu").classList.toggle("show");
+    const overlay = document.getElementById("overlayMenu");
+    overlay.classList.toggle("show");
+    document.body.classList.toggle("overlay-open");
   }
 
   function toggleDropdown() {
     document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-  }
-
-  function scrollGallery(direction) {
-    const track = document.getElementById("galleryTrack");
-    const scrollAmount = track.offsetWidth * 0.7;
-    track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
   }
   </script>
 </body>
