@@ -85,20 +85,17 @@ header, footer {
 .lang-switch {
   font-size: 0.95em;
   display: flex;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
   justify-content: center;
 }
-
 .lang-switch a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 2px 6px;
   background: none;
   border: none;
 }
-
 .lang-switch a.active {
   text-decoration: underline;
 }
@@ -194,14 +191,14 @@ section.intro {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* OVERLAY MENU (SLIDE-IN + TRANSPARENT) */
+/* OVERLAY MENU */
 .overlay-menu {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 240px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   box-shadow: 4px 0 20px rgba(0,0,0,0.2);
   padding: 80px 1.5em 2em;
@@ -223,6 +220,7 @@ section.intro {
 .overlay-menu a:hover {
   color: #442d0d;
 }
+
 .close-btn {
   position: absolute;
   top: 16px;
@@ -235,39 +233,37 @@ section.intro {
   z-index: 1002;
 }
 
-/* DROPDOWN (PRODUCT MENU) */
-.dropdown {
-  position: relative;
+/* DROPDOWN IN OVERLAY */
+.overlay-menu .dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.dropdown-toggle {
+.overlay-menu .dropdown-toggle {
   background: none;
   border: none;
-  color: white;
+  font-size: 1em;
+  color: #333;
   font-weight: 500;
-  font-size: 0.95em;
+  text-align: left;
+  padding: 0.7em 0;
   cursor: pointer;
-  padding: 6px 10px;
 }
-.dropdown-content {
+.overlay-menu .dropdown-content {
   display: none;
-  position: absolute;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  margin-top: 4px;
-  z-index: 1000;
+  flex-direction: column;
+  padding-left: 1em;
 }
-.dropdown.open .dropdown-content {
-  display: block;
+.overlay-menu .dropdown.open .dropdown-content {
+  display: flex;
 }
-.dropdown-content a {
-  display: block;
-  color: white;
+.overlay-menu .dropdown-content a {
+  color: #333;
   text-decoration: none;
   padding: 4px 0;
   font-size: 0.95em;
 }
-.dropdown-content a:hover {
+.overlay-menu .dropdown-content a:hover {
   text-decoration: underline;
 }
 
