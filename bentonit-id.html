@@ -14,52 +14,80 @@
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Komoditas Alam dari Indonesia</p>
         </div>
       </div>
       <div class="lang-switch">
-        <a href="bentonit-id.html" class="active">ID</a>
-        <a href="bentonite.html">EN</a>
+        🇮🇩<a href="bentonite-id.html" class="active">ID</a> | 🇬🇧<a href="bentonite.html">EN</a>
       </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="index-id.html">Beranda</a>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonit-id.html" class="active">Produk</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
+        <a href="bentonite-id.html" class="active">Produk</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
       </nav>
     </div>
   </header>
 
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html" class="active">Produk</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="contact.html">Kontak</a>
+  </div>
+
   <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-bentonite.jpg" alt="Bentonit Ekspor">
+      <div class="hero-text">
+        <h2>Bentonit Berkualitas Tinggi</h2>
+        <p>Pasokan terpercaya untuk kebutuhan industri dan pertanian</p>
+      </div>
+    </section>
+
     <section>
-      <h2>Produk Bentonit</h2>
+      <h2>Tentang Produk Bentonit Kami</h2>
       <p>
-        Bentonit kami berasal dari tambang terpercaya di Indonesia dan diolah sesuai standar kualitas ekspor untuk memenuhi kebutuhan industri global.
+        Bentonit kami berasal dari sumber alami terbaik di Indonesia. Kami menyediakan bentonit natrium dan kalsium, cocok untuk kebutuhan pengeboran, konstruksi, pertanian, dan lingkungan.
       </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Spesifikasi Produk</h3>
       <ul>
-        <li><strong>Aplikasi:</strong> Lumpur pengeboran, bahan pengikat pelet bijih besi, pasir pengecoran, pasir kucing, dan pertanian.</li>
-        <li><strong>Jenis:</strong> Bentonit Natrium & Kalsium</li>
-        <li><strong>Kemasan:</strong> Karung 25 kg, 50 kg atau jumbo bag (1 ton)</li>
-        <li><strong>Asal:</strong> Indonesia</li>
+        <li>Kadar Air: &lt; 12%</li>
+        <li>Daya Mengembang: Sangat Baik</li>
+        <li>Ukuran Mesh: 100–200</li>
+        <li>pH: 8–10</li>
+        <li>Kemasan: Karung PP 25kg / 50kg atau jumbo bag</li>
       </ul>
     </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button" target="_blank">Minta Penawaran</a>
-    <a href="brosur.pdf" class="download-button" download>Unduh Brosur Produk</a>
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+      <a href="files/bentonite-brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      document.getElementById("overlayMenu").classList.toggle("show");
     }
-    document.querySelectorAll('#navLinks a').forEach(link => {
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
