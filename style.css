@@ -85,11 +85,11 @@ header, footer {
 .lang-switch {
   font-size: 0.95em;
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5em;
 }
+
 .lang-switch a {
   color: white;
   text-decoration: none;
@@ -98,6 +98,7 @@ header, footer {
   background: none;
   border: none;
 }
+
 .lang-switch a.active {
   text-decoration: underline;
 }
@@ -193,43 +194,7 @@ section.intro {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* DROPDOWN (PRODUCT MENU) */
-.dropdown {
-  position: relative;
-}
-.dropdown-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-weight: 500;
-  font-size: 0.95em;
-  cursor: pointer;
-  padding: 6px 10px;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
-  margin-top: 4px;
-  z-index: 1000;
-}
-.dropdown.open .dropdown-content {
-  display: block;
-}
-.dropdown-content a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 4px 0;
-  font-size: 0.95em;
-}
-.dropdown-content a:hover {
-  text-decoration: underline;
-}
-
-/* OVERLAY MENU (MODERN SLIDE-IN + TRANSPARENT BLUR) */
+/* OVERLAY MENU (SLIDE-IN + TRANSPARENT) */
 .overlay-menu {
   position: fixed;
   top: 0;
@@ -270,6 +235,42 @@ section.intro {
   z-index: 1002;
 }
 
+/* DROPDOWN (PRODUCT MENU) */
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95em;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 4px;
+  z-index: 1000;
+}
+.dropdown.open .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 4px 0;
+  font-size: 0.95em;
+}
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
@@ -288,4 +289,3 @@ section.intro {
     display: none;
   }
 }
-
