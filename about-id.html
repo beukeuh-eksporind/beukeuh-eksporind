@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Komoditas Alam dari Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links">
+      <div class="lang-switch">
+        <a href="about-id.html" class="active">🇮🇩 ID</a>
+        <a href="about.html">🇬🇧 EN</a>
+      </div>
+      <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html" class="active">Tentang</a>
-
         <div class="dropdown">
           <button class="dropdown-toggle">Produk ▼</button>
           <div class="dropdown-content">
@@ -32,15 +34,9 @@
             <a href="charcoal-id.html">Arang</a>
           </div>
         </div>
-
         <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
       </nav>
-
-      <div class="lang-switch">
-        <a href="about-id.html" class="active">🇮🇩 ID</a>
-        <a href="about.html">🇬🇧 EN</a>
-      </div>
     </div>
   </header>
 
@@ -68,15 +64,8 @@
   <main class="container">
     <section class="intro">
       <h2>Tentang Beukeuh Eksporind</h2>
-      <p>
-        Beukeuh Eksporind adalah perusahaan ekspor terpercaya dari Indonesia yang mengedepankan kualitas dan keberlanjutan dalam menyuplai komoditas alami seperti bentonit, vanila, kayu manis, kopi, dan arang.
-      </p>
-      <p>
-        Misi kami adalah menjembatani hasil alam Indonesia dengan pasar global melalui kemitraan jangka panjang, praktik dagang yang adil, dan transparansi. Kami bekerja erat dengan petani lokal untuk menjaga kualitas dan nilai dari setiap produk.
-      </p>
-      <p>
-        Beukeuh Eksporind siap menjadi mitra Anda yang andal dalam menyediakan komoditas terbaik dari Indonesia ke seluruh dunia.
-      </p>
+      <p>Beukeuh Eksporind adalah perusahaan ekspor terpercaya yang berbasis di Indonesia. Kami berfokus pada pengadaan dan distribusi komoditas alam berkualitas tinggi seperti bentonit, vanila, kayu manis, kopi, dan arang ke pasar internasional.</p>
+      <p>Misi kami adalah menghubungkan kekayaan alam Indonesia dengan dunia melalui praktik berkelanjutan dan kemitraan jangka panjang yang dapat dipercaya.</p>
     </section>
   </main>
 
@@ -93,13 +82,20 @@
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    // Tutup overlay saat salah satu link diklik
-    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
+    // Tutup menu saat klik link
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
-  </script>
 
+    // Dropdown toggle di overlay
+    const dropdownToggles = document.querySelectorAll('.overlay-menu .dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function () {
+        this.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
