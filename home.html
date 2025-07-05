@@ -8,15 +8,16 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
-      <div class="brand">
+      <div class="header-row">
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+        <div class="brand">
+          <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+          <div class="brand-name">
+            <h1>Beukeuh Eksporind</h1>
+            <p class="tagline">Natural Commodities from Indonesia</p>
+          </div>
         </div>
       </div>
 
@@ -24,10 +25,17 @@
         <a href="home-id.html">ID</a>
         <a href="home.html" class="active">EN</a>
       </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonite.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- OVERLAY MENU -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
@@ -41,7 +49,6 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
@@ -65,17 +72,16 @@
     <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WA FLOATING BUTTON -->
+  <!-- Floating WhatsApp -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- SCRIPT -->
+  <!-- Script -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
