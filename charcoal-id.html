@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arang | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="charcoal-id.html" class="active">ID</a> | 🇬🇧<a href="charcoal.html">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonite-id.html" class="active">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-charcoal.jpg" alt="Arang Indonesia">
+      <div class="hero-text">
+        <h2>Arang Berkualitas Ekspor</h2>
+        <p>Alami, berkelanjutan, dan siap kirim ke pasar global</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tentang Arang Kami</h2>
+      <p>
+        Kami menyediakan arang tempurung kelapa dan arang kayu keras berkualitas tinggi, diproses secara ramah lingkungan untuk menjaga kualitas dan waktu bakar yang lama.
+      </p>
+      <p>
+        Cocok untuk BBQ, shisha, dan keperluan industri – dikemas sesuai standar ekspor internasional.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Spesifikasi Produk</h3>
+      <ul>
+        <li>Jenis: Arang Tempurung Kelapa & Arang Kayu</li>
+        <li>Karbon Tetap: Min 75%</li>
+        <li>Kadar Air: Maks. 8%</li>
+        <li>Kadar Abu: Maks. 6%</li>
+        <li>Kemasan: Karung 10 kg / 20 kg atau sesuai permintaan</li>
+        <li>Bentuk: Kubus, Hexagon, Stick, atau Bongkahan Alami</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+      <a href="files/charcoal-brochure.pdf" class="download-button" download>Unduh Brosur Arang</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
