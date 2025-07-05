@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -18,49 +17,67 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
+      <div class="lang-switch">
+        🇮🇩<a href="contact-id.html">ID</a> | 🇬🇧<a href="contact.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonit-en.html">Products</a>
-        <a href="galeri.html">Gallery</a>
+        <a href="bentonite.html">Products</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="active">Contact</a>
-        <div class="lang-switch">
-          <a href="contact-id.html">ID</a>
-          <a href="contact.html" class="active">EN</a>
-        </div>
       </nav>
     </div>
   </header>
 
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="bentonite.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+
   <main class="container">
-    <h2>Contact Us</h2>
-    <p>We're happy to assist with any inquiries regarding our products or partnership opportunities.</p>
+    <section class="intro">
+      <h2>Get in Touch</h2>
+      <p>
+        Interested in our products or have any inquiries? We’d love to hear from you. Reach out via the contact details below or directly through WhatsApp.
+      </p>
+    </section>
 
-    <ul>
-      <li><strong>Email:</strong> info@beukeuh-eksporind.com</li>
-      <li><strong>Phone:</strong> +62 812-8254-1982</li>
-      <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Chat Us</a></li>
-      <li><strong>Location:</strong> Bandung, West Java, Indonesia</li>
-    </ul>
+    <section class="contact-info">
+      <h3>Contact Information</h3>
+      <ul>
+        <li><strong>Email:</strong> info@beukeuheksporind.com</li>
+        <li><strong>Phone:</strong> +62 812-8254-1982</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Click to Chat</a></li>
+        <li><strong>Location:</strong> Bandung, West Java, Indonesia</li>
+      </ul>
+    </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact via WhatsApp</a>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Message via WhatsApp</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("show");
+      document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    document.querySelectorAll('#navLinks a').forEach(link => {
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('show');
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
-
 </body>
 </html>
