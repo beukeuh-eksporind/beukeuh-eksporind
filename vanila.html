@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanilla | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="vanilla-id.html">ID</a> | 🇬🇧<a href="vanilla.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonite.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="bentonite.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-vanilla.jpg" alt="Vanilla Export">
+      <div class="hero-text">
+        <h2>Premium Vanilla Beans</h2>
+        <p>Direct from Indonesian farms with high-quality standards</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Our Vanilla</h2>
+      <p>
+        Our vanilla is sourced from the fertile regions of Indonesia, known for producing beans with rich aroma, high vanillin content, and long-lasting flavor.
+      </p>
+      <p>
+        We offer both cured and dried vanilla beans, ideal for food, cosmetic, and essential oil industries.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Product Specifications</h3>
+      <ul>
+        <li>Moisture Content: 25–30%</li>
+        <li>Length: 14–20 cm</li>
+        <li>Color: Dark brown to black</li>
+        <li>Packaging: Vacuum sealed, 500g / 1kg</li>
+        <li>Grades: Gourmet, Grade A, Grade B</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+      <a href="files/vanilla-brochure.pdf" class="download-button" download>Download Vanilla Brochure</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
