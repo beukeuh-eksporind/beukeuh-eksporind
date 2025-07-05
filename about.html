@@ -11,7 +11,6 @@
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -26,8 +25,8 @@
       </div>
 
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="home.html">Home</a>
+        <a href="about.html" class="active">About</a>
         <a href="bentonite.html">Products</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
@@ -37,7 +36,7 @@
 
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="index.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="about.html" class="active">About</a>
     <a href="bentonite.html">Products</a>
     <a href="gallery.html">Gallery</a>
@@ -50,53 +49,51 @@
 
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero-about.jpg" alt="About Banner" />
+      <img src="images/about-hero.jpg" alt="About Beukeuh Eksporind">
       <div class="hero-text">
-        <h2>About Beukeuh Eksporind</h2>
-        <p>Exporting Indonesia’s best to the world.</p>
+        <h2>Dedicated to Exporting Indonesia’s Natural Treasures</h2>
+        <p>From the Earth to the World, with Quality and Integrity</p>
       </div>
     </section>
 
     <section class="intro">
       <h2>Who We Are</h2>
       <p>
-        Beukeuh Eksporind is a trusted Indonesian export company specializing in high-quality natural commodities. We work directly with farmers and producers across Indonesia to bring authentic, sustainable, and export-grade products to global buyers.
+        Beukeuh Eksporind is a committed exporter of Indonesia's finest natural commodities. Rooted in local wisdom and driven by global standards, we deliver products like Bentonite, spices, and charcoal to markets worldwide.
       </p>
       <p>
-        With years of experience in international trade, we aim to deliver transparency, reliability, and excellence in every shipment.
+        Our mission is not just to trade—but to build long-term partnerships based on trust, quality, and mutual growth. We bridge the richness of Indonesian soil with the needs of international clients who value sustainability and authenticity.
       </p>
     </section>
 
     <section class="product-highlights">
-      <h2>Why Choose Us</h2>
+      <h2>What We Offer</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="images/quality.jpg" alt="Quality First" />
-          <h3>Premium Quality</h3>
+          <img src="images/bentonite.jpg" alt="Bentonite">
+          <h3>Bentonite</h3>
         </div>
         <div class="product-card">
-          <img src="images/sustainable.jpg" alt="Sustainable Sourcing" />
-          <h3>Sustainable Sourcing</h3>
+          <img src="images/spices.jpg" alt="Spices">
+          <h3>Vanilla & Spices</h3>
         </div>
         <div class="product-card">
-          <img src="images/partnership.jpg" alt="Long-Term Partnership" />
-          <h3>Reliable Partnerships</h3>
+          <img src="images/charcoal.jpg" alt="Charcoal">
+          <h3>Charcoal</h3>
         </div>
       </div>
     </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <div class="wa-float">
-    <a href="https://wa.me/6281282541982" target="_blank">
-      <img src="images/wa-icon.png" alt="WhatsApp Button" />
-    </a>
-  </div>
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
 
   <script>
     function toggleMenu() {
@@ -109,6 +106,5 @@
       });
     });
   </script>
-
 </body>
 </html>
