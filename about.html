@@ -3,43 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Beukeuh Eksporind</title>
+  <title>About | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .overlay-menu .dropdown-toggle {
-      background: none;
-      border: none;
-      font-weight: 500;
-      color: #333;
-      font-size: 1em;
-      padding: 6px 0;
-      cursor: pointer;
-      width: 100%;
-      text-align: left;
-    }
-
-    .overlay-menu .dropdown-content {
-      display: none;
-      padding-left: 1em;
-      margin-top: 0.5em;
-    }
-
-    .overlay-menu .dropdown.open .dropdown-content {
-      display: block;
-    }
-
-    .overlay-menu .dropdown-content a {
-      display: block;
-      font-size: 0.95em;
-      margin: 0.3em 0;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .overlay-menu .dropdown-content a:hover {
-      color: #442d0d;
-    }
-  </style>
 </head>
 <body>
 
@@ -53,16 +18,13 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <div class="lang-switch">
-        <a href="about-id.html">🇮🇩 ID</a>
-        <a href="about.html" class="active">🇬🇧 EN</a>
-      </div>
       <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html" class="active">About</a>
+
         <div class="dropdown">
-          <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-          <div class="dropdown-content" id="productDropdown">
+          <button class="dropdown-toggle">Products ▼</button>
+          <div class="dropdown-content">
             <a href="bentonite.html">Bentonite</a>
             <a href="vanilla.html">Vanilla</a>
             <a href="cinnamon.html">Cinnamon</a>
@@ -70,21 +32,27 @@
             <a href="charcoal.html">Charcoal</a>
           </div>
         </div>
+
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
+
+      <div class="lang-switch">
+        <a href="about-id.html">🇮🇩 ID</a>
+        <a href="about.html" class="active">🇬🇧 EN</a>
+      </div>
     </div>
   </header>
 
-  <!-- OVERLAY MENU -->
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html" class="active">About</a>
 
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleOverlayDropdown()">Products ▾</button>
-      <div class="dropdown-content" id="overlayProductDropdown">
+      <button class="dropdown-toggle">Products ▼</button>
+      <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
@@ -101,10 +69,13 @@
     <section class="intro">
       <h2>About Beukeuh Eksporind</h2>
       <p>
-        Beukeuh Eksporind is an export company based in Indonesia, dedicated to providing high-quality natural commodities. We connect Indonesia’s natural richness to global markets through long-term, trustworthy partnerships.
+        Beukeuh Eksporind is a trusted Indonesian export company that specializes in delivering the richness of nature through premium-quality commodities. From Bentonite to vanilla, cinnamon, coffee, and charcoal, we take pride in our local resources and sustainable practices.
       </p>
       <p>
-        With a strong focus on quality, sustainability, and customer satisfaction, we offer products such as bentonite, vanilla, cinnamon, charcoal, and various other agricultural goods.
+        Our mission is to connect Indonesian farmers and producers with the global market through fair trade, transparency, and long-term partnerships. We ensure consistent quality, ethical sourcing, and customer-focused service.
+      </p>
+      <p>
+        With a growing presence and reputation in the export industry, Beukeuh Eksporind aims to be your reliable partner in sourcing the best of Indonesia.
       </p>
     </section>
   </main>
@@ -113,20 +84,17 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    function toggleDropdown() {
-      document.getElementById("productDropdown").classList.toggle("open");
-    }
-
-    function toggleOverlayDropdown() {
-      document.getElementById("overlayProductDropdown").parentElement.classList.toggle("open");
-    }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
+    // Tutup overlay saat salah satu link diklik
+    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
       });
