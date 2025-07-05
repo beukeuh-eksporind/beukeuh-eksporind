@@ -5,6 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Tambahan khusus untuk overlay dropdown agar berfungsi */
+    .overlay-menu .dropdown-toggle {
+      background: none;
+      border: none;
+      font-weight: 500;
+      color: #333;
+      font-size: 1em;
+      padding: 6px 0;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .overlay-menu .dropdown-content {
+      display: none;
+      padding-left: 1em;
+      margin-top: 0.5em;
+    }
+
+    .overlay-menu .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .overlay-menu .dropdown-content a {
+      display: block;
+      font-size: 0.95em;
+      margin: 0.3em 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .overlay-menu .dropdown-content a:hover {
+      color: #442d0d;
+    }
+  </style>
 </head>
 <body>
 
@@ -41,12 +77,12 @@
     </div>
   </header>
 
+  <!-- OVERLAY MENU -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html" class="active">Tentang</a>
 
-    <!-- Dropdown di Overlay -->
     <div class="dropdown">
       <button class="dropdown-toggle" onclick="toggleOverlayDropdown()">Produk ▾</button>
       <div class="dropdown-content" id="overlayProductDropdown">
@@ -88,7 +124,7 @@
     }
 
     function toggleOverlayDropdown() {
-      document.getElementById("overlayProductDropdown").classList.toggle("open");
+      document.getElementById("overlayProductDropdown").parentElement.classList.toggle("open");
     }
 
     document.querySelectorAll('#overlayMenu a').forEach(link => {
@@ -97,5 +133,6 @@
       });
     });
   </script>
+
 </body>
 </html>
