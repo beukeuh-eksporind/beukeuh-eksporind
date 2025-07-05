@@ -22,24 +22,55 @@
         <a href="home-id.html">🇮🇩 ID</a>
         <a href="home.html" class="active">🇬🇧 EN</a>
       </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown-overlay desktop-dropdown">
+          <a href="#">Products ▾</a>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonit</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
+  <!-- Overlay menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
-    <a href="bentonite.html">Products</a>
+    <div class="dropdown-overlay">
+      <button class="dropdown-btn">Products ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonit</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+    <div class="lang-switch">
+      <a href="home-id.html">🇮🇩 ID</a>
+      <a href="home.html" class="active">🇬🇧 EN</a>
+    </div>
   </div>
 
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
       <div class="hero-text">
-        <h2>Indonesia’s Natural Riches</h2>
-        <p>Ready for Export – Bentonite, spices, charcoal, and more.</p>
+        <h2>Indonesia’s Natural Riches<br />Ready for Export</h2>
+        <p>Trusted source of Bentonite, spices, charcoal, and more.</p>
       </div>
     </section>
 
@@ -61,10 +92,12 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- WhatsApp floating -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
+  <!-- Script -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
@@ -75,6 +108,15 @@
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
+
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    const dropdownOverlay = document.querySelector('.dropdown-overlay');
+
+    if (dropdownBtn && dropdownOverlay) {
+      dropdownBtn.addEventListener('click', () => {
+        dropdownOverlay.classList.toggle('open');
+      });
+    }
   </script>
 </body>
 </html>
