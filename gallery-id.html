@@ -59,17 +59,18 @@
   </div>
 
   <main class="container">
-    <h2>Galeri</h2>
-    <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p>
-<section class="gallery">
-    <div class="gallery-track">
-      <img src="images/gallery1.jpg" alt="Galeri 1" />
-      <img src="images/gallery2.jpg" alt="Galeri 2" />
-      <img src="images/gallery3.jpg" alt="Galeri 3" />
-      <img src="images/gallery4.jpg" alt="Galeri 4" />
-      <img src="images/gallery5.jpg" alt="Galeri 5" />
-    </div>
-  </section>
+    <section class="gallery-wrapper">
+      <h2>Galeri</h2>
+      <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p>
+
+      <div class="gallery-scroll">
+        <img src="images/gallery1.jpg" alt="Galeri 1" />
+        <img src="images/gallery2.jpg" alt="Galeri 2" />
+        <img src="images/gallery3.jpg" alt="Galeri 3" />
+        <img src="images/gallery4.jpg" alt="Galeri 4" />
+        <img src="images/gallery5.jpg" alt="Galeri 5" />
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -84,6 +85,7 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
+
     function toggleDropdown() {
       document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
     }
