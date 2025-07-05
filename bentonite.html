@@ -1,4 +1,5 @@
-<!-- ✅ File: bentonite.html (versi update bersih) --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,14 +18,17 @@
         </div>
       </div>
     </div>
-  </header>  <!-- Overlay Menu -->  <div class="overlay-menu" id="overlayMenu">
+  </header>
+
+  <!-- Overlay Menu -->
+  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">×</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
       <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▼</button>
       <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
+        <a href="bentonite.html" class="active">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
         <a href="coffee.html">Coffee</a>
@@ -33,25 +37,29 @@
     </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
-  </div>  <!-- Main Content -->  <div class="container">
+  </div>
+
+  <div class="container">
     <section class="intro fade-up">
-      <h2>Bentonite</h2><img src="images/bentonite.a1.jpg" alt="Bentonite Export" class="intro-image" />
+      <h2>Bentonite</h2>
+      <p>
+        Bentonite is a natural clay with exceptional absorbent and swelling properties, making it highly valuable for various industries such as agriculture, drilling, cosmetics, and pharmaceuticals.
+      </p>
 
-  <p>
-    Bentonite is a natural clay with exceptional absorbent and swelling properties,
-    making it highly valuable for various industries such as agriculture, drilling,
-    cosmetics, and pharmaceuticals.
-  </p>
-  <p>
-    At Beukeuh Eksporind, we supply premium-quality Bentonite from Indonesia,
-    processed to meet global standards. We ensure reliability, consistency,
-    and support for long-term partnerships.
-  </p>
-</section>
+      <!-- Gambar yang benar -->
+      <img src="images/bentonite.a1.jpg" alt="Bentonite Export" class="product-image" />
 
-  </div>  <footer>
+      <p>
+        At Beukeuh Eksporind, we supply premium-quality Bentonite from Indonesia, processed to meet global standards. We ensure reliability, consistency, and support for long-term partnerships.
+      </p>
+    </section>
+  </div>
+
+  <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>  <script>
+  </footer>
+
+  <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
@@ -59,8 +67,6 @@
     function toggleDropdown(el) {
       el.parentElement.classList.toggle("open");
     }
-  </script></body>
-</html><!-- ✅ Tambahkan di style.css -->/* Gambar di halaman produk */ .intro-image { width: 100%; max-width: 600px; height: auto; display: block; margin: 2em auto 1.5em auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-
-@media (max-width: 600px) { .intro-image { max-width: 90%; } }
-
+  </script>
+</body>
+</html>
