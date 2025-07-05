@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanila | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="vanilla-id.html" class="active">ID</a> | 🇬🇧<a href="vanilla.html">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonite-id.html" class="active">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-vanilla.jpg" alt="Vanila Indonesia">
+      <div class="hero-text">
+        <h2>Vanila Premium dari Indonesia</h2>
+        <p>Langsung dari petani lokal dengan kualitas terbaik</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tentang Vanila Kami</h2>
+      <p>
+        Vanila kami berasal dari daerah subur di Indonesia, dikenal dengan aroma yang kaya, kandungan vanilin tinggi, dan rasa yang tahan lama.
+      </p>
+      <p>
+        Kami menyediakan biji vanila yang sudah dikeringkan dan diawetkan, cocok untuk industri makanan, kosmetik, dan minyak esensial.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Spesifikasi Produk</h3>
+      <ul>
+        <li>Kadar Air: 25–30%</li>
+        <li>Panjang: 14–20 cm</li>
+        <li>Warna: Coklat tua ke hitam</li>
+        <li>Kemasan: Vakum 500g / 1kg</li>
+        <li>Grade: Gourmet, Grade A, Grade B</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+      <a href="files/vanilla-brochure.pdf" class="download-button" download>Unduh Brosur Vanila</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
