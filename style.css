@@ -230,9 +230,8 @@ section.intro {
   left: 0;
   height: 100vh;
   width: 240px;
-  background-color: rgba(255, 255, 255, 0.5); /* transparan */
-  backdrop-filter: blur(10px);               /* efek blur */
-  -webkit-backdrop-filter: blur(10px);       /* Safari support */
+  background-color: rgba(255, 255, 255, 0.8); /* transparan putih */
+  backdrop-filter: blur(10px); /* efek blur */
   box-shadow: 4px 0 20px rgba(0,0,0,0.2);
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
@@ -255,6 +254,26 @@ section.intro {
 
 .overlay-menu a:hover {
   color: #442d0d;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px; /* diposisikan di kanan atas */
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  color: #d33;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* Tambahan opsional untuk estetika emoji */
+.lang-switch a {
+  background: none;
+  box-shadow: none;
+  padding: 4px 6px;
+  font-size: 0.95em;
 }
 
 /* LANGUAGE SWITCH (UPDATED WITH EMOJI) */
