@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kayu Manis | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="cinnamon-id.html" class="active">ID</a> | 🇬🇧<a href="cinnamon.html">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
+        <a href="bentonite-id.html" class="active">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-cinnamon.jpg" alt="Kayu Manis Indonesia">
+      <div class="hero-text">
+        <h2>Kayu Manis Premium dari Indonesia</h2>
+        <p>Aroma kuat dan rasa alami untuk kebutuhan dunia</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tentang Kayu Manis Kami</h2>
+      <p>
+        Kayu manis kami berasal dari dataran tinggi Sumatra dan Jawa, dikenal karena kandungan minyak atsiri dan aromanya yang kuat. Proses panen dilakukan secara alami dan pengeringan dengan sinar matahari.
+      </p>
+      <p>
+        Cocok digunakan dalam industri makanan, minuman, farmasi, dan kosmetik.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Spesifikasi Produk</h3>
+      <ul>
+        <li>Kadar Air: Maks. 13%</li>
+        <li>Bentuk: Gulungan (stick), bubuk, patahan</li>
+        <li>Warna: Coklat alami sampai coklat tua</li>
+        <li>Kemasan: 25 kg/karung atau sesuai permintaan</li>
+        <li>Asal: Sumatra / Jawa, Indonesia</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+      <a href="files/cinnamon-brochure.pdf" class="download-button" download>Unduh Brosur Kayu Manis</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
