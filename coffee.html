@@ -18,12 +18,22 @@
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="coffee-id.html">ID</a> | 🇬🇧<a href="coffee.html" class="active">EN</a>
+        <a href="coffee-id.html">🇮🇩 ID</a>
+        <a href="coffee.html" class="active">🇬🇧 EN</a>
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonite.html" class="active">Products</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Products ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonite</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html" class="active">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
+          </div>
+        </div>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -34,45 +44,39 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
-    <a href="bentonite.html">Products</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html" class="active">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero-coffee.jpg" alt="Indonesian Coffee">
-      <div class="hero-text">
-        <h2>Premium Indonesian Coffee</h2>
-        <p>Rich taste, deep aroma – From our farms to the world</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>About Our Coffee</h2>
+    <section class="intro">
+      <h2>Export-Grade Indonesian Coffee</h2>
       <p>
-        Our coffee is harvested from the lush highlands of Sumatra and Java. Grown with care, processed with precision, and roasted to bring out its bold flavor and unique aroma.
+        Indonesia is known for its rich and aromatic coffee. We export robusta and arabica beans sourced from Sumatra, Java, and Sulawesi. Available in green bean, roasted, or powder form.
       </p>
       <p>
-        Available in green beans and roasted forms for diverse market needs.
+        Our coffee is grown by sustainable farmers, sorted by hand, and processed under international quality standards.
       </p>
-    </section>
-
-    <section class="product-highlights">
-      <h3>Product Specifications</h3>
       <ul>
-        <li>Type: Arabica & Robusta</li>
-        <li>Grade: Export Grade A</li>
-        <li>Moisture: Max 12%</li>
-        <li>Packaging: 60 kg jute bags or custom packaging</li>
-        <li>Origin: Sumatra, Java, and other regions</li>
+        <li><strong>Types:</strong> Arabica, Robusta</li>
+        <li><strong>Form:</strong> Green bean, roasted, or powder</li>
+        <li><strong>Moisture:</strong> &lt; 13%</li>
+        <li><strong>Packaging:</strong> Jute bag, 60 kg or custom</li>
+        <li><strong>Origin:</strong> Sumatra, Java, Sulawesi</li>
       </ul>
     </section>
-
-    <section>
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
-      <a href="files/coffee-brochure.pdf" class="download-button" download>Download Coffee Brochure</a>
-    </section>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
   </main>
 
   <footer>
@@ -87,6 +91,12 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
+
+    function toggleDropdown(btn) {
+      const parent = btn.parentElement;
+      parent.classList.toggle("open");
+    }
+
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
