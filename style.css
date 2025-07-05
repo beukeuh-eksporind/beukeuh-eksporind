@@ -356,3 +356,7 @@ section.intro {
     display: none;
   }
 }
+/* Sembunyikan language switch saat overlay aktif */
+body.overlay-open .lang-switch {
+  display: none;
+}
