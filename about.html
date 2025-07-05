@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,12 +17,12 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
         <a href="about.html" class="active">About</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Products</button>
-          <div class="dropdown-content">
+          <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
+          <div class="dropdown-content" id="productDropdown">
             <a href="bentonite.html">Bentonite</a>
             <a href="vanilla.html">Vanilla</a>
             <a href="cinnamon.html">Cinnamon</a>
@@ -40,13 +40,14 @@
     </div>
   </header>
 
+  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html" class="active">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Products</button>
-      <div class="dropdown-content">
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
+      <div class="dropdown-content" id="productDropdown">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
@@ -60,12 +61,12 @@
 
   <main class="container">
     <section class="intro">
-      <h2>About Us</h2>
+      <h2>About Beukeuh Eksporind</h2>
       <p>
-        Beukeuh Eksporind is an Indonesian export company committed to delivering the richness of our archipelago’s natural resources to the global market. We specialize in Bentonite, vanilla, cinnamon, coffee, and charcoal – all cultivated or sourced with care and integrity.
+        Beukeuh Eksporind is an Indonesian export company dedicated to delivering premium quality natural commodities to global markets. With a passion for nature and sustainability, we source our products directly from trusted local farmers and producers.
       </p>
       <p>
-        Our mission is to build sustainable, long-term partnerships by ensuring consistent quality, timely delivery, and deep respect for nature and people. With years of experience in agriculture and global trade, Beukeuh Eksporind is your reliable gateway to Indonesia’s finest commodities.
+        Our mission is to bridge Indonesia’s rich agricultural heritage with international demand through long-term, reliable, and ethical partnerships.
       </p>
     </section>
   </main>
@@ -74,13 +75,19 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- WhatsApp floating button -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
+  <!-- Scripts -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
+    }
+
+    function toggleDropdown() {
+      document.getElementById("productDropdown").classList.toggle("open");
     }
 
     document.querySelectorAll('#overlayMenu a').forEach(link => {
@@ -88,13 +95,6 @@
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
-
-    document.querySelectorAll('.dropdown-toggle').forEach(button => {
-      button.addEventListener('click', function () {
-        this.parentElement.classList.toggle('open');
-      });
-    });
   </script>
 </body>
 </html>
-
