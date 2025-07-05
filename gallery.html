@@ -68,22 +68,15 @@
   </a>
 
   <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
+  function toggleMenu() {
+    const overlay = document.getElementById("overlayMenu");
+    overlay.classList.toggle("show");
+    document.body.classList.toggle("overlay-open");
+  }
 
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-
-    document.querySelectorAll('.overlay-menu .dropdown-toggle').forEach(button => {
-      button.addEventListener('click', function (e) {
-        e.stopPropagation();
-        this.parentElement.classList.toggle('open');
-      });
-    });
+  function toggleDropdown() {
+    document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+  }
   </script>
 </body>
 </html>
