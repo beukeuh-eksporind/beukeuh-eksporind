@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -18,54 +20,70 @@
         </div>
       </div>
 
+      <!-- Switch Bahasa -->
+      <div class="lang-switch">
+        <a href="home-id.html" class="active">🇮🇩 ID</a>
+        <a href="home.html">🇬🇧 EN</a>
+      </div>
+
+      <!-- Menu Header -->
       <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
         <div class="dropdown">
-          <button class="dropbtn">Produk ▾</button>
+          <button class="dropdown-toggle">Produk ▼</button>
           <div class="dropdown-content">
-            <a href="bentonite.html">Bentonit</a>
-            <a href="#">Vanili</a>
-            <a href="#">Arang</a>
+            <a href="bentonite-id.html">Bentonit</a>
+            <a href="vanilla-id.html">Vanila</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html">Arang</a>
           </div>
         </div>
-        <a href="gallery.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
       </nav>
-
-      <div class="lang-switch">
-        <a href="home-id.html" class="active">ID</a>
-        <a href="home.html">EN</a>
-      </div>
     </div>
   </header>
 
-  <!-- Overlay menu mobile -->
+  <!-- MENU OVERLAY -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite.html">Produk</a>
-    <a href="gallery.html">Galeri</a>
-    <a href="contact.html">Kontak</a>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle">Produk ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html">Vanila</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
+
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
   </div>
 
+  <!-- ISI UTAMA -->
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
       <div class="hero-text">
-        <h2>Kekayaan Alam Indonesia<br />Siap Diekspor</h2>
-        <p>Sumber terpercaya untuk bentonit, rempah, arang, dan lainnya.</p>
+        <h2>Kekayaan Alam Indonesia<br>Siap untuk Diekspor</h2>
+        <p>Sumber terpercaya bentonit, rempah, arang, dan lainnya.</p>
       </div>
     </section>
 
     <section>
       <h2>Selamat Datang di Beukeuh Eksporind</h2>
       <p>
-        Kami adalah perusahaan ekspor asal Indonesia yang berfokus menyediakan komoditas alami berkualitas tinggi seperti bentonit, vanili, kayu manis, arang, dan hasil pertanian lainnya.
+        Kami adalah perusahaan ekspor berbasis di Indonesia yang berfokus pada penyediaan komoditas alami berkualitas tinggi seperti bentonit, vanila, kayu manis, arang, dan hasil pertanian lainnya.
       </p>
       <p>
-        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menjembatani kekayaan alam Indonesia ke pasar global melalui kerja sama jangka panjang yang terpercaya.
+        Dengan komitmen terhadap kualitas, keberlanjutan, dan kepuasan pelanggan, kami menghubungkan kekayaan alam Indonesia dengan pasar global melalui kemitraan jangka panjang yang terpercaya.
       </p>
     </section>
 
@@ -73,14 +91,17 @@
     <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
+  <!-- WHATSAPP MELAYANG -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
@@ -91,6 +112,13 @@
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', function () {
+        this.parentElement.classList.toggle('open');
+      });
+    });
   </script>
+
 </body>
 </html>
