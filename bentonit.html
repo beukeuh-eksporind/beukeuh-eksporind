@@ -1,8 +1,9 @@
+<!-- Contoh Struktur Halaman Produk: bentonite.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bentonite | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -18,12 +19,22 @@
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="bentonite-id.html">ID</a> | 🇬🇧<a href="bentonite.html" class="active">EN</a>
+        <a href="bentonite-id.html">🇮🇩 ID</a>
+        <a href="bentonite.html" class="active">🇬🇧 EN</a>
       </div>
       <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
-        <a href="bentonite.html" class="active">Products</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Products &#x25BC;</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonite</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
+          </div>
+        </div>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -34,42 +45,35 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
-    <a href="bentonite.html" class="active">Products</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Products &#x25BC;</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero-bentonite.jpg" alt="Bentonite Export">
-      <div class="hero-text">
-        <h2>High-Quality Bentonite</h2>
-        <p>Reliable supply for industrial and agricultural needs</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>About Our Bentonite</h2>
+    <section class="intro">
+      <h2>Bentonite</h2>
       <p>
-        Our Bentonite is sourced from the finest natural reserves in Indonesia. We supply both sodium and calcium bentonite, suitable for drilling, construction, agriculture, and environmental applications.
+        Our Bentonite clay is a premium-quality natural mineral, widely used in
+        drilling, foundry, construction, and agriculture. It offers strong
+        bonding and absorption properties, sourced responsibly from Indonesia.
+      </p>
+      <p>
+        We provide Bentonite in various grades and packaging, customized to meet
+        international standards and client specifications.
       </p>
     </section>
-
-    <section class="product-highlights">
-      <h3>Product Features</h3>
-      <ul>
-        <li>Moisture Content: &lt; 12%</li>
-        <li>Swelling Capacity: Excellent</li>
-        <li>Mesh Size: 100–200</li>
-        <li>pH: 8–10</li>
-        <li>Packaging: 25kg / 50kg PP bags or jumbo bags</li>
-      </ul>
-    </section>
-
-    <section>
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
-      <a href="files/bentonite-brochure.pdf" class="download-button" download>Download Product Brochure</a>
-    </section>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
   </main>
 
   <footer>
@@ -77,19 +81,21 @@
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
+    <img src="images/wa-icon.png" alt="WhatsApp" />
   </a>
 
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      const overlay = document.getElementById("overlayMenu");
+      overlay.classList.toggle("show");
     }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
+    document.querySelectorAll('#overlayMenu .dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const parent = this.closest('.dropdown');
+        parent.classList.toggle('open');
       });
     });
   </script>
 </body>
 </html>
+
