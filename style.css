@@ -233,6 +233,60 @@ header, footer {
 .gallery-scroll img:hover {
   transform: scale(1.05);
 }
+.gallery {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5em 0;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 1em;
+}
+
+.gallery-track img {
+  flex: 0 0 auto;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-track img:hover {
+  transform: scale(1.05);
+}
+
+.gallery .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 1.8em;
+  color: #442d0d;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+.gallery .arrow:hover {
+  background: #eee;
+}
+.gallery .arrow.left {
+  left: 10px;
+}
+.gallery .arrow.right {
+  right: 10px;
+}
 
 /* SECTIONS */
 section.intro {
