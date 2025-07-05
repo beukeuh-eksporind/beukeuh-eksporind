@@ -199,8 +199,7 @@ footer {
   margin-top: 0.3em;
   font-size: 1.1em;
 }
-
-/* HEADER BARU */
+/* MAIN HEADER */
 .main-header {
   background-color: #442d0d;
   color: white;
@@ -209,23 +208,28 @@ footer {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.5s ease;
 }
+
 .main-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1em;
+  position: relative;
 }
+
+/* BRAND LOGO & NAMA */
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 .brand .logo {
-  max-width: 60px;
-  height: auto;
+  height: 48px;
+  max-height: 48px;
+  width: auto;
 }
 .brand-name h1 {
   font-size: 1.5em;
@@ -236,6 +240,19 @@ footer {
   font-style: italic;
   margin-top: 4px;
 }
+
+/* TOGGLE */
+.menu-toggle {
+  display: block;
+  font-size: 1.8em;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* NAVIGATION LINKS */
 .nav-links {
   display: flex;
   gap: 16px;
@@ -255,6 +272,62 @@ footer {
 .nav-links a:hover {
   background-color: rgba(255,255,255,0.15);
   transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .main-header .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8em 1em;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-name h1 {
+    font-size: 1.3em;
+  }
+
+  .brand-name .tagline {
+    font-size: 0.85em;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #442d0d;
+    padding: 1em 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .menu-toggle {
+    position: relative;
+  }
+
+  .lang-switch {
+    justify-content: center;
+    margin-top: 1em;
+  }
 }
 
 /* RESPONSIVE */
