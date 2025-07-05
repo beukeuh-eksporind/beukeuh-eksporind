@@ -14,16 +14,26 @@
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Komoditas Alam dari Indonesia</p>
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="charcoal-id.html" class="active">ID</a> | 🇬🇧<a href="charcoal.html">EN</a>
+        <a href="charcoal-id.html" class="active">🇮🇩 ID</a>
+        <a href="charcoal.html">🇬🇧 EN</a>
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html" class="active">Produk</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Produk ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite-id.html">Bentonit</a>
+            <a href="vanilla-id.html">Vanila</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html" class="active">Arang</a>
+          </div>
+        </div>
         <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
       </nav>
@@ -34,46 +44,39 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html">Produk</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html">Vanila</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html" class="active">Arang</a>
+      </div>
+    </div>
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html">Kontak</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero-charcoal.jpg" alt="Arang Indonesia">
-      <div class="hero-text">
-        <h2>Arang Berkualitas Ekspor</h2>
-        <p>Alami, berkelanjutan, dan siap kirim ke pasar global</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Tentang Arang Kami</h2>
+    <section class="intro">
+      <h2>Arang Berkualitas dari Indonesia</h2>
       <p>
-        Kami menyediakan arang tempurung kelapa dan arang kayu keras berkualitas tinggi, diproses secara ramah lingkungan untuk menjaga kualitas dan waktu bakar yang lama.
+        Kami mengekspor arang kayu keras alami dan arang tempurung kelapa untuk kebutuhan barbekyu dan industri. Arang kami tanpa asap, tahan lama, dan dikemas dengan rapi.
       </p>
       <p>
-        Cocok untuk BBQ, shisha, dan keperluan industri – dikemas sesuai standar ekspor internasional.
+        Tersedia dalam bentuk briket atau bongkahan, diproses dengan kontrol kualitas ketat dan standar kemasan internasional.
       </p>
-    </section>
-
-    <section class="product-highlights">
-      <h3>Spesifikasi Produk</h3>
       <ul>
-        <li>Jenis: Arang Tempurung Kelapa & Arang Kayu</li>
-        <li>Karbon Tetap: Min 75%</li>
-        <li>Kadar Air: Maks. 8%</li>
-        <li>Kadar Abu: Maks. 6%</li>
-        <li>Kemasan: Karung 10 kg / 20 kg atau sesuai permintaan</li>
-        <li>Bentuk: Kubus, Hexagon, Stick, atau Bongkahan Alami</li>
+        <li><strong>Jenis:</strong> Kayu keras, tempurung kelapa</li>
+        <li><strong>Bentuk:</strong> Briket atau bongkahan</li>
+        <li><strong>Kadar air:</strong> &lt; 7%</li>
+        <li><strong>Kemasan:</strong> Karton 10kg, bisa merek sendiri</li>
+        <li><strong>Penggunaan:</strong> BBQ, Shisha, Industri</li>
       </ul>
     </section>
-
-    <section>
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
-      <a href="files/charcoal-brochure.pdf" class="download-button" download>Unduh Brosur Arang</a>
-    </section>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
   </main>
 
   <footer>
@@ -88,6 +91,12 @@
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
+
+    function toggleDropdown(btn) {
+      const parent = btn.parentElement;
+      parent.classList.toggle("open");
+    }
+
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
