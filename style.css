@@ -364,3 +364,7 @@ body.overlay-open .lang-switch {
 body.overlay-open .lang-switch {
   display: none !important;
 }
+/* SEMBUNYIKAN LANG-SWITCH SAAT OVERLAY AKTIF */
+.overlay-menu.show ~ .lang-switch {
+  display: none !important;
+}
