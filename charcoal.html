@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charcoal | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Natural Commodities from Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        🇮🇩<a href="charcoal-id.html">ID</a> | 🇬🇧<a href="charcoal.html" class="active">EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bentonite.html" class="active">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="bentonite.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/hero-charcoal.jpg" alt="Charcoal Export">
+      <div class="hero-text">
+        <h2>High-Quality Indonesian Charcoal</h2>
+        <p>Natural, sustainable, and ready for global markets</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Our Charcoal</h2>
+      <p>
+        We supply premium-grade coconut shell charcoal and hardwood charcoal, processed with care and eco-friendly methods to ensure consistent quality and long burn time.
+      </p>
+      <p>
+        Our charcoal is ideal for BBQ, shisha, and industrial use – packed for export with international standards.
+      </p>
+    </section>
+
+    <section class="product-highlights">
+      <h3>Product Specifications</h3>
+      <ul>
+        <li>Type: Coconut Shell & Hardwood Charcoal</li>
+        <li>Fixed Carbon: Min 75%</li>
+        <li>Moisture Content: Max 8%</li>
+        <li>Ash Content: Max 6%</li>
+        <li>Packaging: 10 kg / 20 kg bags or as requested</li>
+        <li>Shape: Cube, Hexagon, Stick, or Natural Lump</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+      <a href="files/charcoal-brochure.pdf" class="download-button" download>Download Charcoal Brochure</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+    }
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
