@@ -372,7 +372,37 @@ footer {
 .swiper-pagination-bullet {
   background: #442d0d;
 }
-
+.intro, .product-highlights {
+  padding: 2em 0;
+  animation: fadeIn 0.8s ease-in;
+}
+.product-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1.5em;
+}
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.product-card:hover {
+  transform: scale(1.03);
+}
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.product-card h3 {
+  padding: 1em;
+  margin: 0;
+  font-size: 1.1em;
+  background-color: #f9f5ec;
+}
 /* WHATSAPP FLOATING BUTTON */
 .wa-float {
   position: fixed;
