@@ -8,12 +8,11 @@
 </head>
 <body>
 
-  <!-- Toggle Menu di luar .container -->
+  <!-- HEADER -->
   <header class="main-header">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
     <div class="container">
       <div class="brand">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
@@ -28,7 +27,7 @@
     </div>
   </header>
 
-  <!-- Overlay Menu -->
+  <!-- OVERLAY MENU -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
@@ -42,7 +41,7 @@
     </div>
   </div>
 
-  <!-- Main Content -->
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
@@ -55,7 +54,7 @@
     <section>
       <h2>Welcome to Beukeuh Eksporind</h2>
       <p>
-        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods. 
+        We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.
       </p>
       <p>
         With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.
@@ -66,22 +65,22 @@
     <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
+  <!-- WA FLOATING BUTTON -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- Script untuk Toggle Overlay Menu -->
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    // Tutup overlay saat klik link menu
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
