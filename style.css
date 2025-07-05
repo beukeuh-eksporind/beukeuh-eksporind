@@ -496,4 +496,51 @@ footer {
 .wa-float:hover {
   transform: scale(1.1);
 }
+/* BRAND WRAP (untuk sejajarkan logo dan toggle) */
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
 
+/* Toggle di dalam brand wrap agar sejajar */
+.menu-toggle {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive: pastikan logo dan toggle tetap sejajar di HP */
+@media screen and (max-width: 768px) {
+  .brand-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1em;
+  }
+
+  .brand {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .brand-name h1 {
+    font-size: 1.2em;
+  }
+
+  .brand-name .tagline {
+    font-size: 0.9em;
+  }
+}
