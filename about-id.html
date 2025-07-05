@@ -2,11 +2,12 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tentang Kami | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -14,90 +15,85 @@
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alam dari Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html" class="active">Tentang</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Produk</button>
-          <div class="dropdown-content">
-            <a href="bentonite-id.html">Bentonit</a>
-            <a href="vanilla-id.html">Vanila</a>
-            <a href="cinnamon-id.html">Kayu Manis</a>
-            <a href="coffee-id.html">Kopi</a>
-            <a href="charcoal-id.html">Arang</a>
-          </div>
-        </div>
-        <a href="gallery-id.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
-      </nav>
       <div class="lang-switch">
         <a href="about-id.html" class="active">🇮🇩 ID</a>
         <a href="about.html">🇬🇧 EN</a>
       </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html" class="active">Tentang</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
+          <div class="dropdown-content" id="productDropdown">
+            <a href="bentonite.html">Bentonit</a>
+            <a href="vanilla.html">Vanila</a>
+            <a href="cinnamon.html">Kayu Manis</a>
+            <a href="coffee.html">Kopi</a>
+            <a href="charcoal.html">Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Overlay menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html" class="active">Tentang</a>
+
+    <!-- Dropdown di Overlay -->
     <div class="dropdown">
-      <button class="dropdown-toggle">Produk</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanila</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
+      <button class="dropdown-toggle" onclick="toggleOverlayDropdown()">Produk ▾</button>
+      <div class="dropdown-content" id="overlayProductDropdown">
+        <a href="bentonite.html">Bentonit</a>
+        <a href="vanilla.html">Vanila</a>
+        <a href="cinnamon.html">Kayu Manis</a>
+        <a href="coffee.html">Kopi</a>
+        <a href="charcoal.html">Arang</a>
       </div>
     </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
+
+    <a href="gallery.html">Galeri</a>
+    <a href="contact.html">Kontak</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero.jpg" alt="Tentang Kami Banner">
-      <div class="hero-text">
-        <h2>Menghubungkan Alam Indonesia dengan Dunia</h2>
-        <p>Komitmen kami untuk ekspor berkualitas dan berkelanjutan.</p>
-      </div>
-    </section>
-
     <section class="intro">
       <h2>Tentang Beukeuh Eksporind</h2>
       <p>
-        Beukeuh Eksporind adalah perusahaan ekspor Indonesia yang berdedikasi dalam menyediakan komoditas alami terbaik seperti bentonit, vanila, kayu manis, kopi, dan arang ke pasar global.
+        Beukeuh Eksporind adalah perusahaan ekspor asal Indonesia yang berdedikasi dalam menyediakan komoditas alami berkualitas tinggi. Kami menghubungkan kekayaan alam Indonesia dengan pasar dunia melalui kemitraan yang terpercaya dan berkelanjutan.
       </p>
       <p>
-        Kami berkomitmen untuk menjaga kualitas produk, mendukung keberlanjutan, dan membangun kemitraan jangka panjang yang saling menguntungkan dengan mitra internasional.
+        Dengan fokus pada kualitas, keberlanjutan, dan kepuasan pelanggan, kami menyediakan produk seperti bentonit, vanila, kayu manis, arang, dan berbagai hasil pertanian lainnya.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
 
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
+    function toggleDropdown() {
+      document.getElementById("productDropdown").classList.toggle("open");
+    }
+
+    function toggleOverlayDropdown() {
+      document.getElementById("overlayProductDropdown").classList.toggle("open");
+    }
+
+    document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
-        const overlay = document.getElementById('overlayMenu');
-        if (overlay.classList.contains('show')) {
-          overlay.classList.remove('show');
-        }
+        document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
