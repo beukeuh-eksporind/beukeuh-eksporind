@@ -1,9 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-
   <header class="main-header">
     <div class="container">
-      <button class="menu-toggle" id="menuToggle">&#9776;</button>
-
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -20,64 +26,53 @@
       <nav class="nav-links" id="navLinks">
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
-        <a href="galeri.html">Gallery</a>
+        <div class="dropdown">
+          <button class="dropbtn">Products ▾</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html">Bentonite</a>
+            <a href="#">Vanilla</a>
+            <a href="#">Cinnamon</a>
+            <a href="#">Coffee</a>
+            <a href="#">Charcoal</a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" id="closeBtn">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="galeri.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-    <div class="lang-switch">
-      <a href="index-id.html">ID</a>
-      <a href="index.html" class="active">EN</a>
-    </div>
-  </div>
-
   <main class="container">
     <section class="hero-banner">
-      <img src="images/banner.jpg" alt="Banner">
+      <img src="images/hero.jpg" alt="Hero Banner">
       <div class="hero-text">
-        <h2>Beukeuh Eksporind</h2>
-        <p>Exporting Nature's Best from Indonesia</p>
+        <h2>Indonesia’s Natural Riches<br>Ready for Export</h2>
+        <p>Trusted source of Bentonite, spices, charcoal, and more.</p>
       </div>
     </section>
 
-    <section>
+    <section class="intro">
       <h2>Welcome to Beukeuh Eksporind</h2>
-      <p>We specialize in sourcing and exporting premium-quality natural commodities including coffee, vanilla, cinnamon, and bentonite from the lush islands of Indonesia.</p>
+      <p>We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.</p>
+      <p>With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.</p>
     </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact via WhatsApp</a>
-    <a href="brochure.pdf" class="download-button" download>Download Brochure (PDF)</a>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
   </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const overlayMenu = document.getElementById('overlayMenu');
-    const closeBtn = document.getElementById('closeBtn');
-
-    menuToggle.addEventListener('click', () => {
-      overlayMenu.classList.add('show');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      overlayMenu.classList.remove('show');
-    });
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        overlayMenu.classList.remove('show');
-      });
-    });
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
   </script>
-
 </body>
+</html>
