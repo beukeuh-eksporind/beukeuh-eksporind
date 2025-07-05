@@ -3,10 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Beukeuh Eksporind</title>
+  <title>About Us | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .overlay-menu .dropdown-toggle {
+      background: none;
+      border: none;
+      font-weight: 500;
+      color: #333;
+      font-size: 1em;
+      padding: 6px 0;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+    }
+
+    .overlay-menu .dropdown-content {
+      display: none;
+      padding-left: 1em;
+      margin-top: 0.5em;
+    }
+
+    .overlay-menu .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .overlay-menu .dropdown-content a {
+      display: block;
+      font-size: 0.95em;
+      margin: 0.3em 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .overlay-menu .dropdown-content a:hover {
+      color: #442d0d;
+    }
+  </style>
 </head>
 <body>
+
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -17,7 +53,11 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
+      <div class="lang-switch">
+        <a href="about-id.html">🇮🇩 ID</a>
+        <a href="about.html" class="active">🇬🇧 EN</a>
+      </div>
+      <nav class="nav-links">
         <a href="home.html">Home</a>
         <a href="about.html" class="active">About</a>
         <div class="dropdown">
@@ -33,21 +73,18 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="lang-switch">
-        <a href="about-id.html">🇮🇩 ID</a>
-        <a href="about.html" class="active">🇬🇧 EN</a>
-      </div>
     </div>
   </header>
 
-  <!-- Overlay Menu -->
+  <!-- OVERLAY MENU -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html" class="active">About</a>
+
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content" id="productDropdown">
+      <button class="dropdown-toggle" onclick="toggleOverlayDropdown()">Products ▾</button>
+      <div class="dropdown-content" id="overlayProductDropdown">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
@@ -55,6 +92,7 @@
         <a href="charcoal.html">Charcoal</a>
       </div>
     </div>
+
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -63,10 +101,10 @@
     <section class="intro">
       <h2>About Beukeuh Eksporind</h2>
       <p>
-        Beukeuh Eksporind is an Indonesian export company dedicated to delivering premium quality natural commodities to global markets. With a passion for nature and sustainability, we source our products directly from trusted local farmers and producers.
+        Beukeuh Eksporind is an export company based in Indonesia, dedicated to providing high-quality natural commodities. We connect Indonesia’s natural richness to global markets through long-term, trustworthy partnerships.
       </p>
       <p>
-        Our mission is to bridge Indonesia’s rich agricultural heritage with international demand through long-term, reliable, and ethical partnerships.
+        With a strong focus on quality, sustainability, and customer satisfaction, we offer products such as bentonite, vanilla, cinnamon, charcoal, and various other agricultural goods.
       </p>
     </section>
   </main>
@@ -75,12 +113,6 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WhatsApp floating button -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <!-- Scripts -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
@@ -90,11 +122,16 @@
       document.getElementById("productDropdown").classList.toggle("open");
     }
 
+    function toggleOverlayDropdown() {
+      document.getElementById("overlayProductDropdown").parentElement.classList.toggle("open");
+    }
+
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
   </script>
+
 </body>
 </html>
