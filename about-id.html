@@ -11,7 +11,6 @@
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
       <div class="brand">
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
@@ -26,22 +25,22 @@
       </div>
 
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <a href="bentonite.html">Produk</a>
-        <a href="gallery.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html" class="active">Tentang</a>
+        <a href="bentonite-id.html">Produk</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
       </nav>
     </div>
   </header>
 
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="index.html">Beranda</a>
+    <a href="home-id.html">Beranda</a>
     <a href="about-id.html" class="active">Tentang</a>
-    <a href="bentonite.html">Produk</a>
-    <a href="gallery.html">Galeri</a>
-    <a href="contact.html">Kontak</a>
+    <a href="bentonite-id.html">Produk</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
     <div class="lang-switch">
       <a href="about-id.html" class="active">ID</a>
       <a href="about.html">EN</a>
@@ -50,53 +49,51 @@
 
   <main class="container">
     <section class="hero-banner">
-      <img src="images/hero-about.jpg" alt="Tentang Kami Banner" />
+      <img src="images/about-hero.jpg" alt="Tentang Beukeuh Eksporind">
       <div class="hero-text">
-        <h2>Tentang Beukeuh Eksporind</h2>
-        <p>Menjadikan hasil alam Indonesia mendunia.</p>
+        <h2>Berkomitmen Mengekspor Harta Alam Indonesia</h2>
+        <p>Dari Bumi ke Dunia, dengan Kualitas & Integritas</p>
       </div>
     </section>
 
     <section class="intro">
       <h2>Siapa Kami</h2>
       <p>
-        Beukeuh Eksporind adalah perusahaan ekspor terpercaya dari Indonesia yang fokus pada komoditas alami berkualitas tinggi. Kami bekerja langsung dengan petani dan produsen lokal untuk menghadirkan produk autentik, berkelanjutan, dan siap ekspor ke pasar global.
+        Beukeuh Eksporind adalah perusahaan ekspor komoditas alami terbaik dari Indonesia. Berakar dari kearifan lokal dan dijalankan dengan standar global, kami menyediakan Bentonite, rempah-rempah, dan arang ke berbagai negara.
       </p>
       <p>
-        Dengan pengalaman dalam perdagangan internasional, kami berkomitmen memberikan transparansi, keandalan, dan kualitas terbaik dalam setiap pengiriman.
+        Misi kami bukan sekadar berdagang—tetapi membangun kemitraan jangka panjang berdasarkan kepercayaan, kualitas, dan pertumbuhan bersama. Kami menjembatani kekayaan tanah Indonesia dengan kebutuhan pasar internasional yang menghargai keberlanjutan dan keaslian.
       </p>
     </section>
 
     <section class="product-highlights">
-      <h2>Mengapa Memilih Kami</h2>
+      <h2>Produk Kami</h2>
       <div class="product-grid">
         <div class="product-card">
-          <img src="images/quality.jpg" alt="Kualitas Unggul" />
-          <h3>Kualitas Unggul</h3>
+          <img src="images/bentonite.jpg" alt="Bentonite">
+          <h3>Bentonite</h3>
         </div>
         <div class="product-card">
-          <img src="images/sustainable.jpg" alt="Sumber Berkelanjutan" />
-          <h3>Berbasis Keberlanjutan</h3>
+          <img src="images/spices.jpg" alt="Rempah-rempah">
+          <h3>Vanili & Rempah</h3>
         </div>
         <div class="product-card">
-          <img src="images/partnership.jpg" alt="Kemitraan Jangka Panjang" />
-          <h3>Kemitraan Jangka Panjang</h3>
+          <img src="images/charcoal.jpg" alt="Arang">
+          <h3>Arang</h3>
         </div>
       </div>
     </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Perusahaan</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <div class="wa-float">
-    <a href="https://wa.me/6281282541982" target="_blank">
-      <img src="images/wa-icon.png" alt="Tombol WhatsApp" />
-    </a>
-  </div>
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
 
   <script>
     function toggleMenu() {
@@ -109,6 +106,5 @@
       });
     });
   </script>
-
 </body>
 </html>
