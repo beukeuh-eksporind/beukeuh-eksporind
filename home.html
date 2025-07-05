@@ -1,14 +1,17 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
@@ -16,12 +19,13 @@
           <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
+
+      <nav class="nav-links">
         <a href="home.html" class="active">Home</a>
         <a href="about.html">About</a>
         <div class="dropdown">
-          <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-          <div class="dropdown-content" id="productDropdown">
+          <button class="dropdown-toggle">Products ▾</button>
+          <div class="dropdown-content">
             <a href="bentonite.html">Bentonite</a>
             <a href="vanilla.html">Vanilla</a>
             <a href="cinnamon.html">Cinnamon</a>
@@ -32,18 +36,23 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <div class="lang-switch">
         <a href="home-id.html">🇮🇩 ID</a>
         <a href="home.html" class="active">🇬🇧 EN</a>
       </div>
     </div>
-  </header>  <div class="overlay-menu" id="overlayMenu">
+  </header>
+
+  <!-- Overlay Menu -->
+  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
+    
     <div class="dropdown">
       <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content" id="productDropdown">
+      <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
@@ -51,49 +60,59 @@
         <a href="charcoal.html">Charcoal</a>
       </div>
     </div>
+
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
+    
     <div class="lang-switch">
       <a href="home-id.html">🇮🇩 ID</a>
       <a href="home.html" class="active">🇬🇧 EN</a>
     </div>
-  </div>  <main class="container">
+  </div>
+
+  <main class="container">
     <section class="hero-banner">
       <img src="images/hero.jpg" alt="Hero Banner">
       <div class="hero-text">
-        <h2>Indonesia’s Natural Riches</h2>
-        <p>Ready for Export</p>
+        <h2>Indonesia’s Natural Riches<br>Ready for Export</h2>
+        <p>Trusted source of Bentonite, spices, charcoal, and more.</p>
       </div>
-    </section><section>
-  <h2>Welcome to Beukeuh Eksporind</h2>
-  <p>
-    We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.
-  </p>
-  <p>
-    With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.
-  </p>
-</section>
+    </section>
 
-<a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
-<a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
+    <section>
+      <h2>Welcome to Beukeuh Eksporind</h2>
+      <p>We are an export company based in Indonesia, focused on providing high-quality natural commodities such as Bentonite, vanilla, cinnamon, charcoal, and other agricultural goods.</p>
+      <p>With a strong commitment to quality, sustainability, and customer satisfaction, we connect Indonesia’s rich nature with global markets through long-term, trusted partnerships.</p>
+    </section>
 
-  </main>  <footer>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
+  </main>
+
+  <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>  <script>
+  </a>
+
+  <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
     function toggleDropdown() {
-      document.getElementById("productDropdown").classList.toggle("open");
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
     }
 
+    // Close overlay when a link is clicked
     document.querySelectorAll('#overlayMenu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('overlayMenu').classList.remove('show');
       });
     });
-  </script></body>
+  </script>
+</body>
 </html>
