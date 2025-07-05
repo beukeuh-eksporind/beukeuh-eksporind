@@ -14,16 +14,26 @@
         <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <p class="tagline">Dari Alam, Untuk Dunia</p>
         </div>
       </div>
       <div class="lang-switch">
-        🇮🇩<a href="vanilla-id.html" class="active">ID</a> | 🇬🇧<a href="vanilla.html">EN</a>
+        <a href="vanilla-id.html" class="active">🇮🇩 ID</a>
+        <a href="vanilla.html">🇬🇧 EN</a>
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" id="navLinks">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
-        <a href="bentonite-id.html" class="active">Produk</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Produk ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite-id.html">Bentonit</a>
+            <a href="vanilla-id.html" class="active">Vanila</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html">Arang</a>
+          </div>
+        </div>
         <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
       </nav>
@@ -34,49 +44,43 @@
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
-    <a href="bentonite-id.html">Produk</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▼</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html" class="active">Vanila</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html">Kontak</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/hero-vanilla.jpg" alt="Vanila Indonesia">
-      <div class="hero-text">
-        <h2>Vanila Premium dari Indonesia</h2>
-        <p>Langsung dari petani lokal dengan kualitas terbaik</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Tentang Vanila Kami</h2>
+    <section class="intro">
+      <h2>Vanila Premium dari Indonesia</h2>
       <p>
-        Vanila kami berasal dari daerah subur di Indonesia, dikenal dengan aroma yang kaya, kandungan vanilin tinggi, dan rasa yang tahan lama.
+        Vanila kami berasal dari daerah subur Indonesia yang dikenal menghasilkan aroma yang kuat, kadar vanilin tinggi, dan kelembaban ideal. Kami menyediakan vanila Grade A yang cocok untuk industri makanan, minuman, dan parfum.
       </p>
       <p>
-        Kami menyediakan biji vanila yang sudah dikeringkan dan diawetkan, cocok untuk industri makanan, kosmetik, dan minyak esensial.
+        Tersedia dalam bentuk polong kering maupun olahan, kami siap mengirimkan sesuai kebutuhan dan kemasan yang disesuaikan. Proses produksi kami diawasi ketat dari panen hingga pengiriman.
       </p>
-    </section>
-
-    <section class="product-highlights">
-      <h3>Spesifikasi Produk</h3>
       <ul>
-        <li>Kadar Air: 25–30%</li>
-        <li>Panjang: 14–20 cm</li>
-        <li>Warna: Coklat tua ke hitam</li>
-        <li>Kemasan: Vakum 500g / 1kg</li>
-        <li>Grade: Gourmet, Grade A, Grade B</li>
+        <li><strong>Jenis:</strong> Vanilla Planifolia</li>
+        <li><strong>Asal:</strong> Jawa & Sumatra</li>
+        <li><strong>Kadar Vanilin:</strong> ≥ 2%</li>
+        <li><strong>Kelembaban:</strong> 30–35%</li>
+        <li><strong>Kemasan:</strong> Vakum atau tabung kaca</li>
       </ul>
     </section>
-
-    <section>
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi via WhatsApp</a>
-      <a href="files/vanilla-brochure.pdf" class="download-button" download>Unduh Brosur Vanila</a>
-    </section>
+    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
+    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
@@ -86,6 +90,11 @@
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
+    }
+
+    function toggleDropdown(btn) {
+      const parent = btn.parentElement;
+      parent.classList.toggle("open");
     }
 
     document.querySelectorAll('#overlayMenu a').forEach(link => {
