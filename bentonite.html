@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bentonite - Beukeuh Eksporind</title>
+  <title>Bentonite | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,24 +11,43 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <div class="tagline">Natural Commodities from Indonesia</div>
+          <p class="tagline">Natural Commodities from Indonesia</p>
         </div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+          <button class="dropdown-toggle">Products ▼</button>
+          <div class="dropdown-content">
+            <a href="bentonite.html" class="active">Bentonite</a>
+            <a href="vanilla.html">Vanilla</a>
+            <a href="cinnamon.html">Cinnamon</a>
+            <a href="coffee.html">Coffee</a>
+            <a href="charcoal.html">Charcoal</a>
+          </div>
+        </div>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="lang-switch">
+        <a href="bentonite-id.html">🇮🇩 ID</a>
+        <a href="bentonite.html" class="active">🇬🇧 EN</a>
       </div>
     </div>
   </header>
 
-  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▼</button>
+      <button class="dropdown-toggle">Products ▼</button>
       <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
+        <a href="bentonite.html" class="active">Bentonite</a>
         <a href="vanilla.html">Vanilla</a>
         <a href="cinnamon.html">Cinnamon</a>
         <a href="coffee.html">Coffee</a>
@@ -39,34 +58,60 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <section class="intro fade-up">
-      <h2>Bentonite</h2>
-      <p>
-        Bentonite is a natural clay with exceptional absorbent and swelling properties, making it highly valuable for various industries such as agriculture, drilling, cosmetics, and pharmaceuticals.
-      </p>
-
-      <img src="images/bentonite.a1.jpg" alt="Bentonite Export" class="product-image" />
-
-      <p>
-        At Beukeuh Eksporind, we supply premium-quality Bentonite from Indonesia, processed to meet global standards. We ensure reliability, consistency, and support for long-term partnerships.
-      </p>
+  <main class="container">
+    <section class="hero-banner">
+      <img src="images/bentonite-banner.jpg" alt="Bentonite Banner">
+      <div class="hero-text">
+        <h2>Export-Grade Bentonite</h2>
+        <p>Natural material from Indonesia for various industries</p>
+      </div>
     </section>
-  </div>
+
+    <section class="intro">
+      <h2>What is Bentonite?</h2>
+      <p>
+        Bentonite is a natural clay highly valued in industries such as oil drilling, water treatment, cosmetics, and agriculture.
+        Our product is sourced from high-quality deposits in Indonesia and processed under strict quality control to ensure top-grade performance.
+      </p>
+
+      <h3>Specifications:</h3>
+      <ul>
+        <li>High Montmorillonite content</li>
+        <li>Maximum 12% moisture</li>
+        <li>Particle size upon request</li>
+        <li>Packed in 25kg / 50kg / jumbo bags</li>
+      </ul>
+
+      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us via WhatsApp</a>
+      <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
+
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
 
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
     }
 
-    function toggleDropdown(el) {
-      el.parentElement.classList.toggle("open");
-    }
+    document.querySelectorAll('#overlayMenu a, .dropdown-toggle').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('overlayMenu').classList.remove('show');
+      });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        button.parentElement.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
