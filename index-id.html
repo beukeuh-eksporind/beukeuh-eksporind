@@ -1,66 +1,99 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <div class="tagline">Natural Commodities from Indonesia</div>
+          <div class="tagline">Komoditas Alam dari Indonesia</div>
         </div>
       </div>
       <div class="lang-switch">
-        <a href="index.html" class="active">🇬🇧EN</a>
-        <a href="index-id.html">🇮🇩ID</a>
+        <a href="index-id.html" class="active">🇮🇩 ID</a>
+        <a href="index.html">🇬🇧 EN</a>
       </div>
     </div>
-  </header>  
+  </header>
+
+  <!-- HERO SECTION -->
   <section class="hero-banner">
-    <img src="images/hero-banner.jpg" alt="Hero Banner" />
+    <img src="images/home-banner.jpg" alt="Banner Utama" />
     <div class="banner-text">
-      <h2 class="fade-up">Selamat Datang</h2>
-      <p class="fade-up">Eksportir Komoditas Alam dari Indonesia</p>
+      <h2 class="fade-up">Selamat Datang di Beukeuh Eksporind</h2>
+      <p class="fade-up">Mengekspor Sumber Daya Alam Terbaik dari Indonesia</p>
     </div>
-  </section>  
-  <!-- NAVIGASI UTAMA DI BAWAH BANNER -->  
+  </section>
+
+  <!-- NAVIGATION BAR -->
   <nav class="main-nav">
     <a href="index-id.html" class="active">Beranda</a>
-    <a href="about-id.html">Tentang</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▾</button>
       <div class="dropdown-content">
         <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanili</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
+        <a href="zeolite-id.html">Zeolit</a>
+        <a href="coconut-id.html">Arang Kelapa</a>
       </div>
     </div>
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html">Kontak</a>
-  </nav>  <main class="content">
-    <section class="intro fade-up">
-      <div class="container">
-        <h2>Komoditas Berkualitas untuk Dunia</h2>
-        <p>Kami menyediakan produk alam terbaik seperti bentonite, kopi, kayu manis, dan vanili yang berasal dari alam Indonesia.</p>
-      </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="intro fade-up">
+    <section class="content">
+      <h2>Tentang Kami</h2>
+      <p>
+        Beukeuh Eksporind berkomitmen menghadirkan komoditas alam berkualitas tinggi dari Indonesia ke pasar global. Kami berfokus pada ekspor Bentonit, Zeolit, dan produk berbasis Kelapa.
+      </p>
     </section>
-  </main>  <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>  <script>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi undang-undang.</p>
+  </footer>
+
+  <!-- OVERLAY MENU (Mobile) -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <a href="index-id.html" class="active">Beranda</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="zeolite-id.html">Zeolit</a>
+        <a href="coconut-id.html">Arang Kelapa</a>
+      </div>
+    </div>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
     function toggleMenu() {
-      document.querySelector(".overlay-menu").classList.toggle("show");
+      const menu = document.getElementById("overlayMenu");
+      menu.classList.toggle("show");
       document.body.classList.toggle("overlay-open");
     }
-    function toggleDropdown() {
-      document.querySelector(".main-nav .dropdown").classList.toggle("open");
+
+    function toggleDropdown(button) {
+      const dropdown = button.parentElement;
+      dropdown.classList.toggle("open");
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
