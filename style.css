@@ -187,7 +187,7 @@ body.overlay-open .lang-switch {
 .gallery-track img {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 240px;
+  max-width: 220px;
   height: auto;
   border-radius: 8px;
   scroll-snap-align: center;
@@ -195,9 +195,14 @@ body.overlay-open .lang-switch {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
-
 .gallery-track img:hover {
   transform: scale(1.05);
+}
+/* Ukuran lebih kecil untuk HP */
+@media (max-width: 768px) {
+  .gallery-track img {
+    max-width: 160px;
+  }
 }
 
 /* Tombol panah */
