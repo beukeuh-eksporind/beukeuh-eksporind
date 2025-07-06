@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Beukeuh Eksporind</title>
+  <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -14,7 +16,7 @@
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+          <div class="tagline">Natural Commodities from Indonesia</div>
         </div>
       </div>
       <div class="lang-switch">
@@ -24,75 +26,71 @@
     </div>
   </header>
 
-  <!-- Overlay Menu for Mobile -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
-      </div>
-    </div>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- Hero Banner -->
+  <!-- HERO SECTION -->
   <section class="hero-banner">
-    <img src="images/home-banner.jpg" alt="Banner" />
+    <img src="images/home-banner.jpg" alt="Main Banner" />
     <div class="banner-text fade-up">
-      <h2>Beukeuh Eksporind</h2>
-      <p>Natural commodities for the global market.</p>
+      <h2>Welcome to Beukeuh Eksporind</h2>
+      <p>Exporting Indonesia's Finest Natural Resources</p>
     </div>
   </section>
 
-  <!-- Navigation Below Banner -->
+  <!-- NAVIGATION BAR (Main Menu Under Hero) -->
   <nav class="main-nav">
     <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
     <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▾</button>
       <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
+        <a href="zeolite.html">Zeolite</a>
+        <a href="coconut.html">Coconut Charcoal</a>
       </div>
     </div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Konten utama -->
-  <main class="container">
-    <p class="fade-up">
-      Welcome to Beukeuh Eksporind, your trusted partner for high-quality natural exports from Indonesia.
-    </p>
+  <!-- CONTENT -->
+  <main class="intro fade-up">
+    <section class="content">
+      <h2>About Us</h2>
+      <p>
+        Beukeuh Eksporind is dedicated to delivering premium natural commodities from Indonesia to global markets. We specialize in exporting Bentonite, Zeolite, and Coconut-based products.
+      </p>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
+  <!-- OVERLAY MENU -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">×</button>
+    <a href="index.html" class="active">Home</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="zeolite.html">Zeolite</a>
+        <a href="coconut.html">Coconut Charcoal</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
+  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
       document.body.classList.toggle("overlay-open");
     }
-    function toggleDropdown() {
-      document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("open"));
-      this.parentNode.classList.toggle("open");
+
+    function toggleDropdown(button) {
+      const dropdown = button.parentElement;
+      dropdown.classList.toggle("open");
     }
   </script>
 </body>
