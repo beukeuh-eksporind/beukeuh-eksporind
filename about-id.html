@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang Kami | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bentonit | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,21 +14,21 @@
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alam dari Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
       <div class="lang-switch">
-        <a href="about-id.html" class="active">🇮🇩 ID</a>
-        <a href="about.html">🇬🇧 EN</a>
+        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
+        <a href="bentonite.html">🇬🇧 EN</a>
       </div>
-      <nav class="nav-links" id="navLinks">
+      <nav class="nav-links">
         <a href="home-id.html">Beranda</a>
-        <a href="about-id.html" class="active">Tentang</a>
+        <a href="about-id.html">Tentang</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▼</button>
+          <button class="dropdown-toggle">Produk ▾</button>
           <div class="dropdown-content">
-            <a href="bentonite-id.html">Bentonit</a>
-            <a href="vanilla-id.html">Vanila</a>
+            <a href="bentonite-id.html" class="active">Bentonit</a>
+            <a href="vanilla-id.html">Vanili</a>
             <a href="cinnamon-id.html">Kayu Manis</a>
             <a href="coffee-id.html">Kopi</a>
             <a href="charcoal-id.html">Arang</a>
@@ -40,34 +40,34 @@
     </div>
   </header>
 
-  <!-- Overlay Menu -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
-    <a href="about-id.html" class="active">Tentang</a>
-
+    <a href="about-id.html">Tentang</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Produk ▼</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
       <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanila</a>
+        <a href="bentonite-id.html" class="active">Bentonit</a>
+        <a href="vanilla-id.html">Vanili</a>
         <a href="cinnamon-id.html">Kayu Manis</a>
         <a href="coffee-id.html">Kopi</a>
         <a href="charcoal-id.html">Arang</a>
       </div>
     </div>
-
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html">Kontak</a>
   </div>
 
-  <main class="container">
-    <section class="intro">
-      <h2>Tentang Beukeuh Eksporind</h2>
-      <p>Beukeuh Eksporind adalah perusahaan ekspor terpercaya yang berbasis di Indonesia. Kami berfokus pada pengadaan dan distribusi komoditas alam berkualitas tinggi seperti bentonit, vanila, kayu manis, kopi, dan arang ke pasar internasional.</p>
-      <p>Misi kami adalah menghubungkan kekayaan alam Indonesia dengan dunia melalui praktik berkelanjutan dan kemitraan jangka panjang yang dapat dipercaya.</p>
-    </section>
-  </main>
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <img src="images/bentonite-banner.jpg" alt="Banner Bentonit" />
+    <div class="banner-text">
+      <h2 class="fade-up">Bentonit</h2>
+      <p class="fade-up">Lempung alami berkualitas tinggi untuk kebutuhan industri ekspor.</p>
+    </div>
+  </section>
+
+  <!-- Konten lain jika dibutuhkan bisa ditambahkan di sini -->
 
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
@@ -80,22 +80,11 @@
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
+      document.body.classList.toggle("overlay-open");
     }
-
-    // Tutup menu saat klik link
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-
-    // Dropdown toggle di overlay
-    const dropdownToggles = document.querySelectorAll('.overlay-menu .dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function () {
-        this.parentElement.classList.toggle('open');
-      });
-    });
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
