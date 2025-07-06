@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beukeuh Eksporind | Natural Commodities from Indonesia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- HEADER BAR -->
   <header class="main-header">
-    <div class="container header-top">
+    <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
         <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
@@ -19,23 +18,42 @@
         </div>
       </div>
       <div class="lang-switch">
-        <a href="index-id.html">🇮🇩</a>
-        <a href="index.html" class="active">🇬🇧</a>
+        <a href="index-id.html">🇮🇩 ID</a>
+        <a href="index.html" class="active">🇬🇧 EN</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO BANNER -->
+  <!-- Overlay Menu for Mobile -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite.html">Bentonite</a>
+        <a href="vanilla.html">Vanilla</a>
+        <a href="cinnamon.html">Cinnamon</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="charcoal.html">Charcoal</a>
+      </div>
+    </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Hero Banner -->
   <section class="hero-banner">
-    <img src="images/hero-banner.jpg" alt="Export Commodities from Indonesia" />
+    <img src="images/home-banner.jpg" alt="Banner" />
     <div class="banner-text fade-up">
-      <h2>Welcome to Beukeuh Eksporind</h2>
-      <p>Explore our finest natural products for global export.</p>
+      <h2>Beukeuh Eksporind</h2>
+      <p>Natural commodities for the global market.</p>
     </div>
   </section>
 
-  <!-- NAVIGATION (below banner) -->
-  <nav class="main-nav container">
+  <!-- Navigation Below Banner -->
+  <nav class="main-nav">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <div class="dropdown">
@@ -52,48 +70,29 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- OVERLAY MENU (for mobile) -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="bentonite.html">Bentonite</a>
-    <a href="vanilla.html">Vanilla</a>
-    <a href="cinnamon.html">Cinnamon</a>
-    <a href="coffee.html">Coffee</a>
-    <a href="charcoal.html">Charcoal</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <!-- MAIN CONTENT -->
-  <main class="container fade-up">
-    <section class="intro">
-      <h2>Our Commitment</h2>
-      <p>We deliver high-quality Indonesian commodities to the world with integrity and sustainability.</p>
-      <img src="images/export-process.jpg" alt="Export Process" />
-    </section>
+  <!-- Konten utama -->
+  <main class="container">
+    <p class="fade-up">
+      Welcome to Beukeuh Eksporind, your trusted partner for high-quality natural exports from Indonesia.
+    </p>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
 
-  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       document.getElementById("overlayMenu").classList.toggle("show");
       document.body.classList.toggle("overlay-open");
     }
-
     function toggleDropdown() {
-      document.querySelector(".dropdown").classList.toggle("open");
+      document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("open"));
+      this.parentNode.classList.toggle("open");
     }
   </script>
 </body>
