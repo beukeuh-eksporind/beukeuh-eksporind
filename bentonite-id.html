@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bentonit | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,17 +11,21 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
           <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
+      <div class="lang-switch">
+        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
+        <a href="bentonite.html">🇬🇧 EN</a>
+      </div>
+      <nav class="nav-links">
         <a href="home-id.html">Beranda</a>
         <a href="about-id.html">Tentang</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▼</button>
+          <button class="dropdown-toggle">Produk ▾</button>
           <div class="dropdown-content">
             <a href="bentonite-id.html" class="active">Bentonit</a>
             <a href="vanilla-id.html">Vanili</a>
@@ -33,10 +37,6 @@
         <a href="gallery-id.html">Galeri</a>
         <a href="contact-id.html">Kontak</a>
       </nav>
-      <div class="lang-switch">
-        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
-        <a href="bentonite.html">🇬🇧 EN</a>
-      </div>
     </div>
   </header>
 
@@ -45,7 +45,7 @@
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Produk ▼</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
       <div class="dropdown-content">
         <a href="bentonite-id.html" class="active">Bentonit</a>
         <a href="vanilla-id.html">Vanili</a>
@@ -58,37 +58,19 @@
     <a href="contact-id.html">Kontak</a>
   </div>
 
-  <main class="container">
-    <section class="hero-banner">
-      <img src="images/bentonite-banner.jpg" alt="Banner Bentonit">
-      <div class="hero-text">
-        <h2>Bentonit Berkualitas Ekspor</h2>
-        <p>Bahan alami dari Indonesia untuk berbagai industri</p>
-      </div>
-    </section>
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <img src="images/bentonite-banner.jpg" alt="Banner Bentonit" />
+    <div class="banner-text">
+      <h2 class="fade-up">Bentonit</h2>
+      <p class="fade-up">Lempung alami berkualitas tinggi untuk kebutuhan industri ekspor.</p>
+    </div>
+  </section>
 
-    <section class="intro">
-      <h2>Apa itu Bentonit?</h2>
-      <p>
-        Bentonit adalah jenis tanah liat alami yang sangat berguna dalam berbagai industri seperti pengeboran minyak, pengolahan air, pembuatan kosmetik, hingga pertanian. 
-        Produk kami berasal dari sumber berkualitas di Indonesia dan telah melalui proses penyaringan ketat untuk menjamin kualitas terbaik.
-      </p>
-
-      <h3>Spesifikasi:</h3>
-      <ul>
-        <li>Kadar Montmorillonit tinggi</li>
-        <li>Kelembaban maksimal 12%</li>
-        <li>Ukuran partikel sesuai permintaan</li>
-        <li>Dikemas dalam karung 25kg / 50kg / jumbo bag</li>
-      </ul>
-
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
-      <a href="brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
-    </section>
-  </main>
+  <!-- Konten lain jika dibutuhkan bisa ditambahkan di sini -->
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
@@ -96,22 +78,13 @@
   </a>
 
   <script>
-  function toggleMenu() {
-    document.getElementById("overlayMenu").classList.toggle("show");
-  }
-
-  // Hanya tutup overlay jika klik link biasa (bukan dropdown toggle)
-  document.querySelectorAll('#overlayMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('overlayMenu').classList.remove('show');
-    });
-  });
-
-  // Tangani klik pada dropdown di overlay
-  document.querySelectorAll('.overlay-menu .dropdown-toggle').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.stopPropagation(); // Cegah klik ini menutup overlay
-      this.parentElement.classList.toggle('open');
-    });
-  });
-</script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+      document.body.classList.toggle("overlay-open");
+    }
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
