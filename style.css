@@ -17,7 +17,28 @@ img {
   height: auto;
   display: block;
 }
+/* ==== FIX LOGO BERGESER SAAT OVERLAY ==== */
+body.overlay-open .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #442d0d;
+  z-index: 1001;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
+body.overlay-open .main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+}
 /* HEADER & FOOTER */
 header, footer {
   background-color: #442d0d;
