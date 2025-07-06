@@ -10,7 +10,12 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+/* Gambar default: tidak meledak keluar container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* HEADER & FOOTER */
 header, footer {
   background-color: #442d0d;
