@@ -2,10 +2,99 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; URL=home-id.html" />
-  <title>Mengalihkan...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beukeuh Eksporind | Komoditas Alami dari Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <p>Jika tidak dialihkan, <a href="home-id.html">klik di sini</a>.</p>
+  <!-- HEADER BAR -->
+  <header class="main-header">
+    <div class="container header-top">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <div class="brand-name">
+          <h1>Beukeuh Eksporind</h1>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
+        </div>
+      </div>
+      <div class="lang-switch">
+        <a href="index-id.html" class="active">🇮🇩</a>
+        <a href="index.html">🇬🇧</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <img src="images/hero-banner.jpg" alt="Komoditas ekspor dari Indonesia" />
+    <div class="banner-text fade-up">
+      <h2>Selamat Datang di Beukeuh Eksporind</h2>
+      <p>Temukan produk alami terbaik Indonesia untuk ekspor global.</p>
+    </div>
+  </section>
+
+  <!-- NAVIGATION (di bawah banner) -->
+  <nav class="main-nav container">
+    <a href="index-id.html" class="active">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html">Vanili</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </nav>
+
+  <!-- OVERLAY MENU (untuk tampilan mobile) -->
+  <div class="overlay-menu" id="overlayMenu">
+    <button class="close-btn" onclick="toggleMenu()">&times;</button>
+    <a href="index-id.html" class="active">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <a href="bentonite-id.html">Bentonit</a>
+    <a href="vanilla-id.html">Vanili</a>
+    <a href="cinnamon-id.html">Kayu Manis</a>
+    <a href="coffee-id.html">Kopi</a>
+    <a href="charcoal-id.html">Arang</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="container fade-up">
+    <section class="intro">
+      <h2>Komitmen Kami</h2>
+      <p>Kami menyediakan komoditas alami Indonesia dengan kualitas tinggi, berlandaskan integritas dan keberlanjutan.</p>
+      <img src="images/export-process.jpg" alt="Proses Ekspor" />
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp">
+  </a>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+      document.body.classList.toggle("overlay-open");
+    }
+
+    function toggleDropdown() {
+      document.querySelector(".dropdown").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
