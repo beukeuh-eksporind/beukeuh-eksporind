@@ -208,6 +208,64 @@ body.overlay-open .lang-switch {
   padding: 0 0.5em;
   z-index: 10;
 }
+/* ATURAN TAMBAHAN UNTUK GALERI SAJA */
+.gallery-track img {
+  flex: 0 0 auto;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:not(.gallery-track img) {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  padding: 1em 0;
+}
+.gallery-track {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1em 0 1em 0.5em;
+}
+
+.gallery .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 1.6em;
+  padding: 0.3em 0.6em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+.gallery .arrow:hover {
+  background: white;
+}
+.gallery .arrow.left {
+  left: 10px;
+}
+.gallery .arrow.right {
+  right: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  /* ... */
+}
 
 /* WHATSAPP FLOATING */
 .wa-float {
