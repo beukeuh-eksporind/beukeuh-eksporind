@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bentonite | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bentonit | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,107 +11,88 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
+          <p class="tagline">Komoditas Alami dari Indonesia</p>
         </div>
       </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
+      <div class="lang-switch">
+        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
+        <a href="bentonite.html">🇬🇧 EN</a>
+      </div>
+      <nav class="nav-links">
+        <a href="home-id.html">Beranda</a>
+        <a href="about-id.html">Tentang</a>
         <div class="dropdown">
-          <button class="dropdown-toggle">Products ▼</button>
+          <button class="dropdown-toggle">Produk ▾</button>
           <div class="dropdown-content">
-            <a href="bentonite.html" class="active">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
+            <a href="bentonite-id.html" class="active">Bentonit</a>
+            <a href="vanilla-id.html">Vanili</a>
+            <a href="cinnamon-id.html">Kayu Manis</a>
+            <a href="coffee-id.html">Kopi</a>
+            <a href="charcoal-id.html">Arang</a>
           </div>
         </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="gallery-id.html">Galeri</a>
+        <a href="contact-id.html">Kontak</a>
       </nav>
-      <div class="lang-switch">
-        <a href="bentonite-id.html">🇮🇩 ID</a>
-        <a href="bentonite.html" class="active">🇬🇧 EN</a>
-      </div>
     </div>
   </header>
 
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Products ▼</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
       <div class="dropdown-content">
-        <a href="bentonite.html" class="active">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
+        <a href="bentonite-id.html" class="active">Bentonit</a>
+        <a href="vanilla-id.html">Vanili</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
       </div>
     </div>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
+    <a href="gallery-id.html">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
   </div>
 
   <main class="container">
-    <section class="hero-banner">
-      <img src="images/bentonite-banner.jpg" alt="Bentonite Banner">
-      <div class="hero-text">
-        <h2>Export-Grade Bentonite</h2>
-        <p>Natural material from Indonesia for various industries</p>
-      </div>
+    <section class="intro fade-up">
+      <h2>Bentonit</h2>
+      <p>Bentonit adalah lempung alami yang memiliki berbagai manfaat dalam industri pengeboran, pertanian, dan pengolahan limbah. Kami menyediakan bentonit berkualitas tinggi untuk kebutuhan ekspor Anda.</p>
     </section>
 
-    <section class="intro">
-      <h2>What is Bentonite?</h2>
-      <p>
-        Bentonite is a natural clay highly valued in industries such as oil drilling, water treatment, cosmetics, and agriculture.
-        Our product is sourced from high-quality deposits in Indonesia and processed under strict quality control to ensure top-grade performance.
-      </p>
-
-      <h3>Specifications:</h3>
-      <ul>
-        <li>High Montmorillonite content</li>
-        <li>Maximum 12% moisture</li>
-        <li>Particle size upon request</li>
-        <li>Packed in 25kg / 50kg / jumbo bags</li>
-      </ul>
-
-      <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us via WhatsApp</a>
-      <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
+    <section class="content fade-up">
+      <img src="images/bentonite-main.jpg" alt="Bentonit Indonesia" />
+      <p>Produk kami diproses secara hati-hati untuk menjaga kemurnian dan efektivitas bentonit dalam aplikasi industri. Dengan tekstur halus dan kemampuan menyerap yang tinggi, bentonit kami ideal untuk berbagai kebutuhan teknis.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
   </a>
+
   <script>
-  function toggleMenu() {
-    document.getElementById("overlayMenu").classList.toggle("show");
-  }
+    function toggleMenu() {
+      document.getElementById("overlayMenu").classList.toggle("show");
+      document.body.classList.toggle("overlay-open");
+    }
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
 
-  // Hanya tutup overlay jika klik link biasa (bukan dropdown toggle)
-  document.querySelectorAll('#overlayMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('overlayMenu').classList.remove('show');
+    // Aktifkan animasi fade-up
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('.fade-up').forEach(el => {
+        el.classList.add('show');
+      });
     });
-  });
-
-  // Tangani klik pada dropdown di overlay
-  document.querySelectorAll('.overlay-menu .dropdown-toggle').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.stopPropagation(); // Cegah klik ini menutup overlay
-      this.parentElement.classList.toggle('open');
-    });
-  });
-</script>
-  <
+  </script>
+</body>
+</html>
