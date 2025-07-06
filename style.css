@@ -2,7 +2,6 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -11,36 +10,15 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-/* ==== FIX LOGO BERGESER SAAT OVERLAY ==== */
-body.overlay-open .main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: #442d0d;
-  z-index: 1001;
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
-body.overlay-open .main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1em;
-  box-sizing: border-box;
-}
 /* HEADER & FOOTER */
-header, footer {
+header,
+footer {
   background-color: #442d0d;
   color: white;
   text-align: center;
@@ -58,39 +36,35 @@ header, footer {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .menu-toggle {
   background: none;
   border: none;
   font-size: 1.8em;
   color: white;
   cursor: pointer;
+  position: relative;
+  z-index: 40;
 }
-
 .brand {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   text-align: left;
 }
-
 .logo {
   max-height: 48px;
   width: auto;
 }
-
 .brand-name {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   line-height: 1.2;
 }
-
 .brand-name h1 {
   font-size: 1.2em;
   margin: 0;
 }
-
 .brand-name .tagline {
   font-size: 0.85em;
   font-style: italic;
@@ -102,105 +76,115 @@ header, footer {
   gap: 8px;
   font-size: 0.95em;
 }
-
 .lang-switch a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
 .lang-switch a.active {
   text-decoration: underline;
 }
-
 body.overlay-open .lang-switch {
   display: none !important;
 }
 
-/* NAVIGATION */
-header .nav-links {
-  display: none;
-}
-
-.navbar-bawah {
+/* MAIN NAVIGATION DI BAWAH HERO */
+.main-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1em;
-  background-color: #f8f1e6;
-  padding: 0.8em 1em;
+  gap: 16px;
+  padding: 1em 0;
+  background-color: #fff8ee;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
-.navbar-bawah a {
+.main-nav a {
   text-decoration: none;
   color: #442d0d;
   font-weight: 500;
-  font-size: 0.95em;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
-
-.navbar-bawah a:hover {
+.main-nav a:hover {
   background-color: rgba(68, 45, 13, 0.1);
 }
-
-.navbar-bawah a.active {
-  background-color: rgba(68, 45, 13, 0.2);
+.main-nav a.active {
+  background-color: rgba(68, 45, 13, 0.15);
 }
-/* ====================
-   MENU DROPDOWN
-==================== */
-.dropdown {
+
+.main-nav .dropdown {
   position: relative;
 }
-
-.dropdown-toggle {
+.main-nav .dropdown-toggle {
   background: none;
   border: none;
-  color: #442d0d;
   font-weight: 500;
-  font-size: 1em;
+  color: #442d0d;
   cursor: pointer;
+  font-size: 1em;
   padding: 8px 12px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }
-
-.dropdown-content {
+.main-nav .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  padding: 0.5em 0;
   background-color: #fffaf3;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding: 0.5em 0;
   z-index: 100;
-  min-width: 160px;
   flex-direction: column;
+  min-width: 160px;
 }
-
-.dropdown-content a {
+.main-nav .dropdown.open .dropdown-content {
+  display: flex;
+}
+.main-nav .dropdown-content a {
   display: block;
   padding: 8px 16px;
   white-space: nowrap;
   color: #442d0d;
-  text-decoration: none;
-  font-size: 0.95em;
 }
-
-.dropdown-content a:hover {
+.main-nav .dropdown-content a:hover {
   background-color: #f2e5d5;
 }
 
-/* ✅ Ini penting agar dropdown bisa muncul saat aktif */
-.dropdown.open .dropdown-content {
-  display: flex;
-  flex-direction: column;
+/* HERO SECTION */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
 }
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 0 1em;
+}
+.banner-text h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+.banner-text p {
+  font-size: 1em;
+  margin: 0.3em 0 0;
+}
+
 /* OVERLAY MENU */
 .overlay-menu {
   position: fixed;
@@ -210,17 +194,15 @@ header .nav-links {
   width: 240px;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
-  box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
-  z-index: 2000;
+  z-index: 10;
 }
-
 .overlay-menu.show {
   transform: translateX(0);
 }
-
 .overlay-menu a {
   display: block;
   margin: 0.7em 0;
@@ -229,11 +211,9 @@ header .nav-links {
   color: #333;
   font-size: 1em;
 }
-
 .overlay-menu a:hover {
   color: #442d0d;
 }
-
 .close-btn {
   position: absolute;
   top: 16px;
@@ -246,49 +226,11 @@ header .nav-links {
   z-index: 1002;
 }
 
-/* HERO SECTION */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.65);
-}
-
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  z-index: 2;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  padding: 0 1em;
-}
-
-.banner-text h2 {
-  font-size: 1.8em;
-  margin: 0;
-}
-
-.banner-text p {
-  font-size: 1em;
-  margin: 0.3em 0 0;
-}
-
 /* ANIMASI FADE UP */
 .fade-up {
   opacity: 0;
   animation: fadeUp 0.8s ease-out forwards;
 }
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -300,109 +242,27 @@ header .nav-links {
   }
 }
 
-/* GALLERY */
-.gallery {
-  position: relative;
-  overflow: hidden;
-  padding: 1em 0;
-  display: flex;
-  align-items: center;
-}
-
-.gallery-track {
-  display: flex;
-  gap: 1em;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 1em 0.5em;
-}
-
-.gallery-track img {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 8px;
-  scroll-snap-align: center;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.gallery-track img:hover {
-  transform: scale(1.05);
-}
-
-.gallery .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: none;
-  font-size: 1.6em;
-  padding: 0.3em 0.6em;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background 0.3s;
-}
-
-.gallery .arrow:hover {
-  background: white;
-}
-
-.gallery .arrow.left {
-  left: 10px;
-}
-
-.gallery .arrow.right {
-  right: 10px;
-}
-
-/* WHATSAPP FLOATING */
-.wa-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-
-.wa-float img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
 /* Z-INDEX & FIX LAYERING */
 .main-header {
   position: relative;
   z-index: 30;
 }
-
-.menu-toggle {
-  position: relative;
-  z-index: 40; /* lebih tinggi dari overlay */
-}
-
-.overlay-menu {
-  z-index: 10; /* di bawah header dan tombol */
-}
-
-/* Saat overlay aktif, jangan geser container */
 body.overlay-open .main-header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 1001;
 }
-
 body.overlay-open .main-header .container {
   margin: 0 auto;
   padding: 0 1em;
   max-width: 1100px;
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
@@ -421,32 +281,8 @@ body.overlay-open .main-header .container {
     display: none;
   }
 }
-
 @media (max-width: 480px) {
   .gallery-track img {
     max-width: 120px;
   }
-}
-
-/* FIX SHIFT HEADER SAAT OVERLAY */
-body.overlay-open .main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-  z-index: 1500;
-  background-color: #442d0d;
-}
-
-body.overlay-open .main-header .container {
-  margin: 0 auto !important;
-  padding: 0 1em !important;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 }
