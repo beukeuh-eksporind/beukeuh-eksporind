@@ -35,20 +35,22 @@
     </div>
   </section>
 
-  <!-- NAVIGATION BAR (Main Menu Under Hero) -->
+  <!-- NAVIGATION BAR -->
   <nav class="main-nav">
     <a href="index.html" class="active">Home</a>
     <div class="dropdown">
-      <button class="dropdown-toggle">Products ▾</button>
+      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▾</button>
       <div class="dropdown-content">
         <a href="bentonite.html">Bentonite</a>
         <a href="zeolite.html">Zeolite</a>
         <a href="coconut.html">Coconut Charcoal</a>
       </div>
     </div>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- CONTENT -->
+  <!-- MAIN CONTENT -->
   <main class="intro fade-up">
     <section class="content">
       <h2>About Us</h2>
@@ -63,7 +65,7 @@
     <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- OVERLAY MENU -->
+  <!-- OVERLAY MENU (Mobile) -->
   <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">×</button>
     <a href="index.html" class="active">Home</a>
@@ -82,7 +84,8 @@
   <!-- SCRIPT -->
   <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      const menu = document.getElementById("overlayMenu");
+      menu.classList.toggle("show");
       document.body.classList.toggle("overlay-open");
     }
 
@@ -91,5 +94,6 @@
       dropdown.classList.toggle("open");
     }
   </script>
+
 </body>
 </html>
