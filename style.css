@@ -128,7 +128,58 @@ header .nav-links {
 .navbar-bawah a.active {
   background-color: rgba(68, 45, 13, 0.2);
 }
+/* ====================
+   MENU DROPDOWN
+==================== */
+.dropdown {
+  position: relative;
+}
 
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #442d0d;
+  font-weight: 500;
+  font-size: 1em;
+  cursor: pointer;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0.5em 0;
+  background-color: #fffaf3;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  z-index: 100;
+  min-width: 160px;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  color: #442d0d;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2e5d5;
+}
+
+/* ✅ Ini penting agar dropdown bisa muncul saat aktif */
+.dropdown.open .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
 /* OVERLAY MENU */
 .overlay-menu {
   position: fixed;
@@ -142,7 +193,7 @@ header .nav-links {
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .overlay-menu.show {
@@ -338,7 +389,7 @@ body.overlay-open .main-header {
   width: 100%;
   margin: 0 !important;
   padding: 0 !important;
-  z-index: 1001;
+  z-index: 1500;
   background-color: #442d0d;
 }
 
@@ -346,4 +397,8 @@ body.overlay-open .main-header .container {
   margin: 0 auto !important;
   padding: 0 1em !important;
   max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 }
