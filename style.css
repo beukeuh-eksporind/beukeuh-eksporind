@@ -16,6 +16,28 @@ img {
   height: auto;
   display: block;
 }
+/* HERO SECTION */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
 /* HEADER & FOOTER */
 header, footer {
   background-color: #442d0d;
@@ -203,14 +225,25 @@ body.overlay-open .lang-switch {
 .gallery-track img:hover {
   transform: scale(1.05);
 }
-
+.gallery-track img.active {
+  transform: scale(1.05);
+}
 /* Ukuran sangat kecil (HP kecil atau landscape) */
 @media (max-width: 480px) {
   .gallery-track img {
     max-width: 120px;
   }
 }
-
+/* ========================
+   Gambar dalam Konten Umum
+   ======================== */
+.intro img,
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em auto;
+  display: block;
+}
 /* Tombol panah */
 .gallery .arrow {
   position: absolute;
