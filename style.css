@@ -78,7 +78,19 @@ header, footer {
 .nav-links a.active {
   background-color: rgba(255,255,255,0.2);
 }
+.nav-links .dropdown-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 0.95em;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
 
+.nav-links .dropdown-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
 /* LANGUAGE SWITCH */
 .lang-switch {
   display: flex;
