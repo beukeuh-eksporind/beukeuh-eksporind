@@ -9,6 +9,7 @@ body {
   background-color: #fffaf3;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -52,6 +53,12 @@ header, footer {
   max-height: 48px;
   width: auto;
 }
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
 .brand-name h1 {
   font-size: 1.2em;
   margin: 0;
@@ -60,12 +67,7 @@ header, footer {
   font-size: 0.85em;
   font-style: italic;
 }
-.brand-name {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.2;
-}
+
 /* NAVIGATION */
 .nav-links {
   display: flex;
@@ -78,7 +80,6 @@ header, footer {
   border-radius: 4px;
   font-size: 0.95em;
 }
-/* Sembunyikan menu utama dari header */
 header .nav-links {
   display: none;
 }
@@ -98,37 +99,6 @@ header .nav-links {
   border-radius: 4px;
 }
 
-.nav-links .dropdown-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-/* MENU NAVIGASI DI BAWAH BANNER */
-.navbar-bawah {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em;
-  background-color: #f8f1e6;
-  padding: 0.8em 1em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.navbar-bawah a {
-  text-decoration: none;
-  color: #442d0d;
-  font-weight: 500;
-  font-size: 0.95em;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.navbar-bawah a:hover {
-  background-color: rgba(68, 45, 13, 0.1);
-}
-
-.navbar-bawah a.active {
-  background-color: rgba(68, 45, 13, 0.2);
-}
 /* LANGUAGE SWITCH */
 .lang-switch {
   display: flex;
@@ -160,6 +130,7 @@ body.overlay-open .lang-switch {
   padding: 80px 1.5em 2em;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
+  z-index: 1000;
 }
 .overlay-menu.show {
   transform: translateX(0);
@@ -186,57 +157,6 @@ body.overlay-open .lang-switch {
   cursor: pointer;
   z-index: 1002;
 }
-/* ====================
-   MENU DROPDOWN
-==================== */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-weight: 500;
-  font-size: 1em;
-  cursor: pointer;
-  padding: 6px 10px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 0.5em 1em;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  z-index: 999;
-  min-width: 160px;
-  flex-direction: column;
-}
-
-.dropdown-content a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 0.4em 0;
-  font-size: 0.95em;
-  white-space: nowrap;
-}
-
-.dropdown-content a:hover {
-  text-decoration: underline;
-  color: #442d0d;
-}
-
-.dropdown.open .dropdown-content {
-  display: flex;
-}
 
 /* HERO SECTION */
 .hero-banner {
@@ -260,8 +180,8 @@ body.overlay-open .lang-switch {
   text-align: center;
   z-index: 2;
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-  width:100%
-  padding:0 1em
+  width: 100%;
+  padding: 0 1em;
 }
 .banner-text h2 {
   font-size: 1.8em;
@@ -271,6 +191,33 @@ body.overlay-open .lang-switch {
   font-size: 1em;
   margin: 0.3em 0 0;
 }
+
+/* NAVBAR BAWAH */
+.navbar-bawah {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  background-color: #f8f1e6;
+  padding: 0.8em 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.navbar-bawah a {
+  text-decoration: none;
+  color: #442d0d;
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.navbar-bawah a:hover {
+  background-color: rgba(68, 45, 13, 0.1);
+}
+.navbar-bawah a.active {
+  background-color: rgba(68, 45, 13, 0.2);
+}
+
 /* MAIN NAVIGATION DI BAWAH HERO */
 .main-nav {
   display: flex;
@@ -281,7 +228,6 @@ body.overlay-open .lang-switch {
   background-color: #fff8ee;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-
 .main-nav a {
   text-decoration: none;
   color: #442d0d;
@@ -297,7 +243,7 @@ body.overlay-open .lang-switch {
   background-color: rgba(68, 45, 13, 0.15);
 }
 
-/* Dropdown khusus dalam main-nav */
+/* Dropdown dalam main-nav */
 .main-nav .dropdown {
   position: relative;
 }
@@ -350,83 +296,6 @@ body.overlay-open .lang-switch {
   }
 }
 
-/* GALLERY */
-.gallery {
-  position: relative;
-  overflow: hidden;
-  padding: 1em 0;
-  display: flex;
-  align-items: center;
-}
-.gallery-track {
-  display: flex;
-  gap: 1em;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 1em 0.5em;
-}
-.gallery-track img {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 8px;
-  scroll-snap-align: center;
-  object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-.gallery-track img:hover {
-  transform: scale(1.05);
-}
-.gallery .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: none;
-  font-size: 1.6em;
-  padding: 0.3em 0.6em;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background 0.3s;
-}
-.gallery .arrow:hover {
-  background: white;
-}
-.gallery .arrow.left {
-  left: 10px;
-}
-.gallery .arrow.right {
-  right: 10px;
-}
-
-/* Gambar dalam Konten Umum */
-.intro img,
-.content img {
-  max-width: 100%;
-  height: auto;
-  margin: 1em auto;
-  display: block;
-}
-
-/* WHATSAPP FLOATING */
-.wa-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-}
-.wa-float img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
@@ -445,26 +314,14 @@ body.overlay-open .lang-switch {
     display: none;
   }
 }
+
 @media (max-width: 480px) {
   .gallery-track img {
     max-width: 120px;
   }
-  /* === FIX: Header shift saat overlay aktif === */
-body.overlay-open .main-header {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
 }
-body.overlay-open .main-header .container {
-  margin-left: auto !important;
-}
-  body.overlay-open .main-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1001;
-}
-  /* Saat overlay terbuka, pastikan header tetap simetris */
+
+/* ======== FIX OVERLAY SHIFTING ======== */
 body.overlay-open .main-header {
   position: fixed;
   top: 0;
@@ -472,13 +329,18 @@ body.overlay-open .main-header {
   right: 0;
   width: 100%;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 1em 0 !important;
+  background-color: #442d0d;
   z-index: 1001;
 }
-
 body.overlay-open .main-header .container {
+  max-width: 1100px;
   margin: 0 auto !important;
   padding: 0 1em !important;
-  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+body.overlay-open {
+  overflow: hidden;
 }
