@@ -72,6 +72,10 @@ header, footer {
   border-radius: 4px;
   font-size: 0.95em;
 }
+/* Sembunyikan menu utama dari header */
+header .nav-links {
+  display: none;
+}
 .nav-links a:hover {
   background-color: rgba(255,255,255,0.15);
 }
@@ -90,6 +94,34 @@ header, footer {
 
 .nav-links .dropdown-toggle:hover {
   background-color: rgba(255, 255, 255, 0.15);
+}
+/* MENU NAVIGASI DI BAWAH BANNER */
+.navbar-bawah {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  background-color: #f8f1e6;
+  padding: 0.8em 1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-bawah a {
+  text-decoration: none;
+  color: #442d0d;
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.navbar-bawah a:hover {
+  background-color: rgba(68, 45, 13, 0.1);
+}
+
+.navbar-bawah a.active {
+  background-color: rgba(68, 45, 13, 0.2);
 }
 /* LANGUAGE SWITCH */
 .lang-switch {
