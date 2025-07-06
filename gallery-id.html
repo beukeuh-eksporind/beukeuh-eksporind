@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,38 +8,38 @@
 <body>
   <header class="main-header">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="gallery-id.html" class="active">🇮🇩 ID</a>
-        <a href="gallery.html">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite-id.html">Bentonit</a>
-            <a href="vanilla-id.html">Vanili</a>
-            <a href="cinnamon-id.html">Kayu Manis</a>
-            <a href="coffee-id.html">Kopi</a>
-            <a href="charcoal-id.html">Arang</a>
-          </div>
-        </div>
-        <a href="gallery-id.html" class="active">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
-      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button><div class="brand">
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <div class="brand-name">
+      <h1>Beukeuh Eksporind</h1>
+      <p class="tagline">Komoditas Alami dari Indonesia</p>
     </div>
-  </header>
+  </div>
 
-  <div class="overlay-menu" id="overlayMenu">
+  <div class="lang-switch" id="langSwitch">
+    <a href="gallery-id.html" class="active">🇩🇭 ID</a>
+    <a href="gallery.html">🇬🇧 EN</a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="home-id.html">Beranda</a>
+    <a href="about-id.html">Tentang</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Produk ▾</button>
+      <div class="dropdown-content">
+        <a href="bentonite-id.html">Bentonit</a>
+        <a href="vanilla-id.html">Vanili</a>
+        <a href="cinnamon-id.html">Kayu Manis</a>
+        <a href="coffee-id.html">Kopi</a>
+        <a href="charcoal-id.html">Arang</a>
+      </div>
+    </div>
+    <a href="gallery-id.html" class="active">Galeri</a>
+    <a href="contact-id.html">Kontak</a>
+  </nav>
+</div>
+
+  </header>  <div class="overlay-menu" id="overlayMenu">
     <button class="close-btn" onclick="toggleMenu()">&times;</button>
     <a href="home-id.html">Beranda</a>
     <a href="about-id.html">Tentang</a>
@@ -56,15 +55,10 @@
     </div>
     <a href="gallery-id.html" class="active">Galeri</a>
     <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <main class="container"
-      <h2>Galeri</h2>
-      <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p>
-<!-- Tanda panah -->
-    <section class="gallery">
+  </div>  <main class="container">
+    <h2>Galeri</h2>
+    <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p><section class="gallery">
   <button class="arrow left" onclick="scrollGallery(-1)">❮</button>
-  
   <div class="gallery-track" id="galleryTrack">
     <img src="images/gallery1.jpg" alt="Galeri 1" />
     <img src="images/gallery2.jpg" alt="Galeri 2" />
@@ -72,30 +66,28 @@
     <img src="images/gallery4.jpg" alt="Galeri 4" />
     <img src="images/gallery5.jpg" alt="Galeri 5" />
   </div>
-  
   <button class="arrow right" onclick="scrollGallery(1)">❯</button>
 </section>
-      
-  </main>
 
-  <footer>
+  </main>  <footer>
     <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
-  </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+  </footer>  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
     <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
+  </a>  <script>
+    function toggleMenu() {
+      const overlay = document.getElementById("overlayMenu");
+      const isOpen = overlay.classList.toggle("show");
+      document.body.classList.toggle("overlay-open", isOpen);
+    }
 
-  <script>
-  function toggleMenu() {
-    const overlay = document.getElementById("overlayMenu");
-    overlay.classList.toggle("show");
-    document.body.classList.toggle("overlay-open");
-  }
+    function toggleDropdown() {
+      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
+    }
 
-  function toggleDropdown() {
-    document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-  }
-  </script>
-</body>
+    function scrollGallery(direction) {
+      const track = document.getElementById("galleryTrack");
+      const scrollAmount = track.offsetWidth * 0.7;
+      track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    }
+  </script></body>
 </html>
