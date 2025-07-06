@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Beranda | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -11,49 +10,24 @@
     <div class="container">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
         <div class="brand-name">
           <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
+          <div class="tagline">Natural Commodities from Indonesia</div>
         </div>
       </div>
       <div class="lang-switch">
-        <a href="index-id.html" class="active">🇮🇩 ID</a>
-        <a href="index.html">🇬🇧 EN</a>
+        <a href="index.html" class="active">EN</a>
+        <a href="index-id.html">ID</a>
       </div>
     </div>
-  </header>
-
-  <!-- Overlay Menu untuk Mobile -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="index-id.html" class="active">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanili</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
-      </div>
-    </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <!-- Hero Banner -->
-  <section class="hero-banner">
-    <img src="images/home-banner.jpg" alt="Banner Beranda" />
+  </header>  <section class="hero-banner">
+    <img src="images/hero-banner.jpg" alt="Hero Banner" />
     <div class="banner-text fade-up">
-      <h2>Beukeuh Eksporind</h2>
-      <p>Komoditas alami untuk pasar dunia.</p>
+      <h2>Selamat Datang</h2>
+      <p>Eksportir Komoditas Alam dari Indonesia</p>
     </div>
-  </section>
-
-  <!-- Navigasi Utama di Bawah Banner -->
-  <nav class="main-nav">
+  </section>  <!-- NAVIGASI UTAMA DI BAWAH BANNER -->  <nav class="main-nav">
     <a href="index-id.html" class="active">Beranda</a>
     <a href="about-id.html">Tentang</a>
     <div class="dropdown">
@@ -68,32 +42,22 @@
     </div>
     <a href="gallery-id.html">Galeri</a>
     <a href="contact-id.html">Kontak</a>
-  </nav>
-
-  <!-- Konten utama -->
-  <main class="container">
-    <p class="fade-up">
-      Selamat datang di Beukeuh Eksporind, mitra ekspor terpercaya untuk komoditas alami terbaik dari Indonesia.
-    </p>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
-  </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
+  </nav>  <main class="content">
+    <section class="intro fade-up">
+      <div class="container">
+        <h2>Komoditas Berkualitas untuk Dunia</h2>
+        <p>Kami menyediakan produk alam terbaik seperti bentonite, kopi, kayu manis, dan vanili yang berasal dari alam Indonesia.</p>
+      </div>
+    </section>
+  </main>  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>  <script>
     function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
+      document.querySelector(".overlay-menu").classList.toggle("show");
       document.body.classList.toggle("overlay-open");
     }
     function toggleDropdown() {
-      document.querySelectorAll(".dropdown").forEach(drop => drop.classList.remove("open"));
-      this.parentNode.classList.toggle("open");
+      document.querySelector(".main-nav .dropdown").classList.toggle("open");
     }
-  </script>
-</body>
+  </script></body>
 </html>
