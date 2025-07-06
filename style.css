@@ -309,7 +309,29 @@ body.overlay-open .lang-switch {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+/* Bagian galeri atau animasi lainnya... */
 
+/* ANIMASI FADE UP UNTUK KONTEN MASUK */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  /* ...responsif style di sini... */
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
