@@ -198,10 +198,11 @@ body.overlay-open .lang-switch {
 .gallery-track img:hover {
   transform: scale(1.05);
 }
-/* Ukuran lebih kecil untuk HP */
-@media (max-width: 768px) {
+
+/* Ukuran sangat kecil (HP kecil atau landscape) */
+@media (max-width: 480px) {
   .gallery-track img {
-    max-width: 160px;
+    max-width: 140px;
   }
 }
 
@@ -229,12 +230,7 @@ body.overlay-open .lang-switch {
   right: 10px;
 }
 
-/* Responsif di layar kecil */
-@media (max-width: 600px) {
-  .gallery-track img {
-    max-width: 180px;
-  }
-}
+
 .gallery-track img:hover {
   transform: scale(1.05);
 }
