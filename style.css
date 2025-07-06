@@ -10,57 +10,12 @@ body {
   color: #333;
   line-height: 1.6;
 }
-/* Gambar default: tidak meledak keluar container */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-/* HERO SECTION */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-}
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.65);
-}
-/* ANIMASI FADE UP UNTUK TEKS MASUK */
-.fade-up {
-  opacity: 0;
-  animation: fadeUp 0.8s ease-out forwards;
-}
-.hero-text {
-  position: absolute;
-  top: 20%;
-  left: 24%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-.banner-text h2 {
-  font-size: 1.8em;
-  margin: 0;
-}
-.banner-text p {
-  font-size: 1em;
-  margin: 0.3em 0 0;
-}
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 /* HEADER & FOOTER */
 header, footer {
   background-color: #442d0d;
@@ -217,6 +172,54 @@ body.overlay-open .lang-switch {
   text-decoration: underline;
 }
 
+/* HERO SECTION */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+.banner-text h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+.banner-text p {
+  font-size: 1em;
+  margin: 0.3em 0 0;
+}
+
+/* ANIMASI FADE UP */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* GALLERY */
 .gallery {
   position: relative;
@@ -233,7 +236,6 @@ body.overlay-open .lang-switch {
   -webkit-overflow-scrolling: touch;
   padding: 1em 0.5em;
 }
-
 .gallery-track img {
   flex: 0 0 auto;
   width: 100%;
@@ -245,53 +247,6 @@ body.overlay-open .lang-switch {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
 }
-.gallery-track img:hover {
-  transform: scale(1.05);
-}
-.gallery-track img.active {
-  transform: scale(1.05);
-}
-/* Ukuran sangat kecil (HP kecil atau landscape) */
-@media (max-width: 480px) {
-  .gallery-track img {
-    max-width: 120px;
-  }
-}
-/* ========================
-   Gambar dalam Konten Umum
-   ======================== */
-.intro img,
-.content img {
-  max-width: 100%;
-  height: auto;
-  margin: 1em auto;
-  display: block;
-}
-/* Tombol panah */
-.gallery .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: none;
-  font-size: 1.6em;
-  padding: 0.3em 0.6em;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-.gallery .arrow:hover {
-  background: white;
-}
-.gallery .arrow.left {
-  left: 10px;
-}
-.gallery .arrow.right {
-  right: 10px;
-}
-
-
 .gallery-track img:hover {
   transform: scale(1.05);
 }
@@ -319,6 +274,15 @@ body.overlay-open .lang-switch {
   right: 10px;
 }
 
+/* Gambar dalam Konten Umum */
+.intro img,
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em auto;
+  display: block;
+}
+
 /* WHATSAPP FLOATING */
 .wa-float {
   position: fixed;
@@ -332,29 +296,7 @@ body.overlay-open .lang-switch {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-/* Bagian galeri atau animasi lainnya... */
 
-/* ANIMASI FADE UP UNTUK KONTEN MASUK */
-.fade-up {
-  opacity: 0;
-  animation: fadeUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  /* ...responsif style di sini... */
-}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .main-header .container {
@@ -371,5 +313,10 @@ body.overlay-open .lang-switch {
   }
   .nav-links {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-track img {
+    max-width: 120px;
   }
 }
