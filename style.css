@@ -218,3 +218,22 @@ footer {
     margin-top: 4px;
   }
 }
+/* Tambahan untuk tombol bahasa di pojok kanan atas */
+.lang-switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: #2e7d32;
+  margin: 0 4px;
+  font-weight: bold;
+}
