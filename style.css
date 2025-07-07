@@ -26,7 +26,7 @@ header.hero {
   gap: 10px;
   margin-top: 20px;
 }
-
+@media (max-width: 600px) {
 .menu-grid a,
 .menu-dropdown {
   background: linear-gradient(135deg, #4caf50, #2e7d32);
@@ -39,6 +39,8 @@ header.hero {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+    min-width: auto;
+    flex: 1 1 auto;
 }
 
 .menu-grid a:hover,
@@ -65,7 +67,7 @@ header.hero {
   color: #333;
   min-width: 120px;
   z-index: 100;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   margin-top: 8px;
   padding: 8px 0;
