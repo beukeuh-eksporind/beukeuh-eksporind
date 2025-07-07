@@ -236,6 +236,10 @@ footer {
 /* Responsif HP */
 @media (max-width: 600px) {
   .menu-grid {
+   position: pixed;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
     gap: 8px;
     padding: 8px;
   }
