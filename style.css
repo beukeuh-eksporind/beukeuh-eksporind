@@ -235,9 +235,6 @@ footer {
 
   .menu-grid a,
   .menu-dropdown {
-    position: fixed;
-    font-size: 12px;
-    padding: 6px 10px;
     min-width: 90px;
     max-width: 110px;
   }
