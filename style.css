@@ -100,7 +100,7 @@ header.hero {
   display: inline-block;
 }
 .menu-dropdown-content {
-  display: absolute;
+  display: none;
   position: absolute;
   background: white;
   top: 100%;
@@ -109,7 +109,7 @@ header.hero {
   padding: 8px 0;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 1000;
-  min-width: 140px;
+  min-width: 100px;
 }
 
 .menu-dropdown:hover .menu-dropdown-content {
