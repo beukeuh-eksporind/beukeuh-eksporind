@@ -169,16 +169,22 @@ footer {
 }
 
 /* Responsive: Mobile Menu Scroll */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .menu-grid {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 6px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    flex-wrap: wrap;     /* Membuat tombol bisa turun ke baris baru */
+    justify-content: center;
+    gap: 8px;
   }
+
+  .menu-grid a,
+  .menu-dropdown {
+    flex: 1 1 45%;        /* Setiap tombol ambil ± 45% dari lebar layar */
+    max-width: 48%;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
 
   .menu-grid::-webkit-scrollbar {
     display: none;
