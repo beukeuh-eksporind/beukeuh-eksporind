@@ -1,5 +1,4 @@
-/* style.css — Beukeuh Eksporind */
-/* Hijau alami lembut, animasi cantik, menu responsif sebaris */
+/* style.css — Final Version for Beukeuh Eksporind */
 
 /* Base Styles */
 body {
@@ -11,7 +10,6 @@ body {
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
-
 body.loaded {
   opacity: 1;
 }
@@ -30,10 +28,36 @@ header.hero {
   padding: 40px 20px;
   border-radius: 0 0 12px 12px;
 }
-
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
 .tagline {
   font-size: 1.2em;
   margin-bottom: 10px;
+}
+
+/* Language Switch */
+.lang-switch {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 999;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.lang-switch a {
+  text-decoration: none;
+  color: #2e7d32;
+  margin: 0 4px;
+  font-weight: bold;
 }
 
 /* Menu Grid */
@@ -45,11 +69,10 @@ header.hero {
   background: white;
   padding: 10px;
   position: relative;
-  z-index: 10;
+  z-index: 100;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 .menu-grid::-webkit-scrollbar {
   display: none;
 }
@@ -70,21 +93,21 @@ header.hero {
   max-width: 120px;
   text-align: center;
   white-space: nowrap;
+  position: relative;
+  z-index: 100;
 }
-
 .menu-grid a:hover,
 .menu-dropdown:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 14px rgba(0,0,0,0.2);
 }
-
 .menu-grid a:active,
 .menu-dropdown:active {
   transform: translateY(1px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
-/* Dropdown Content */
+/* Dropdown Menu */
 .menu-dropdown-content {
   display: none;
   position: absolute;
@@ -94,14 +117,12 @@ header.hero {
   border-radius: 6px;
   padding: 8px 0;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 9999;
+  z-index: 1000;
   min-width: 140px;
 }
-
 .menu-dropdown:hover .menu-dropdown-content {
   display: block;
 }
-
 .menu-dropdown-content a {
   display: block;
   padding: 8px 12px;
@@ -109,14 +130,22 @@ header.hero {
   text-decoration: none;
   font-size: 14px;
 }
-
 .menu-dropdown-content a:hover {
   background: #f0f0f0;
 }
 
-/* Section Content */
+/* Section Layout */
 .section {
   padding: 40px 20px;
+}
+
+/* Deskripsi Awal */
+.intro-description {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1rem;
+  color: #444;
 }
 
 /* Produk Grid */
@@ -127,7 +156,7 @@ header.hero {
   margin-top: 20px;
 }
 
-/* Card Produk */
+/* Produk Card */
 .card {
   background: white;
   padding: 20px;
@@ -135,7 +164,6 @@ header.hero {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-4px);
 }
@@ -151,7 +179,6 @@ header.hero {
   text-decoration: none;
   font-weight: 600;
 }
-
 .btn-primary:hover {
   background: #66bb6a;
   transition: background 0.3s ease;
@@ -167,7 +194,7 @@ footer {
   border-radius: 12px 12px 0 0;
 }
 
-/* WhatsApp Button */
+/* WhatsApp Floating */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -182,43 +209,12 @@ footer {
   z-index: 999;
 }
 
-/* Intro Description */
-.intro-description {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* Bahasa Switch (pojok kanan atas) */
-.lang-switch {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  z-index: 999;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.lang-switch a {
-  text-decoration: none;
-  color: #2e7d32;
-  margin: 0 4px;
-  font-weight: bold;
-}
-
-/* Responsif HP */
+/* Mobile Responsive */
 @media (max-width: 600px) {
   .menu-grid {
     gap: 8px;
     padding: 8px;
   }
-
   .menu-grid a,
   .menu-dropdown {
     font-size: 12px;
@@ -226,11 +222,9 @@ footer {
     min-width: 90px;
     max-width: 110px;
   }
-
   .grid {
     grid-template-columns: 1fr;
   }
-
   .intro-description {
     font-size: 0.95rem;
   }
