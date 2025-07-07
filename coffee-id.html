@@ -2,106 +2,53 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kopi Indonesia untuk ekspor – Beukeuh Eksporind" />
   <title>Kopi | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Dari Alam, Untuk Dunia</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="coffee-id.html" class="active">🇮🇩 ID</a>
-        <a href="coffee.html">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▼</button>
-          <div class="dropdown-content">
-            <a href="bentonite-id.html">Bentonit</a>
-            <a href="vanilla-id.html">Vanila</a>
-            <a href="cinnamon-id.html">Kayu Manis</a>
-            <a href="coffee-id.html" class="active">Kopi</a>
-            <a href="charcoal-id.html">Arang</a>
-          </div>
-        </div>
-        <a href="gallery-id.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
-      </nav>
+      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height: 48px" />
+      <h1>☕ Biji Kopi Indonesia</h1>
+      <p class="tagline">Aroma kuat, rasa khas, dari dataran tinggi tropis.</p>
+      <a href="coffee.html" class="btn-primary">🌐 English</a>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▼</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanila</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html" class="active">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
-      </div>
-    </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
+  <section class="section">
+    <div class="container">
+      <h2>Deskripsi Produk</h2>
+      <p>
+        Kopi kami berasal dari kebun dataran tinggi di Jawa Barat dan Sumatra. Tumbuh di atas ketinggian 1.200 meter, menghasilkan cita rasa kompleks, aroma dalam, dan aftertaste yang lembut.
+      </p>
 
-  <main class="container">
-    <section class="intro">
-      <h2>Kopi Indonesia Siap Ekspor</h2>
-      <p>
-        Kopi Indonesia terkenal di dunia karena cita rasa dan aromanya yang khas. Kami menyediakan kopi arabika dan robusta dari Sumatra, Jawa, dan Sulawesi dalam bentuk green bean, roasted, maupun bubuk.
-      </p>
-      <p>
-        Produk kami berasal dari petani berkelanjutan dan diproses sesuai standar kualitas ekspor dengan kontrol mutu ketat.
-      </p>
+      <h3>Spesifikasi:</h3>
       <ul>
-        <li><strong>Jenis:</strong> Arabika, Robusta</li>
-        <li><strong>Bentuk:</strong> Green bean, sangrai, atau bubuk</li>
-        <li><strong>Kadar Air:</strong> &lt; 13%</li>
-        <li><strong>Kemasan:</strong> Karung goni 60 kg atau custom</li>
-        <li><strong>Asal:</strong> Sumatra, Jawa, Sulawesi</li>
+        <li>Jenis: Arabika / Robusta (sesuai permintaan)</li>
+        <li>Kadar air: &lt; 13%</li>
+        <li>Proses: Basah / Kering</li>
+        <li>Asal: Jawa Barat & Sumatra, Indonesia</li>
       </ul>
-    </section>
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Hubungi Kami via WhatsApp</a>
-    <a href="brochure.pdf" class="download-button" download>Unduh Brosur Produk</a>
-  </main>
+
+      <h3>Keunggulan:</h3>
+      <ul>
+        <li>Dipetik tangan & dijemur alami</li>
+        <li>Green bean atau roasted tersedia</li>
+        <li>Kemasan dapat disesuaikan</li>
+      </ul>
+
+      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Hubungi untuk Order</a>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
+    </div>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-
-    function toggleDropdown(btn) {
-      const parent = btn.parentElement;
-      parent.classList.toggle("open");
-    }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-  </script>
 </body>
 </html>
