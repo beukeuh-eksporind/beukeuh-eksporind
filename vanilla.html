@@ -1,107 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Indonesian Vanilla for Export - Beukeuh Eksporind">
   <title>Vanilla | Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Pure Nature, Global Reach</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="vanilla-id.html">🇮🇩 ID</a>
-        <a href="vanilla.html" class="active">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products ▼</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html">Bentonite</a>
-            <a href="vanilla.html" class="active">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <h1>🌿 Premium Indonesian Vanilla</h1>
+      <p class="tagline">Aromatic, natural, and ready for global export.</p>
+      <a href="vanilla-id.html" class="btn-primary">🇮🇩 Bahasa Indonesia</a>
     </div>
-  </header>
+  </header>  <section class="section">
+    <div class="container">
+      <h2>Product Description</h2>
+      <p>Beukeuh Eksporind provides high-quality vanilla beans from tropical Indonesian plantations. Our vanilla is carefully harvested, sun-dried, and processed to preserve its natural aroma and flavor.</p><h3>Specifications:</h3>
+  <ul>
+    <li>Grade: Gourmet / Extraction</li>
+    <li>Moisture: 30–35%</li>
+    <li>Length: 14–20 cm</li>
+    <li>Origin: West Java, Indonesia</li>
+  </ul>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Products ▼</button>
-      <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
-        <a href="vanilla.html" class="active">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
-      </div>
+  <h3>Why Choose Our Vanilla?</h3>
+  <ul>
+    <li>Ethically sourced from local farmers</li>
+    <li>Rich aroma and long shelf life</li>
+    <li>Custom packaging available</li>
+  </ul>
+
+  <a href="https://wa.me/6281234567890" class="btn-primary">📦 Contact for Order</a>
+</div>
+
+  </section>  <footer>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
     </div>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <main class="container">
-    <section class="intro">
-      <h2>Premium Indonesian Vanilla</h2>
-      <p>
-        Our vanilla beans are harvested from the fertile regions of Indonesia, known for their rich aroma, high vanillin content, and moisture level. We supply only Grade A vanilla, suitable for culinary and fragrance industries.
-      </p>
-      <p>
-        We offer both dried and cured vanilla beans, ready for export in customized packaging according to client needs. Our team ensures quality control from farm to shipment.
-      </p>
-      <ul>
-        <li><strong>Type:</strong> Vanilla Planifolia</li>
-        <li><strong>Origin:</strong> Java and Sumatra</li>
-        <li><strong>Vanillin Content:</strong> ≥ 2%</li>
-        <li><strong>Moisture:</strong> 30–35%</li>
-        <li><strong>Packaging:</strong> Vacuum-sealed or glass tubes</li>
-      </ul>
-    </section>
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Contact Us on WhatsApp</a>
-    <a href="brochure.pdf" class="download-button" download>Download Product Brochure</a>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-
-    function toggleDropdown(btn) {
-      const parent = btn.parentElement;
-      parent.classList.toggle("open");
-    }
-
-    document.querySelectorAll('#overlayMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('overlayMenu').classList.remove('show');
-      });
-    });
-  </script>
 </body>
 </html>
