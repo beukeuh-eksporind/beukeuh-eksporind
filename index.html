@@ -1,4 +1,5 @@
-<!-- Final index.html dengan menu, deskripsi, dan struktur rapi --><!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,12 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    header.hero, .menu-grid {
+      border: none;
+      box-shadow: none;
+    }
+  </style>
 </head>
 <body>
   <header class="hero" data-aos="fade-down">
@@ -19,25 +26,31 @@
         <a href="index-id.html">🇮🇩 ID</a> | <a href="index.html">🇬🇧 EN</a>
       </div>
     </div>
-  </header>  <div class="menu-grid">
+  </header>
+
+  <div class="menu-grid">
     <a href="index.html"><span class="emoji">🏠</span> Home</a>
     <div class="menu-dropdown">
       <span class="emoji">📦</span> Products
       <div class="menu-dropdown-content">
-        <a href="bentonite.html"><span class="emoji">🪨</span> Bentonite</a>
-        <a href="vanilla.html"><span class="emoji">🌿</span> Vanilla</a>
-        <a href="cinnamon.html"><span class="emoji">🌳</span> Cinnamon</a>
-        <a href="coffee.html"><span class="emoji">☕</span> Coffee</a>
+        <a href="bentonite.html">🪨 Bentonite</a>
+        <a href="vanilla.html">🌿 Vanilla</a>
+        <a href="cinnamon.html">🌳 Cinnamon</a>
+        <a href="coffee.html">☕ Coffee</a>
       </div>
     </div>
     <a href="gallery.html"><span class="emoji">🖼️</span> Gallery</a>
     <a href="about.html"><span class="emoji">📘</span> About</a>
     <a href="contact.html"><span class="emoji">✉️</span> Contact</a>
-  </div>  <section class="section description" data-aos="fade-up">
+  </div>
+
+  <section class="section description" data-aos="fade-up">
     <p class="intro-description">
       Beukeuh Eksporind is a trusted Indonesian exporter of high-quality natural commodities. We bring vanilla, coffee, cinnamon, and bentonite from our rich lands to the global market, built on sustainability and local empowerment.
     </p>
-  </section>  <section class="section" id="produk" data-aos="fade-up">
+  </section>
+
+  <section class="section" id="produk" data-aos="fade-up">
     <div class="container">
       <h2>Featured Products</h2>
       <div class="grid">
@@ -63,13 +76,19 @@
         </div>
       </div>
     </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <div class="container">
       <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
     </div>
-  </footer><a href="https://wa.me/6281282541982" class="wa-float" target="_blank">📱</a>
+  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">📱</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
     AOS.init({ duration: 800, once: true });
-  </script></body>
+  </script>
+</body>
 </html>
