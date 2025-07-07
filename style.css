@@ -44,19 +44,22 @@ header.hero {
   position: relative;
   z-index: 10;
 }
-
+.grid {
+  grid-template-columns: 1fr !important; /* Supaya card produk satu kolom di HP */
+}
 .menu-grid a,
 .menu-dropdown {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
-  padding: 8px 16px;
+  padding: 6px 10px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  flex:1 auto;
 }
 
 .menu-grid a:hover,
@@ -166,7 +169,7 @@ footer {
 }
 
 /* Responsive: Mobile Menu Scroll */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .menu-grid {
     display: flex;
     flex-wrap: nowrap;
