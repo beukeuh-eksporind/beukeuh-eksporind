@@ -3,90 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Industrial-Grade Bentonite Clay from Indonesia – Beukeuh Eksporind">
   <title>Bentonite | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <div class="tagline">Natural Commodities from Indonesia</div>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="bentonite-id.html">🇮🇩 ID</a>
-        <a href="bentonite.html" class="active">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html" class="active">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <img src="logo.png" alt="Beukeuh Eksporind Logo" style="height: 48px" />
+      <h1>🪨 Bentonite Clay</h1>
+      <p class="tagline">High-purity bentonite for industrial and agricultural use.</p>
+      <a href="bentonite-id.html" class="btn-primary">🇮🇩 Bahasa Indonesia</a>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite.html" class="active">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
-      </div>
-    </div>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <section class="section">
+    <div class="container">
+      <h2>Product Overview</h2>
+      <p>
+        Our bentonite clay is sourced from mineral-rich regions in Indonesia, refined to meet export-grade quality. Used in drilling, construction, foundry, and agriculture.
+      </p>
 
-  <!-- Banner Gambar + Teks -->
-  <section class="hero-banner">
-  <img src="images/bentonite-banner.jpg" alt="Bentonite Banner" />
-  <div class="banner-text">
-    <h2 class="fade-up">Bentonite</h2>
-    <p class="fade-up">High-quality natural clay for export industries.</p>
-  </div>
+      <h3>Specifications:</h3>
+      <ul>
+        <li>Type: Sodium / Calcium Bentonite</li>
+        <li>Moisture: &lt; 12%</li>
+        <li>Mesh size: 200 mesh (customizable)</li>
+        <li>Packaging: 25 kg / 50 kg sacks or jumbo bags</li>
+      </ul>
+
+      <h3>Applications:</h3>
+      <ul>
+        <li>Oil & gas drilling mud</li>
+        <li>Casting sand binder</li>
+        <li>Animal feed additive</li>
+        <li>Soil conditioner and water retention</li>
+      </ul>
+
+      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Contact for Order</a>
+    </div>
   </section>
-  <!-- Deskripsi -->
-    <p>
-      Bentonite is a natural clay with various benefits for industries such as drilling, agriculture, and waste treatment. We supply high-quality bentonite tailored for your export needs.
-    </p>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </div>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-      document.body.classList.toggle("overlay-open");
-    }
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
-  </script>
 </body>
 </html>
