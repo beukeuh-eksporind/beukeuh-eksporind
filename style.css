@@ -1,4 +1,4 @@
-/* style.css — versi hijau lembut alami */
+/* style.css — versi hijau lembut alami + animasi cantik */
 
 /* Base Styles */
 body {
@@ -27,6 +27,18 @@ header.hero {
   text-align: center;
   padding: 40px 20px;
   border-radius: 0 0 12px 12px;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tagline {
@@ -44,9 +56,7 @@ header.hero {
   position: relative;
   z-index: 10;
 }
-.grid {
-  grid-template-columns: 1fr !important; /* Supaya card produk satu kolom di HP */
-}
+
 .menu-grid a,
 .menu-dropdown {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
@@ -57,9 +67,21 @@ header.hero {
   font-weight: 600;
   font-size: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  flex:1 1 auto;
+  flex: 1 1 auto;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menu-grid a:hover,
@@ -105,6 +127,16 @@ header.hero {
 
 .section {
   padding: 40px 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .grid {
@@ -119,11 +151,24 @@ header.hero {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: zoomIn 0.5s ease-in-out;
 }
 
 .card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .btn-primary {
@@ -135,6 +180,11 @@ header.hero {
   margin-top: 10px;
   text-decoration: none;
   font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #66bb6a;
 }
 
 footer {
@@ -144,6 +194,7 @@ footer {
   padding: 20px;
   margin-top: 40px;
   border-radius: 12px 12px 0 0;
+  animation: fadeInUp 1s ease;
 }
 
 .wa-float {
@@ -158,6 +209,11 @@ footer {
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
 }
 
 .intro-description {
@@ -166,68 +222,38 @@ footer {
   text-align: center;
   font-size: 1rem;
   color: #444;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Responsive: Mobile Menu Scroll */
+/* Responsive: Mobile */
 @media (max-width: 600px) {
   .menu-grid {
-    display: flex;
-    flex-wrap: wrap;     /* Membuat tombol bisa turun ke baris baru */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
   }
 
   .menu-grid a,
   .menu-dropdown {
-    flex: 1 1 45%;        /* Setiap tombol ambil ± 45% dari lebar layar */
+    flex: 1 1 45%;
     max-width: 48%;
-    padding: 8px 10px;
-    font-size: 13px;
+    padding: 6px 8px;
+    font-size: 12px;
   }
 }
 
-  .menu-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .menu-grid a,
-  .menu-dropdown {
-    background: linear-gradient(135deg, #c5e1a5, #81c784);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    position: relative;
-    min-width: auto;
-    flex: 0 0 auto;
-    display: inline-block;
-    white-space: nowrap;
-  }
-
-  .menu-grid a:hover,
-  .menu-dropdown:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 14px rgba(0,0,0,0.2);
-  }
-
-  .menu-grid a:active,
-  .menu-dropdown:active {
-    transform: translateY(1px);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  }
-
-  .swipe-hint {
-    text-align: center;
-    font-size: 12px;
-    color: #777;
-    margin-top: 4px;
-  }
+.menu-grid::-webkit-scrollbar {
+  display: none;
 }
-/* Tambahan untuk tombol bahasa di pojok kanan atas */
+
+.swipe-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Tombol bahasa di pojok kanan atas */
 .lang-switch {
   position: fixed;
   top: 10px;
@@ -238,6 +264,7 @@ footer {
   background: rgba(255, 255, 255, 0.8);
   padding: 4px 8px;
   border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .lang-switch a {
