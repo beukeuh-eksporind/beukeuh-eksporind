@@ -109,8 +109,8 @@ header.hero {
 
 /* Dropdown Menu */
 .menu-dropdown-content {
-  display: grid;
-  position: absolute;
+  display: block;
+  position: fixed;
   background: white;
   top: 100%;
   left: 0;
@@ -121,10 +121,10 @@ header.hero {
   min-width: 140px;
 }
 .menu-dropdown:hover .menu-dropdown-content {
-  display: grid;
+  display: block;
 }
 .menu-dropdown-content a {
-  display: grid;
+  display: block;
   padding: 8px 12px;
   color: #333;
   text-decoration: none;
