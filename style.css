@@ -48,14 +48,14 @@ header.hero {
 
 /* Menu Grid */
 .menu-grid {
-  display: grid;
+  display: flex;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 10px;
   flex-wrap: nowrap;
   background: white;
   padding: 10px;
   position: relative;
-  z-index: 20;
+  z-index: 120;
   overflow-x: auto;
   overflow-y: visible;
   -webkit-overflow-scrolling: touch;
