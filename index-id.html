@@ -1,4 +1,5 @@
-<!-- Final index-id.html dengan menu, deskripsi, dan struktur rapi --><!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,12 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    header.hero, .menu-grid {
+      border: none;
+      box-shadow: none;
+    }
+  </style>
 </head>
 <body>
   <header class="hero" data-aos="fade-down">
@@ -19,25 +26,31 @@
         <a href="index-id.html">🇮🇩 ID</a> | <a href="index.html">🇬🇧 EN</a>
       </div>
     </div>
-  </header>  <div class="menu-grid">
+  </header>
+
+  <div class="menu-grid">
     <a href="index-id.html"><span class="emoji">🏠</span> Beranda</a>
     <div class="menu-dropdown">
       <span class="emoji">📦</span> Produk
       <div class="menu-dropdown-content">
-        <a href="bentonite.html"><span class="emoji">🪨</span> Bentonit</a>
-        <a href="vanilla.html"><span class="emoji">🌿</span> Vanili</a>
-        <a href="cinnamon.html"><span class="emoji">🌳</span> Kayu Manis</a>
-        <a href="coffee.html"><span class="emoji">☕</span> Kopi</a>
+        <a href="bentonite.html">🪨 Bentonit</a>
+        <a href="vanilla.html">🌿 Vanili</a>
+        <a href="cinnamon.html">🌳 Kayu Manis</a>
+        <a href="coffee.html">☕ Kopi</a>
       </div>
     </div>
     <a href="gallery.html"><span class="emoji">🖼️</span> Galeri</a>
     <a href="about-id.html"><span class="emoji">📘</span> Tentang</a>
     <a href="contact.html"><span class="emoji">✉️</span> Kontak</a>
-  </div>  <section class="section description" data-aos="fade-up">
+  </div>
+
+  <section class="section description" data-aos="fade-up">
     <p class="intro-description">
       Beukeuh Eksporind adalah eksportir terpercaya dari Indonesia yang menyediakan komoditas alam berkualitas tinggi seperti vanili, kopi, kayu manis, dan bentonit. Kami menjalin kemitraan dengan petani lokal dan berkomitmen pada praktik berkelanjutan.
     </p>
-  </section>  <section class="section" id="produk" data-aos="fade-up">
+  </section>
+
+  <section class="section" id="produk" data-aos="fade-up">
     <div class="container">
       <h2>Produk Unggulan</h2>
       <div class="grid">
@@ -63,13 +76,19 @@
         </div>
       </div>
     </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <div class="container">
       <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
     </div>
-  </footer><a href="https://wa.me/6281282541982" class="wa-float" target="_blank">📱</a>
+  </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">📱</a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
     AOS.init({ duration: 800, once: true });
-  </script></body>
+  </script>
+</body>
 </html>
