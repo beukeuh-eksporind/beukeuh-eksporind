@@ -245,33 +245,48 @@ footer {
 /* Responsive: Mobile */
 @media (max-width: 600px) {
   .menu-grid {
-    display:flex;
+    display: flex;
     flex-wrap: nowrap;
-    overflow-x:auto;
-    webkit-overflow-scrolling:touch;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* Menambahkan scroll-snap untuk pengalaman yang lebih baik */
     gap: 8px;
-    padding:10px
+    padding: 10px;
+    touch-action: pan-y; /* Membantu pada beberapa browser */
   }
+
   .menu-grid a,
   .menu-dropdown {
     flex: 0 0 auto;
-    min-width: 100%;
-    max-widht: 120%;
+    min-width: 100%; /* Setiap item akan memenuhi lebar layar */
+    /* max-width tidak diperlukan jika min-width 100% */
     font-size: 12px;
     padding: 6px 8px;
     text-align: center;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar elemen */
+    scroll-snap-align: start; /* Mengatur item untuk snap ke awal saat di-scroll */
   }
-.menu-grid::-webkit-scrollbar {
-  display: none;
+
+  /* Menyembunyikan scrollbar untuk pengalaman yang lebih bersih */
+  .menu-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Untuk Firefox */
+  .menu-grid {
+    scrollbar-width: none;
+  }
+
+  .swipe-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+    /* Optional: Tambahkan margin-bottom jika ada konten di bawahnya */
+    margin-bottom: 10px;
+  }
 }
 
-.swipe-hint {
-  text-align: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 4px;
-}
-}
 
 /* Tombol bahasa di pojok kanan atas */
 .lang-switch {
