@@ -236,16 +236,16 @@ footer {
 /* Responsif HP */
 @media (max-width: 600px) {
   .menu-grid {
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   translate: -50% -50%;
     gap: 8px;
     padding: 8px;
   }
 
   .menu-grid a,
   .menu-dropdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     font-size: 12px;
     padding: 6px 10px;
     min-width: 90px;
