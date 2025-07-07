@@ -230,20 +230,22 @@ footer {
 /* Responsive: Mobile */
 @media (max-width: 600px) {
   .menu-grid {
-    flex-wrap: wrap;
-    justify-content: center;
+    display:flex;
+    flex-wrap: nowrap;
+    overflow-x:auto;
+    webkit-overflow-scrolling:touch;
     gap: 8px;
+    padding:10px
   }
-
   .menu-grid a,
   .menu-dropdown {
-    flex: 1 1 45%;
-    max-width: 46%;
-    padding: 6px 8px;
+    flex: 0 0 auto;
+    min-width: 100%;
+    max-widht: 120%;
     font-size: 12px;
+    padding: 6px 8px;
+    text-align: center;
   }
-}
-
 .menu-grid::-webkit-scrollbar {
   display: none;
 }
@@ -254,6 +256,7 @@ footer {
   color: #777;
   margin-top: 4px;
 }
+}
 
 /* Tombol bahasa di pojok kanan atas */
 .lang-switch {
@@ -263,10 +266,8 @@ footer {
   font-size: 14px;
   font-weight: bold;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.8);
   padding: 0;
   border-radius: 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .lang-switch a {
