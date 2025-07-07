@@ -17,7 +17,7 @@ body.loaded {
 .container {
   height:100vh
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
 }
 
