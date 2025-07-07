@@ -61,15 +61,17 @@ header.hero {
 .menu-dropdown {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  max-width: 120px
   flex: 1 1 auto;
+  text-align: center;
   animation: fadeInUp 0.5s ease-in-out;
 }
 
@@ -236,7 +238,7 @@ footer {
   .menu-grid a,
   .menu-dropdown {
     flex: 1 1 45%;
-    max-width: 48%;
+    max-width: 46%;
     padding: 6px 8px;
     font-size: 12px;
   }
@@ -262,8 +264,8 @@ footer {
   font-weight: bold;
   z-index: 999;
   background: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 0;
+  border-radius: 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
