@@ -1,11 +1,13 @@
 /* style.css — Beukeuh Eksporind */
+/* Hijau alami lembut, animasi cantik, menu responsif sebaris */
+
 /* Base Styles */
 body {
   font-family: 'Poppins', sans-serif;
-  margin: auto;
-  padding: 18px;
+  margin: 0;
+  padding: 0;
   background: #f9f9f9;
-  color: #98FB98;
+  color: #333;
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
@@ -15,20 +17,9 @@ body.loaded {
 }
 
 .container {
-  height:100vh
-  max-width: 800px;
-  margin: auto;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 20px;
-}
-
-/* Logo Bulat */
-.logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 2px solid #c5e1a5;
 }
 
 /* Header Hero */
@@ -53,11 +44,9 @@ header.hero {
   flex-wrap: nowrap;
   background: white;
   padding: 10px;
-  position: fixed;
-  left: 20%;
-  z-index: 1000;
+  position: relative;
+  z-index: 10;
   overflow-x: auto;
-  overflow-y: visible;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -96,22 +85,21 @@ header.hero {
 }
 
 /* Dropdown Content */
-.dropdown {
-  display: inline-block;
-}
 .menu-dropdown-content {
   display: none;
   position: absolute;
   background: white;
+  top: 100%;
+  left: 0;
   border-radius: 6px;
   padding: 8px 0;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 1000;
-  min-width: 100px;
+  z-index: 9999;
+  min-width: 140px;
 }
 
 .menu-dropdown:hover .menu-dropdown-content {
-  display: absolute;
+  display: block;
 }
 
 .menu-dropdown-content a {
@@ -133,10 +121,10 @@ header.hero {
 
 /* Produk Grid */
 .grid {
- display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* Card Produk */
@@ -201,15 +189,13 @@ footer {
   text-align: center;
   font-size: 1rem;
   color: #444;
-  position: absolute;
-  z-index: 1000;
 }
 
 /* Bahasa Switch (pojok kanan atas) */
 .lang-switch {
   position: fixed;
-  top: 20px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   font-size: 14px;
   font-weight: bold;
   z-index: 999;
@@ -235,6 +221,8 @@ footer {
 
   .menu-grid a,
   .menu-dropdown {
+    font-size: 12px;
+    padding: 6px 10px;
     min-width: 90px;
     max-width: 110px;
   }
@@ -245,10 +233,5 @@ footer {
 
   .intro-description {
     font-size: 0.95rem;
-  }
-
-  .logo {
-    width: 80px;
-    height: 80px;
   }
 }
