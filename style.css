@@ -245,7 +245,6 @@ footer {
     position: fixed;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
     font-size: 12px;
     padding: 6px 10px;
     min-width: 90px;
