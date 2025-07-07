@@ -1,93 +1,57 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galeri Produk Ekspor Indonesia – Beukeuh Eksporind" />
   <title>Galeri | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button><div class="brand">
-    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-    <div class="brand-name">
-      <h1>Beukeuh Eksporind</h1>
-      <p class="tagline">Komoditas Alami dari Indonesia</p>
+      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height: 48px" />
+      <h1>📸 Galeri Produk</h1>
+      <p class="tagline">Menampilkan ekspor alami terbaik kami.</p>
+      <a href="gallery.html" class="btn-primary">🌐 English</a>
     </div>
-  </div>
+  </header>
 
-  <div class="lang-switch" id="langSwitch">
-    <a href="gallery-id.html" class="active">🇮🇩 ID</a>
-    <a href="gallery.html">🇬🇧 EN</a>
-  </div>
-
-  <nav class="nav-links">
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanili</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
+  <section class="section">
+    <div class="container">
+      <h2>Jelajahi Komoditas Kami</h2>
+      <div class="gallery-grid">
+        <img src="gallery/vanilla.jpg" alt="Vanili" />
+        <img src="gallery/coffee.jpg" alt="Biji Kopi" />
+        <img src="gallery/cinnamon.jpg" alt="Kayu Manis" />
+        <img src="gallery/bentonite.jpg" alt="Bentonit" />
+        <!-- Tambahkan lebih banyak gambar jika perlu -->
       </div>
     </div>
-    <a href="gallery-id.html" class="active">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </nav>
-</div>
+  </section>
 
-  </header>  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="vanilla-id.html">Vanili</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
-      </div>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
     </div>
-    <a href="gallery-id.html" class="active">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>  <main class="container">
-    <h2>Galeri</h2>
-    <p>Lihat koleksi foto produk alami kami, proses panen, dan pengemasan untuk ekspor.</p><section class="gallery">
-  <button class="arrow left" onclick="scrollGallery(-1)">❮</button>
-  <div class="gallery-track" id="galleryTrack">
-    <img src="images/gallery1.jpg" alt="Galeri 1" />
-    <img src="images/gallery2.jpg" alt="Galeri 2" />
-    <img src="images/gallery3.jpg" alt="Galeri 3" />
-    <img src="images/gallery4.jpg" alt="Galeri 4" />
-    <img src="images/gallery5.jpg" alt="Galeri 5" />
-  </div>
-  <button class="arrow right" onclick="scrollGallery(1)">❯</button>
-</section>
-
-  </main>  <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
-  </footer>  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>  <script>
-    function toggleMenu() {
-      const overlay = document.getElementById("overlayMenu");
-      const isOpen = overlay.classList.toggle("show");
-      document.body.classList.toggle("overlay-open", isOpen);
-    }
-
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
-
-    function scrollGallery(direction) {
-      const track = document.getElementById("galleryTrack");
-      const scrollAmount = track.offsetWidth * 0.7;
-      track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-    }
-  </script></body>
+  </footer>
+</body>
 </html>
