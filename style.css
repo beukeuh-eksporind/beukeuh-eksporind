@@ -13,13 +13,6 @@ body {
 body.loaded {
   opacity: 1;
 }
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* Header Hero */
 header.hero {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
