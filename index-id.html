@@ -1,99 +1,79 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ekspor komoditas alam Indonesia oleh Beukeuh Eksporind: vanili, kopi, kayu manis, bentonit.">
+  <meta name="keywords" content="ekspor Indonesia, beukeuh, vanili, kopi, kayu manis, bentonit">
+  <meta name="author" content="Beukeuh Eksporind">
   <title>Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="main-header">
+  <header class="hero" data-aos="fade-down">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <div class="tagline">Komoditas Alam dari Indonesia</div>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="index-id.html" class="active">🇮🇩 ID</a>
-        <a href="index.html">🇬🇧 EN</a>
-      </div>
+      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height:48px;">
+      <h1>🌿 Beukeuh Eksporind</h1>
+      <p class="tagline">Komoditas Alami Indonesia untuk Dunia</p>
+      <a href="#produk" class="btn-primary">Lihat Produk</a>
+      <a href="index.html" class="btn-primary" style="margin-left:10px">🌐 English</a>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-banner">
-    <img src="images/home-banner.jpg" alt="Banner Utama" />
-    <div class="banner-text">
-      <h2 class="fade-up">Selamat Datang di Beukeuh Eksporind</h2>
-      <p class="fade-up">Mengekspor Sumber Daya Alam Terbaik dari Indonesia</p>
+  <section id="produk" class="section">
+    <div class="container">
+      <h2 data-aos="fade-up">Produk Unggulan</h2>
+      <div class="grid">
+        <div class="card" data-aos="fade-up" data-aos-delay="100">
+          <h3>🪨 Bentonit</h3>
+          <p>Tanah liat industri berkualitas tinggi untuk berbagai kebutuhan.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
+          <h3>🌿 Vanili</h3>
+          <p>Vanili premium dari perkebunan tropis Indonesia dengan aroma khas.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+          <h3>🌳 Kayu Manis</h3>
+          <p>Kulit kayu manis alami dari daerah pegunungan yang bersih.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="400">
+          <h3>☕ Kopi</h3>
+          <p>Biji kopi dari dataran tinggi Indonesia dengan rasa dan aroma unggulan.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- NAVIGATION BAR -->
-  <nav class="main-nav">
-    <a href="index-id.html" class="active">Beranda</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="zeolite-id.html">Zeolit</a>
-        <a href="coconut-id.html">Arang Kelapa</a>
-      </div>
-    </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </nav>
-
-  <!-- MAIN CONTENT -->
-  <main class="intro fade-up">
-    <section class="content">
+  <section class="section about" data-aos="fade-up">
+    <div class="container">
       <h2>Tentang Kami</h2>
-      <p>
-        Beukeuh Eksporind berkomitmen menghadirkan komoditas alam berkualitas tinggi dari Indonesia ke pasar global. Kami berfokus pada ekspor Bentonit, Zeolit, dan produk berbasis Kelapa.
-      </p>
-    </section>
-  </main>
+      <p>Beukeuh Eksporind adalah eksportir komoditas alam dari Indonesia, membawa hasil bumi berkualitas seperti vanili, kopi, dan bentonit ke pasar global. Kami mendukung petani lokal dengan proses yang etis dan berkelanjutan.</p>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
+  <section class="section contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Hubungi Kami</h2>
+      <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281282541982">+62 812 8254 1982</a></p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Hak cipta dilindungi undang-undang.</p>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
+    </div>
   </footer>
 
-  <!-- OVERLAY MENU (Mobile) -->
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">×</button>
-    <a href="index-id.html" class="active">Beranda</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown(this)">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html">Bentonit</a>
-        <a href="zeolite-id.html">Zeolit</a>
-        <a href="coconut-id.html">Arang Kelapa</a>
-      </div>
-    </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
-
-  <!-- SCRIPT -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("overlayMenu");
-      menu.classList.toggle("show");
-      document.body.classList.toggle("overlay-open");
-    }
-
-    function toggleDropdown(button) {
-      const dropdown = button.parentElement;
-      dropdown.classList.toggle("open");
-    }
+    AOS.init({
+      duration: 800,
+      once: true
+    });
   </script>
-
 </body>
 </html>
