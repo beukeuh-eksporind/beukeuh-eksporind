@@ -3,103 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery of Indonesian Export Products – Beukeuh Eksporind" />
   <title>Gallery | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="gallery-id.html">🇮🇩 ID</a>
-        <a href="gallery.html" class="active">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html" class="active">Gallery</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <img src="logo.png" alt="Beukeuh Eksporind Logo" style="height: 48px" />
+      <h1>📸 Product Gallery</h1>
+      <p class="tagline">Showcasing our finest natural exports.</p>
+      <a href="gallery-id.html" class="btn-primary">🇮🇩 Bahasa Indonesia</a>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
+  <section class="section">
+    <div class="container">
+      <h2>Explore Our Commodities</h2>
+      <div class="gallery-grid">
+        <img src="gallery/vanilla.jpg" alt="Vanilla Beans" />
+        <img src="gallery/coffee.jpg" alt="Coffee Beans" />
+        <img src="gallery/cinnamon.jpg" alt="Cinnamon Sticks" />
+        <img src="gallery/bentonite.jpg" alt="Bentonite Powder" />
+        <!-- Tambahkan lebih banyak gambar jika perlu -->
       </div>
     </div>
-    <a href="gallery.html" class="active">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-  <main class="container">
-    <h2>Gallery</h2>
-    <p>Explore our collection of natural products, harvesting, and packaging activities.</p>
-
-    <section class="gallery">
-      <button class="arrow left" onclick="scrollGallery(-1)">❮</button>
-
-      <div class="gallery-track" id="galleryTrack">
-        <img src="images/gallery1.jpg" alt="Gallery 1" />
-        <img src="images/gallery2.jpg" alt="Gallery 2" />
-        <img src="images/gallery3.jpg" alt="Gallery 3" />
-        <img src="images/gallery4.jpg" alt="Gallery 4" />
-        <img src="images/gallery5.jpg" alt="Gallery 5" />
-      </div>
-
-      <button class="arrow right" onclick="scrollGallery(1)">❯</button>
-    </section>
-  </main>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </div>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-      document.body.classList.toggle("overlay-open");
-    }
-
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
-
-    function scrollGallery(direction) {
-      const track = document.getElementById("galleryTrack");
-      const scrollAmount = track.offsetWidth * 0.7;
-      track.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
