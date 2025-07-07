@@ -109,7 +109,7 @@ header.hero {
 
 /* Dropdown Menu */
 .menu-dropdown-content {
-  display: none;
+  display: grid;
   position: absolute;
   background: white;
   top: 100%;
@@ -121,10 +121,10 @@ header.hero {
   min-width: 140px;
 }
 .menu-dropdown:hover .menu-dropdown-content {
-  display: block;
+  display: grid;
 }
 .menu-dropdown-content a {
-  display: block;
+  display: grid;
   padding: 8px 12px;
   color: #333;
   text-decoration: none;
@@ -141,7 +141,6 @@ header.hero {
 
 /* Deskripsi Awal */
 .intro-description {
-  position: absolute;
   max-width: 700px;
   margin: 0 auto;
   text-align: justify;
