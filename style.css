@@ -1,85 +1,120 @@
-/* ==== Reset & Font ==== */
+/* ===== Font & Layout ===== */
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #eef8f0, #ffffff);
+  background: #f1fdf3;
   color: #333;
-  text-align: center;
+  position: relative;
 }
 
-/* ==== Logo & Branding ==== */
+/* ===== Logo ===== */
 .logo-main {
+  display: block;
+  margin: 40px auto 10px;
   height: 80px;
-  margin: 1rem 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
+/* ===== Header Text ===== */
 .brand-name {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 10px 0 0;
   color: #2e7d32;
-  margin: 0.5rem 0;
 }
 
 .tagline {
+  text-align: center;
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 2rem;
 }
 
-/* ==== Grid Button Navigation ==== */
-.grid-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  max-width: 500px;
+/* ===== Bahasa Toggle (Top Right) ===== */
+.lang-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lang-toggle a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #2e7d32;
+}
+
+/* ===== Menu Tombol Satu Baris ===== */
+.menu-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin: 0 auto 3rem;
   padding: 0 1rem;
+  max-width: 400px;
 }
 
-.btn-grid {
+.menu-row a {
+  flex: 1 1 130px;
+  max-width: 150px;
+  padding: 10px 14px;
+  border-radius: 12px;
   background: linear-gradient(to right, #4CAF50, #388E3C);
   color: white;
-  padding: 14px;
-  text-decoration: none;
-  border-radius: 12px;
   font-weight: 600;
+  text-align: center;
+  text-decoration: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-grid:hover {
+.menu-row a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
-/* ==== Footer ==== */
+/* ===== Footer ===== */
 footer {
-  background: #e0f2f1;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #555;
+  background-color: #e0f2e9;
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: #444;
+  margin-top: 2rem;
 }
 
-/* ==== WhatsApp Floating Icon ==== */
+/* ===== WhatsApp Floating Button ===== */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  background-color: #25d366;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
 }
 
 .wa-float img {
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  border-radius: 50%;
 }
 
-.wa-float:hover {
-  transform: scale(1.1);
+/* ===== Responsive Adjustments ===== */
+@media screen and (max-width: 500px) {
+  .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .menu-row a {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
