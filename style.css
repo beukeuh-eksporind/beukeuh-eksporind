@@ -68,7 +68,7 @@ header.hero {
   flex-wrap: nowrap;
   background: white;
   padding: 10px;
-  position: relative;
+  position: inline;
   z-index: 100;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
