@@ -112,7 +112,7 @@ header.hero {
 }
 
 .menu-dropdown:hover .menu-dropdown-content {
-  display: block;
+  display: absolute;
 }
 
 .menu-dropdown-content a {
