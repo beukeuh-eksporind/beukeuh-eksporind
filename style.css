@@ -1,4 +1,4 @@
-/* style.css — versi terbaru dengan responsive scrollable menu */
+/* style.css — versi hijau lembut alami */
 
 /* Base Styles */
 body {
@@ -7,8 +7,6 @@ body {
   padding: 0;
   background: #f9f9f9;
   color: #333;
-}
-body {
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
@@ -24,7 +22,7 @@ body.loaded {
 }
 
 header.hero {
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -49,7 +47,7 @@ header.hero {
 
 .menu-grid a,
 .menu-dropdown {
-  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
   padding: 8px 16px;
   border-radius: 8px;
@@ -126,7 +124,7 @@ header.hero {
 }
 
 .btn-primary {
-  background: #2e7d32;
+  background: #81c784;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
@@ -137,7 +135,7 @@ header.hero {
 }
 
 footer {
-  background: #2e7d32;
+  background: #81c784;
   color: white;
   text-align: center;
   padding: 20px;
@@ -185,7 +183,7 @@ footer {
 
   .menu-grid a,
   .menu-dropdown {
-    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    background: linear-gradient(135deg, #c5e1a5, #81c784);
     color: white;
     padding: 6px 10px;
     border-radius: 6px;
