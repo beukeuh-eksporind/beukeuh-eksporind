@@ -169,7 +169,7 @@ footer {
 }
 
 /* Responsive: Mobile Menu Scroll */
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   .menu-grid {
     display: flex;
     flex-wrap: nowrap;
