@@ -3,88 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bentonit kualitas ekspor dari Indonesia – Beukeuh Eksporind">
   <title>Bentonit | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
+  <header class="hero">
     <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Komoditas Alami dari Indonesia</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="bentonite-id.html" class="active">🇮🇩 ID</a>
-        <a href="bentonite.html">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home-id.html">Beranda</a>
-        <a href="about-id.html">Tentang</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Produk ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite-id.html" class="active">Bentonit</a>
-            <a href="vanilla-id.html">Vanili</a>
-            <a href="cinnamon-id.html">Kayu Manis</a>
-            <a href="coffee-id.html">Kopi</a>
-            <a href="charcoal-id.html">Arang</a>
-          </div>
-        </div>
-        <a href="gallery-id.html">Galeri</a>
-        <a href="contact-id.html">Kontak</a>
-      </nav>
+      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height: 48px" />
+      <h1>🪨 Bentonit Indonesia</h1>
+      <p class="tagline">Bentonit murni untuk kebutuhan industri dan pertanian.</p>
+      <a href="bentonite.html" class="btn-primary">🌐 English</a>
     </div>
   </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home-id.html">Beranda</a>
-    <a href="about-id.html">Tentang</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Produk ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite-id.html" class="active">Bentonit</a>
-        <a href="vanilla-id.html">Vanili</a>
-        <a href="cinnamon-id.html">Kayu Manis</a>
-        <a href="coffee-id.html">Kopi</a>
-        <a href="charcoal-id.html">Arang</a>
-      </div>
-    </div>
-    <a href="gallery-id.html">Galeri</a>
-    <a href="contact-id.html">Kontak</a>
-  </div>
+  <section class="section">
+    <div class="container">
+      <h2>Deskripsi Produk</h2>
+      <p>
+        Bentonit kami berasal dari wilayah kaya mineral di Indonesia dan telah dimurnikan sesuai standar ekspor. Digunakan dalam pengeboran, konstruksi, pertanian, dan industri pengecoran.
+      </p>
 
-  <!-- HERO BANNER -->
-  <section class="hero-banner">
-    <img src="images/bentonite-banner.jpg" alt="Banner Bentonit" />
-    <div class="banner-text">
-      <h2 class="fade-up">Bentonit</h2>
-      <p class="fade-up">Lempung alami berkualitas tinggi untuk kebutuhan industri ekspor.</p>
+      <h3>Spesifikasi:</h3>
+      <ul>
+        <li>Jenis: Sodium / Kalsium Bentonit</li>
+        <li>Kadar air: &lt; 12%</li>
+        <li>Ukuran mesh: 200 mesh (dapat disesuaikan)</li>
+        <li>Kemasan: Karung 25 kg / 50 kg atau jumbo bag</li>
+      </ul>
+
+      <h3>Aplikasi:</h3>
+      <ul>
+        <li>Pelumas pengeboran minyak & gas</li>
+        <li>Perekat pasir cetak pengecoran</li>
+        <li>Campuran pakan ternak</li>
+        <li>Pengikat tanah & penyimpan air</li>
+      </ul>
+
+      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Hubungi untuk Order</a>
     </div>
   </section>
 
-  <!-- Konten lain jika dibutuhkan bisa ditambahkan di sini -->
-
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
+    </div>
   </footer>
-
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp">
-  </a>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-      document.body.classList.toggle("overlay-open");
-    }
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
-  </script>
 </body>
 </html>
