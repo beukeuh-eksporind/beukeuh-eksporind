@@ -48,7 +48,7 @@ header.hero {
 
 /* Menu Grid */
 .menu-grid {
-  display: flex;
+  display: grid;
   justify-content: flex-start;
   gap: 1rem;
   flex-wrap: nowrap;
