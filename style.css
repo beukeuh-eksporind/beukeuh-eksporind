@@ -55,8 +55,7 @@ header.hero {
   padding: 10px;
   position: fixed;
   top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  left: 20%;
   z-index: 1000;
   overflow-x: auto;
   overflow-y: visible;
