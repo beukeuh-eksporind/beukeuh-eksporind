@@ -59,7 +59,7 @@ header.hero {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-  flex:0 auto;
+  flex:1 1 auto;
 }
 
 .menu-grid a:hover,
