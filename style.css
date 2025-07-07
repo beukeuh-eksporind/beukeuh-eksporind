@@ -54,7 +54,7 @@ header.hero {
   flex-wrap: nowrap;
   background: white;
   padding: 10px;
-  position: pixed;
+  position: fixed;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -106,7 +106,7 @@ header.hero {
   display: none;
   position: absolute;
   background: white;
-  position: pixed;
+  position: fixed;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -215,8 +215,8 @@ footer {
 /* Bahasa Switch (pojok kanan atas) */
 .lang-switch {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 15px;
   font-size: 14px;
   font-weight: bold;
   z-index: 999;
@@ -236,7 +236,7 @@ footer {
 /* Responsif HP */
 @media (max-width: 600px) {
   .menu-grid {
-   position: pixed;
+   position: fixed;
    top: 50%;
    left: 50%;
    translate: -50% -50%;
