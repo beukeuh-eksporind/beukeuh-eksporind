@@ -1,4 +1,4 @@
-/* === style.css Final Full Update === */
+/* === style.css Final Full Update with Responsive Fix === */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -182,4 +182,29 @@ footer {
 
 .wa-float:hover {
   background-color: #1ebd5a;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 480px) {
+  .menu-grid {
+    gap: 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 10px;
+  }
+
+  .menu-grid a,
+  .menu-dropdown {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+
+  .menu-dropdown-content {
+    left: 0;
+    right: auto;
+    min-width: 140px;
+  }
 }
