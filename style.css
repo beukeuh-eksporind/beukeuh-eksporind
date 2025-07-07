@@ -100,7 +100,7 @@ header.hero {
   display: inline-block;
 }
 .menu-dropdown-content {
-  display: none;
+  display: absolute;
   position: absolute;
   background: white;
   top: 100%;
