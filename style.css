@@ -141,6 +141,7 @@ header.hero {
 
 /* Deskripsi Awal */
 .intro-description {
+  position: absolute;
   max-width: 700px;
   margin: 0 auto;
   text-align: justify;
