@@ -31,11 +31,11 @@ header.hero {
 .menu-dropdown {
   background: linear-gradient(135deg, #4caf50, #2e7d32);
   color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
@@ -63,7 +63,7 @@ header.hero {
   position: absolute;
   background: white;
   color: #333;
-  min-width: 160px;
+  min-width: 120px;
   z-index: 100;
   border-radius: 8px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
