@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eksportir komoditas alami Indonesia: vanili, kopi, kayu manis, bentonit.">
-  <meta name="keywords" content="ekspor Indonesia, vanili, kopi, kayu manis, bentonit, beukeuh">
+  <meta name="description" content="Ekspor komoditas alam Indonesia: vanila, kopi, kayu manis, bentonit.">
+  <meta name="keywords" content="ekspor Indonesia, vanila, kopi, kayu manis, bentonit, beukeuh">
   <meta name="author" content="Beukeuh Eksporind">
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
@@ -21,20 +21,23 @@
   <!-- Header -->
   <header class="hero">
     <div class="container">
-      <img src="logo.png" alt="Logo Beukeuh" class="logo" />
+      <img src="logo.png" alt="Logo Beukeuh Eksporind" class="logo">
       <h1>🌿 Beukeuh Eksporind</h1>
       <p class="tagline">Komoditas Alami Indonesia untuk Dunia</p>
     </div>
   </header>
 
+  <!-- Tombol Hamburger -->
+  <button class="hamburger" id="hamburger">&#9776;</button>
+
   <!-- Navigasi Menu -->
-  <div class="menu-grid">
+  <nav class="menu-grid" id="menu">
     <a href="index-id.html">🏠 Beranda</a>
     <div class="menu-dropdown">
       Produk ▾
       <div class="menu-dropdown-content">
         <a href="bentonite.html">🪨 Bentonit</a>
-        <a href="vanilla.html">🌿 Vanili</a>
+        <a href="vanilla.html">🌿 Vanila</a>
         <a href="cinnamon.html">🌳 Kayu Manis</a>
         <a href="coffee.html">☕ Kopi</a>
       </div>
@@ -42,36 +45,36 @@
     <a href="gallery.html">🖼 Galeri</a>
     <a href="#about">📖 Tentang</a>
     <a href="#contact">📞 Kontak</a>
-  </div>
+  </nav>
 
-  <!-- Deskripsi Utama -->
+  <!-- Deskripsi Singkat -->
   <div class="intro-description">
-    <p>Beukeuh Eksporind adalah eksportir komoditas alami Indonesia. Kami menyediakan vanili, kopi, kayu manis, dan bentonit berkualitas tinggi yang bersumber dari petani lokal dengan standar ekspor tinggi serta komitmen terhadap praktik berkelanjutan dan etis.</p>
+    <p>Beukeuh Eksporind adalah eksportir komoditas alam Indonesia seperti vanila, kopi, kayu manis, dan bentonit. Kami bekerja sama dengan petani lokal untuk menghadirkan produk berkualitas tinggi ke pasar global secara berkelanjutan dan etis.</p>
   </div>
 
   <!-- Produk Unggulan -->
   <section id="products" class="section">
     <div class="container">
-      <h2>🌟 Produk Unggulan</h2>
+      <h2>Produk Unggulan</h2>
       <div class="grid">
         <div class="card">
           <h3>🪨 Bentonit</h3>
-          <p>Tanah liat industri berkualitas tinggi untuk berbagai aplikasi.</p>
+          <p>Lempung industri berkualitas tinggi untuk berbagai aplikasi.</p>
           <a class="btn-primary" href="bentonite.html">Lihat Detail</a>
         </div>
         <div class="card">
-          <h3>🌿 Vanili</h3>
-          <p>Vanili premium dari perkebunan tropis Indonesia.</p>
+          <h3>🌿 Vanila</h3>
+          <p>Vanila premium dari perkebunan tropis Indonesia.</p>
           <a class="btn-primary" href="vanilla.html">Lihat Detail</a>
         </div>
         <div class="card">
           <h3>🌳 Kayu Manis</h3>
-          <p>Kayu manis alami dari daerah pegunungan Indonesia.</p>
+          <p>Kulit kayu manis alami dari daerah pegunungan yang bersih.</p>
           <a class="btn-primary" href="cinnamon.html">Lihat Detail</a>
         </div>
         <div class="card">
           <h3>☕ Kopi</h3>
-          <p>Biji kopi pilihan dari dataran tinggi Indonesia yang kaya rasa.</p>
+          <p>Biji kopi terpilih dari dataran tinggi Indonesia yang harum dan nikmat.</p>
           <a class="btn-primary" href="coffee.html">Lihat Detail</a>
         </div>
       </div>
@@ -79,17 +82,17 @@
   </section>
 
   <!-- Tentang -->
-  <section id="about">
+  <section id="about" class="section">
     <div class="container">
-      <h2>📖 Tentang Kami</h2>
-      <p>Kami bekerja sama dengan petani lokal di seluruh Indonesia untuk menghadirkan produk alami terbaik ke pasar internasional, dengan integritas dan keberlanjutan sebagai inti dari bisnis kami.</p>
+      <h2>Tentang Kami</h2>
+      <p style="text-align: justify;">Beukeuh Eksporind bekerja sama dengan petani di seluruh Indonesia untuk mengekspor sumber daya alam terbaik ke pasar internasional. Kami menjunjung tinggi transparansi dan keberlanjutan dalam perdagangan global.</p>
     </div>
   </section>
 
   <!-- Kontak -->
-  <section id="contact">
+  <section id="contact" class="section">
     <div class="container">
-      <h2>📞 Kontak</h2>
+      <h2>Kontak</h2>
       <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
       <p>WhatsApp: <a href="https://wa.me/6281282541982">+62 812 8254 1982</a></p>
     </div>
@@ -103,7 +106,9 @@
   </footer>
 
   <!-- Tombol WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" title="Hubungi via WhatsApp" target="_blank"></a>
+  <a href="https://wa.me/6281282541982" class="wa-float" title="Hubungi via WhatsApp"></a>
 
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
