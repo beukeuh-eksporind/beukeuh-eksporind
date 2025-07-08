@@ -48,6 +48,19 @@ header.hero {
 }
 
 /* Menu Navigation */
+/* Perkuat Nav supaya selalu di atas */
+.nav-wrapper {
+  position: relative;
+  z-index: 100;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Pastikan deskripsi tidak menimpa */
+.intro-description {
+  position: relative;
+  z-index: 1;
+}
 .menu-grid {
   display: flex;
   flex-wrap: nowrap;
