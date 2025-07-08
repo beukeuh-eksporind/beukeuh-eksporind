@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- hreflang SEO bilingual -->
+  <link rel="alternate" hreflang="en" href="https://yourdomain.com/index.html" />
+  <link rel="alternate" hreflang="id" href="https://yourdomain.com/index-id.html" />
 </head>
 <body onload="document.body.classList.add('loaded')">
 
@@ -21,16 +24,17 @@
   <!-- Header -->
   <header class="hero">
     <div class="container">
-      <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+      <img src="images/logo.png" alt="Beukeuh Eksporind Logo" class="logo" />
       <h1>🌿 Beukeuh Eksporind</h1>
       <p class="tagline">Indonesia's Natural Commodities for the World</p>
     </div>
   </header>
-  <!-- Tombol Hamburger -->
-  <button class="hamburger" id="hamburger">&#9776;</button>
-  
-  <!-- Menu Navigation -->
-  <div class="menu-grid">
+
+  <!-- Hamburger Button -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">&#9776;</button>
+
+  <!-- Navigation Menu -->
+  <nav class="menu-grid" id="menu">
     <a href="index.html">🏠 Home</a>
     <div class="menu-dropdown">
       Products ▾
@@ -44,7 +48,7 @@
     <a href="gallery.html">🖼 Gallery</a>
     <a href="#about">📖 About</a>
     <a href="#contact">📞 Contact</a>
-  </div>
+  </nav>
 
   <!-- Intro Description -->
   <div class="intro-description">
@@ -80,16 +84,16 @@
     </div>
   </section>
 
-  <!-- About Us -->
-  <section id="about">
+  <!-- About -->
+  <section id="about" class="section">
     <div class="container">
       <h2>📖 About Us</h2>
-      <p>We collaborate with local Indonesian farmers to bring the highest quality natural products to the global market, with integrity and sustainability at the core of our business.</p>
+      <p style="text-align: justify;">We collaborate with Indonesian farmers across the archipelago to export the finest natural resources to the global market. Our business is grounded in integrity, transparency, and sustainability.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
+  <section id="contact" class="section">
     <div class="container">
       <h2>📞 Contact</h2>
       <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
@@ -104,8 +108,12 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Floating Icon -->
-  <a href="https://wa.me/6281282541982" class="wa-float" title="Chat via WhatsApp" target="_blank"></a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6281282541982" class="wa-float" title="Chat via WhatsApp" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp Chat" />
+  </a>
 
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
