@@ -1,30 +1,20 @@
-// script.js — Efek Animasi Halus
-
-// Tambah kelas 'loaded' setelah halaman dimuat untuk efek fade-in
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-
-  // Munculkan animasi tiap elemen dengan kelas .fade-in
-  const faders = document.querySelectorAll(".fade-in");
-  faders.forEach((el, i) => {
-    setTimeout(() => {
-      el.classList.add("show");
-    }, 200 * i);
-  });
+// Saat halaman selesai dimuat, tambahkan kelas 'loaded' ke body
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
 });
 
-// Scroll ke atas
-const scrollBtn = document.getElementById("scrollToTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
+// Tombol hamburger toggle menu
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('menu-open');
+  hamburger.classList.toggle('open');
+
+  // Ubah isi tombol hamburger dari ≡ ke ✖
+  if (hamburger.classList.contains('open')) {
+    hamburger.innerHTML = '&times;'; // ✖
   } else {
-    scrollBtn.style.display = "none";
+    hamburger.innerHTML = '&#9776;'; // ≡
   }
 });
-
-if (scrollBtn) {
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
