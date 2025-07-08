@@ -1,24 +1,20 @@
-// script.js
+// Saat halaman selesai dimuat, tambahkan kelas 'loaded' ke body
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
 
-document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.getElementById('hamburger');
-  const closeMenu = document.getElementById('closeMenu');
-  const mobileOverlay = document.getElementById('mobileOverlay');
+// Tombol hamburger toggle menu
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 
-  // Tampilkan overlay saat tombol hamburger diklik
-  hamburger.addEventListener('click', () => {
-    mobileOverlay.classList.add('active');
-  });
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('menu-open');
+  hamburger.classList.toggle('open');
 
-  // Sembunyikan overlay saat tombol close diklik
-  closeMenu.addEventListener('click', () => {
-    mobileOverlay.classList.remove('active');
-  });
-
-  // Tutup menu jika klik di luar menu saat overlay aktif
-  mobileOverlay.addEventListener('click', (e) => {
-    if (e.target === mobileOverlay) {
-      mobileOverlay.classList.remove('active');
-    }
-  });
+  // Ubah isi tombol hamburger dari ≡ ke ✖
+  if (hamburger.classList.contains('open')) {
+    hamburger.innerHTML = '&times;'; // ✖
+  } else {
+    hamburger.innerHTML = '&#9776;'; // ≡
+  }
 });
