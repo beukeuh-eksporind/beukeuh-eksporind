@@ -1,185 +1,109 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nusantara Spice Exporters - Rempah Terbaik dari Indonesia</title>
-    <meta name="description" content="Supplier terpercaya rempah-rempah alami dan berkualitas tinggi dari Indonesia untuk pasar global.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Indonesian natural commodity exporter: vanilla, coffee, cinnamon, bentonite.">
+  <meta name="keywords" content="export Indonesia, vanilla, coffee, cinnamon, bentonite, beukeuh">
+  <meta name="author" content="Beukeuh Eksporind">
+  <title>Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body onload="document.body.classList.add('loaded')">
 
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Nusantara Spice</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#products">Produk</a></li>
-                <li><a href="#why-us">Mengapa Kami</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-            <div class="lang-switcher">
-                <a href="index.html" class="lang-active">🇮🇩 ID</a>
-                <a href="index-en.html">🇬🇧 EN</a>
-            </div>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="index.html">🇬🇧EN</a> | <a href="index-id.html">🇮🇩ID</a>
+  </div>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h1>Rempah Terbaik dari Tanah Nusantara</h1>
-                <p>Supplier terpercaya rempah-rempah alami dan berkualitas tinggi dari Indonesia untuk pasar global.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn primary">Lihat Produk Kami</a>
-                    <a href="#contact" class="btn secondary">Hubungi Kami</a>
-                </div>
-            </div>
-        </section>
+  <!-- Header -->
+  <header class="hero">
+    <div class="container">
+      <img src="logo.png" alt="Logo Beukeuh" class="logo" />
+      <h1>🌿 Beukeuh Eksporind</h1>
+      <p class="tagline">Indonesia's Natural Commodities for the World</p>
+    </div>
+  </header>
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>Mengenal Lebih Dekat Nusantara Spice Exporters</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Kami adalah perusahaan ekspor terkemuka yang berdedikasi untuk menghadirkan kekayaan rempah-rempah alami Indonesia ke seluruh dunia. Dengan komitmen kuat terhadap **kualitas** dan **keberlanjutan**, kami menjalin kemitraan erat dengan petani lokal untuk memastikan setiap rempah yang kami ekspor memiliki aroma, rasa, dan khasiat terbaik.</p>
-                        <p>Visi kami adalah menjadi jembatan antara kekayaan alam Indonesia dan pasar global, sambil memberdayakan komunitas petani lokal dan menjaga kelestarian lingkungan.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/about-us.jpg" alt="Petani rempah Indonesia">
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Menu Navigation -->
+  <div class="menu-grid">
+    <a href="index.html">🏠 Home</a>
+    <div class="menu-dropdown">
+      Products ▾
+      <div class="menu-dropdown-content">
+        <a href="bentonite.html">🪨 Bentonite</a>
+        <a href="vanilla.html">🌿 Vanilla</a>
+        <a href="cinnamon.html">🌳 Cinnamon</a>
+        <a href="coffee.html">☕ Coffee</a>
+      </div>
+    </div>
+    <a href="gallery.html">🖼 Gallery</a>
+    <a href="#about">📖 About</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
 
-        <section id="products" class="products-section">
-            <div class="container">
-                <h2>Rempah Pilihan Kami</h2>
-                <div class="product-grid">
-                    <div class="product-item">
-                        <img src="images/lada-hitam.jpg" alt="Lada Hitam">
-                        <h3>Lada Hitam</h3>
-                        <p>Aroma kuat dan rasa pedas yang khas, cocok untuk berbagai masakan.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/kayu-manis-banner.jpg" alt="Kayu Manis">
-                        <h3>Kayu Manis</h3>
-                        <p>Manis alami dengan sentuhan hangat, ideal untuk hidangan manis dan gurih.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/pala.jpg" alt="Pala">
-                        <h3>Pala</h3>
-                        <p>Aroma lembut dan kaya, sempurna untuk bumbu dasar dan minuman hangat.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/cengkeh.jpg" alt="Cengkeh">
-                        <h3>Cengkeh</h3>
-                        <p>Aroma kuat, hangat, dan pedas manis, sering digunakan dalam kari dan kue.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/kunyit.jpg" alt="Kunyit">
-                        <h3>Kunyit</h3>
-                        <p>Warna kuning cerah dan rasa bumi yang hangat, penting dalam masakan Asia.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="images/ginger-banner.jpg" alt="Jahe">
-                        <h3>Jahe</h3>
-                        <p>Rasa pedas dan hangat yang menyegarkan, cocok untuk bumbu dan minuman.</p>
-                        <a href="#" class="btn-small">Lihat Detail</a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a href="products.html" class="btn primary">Lihat Semua Produk</a>
-                </div>
-            </div>
-        </section>
+  <!-- Intro Description -->
+  <div class="intro-description">
+    <p>Beukeuh Eksporind is an exporter of Indonesia’s natural commodities. We provide premium vanilla, coffee, cinnamon, and bentonite sourced from local farmers with high export standards and a commitment to sustainable and ethical practices.</p>
+  </div>
 
-        <section id="why-us" class="why-us-section">
-            <div class="container">
-                <h2>Mengapa Memilih Kami?</h2>
-                <div class="why-us-grid">
-                    <div class="why-us-item">
-                        <h3>Kualitas Terjamin</h3>
-                        <p>Setiap rempah melewati seleksi ketat dan kontrol kualitas untuk memastikan kemurnian dan kesegaran.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <h3>Sumber Daya Alami Terbaik</h3>
-                        <p>Kami bekerja langsung dengan petani di sentra produksi rempah terbaik Indonesia.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <h3>Komitmen Keberlanjutan</h3>
-                        <p>Mendukung praktik pertanian ramah lingkungan dan memberdayakan komunitas lokal.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <h3>Pasokan Global Andal</h3>
-                        <p>Jaringan logistik yang kuat untuk pengiriman rempah ke seluruh penjuru dunia.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Hubungi Kami</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Informasi Kontak</h3>
-                        <p><strong>Alamat:</strong> Jl. Rempah Wangi No. 123, Tangerang, Banten, Indonesia</p>
-                        <p><strong>Telepon:</strong> +62 812 8254 1982</p>
-                        <p><strong>Email:</strong> <a href="mailto:info@nusantaraspice.com">info@nusantaraspice.com</a></p>
-                        <p><strong>Jam Kerja:</strong> Senin - Jumat, 09:00 - 17:00 WIB</p>
-                        <div class="social-icons">
-                            <a href="#" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                            <a href="#" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                            <a href="#" target="_blank"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Kirim Pesan kepada Kami</h3>
-                        <form action="#" method="POST">
-                            <input type="text" name="name" placeholder="Nama Lengkap" required>
-                            <input type="email" name="email" placeholder="Email Anda" required>
-                            <input type="text" name="subject" placeholder="Subjek Pesan">
-                            <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
-                            <button type="submit" class="btn primary">Kirim Pesan</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Nusantara Spice Exporters. All Rights Reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Kebijakan Privasi</a></li>
-                <li><a href="#">Syarat & Ketentuan</a></li>
-            </ul>
+  <!-- Featured Products -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2>🌟 Featured Products</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🪨 Bentonite</h3>
+          <p>High-quality industrial clay for various applications.</p>
+          <a class="btn-primary" href="bentonite.html">View Details</a>
         </div>
-    </footer>
+        <div class="card">
+          <h3>🌿 Vanilla</h3>
+          <p>Premium vanilla from tropical Indonesian plantations.</p>
+          <a class="btn-primary" href="vanilla.html">View Details</a>
+        </div>
+        <div class="card">
+          <h3>🌳 Cinnamon</h3>
+          <p>Natural cinnamon bark from pristine highland areas.</p>
+          <a class="btn-primary" href="cinnamon.html">View Details</a>
+        </div>
+        <div class="card">
+          <h3>☕ Coffee</h3>
+          <p>Selected beans from Indonesia's highlands with rich aroma and flavor.</p>
+          <a class="btn-primary" href="coffee.html">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://wa.me/6281282541982" class="whatsapp-float" target="_blank">
-        <img src="images/wa-icon.png" alt="WhatsApp">
-    </a>
+  <!-- About Us -->
+  <section id="about">
+    <div class="container">
+      <h2>📖 About Us</h2>
+      <p>We collaborate with local Indonesian farmers to bring the highest quality natural products to the global market, with integrity and sustainability at the core of our business.</p>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>📞 Contact</h2>
+      <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281282541982">+62 812 8254 1982</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/6281282541982" class="wa-float" title="Chat via WhatsApp" target="_blank"></a>
+
 </body>
 </html>
