@@ -3,49 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Natural Indonesian commodities exporter" />
   <title>Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body onload="document.body.classList.add('loaded')">
-  
+<body>
+
   <!-- Language Switch -->
   <div class="lang-switch">
-    <a href="index-id.html">🇮🇩ID</a> | <a href="index.html">🇬🇧EN</a>
+    <a href="index.html">🇬🇧 EN</a> | <a href="index-id.html">🇮🇩 ID</a>
   </div>
 
   <!-- Header -->
   <header class="hero">
-    <img src="logo.png" alt="Logo Beukeuh Eksporind" class="logo-round" />
-    <h1>🌿 Beukeuh Eksporind</h1>
-    <p class="tagline">Indonesia's Natural Commodities</p>
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <h1><span class="leaf">🌿</span> Beukeuh Eksporind</h1>
+    <p class="tagline">Indonesia's Natural Commodities for the World</p>
   </header>
 
-  <!-- Navigation -->
-  <nav class="nav-glass">
-    <a href="#">🏠 Home</a>
-    <div class="dropdown">
-      <button>📦 Products ▾</button>
-      <div class="dropdown-content">
+  <!-- Navigation Menu -->
+  <nav class="menu-grid">
+    <a href="index.html">🏠 Home</a>
+    <div class="menu-dropdown">
+      Products ▾
+      <div class="menu-dropdown-content">
         <a href="bentonite.html">🪨 Bentonite</a>
         <a href="vanilla.html">🌿 Vanilla</a>
         <a href="cinnamon.html">🌳 Cinnamon</a>
         <a href="coffee.html">☕ Coffee</a>
       </div>
     </div>
+    <a href="gallery.html">🖼 Gallery</a>
     <a href="#about">📖 About</a>
     <a href="#contact">📞 Contact</a>
   </nav>
 
-  <!-- Deskripsi -->
-  <section class="glass-section">
-    <p class="intro">We export premium natural commodities from Indonesia: vanilla, coffee, cinnamon, and bentonite — with a focus on sustainability and local empowerment.</p>
+  <!-- Intro Description -->
+  <section class="intro-section">
+    <div class="intro-description">
+      <p>
+        Beukeuh Eksporind is an exporter of Indonesia’s natural commodities.
+        We provide premium vanilla, coffee, cinnamon, and bentonite sourced
+        from local farmers with high export standards and a commitment to
+        sustainable and ethical practices.
+      </p>
+    </div>
   </section>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/6281282541982" class="wa-float" title="Chat via WhatsApp">
-    <img src="images/wa-icon.png" alt="Chat WhatsApp" />
+  <!-- Featured Products -->
+  <section id="products" class="section">
+    <h2>Featured Products</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🪨 Bentonite</h3>
+        <p>High-quality industrial clay for various applications.</p>
+        <a class="btn-primary" href="bentonite.html">View Details</a>
+      </div>
+      <div class="card">
+        <h3>🌿 Vanilla</h3>
+        <p>Premium vanilla from tropical Indonesian plantations.</p>
+        <a class="btn-primary" href="vanilla.html">View Details</a>
+      </div>
+      <div class="card">
+        <h3>🌳 Cinnamon</h3>
+        <p>Natural cinnamon bark from pristine highland areas.</p>
+        <a class="btn-primary" href="cinnamon.html">View Details</a>
+      </div>
+      <div class="card">
+        <h3>☕ Coffee</h3>
+        <p>Selected beans from Indonesia's highlands with rich aroma and flavor.</p>
+        <a class="btn-primary" href="coffee.html">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      Beukeuh Eksporind partners with local farmers across Indonesia to deliver the finest
+      natural resources to the international market. Our mission is to promote sustainable and
+      transparent trading that uplifts communities and preserves nature.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6281282541982">+62 812 8254 1982</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
+    <img src="images/wa-icon.png" alt="WhatsApp" />
   </a>
 
 </body>
