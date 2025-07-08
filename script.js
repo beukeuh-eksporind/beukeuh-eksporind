@@ -1,20 +1,44 @@
-// Saat halaman selesai dimuat, tambahkan kelas 'loaded' ke body
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
-});
+/* Untuk efek tampil/hilang menu transparan */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.85); /* transparan */
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px 20px;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease;
+}
 
-// Tombol hamburger toggle menu
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+.mobile-menu.show {
+  display: flex;
+}
 
-hamburger.addEventListener('click', () => {
-  menu.classList.toggle('menu-open');
-  hamburger.classList.toggle('open');
+.hamburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-  // Ubah isi tombol hamburger dari ≡ ke ✖
-  if (hamburger.classList.contains('open')) {
-    hamburger.innerHTML = '&times;'; // ✖
-  } else {
-    hamburger.innerHTML = '&#9776;'; // ≡
-  }
-});
+.close-btn {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #00695c;
+  cursor: pointer;
+  z-index: 1001;
+    }
