@@ -1,59 +1,42 @@
-/* ===============================
-   STYLE.CSS — Beukeuh Eksporind
-   Tema: Hijau Alami Lembut + Efek Cantik
-   =============================== */
+/* style.css — Beukeuh Eksporind */
+/* Hijau alami lembut, animasi cantik, menu responsif sebaris */
 
-/* === 1. Body & Global === */
+/* Base Styles */
 body {
-  font-family: 'Poppins', sans-serif; /* Font utama */
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9; /* Latar lembut */
+  background: #f9f9f9;
   color: #333;
-  opacity: 0; /* Untuk animasi masuk */
-  transition: opacity 0.5s ease-in;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
 }
+
 body.loaded {
   opacity: 1;
 }
 
-/* === 2. Kontainer Tengah === */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* === 3. Header Hero === */
+/* Header Hero */
 header.hero {
-  background: linear-gradient(135deg, #c5e1a5, #81c784); /* Gradasi hijau alami */
+  background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
   text-align: center;
   padding: 40px 20px;
-  border-radius: 0 0 16px 16px;
-  animation: fadeSlideDown 0.8s ease-in-out; /* Efek masuk dari atas */
+  border-radius: 0 0 12px 12px;
 }
 
-/* === 4. Logo Bulat === */
-.logo {
-  height: 60px;
-  border-radius: 50%; /* Membulatkan logo */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-.logo:hover {
-  transform: scale(1.05); /* Efek zoom saat hover */
-}
-
-/* === 5. Tagline === */
 .tagline {
   font-size: 1.2em;
   margin-bottom: 10px;
-  font-weight: 500;
 }
 
-/* === 6. Menu Navigasi (Grid) === */
+/* Menu Grid */
 .menu-grid {
   display: flex;
   justify-content: flex-start;
@@ -61,39 +44,47 @@ header.hero {
   flex-wrap: nowrap;
   background: white;
   padding: 10px;
-  overflow-x: auto; /* Scroll horizontal di HP */
+  position: relative;
+  z-index: 10;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-bottom: 1px solid #e0e0e0;
 }
+
 .menu-grid::-webkit-scrollbar {
-  display: none; /* Sembunyikan scrollbar di mobile */
+  display: none;
 }
+
 .menu-grid a,
 .menu-dropdown {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   flex: 0 0 auto;
+  min-width: 100px;
+  max-width: 120px;
+  text-align: center;
   white-space: nowrap;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
+
 .menu-grid a:hover,
 .menu-dropdown:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 14px rgba(0,0,0,0.2);
 }
+
 .menu-grid a:active,
 .menu-dropdown:active {
   transform: translateY(1px);
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
-/* === 7. Dropdown Menu Produk === */
+/* Dropdown Content */
 .menu-dropdown-content {
   display: none;
   position: absolute;
@@ -106,9 +97,11 @@ header.hero {
   z-index: 9999;
   min-width: 140px;
 }
+
 .menu-dropdown:hover .menu-dropdown-content {
   display: block;
 }
+
 .menu-dropdown-content a {
   display: block;
   padding: 8px 12px;
@@ -116,56 +109,55 @@ header.hero {
   text-decoration: none;
   font-size: 14px;
 }
+
 .menu-dropdown-content a:hover {
   background: #f0f0f0;
 }
 
-/* === 8. Deskripsi Intro (tengah) === */
-.intro-description {
-  max-width: 720px;
-  margin: 20px auto 0;
-  text-align: justify;
-  font-size: 1rem;
-  color: #444;
-  animation: fadeIn 1s ease;
+/* Section Content */
+.section {
+  padding: 40px 20px;
 }
 
-/* === 9. Grid Produk === */
+/* Produk Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
+
+/* Card Produk */
 .card {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-/* === 10. Tombol Aksi Produk === */
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Tombol Umum */
 .btn-primary {
   background: #81c784;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
   display: inline-block;
   margin-top: 10px;
-  transition: background 0.3s ease;
-}
-.btn-primary:hover {
-  background: #66bb6a;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* === 11. Footer === */
+.btn-primary:hover {
+  background: #66bb6a;
+  transition: background 0.3s ease;
+}
+
+/* Footer */
 footer {
   background: #81c784;
   color: white;
@@ -173,29 +165,46 @@ footer {
   padding: 20px;
   margin-top: 40px;
   border-radius: 12px 12px 0 0;
-  animation: fadeSlideUp 1s ease-in-out;
 }
 
-/* === 12. WhatsApp Floating Button === */
+/* WhatsApp Button with Image Icon */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 24px;
-  background: #25D366;
-  color: white;
-  padding: 12px 14px;
+  width: 52px;
+  height: 52px;
+  background: white;
   border-radius: 50%;
-  text-decoration: none;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease;
 }
+
 .wa-float:hover {
   transform: scale(1.1);
 }
 
-/* === 13. Switch Bahasa (Pojok Kanan Atas) === */
+.wa-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Intro Description */
+.intro-description {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Bahasa Switch (pojok kanan atas) */
 .lang-switch {
   position: fixed;
   top: 10px;
@@ -204,14 +213,19 @@ footer {
   font-weight: bold;
   z-index: 999;
   background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
+
 .lang-switch a {
   text-decoration: none;
   color: #2e7d32;
   margin: 0 4px;
+  font-weight: bold;
 }
 
-/* === 14. Responsif untuk HP === */
+/* Responsif HP */
 @media (max-width: 600px) {
   .menu-grid {
     gap: 8px;
@@ -233,20 +247,4 @@ footer {
   .intro-description {
     font-size: 0.95rem;
   }
-}
-
-/* === 15. Keyframes Animasi === */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-@keyframes fadeSlideDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
