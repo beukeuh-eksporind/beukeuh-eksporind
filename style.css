@@ -209,7 +209,7 @@ nav {
 
 /* Hero Section */
 .hero-section {
-    background: url('images/hero-banner.jpg') no-repeat center center/cover; /* Placeholder image */
+    background: url('images/home-banner.jpg') no-repeat center center/cover; /* Path gambar DIUBAH menjadi home-banner.jpg */
     color: #FFF;
     text-align: center;
     padding: 150px 20px 100px; /* Adjust padding as needed */
