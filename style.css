@@ -1,8 +1,6 @@
-/* ===================================
-   Beukeuh Eksporind — Final CSS
-   =================================== */
+/* style.css — Beukeuh Eksporind - Rapi & Anti Overflow */
 
-/* --- 1. Reset & Base Styles --- */
+/* Body */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -12,18 +10,18 @@ body {
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
-
 body.loaded {
   opacity: 1;
 }
 
+/* Container */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* --- 2. Header Hero --- */
+/* Header */
 header.hero {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
@@ -34,14 +32,13 @@ header.hero {
   z-index: 1;
 }
 
-/* Logo bulat */
+/* Logo Round */
 .logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
 }
 
 /* Tagline */
@@ -50,30 +47,27 @@ header.hero {
   margin-bottom: 10px;
 }
 
-/* --- 3. Menu Grid --- */
+/* Menu Navigation */
 .menu-grid {
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
   flex-wrap: nowrap;
-  background: white;
-  padding: 10px;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  padding: 10px 16px;
+  background: white;
   position: relative;
-  z-index: 10;
+  z-index: 100;
+  -webkit-overflow-scrolling: touch;
 }
-
 .menu-grid::-webkit-scrollbar {
   display: none;
 }
 
-/* Tombol menu dan dropdown */
 .menu-grid a,
 .menu-dropdown {
   background: linear-gradient(135deg, #c5e1a5, #81c784);
   color: white;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -99,7 +93,7 @@ header.hero {
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
-/* --- 4. Dropdown Menu Content --- */
+/* Dropdown Menu */
 .menu-dropdown-content {
   display: none;
   position: absolute;
@@ -112,11 +106,9 @@ header.hero {
   z-index: 9999;
   min-width: 140px;
 }
-
 .menu-dropdown:hover .menu-dropdown-content {
   display: block;
 }
-
 .menu-dropdown-content a {
   display: block;
   padding: 8px 12px;
@@ -124,37 +116,32 @@ header.hero {
   text-decoration: none;
   font-size: 14px;
 }
-
 .menu-dropdown-content a:hover {
   background: #f0f0f0;
 }
 
-/* --- 5. Intro Description --- */
+/* Deskripsi Awal */
 .intro-description {
   max-width: 700px;
   margin: 0 auto;
   text-align: justify;
   font-size: 1rem;
   color: #444;
+  padding: 20px;
   position: relative;
   z-index: 1;
 }
 
-/* --- 6. Section & Produk Grid --- */
+/* Produk Grid */
 .section {
   padding: 40px 20px;
-  position: relative;
-  z-index: 1;
 }
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
-
-/* Kartu Produk */
 .card {
   background: white;
   padding: 20px;
@@ -162,12 +149,11 @@ header.hero {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-4px);
 }
 
-/* Tombol utama */
+/* Button */
 .btn-primary {
   background: #81c784;
   color: white;
@@ -178,13 +164,28 @@ header.hero {
   text-decoration: none;
   font-weight: 600;
 }
-
 .btn-primary:hover {
   background: #66bb6a;
   transition: background 0.3s ease;
 }
 
-/* --- 7. Footer --- */
+/* WhatsApp Floating Button */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.wa-float img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Footer */
 footer {
   background: #81c784;
   color: white;
@@ -194,25 +195,7 @@ footer {
   border-radius: 12px 12px 0 0;
 }
 
-/* --- 8. WhatsApp Floating Button --- */
-.wa-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-.wa-float img {
-  width: 26px;
-  height: 26px;
-  display: block;
-}
-
-/* --- 9. Bahasa Switch --- */
+/* Bahasa Switch */
 .lang-switch {
   position: fixed;
   top: 10px;
@@ -221,8 +204,8 @@ footer {
   font-weight: bold;
   z-index: 999;
   background: transparent;
+  padding: 0;
 }
-
 .lang-switch a {
   text-decoration: none;
   color: #2e7d32;
@@ -230,7 +213,7 @@ footer {
   font-weight: bold;
 }
 
-/* --- 10. Responsif Mobile --- */
+/* Responsive Fix */
 @media (max-width: 600px) {
   .menu-grid {
     gap: 8px;
@@ -251,10 +234,5 @@ footer {
 
   .intro-description {
     font-size: 0.95rem;
-  }
-
-  .logo {
-    width: 80px;
-    height: 80px;
   }
 }
