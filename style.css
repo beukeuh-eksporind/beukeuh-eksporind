@@ -1,562 +1,234 @@
-/* General Styling & Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* style.css — Beukeuh Eksporind */
+/* Tema Hijau Aqua Glossy + Animasi Modern */
 
+/* 1. Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e0f7f4; /* hijau aqua muda */
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
 }
 
+body.loaded {
+  opacity: 1;
+}
+
+/* 2. Container */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #4A2B00; /* Dark Brown, inspired by spices */
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 3.5em;
-    text-align: center;
-    color: #FFF; /* For hero section */
-}
-
-h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #8B4513; /* Saddle Brown, accent for headings */
-}
-
-h3 {
-    font-size: 1.8em;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-a {
-    text-decoration: none;
-    color: #8B4513; /* Saddle Brown */
-}
-
-a:hover {
-    color: #A0522D; /* Sightly darker brown on hover */
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn.primary {
-    background-color: #8B4513; /* Saddle Brown */
-    color: #FFF;
-    border: 2px solid #8B4513;
-}
-
-.btn.primary:hover {
-    background-color: #A0522D; /* Sightly darker brown */
-    border-color: #A0522D;
-}
-
-.btn.secondary {
-    background-color: transparent;
-    color: #FFF;
-    border: 2px solid #FFF;
-}
-
-.btn.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #FFF;
-}
-
-.btn-small {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 3px;
-    font-size: 0.9em;
-    background-color: #D2B48C; /* Tan, lighter accent */
-    color: #4A2B00;
-    transition: background-color 0.3s ease;
-}
-
-.btn-small:hover {
-    background-color: #C19A6B;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Header & Navigation */
-header {
-    background-color: #4A2B00; /* Dark Brown */
-    color: #FFF;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.logo a {
-    color: #FFF;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    font-weight: 700;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: #FFF;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #D2B48C; /* Tan */
-}
-
-/* Language Switcher */
-.lang-switcher {
-    display: flex;
-    gap: 10px; /* Jarak antar tombol bahasa */
-    align-items: center;
-    margin-left: 20px; /* Jarak dari menu navigasi */
-}
-
-.lang-switcher a {
-    color: #FFF; /* Warna teks tombol */
-    font-weight: 600;
-    padding: 5px 8px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.lang-switcher a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efek hover */
-}
-
-.lang-switcher a.lang-active {
-    background-color: #D2B48C; /* Warna latar belakang untuk bahasa aktif */
-    color: #4A2B00; /* Warna teks untuk bahasa aktif */
-}
-
-/* Hamburger Menu (Mobile) */
-.hamburger {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 25px;
-    height: 20px;
-}
-
-.hamburger div {
-    width: 100%;
-    height: 3px;
-    background-color: #FFF;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('images/home-banner.jpg') no-repeat center center/cover; /* Path gambar diubah ke home-banner.jpg */
-    color: #FFF;
-    text-align: center;
-    padding: 150px 20px 100px; /* Adjust padding as needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh; /* Minimum height for hero section */
-    margin-top: 70px; /* To prevent header overlap */
-}
-
-.hero-content {
-    max-width: 800px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.hero-buttons .btn {
-    margin: 0 10px;
-}
-
-/* Section Styling */
-section {
-    padding: 80px 0;
-}
-
-section:nth-of-type(even) { /* Apply distinct background to alternate sections */
-    background-color: #F5F5DC; /* Beige */
-}
-
-/* About Section */
-.about-section .container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.about-content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 3. Header Hero */
+header.hero {
+  background: linear-gradient(135deg, #a5f3eb, #4dd0e1); /* gradasi aqua */
+  color: white;
+  text-align: center;
+  padding: 60px 20px 40px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+.tagline {
+  font-size: 1.1em;
+  margin-top: 8px;
+}
 
-.about-text {
-    flex: 2;
+/* 4. Language Switch */
+.lang-switch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  font-size: 14px;
+  z-index: 999;
 }
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Products Section */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.product-item {
-    background-color: #FFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-}
-
-.product-item img {
-    max-width: 100%;
-    height: 200px; /* Fixed height for product images */
-    object-fit: cover; /* Crop images to fit */
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.product-item h3 {
-    font-size: 1.5em;
-    color: #4A2B00;
-    margin-bottom: 10px;
+
+.lang-switch a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 4px;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.product-item p {
-    font-size: 0.95em;
-    color: #555;
-    min-height: 45px; /* Ensure consistent height for descriptions */
-}
-
-/* Why Us Section */
-.why-us-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    text-align: center;
-}
+/* 5. Menu Grid */
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 12px 10px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-.why-us-item {
-    background-color: #FFF;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.menu-grid a,
+.menu-dropdown {
+  background: linear-gradient(135deg, #26c6da, #009688);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.why-us-item h3 {
-    color: #8B4513;
-    margin-bottom: 10px;
+.menu-grid a:hover,
+.menu-dropdown:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* Contact Section */
-.contact-content {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+/* 6. Dropdown */
+.menu-dropdown {
+  position: relative;
 }
 
-.contact-info,
-.contact-form {
-    flex: 1;
-    min-width: 300px; /* Minimum width before wrapping */
+.menu-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 99;
 }
 
-.contact-info p strong {
-    color: #4A2B00;
+.menu-dropdown-content a {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
 }
 
-.social-icons img {
-    width: 35px;
-    height: 35px;
-    margin-right: 15px;
-    margin-top: 15px;
-    transition: transform 0.3s ease;
+.menu-dropdown-content a:hover {
+  background: #f0f0f0;
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.menu-dropdown:hover .menu-dropdown-content {
+  display: block;
 }
 
-.contact-form form {
-    display: flex;
-    flex-direction: column;
+/* 7. Description */
+.intro-description {
+  margin-top: 30px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
+/* 8. Product Section */
+.section {
+  padding: 50px 20px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #8B4513;
-    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.contact-form button {
-    align-self: flex-start; /* Align button to the left */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
-/* Footer */
-footer {
-    background-color: #4A2B00;
-    color: #FFF;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9em;
+.card:hover {
+  transform: translateY(-6px);
 }
 
-.footer-links {
-    list-style: none;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.card h3 {
+  margin-top: 0;
 }
 
-.footer-links a {
-    color: #FFF;
-    transition: color 0.3s ease;
+.btn-primary {
+  display: inline-block;
+  background: #26c6da;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: #D2B48C;
+.btn-primary:hover {
+  background: #00acc1;
 }
 
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
+/* 9. About & Contact */
+footer, #about, #contact {
+  background: #e0f2f1;
+  padding: 40px 20px;
+  color: #333;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
+footer p {
+  margin: 0;
 }
 
-.whatsapp-float img {
-    width: 35px;
-    height: 35px;
-    vertical-align: middle;
+/* 10. WhatsApp Floating Button */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: url('images/wa-icon.png') no-repeat center center / contain;
+  z-index: 999;
 }
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    h1 {
-        font-size: 2.8em;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    .nav-links {
-        margin-left: 0;
-    }
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-image {
-        order: -1; /* Pindahkan gambar ke atas di mobile */
-    }
-    .contact-content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 120px 20px 80px;
-    }
 
-    /* Adjust nav for smaller screens */
-    nav {
-        flex-wrap: wrap; /* Allow items to wrap */
-        padding: 0 20px;
-        justify-content: center; /* Center items when wrapped */
-    }
+/* 11. Responsive */
+@media (max-width: 600px) {
+  .menu-grid {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 
-    .logo {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-        order: 1; /* Ensure logo is at the top */
-    }
+  .menu-grid a,
+  .menu-dropdown {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 
-    .lang-switcher {
-        order: 2; /* Place language switcher next */
-        margin: 10px auto; /* Center it */
-        width: fit-content; /* Adjust width to content */
-    }
-
-    .hamburger {
-        display: flex; /* Show hamburger on mobile */
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        order: 3; /* Hamburger usually last or at specific position */
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none; /* Hide by default */
-        text-align: center;
-        background-color: #4A2B00; /* Background for collapsed menu */
-        padding-top: 10px;
-        order: 4; /* Full width for expanded menu */
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    /* Hamburger Animation */
-    .hamburger.active .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .hamburger.active .line2 {
-        opacity: 0;
-    }
-    .hamburger.active .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-    .whatsapp-float img {
-        width: 30px;
-        height: 30px;
-    }
-}
+  .grid {
+    grid-template-columns: 1fr;
+  }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    .hero-buttons .btn {
-        display: block;
-        margin: 10px auto;
-    }
-    .product-grid {
-        grid-template-columns: 1fr; /* Stack products on very small screens */
-    }
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .lang-switch {
+    font-size: 12px;
+    top: 8px;
+    right: 8px;
+  }
 }
