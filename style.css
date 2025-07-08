@@ -1,255 +1,183 @@
-/* style.css — Beukeuh Eksporind - Rapi & Anti Overflow */
-
-/* Body */
+/* === BASE === */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
   color: #333;
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
+
 body.loaded {
   opacity: 1;
 }
 
-/* Container */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header */
-header.hero {
-  background: linear-gradient(135deg, #c5e1a5, #81c784);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  border-radius: 0 0 12px 12px;
-  position: relative;
-  z-index: 1;
-}
-
-/* Logo Round */
-.logo {
-  width: 90px;
-  height: 90px;
+/* === GAYA LOGO ROUND === */
+.logo-round {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   margin-bottom: 10px;
 }
 
-/* Tagline */
-.tagline {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-/* Menu Navigation */
-/* Perkuat Nav supaya selalu di atas */
-.nav-wrapper {
-  position: relative;
-  z-index: 100;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-/* Pastikan deskripsi tidak menimpa */
-.intro-description {
-  position: relative;
-  z-index: 1;
-}
-.menu-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 10px;
-  padding: 10px 16px;
-  background: white;
-  position: relative;
-  z-index: 100;
-  -webkit-overflow-scrolling: touch;
-}
-.menu-grid::-webkit-scrollbar {
-  display: none;
-}
-
-.menu-grid a,
-.menu-dropdown {
-  background: linear-gradient(135deg, #c5e1a5, #81c784);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  flex: 0 0 auto;
-  min-width: 100px;
-  max-width: 120px;
+/* === HEADER UTAMA === */
+.hero {
   text-align: center;
-  white-space: nowrap;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-.menu-grid a:hover,
-.menu-dropdown:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 14px rgba(0,0,0,0.2);
+.tagline {
+  font-size: 1.1rem;
+  color: #4e944f;
+  margin-top: 8px;
 }
 
-.menu-grid a:active,
-.menu-dropdown:active {
-  transform: translateY(1px);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+/* === NAVIGASI GLASS === */
+.nav-glass {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 10;
 }
 
-/* Dropdown Menu */
-.menu-wrapper{
-  position:relative;
-  z-index: 100;
+.nav-glass a,
+.nav-glass button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2e7d32;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.menu-dropdown-content {
+
+.nav-glass a:hover,
+.nav-glass button:hover {
+  background: rgba(255,255,255,0.4);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* === DROPDOWN === */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
   display: none;
   position: absolute;
-  background: white;
-  top: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  top: 110%;
   left: 0;
-  border-radius: 6px;
+  border-radius: 8px;
+  z-index: 99;
+  min-width: 160px;
   padding: 8px 0;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 9999;
-  min-width: 140px;
 }
-.menu-dropdown:hover .menu-dropdown-content {
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
-.menu-dropdown-content a {
+
+.dropdown-content a {
   display: block;
-  padding: 8px 12px;
+  padding: 10px 16px;
   color: #333;
   text-decoration: none;
   font-size: 14px;
 }
-.menu-dropdown-content a:hover {
-  background: #f0f0f0;
+
+.dropdown-content a:hover {
+  background: #e8f5e9;
 }
 
-/* Deskripsi Awal */
-.intro-description {
-  max-width: 700px;
-  margin: 0 auto;
+/* === SECTION GLASS (Deskripsi Utama) === */
+.glass-section {
+  max-width: 800px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   text-align: justify;
-  font-size: 1rem;
-  color: #444;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
+  line-height: 1.6;
 }
 
-/* Produk Grid */
-.section {
-  padding: 40px 20px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* Button */
-.btn-primary {
-  background: #81c784;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: 600;
-}
-.btn-primary:hover {
-  background: #66bb6a;
-  transition: background 0.3s ease;
-}
-
-/* WhatsApp Floating Button */
-.wa-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-.wa-float img {
-  width: 32px;
-  height: 32px;
-}
-
-/* Footer */
-footer {
-  background: #81c784;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 12px 12px 0 0;
-}
-
-/* Bahasa Switch */
+/* === TOMBOL BAHASA POJOK KANAN === */
 .lang-switch {
   position: fixed;
   top: 10px;
   right: 10px;
   font-size: 14px;
+  z-index: 1000;
   font-weight: bold;
-  z-index: 999;
-  background: transparent;
-  padding: 0;
 }
+
 .lang-switch a {
-  text-decoration: none;
   color: #2e7d32;
+  text-decoration: none;
   margin: 0 4px;
-  font-weight: bold;
 }
 
-/* Responsive Fix */
+/* === TOMBOL WHATSAPP MENGAMBANG === */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  z-index: 999;
+}
+
+.wa-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.wa-float img:hover {
+  transform: scale(1.1);
+}
+
+/* === RESPONSIVE (HP) === */
 @media (max-width: 600px) {
-  .menu-grid {
-    gap: 8px;
-    padding: 8px;
+  .hero h1 {
+    font-size: 1.5rem;
   }
 
-  .menu-grid a,
-  .menu-dropdown {
-    font-size: 12px;
-    padding: 6px 10px;
-    min-width: 90px;
-    max-width: 110px;
+  .nav-glass {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  .glass-section {
+    padding: 20px;
+    margin: 20px 10px;
   }
 
-  .intro-description {
-    font-size: 0.95rem;
+  .dropdown-content {
+    left: auto;
+    right: 0;
   }
 }
