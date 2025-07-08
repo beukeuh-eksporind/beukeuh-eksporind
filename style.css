@@ -6,7 +6,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #e0f7f4; /* hijau aqua muda */
+  background: #e0f7f4;
   color: #333;
   opacity: 0;
   transition: opacity 0.5s ease-in;
@@ -14,6 +14,11 @@ body {
 
 body.loaded {
   opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* 2. Container */
@@ -25,7 +30,7 @@ body.loaded {
 
 /* 3. Header Hero */
 header.hero {
-  background: linear-gradient(135deg, #a5f3eb, #4dd0e1); /* gradasi aqua */
+  background: linear-gradient(135deg, #a5f3eb, #4dd0e1);
   color: white;
   text-align: center;
   padding: 60px 20px 40px;
@@ -53,7 +58,7 @@ header.hero {
   top: 12px;
   right: 12px;
   font-size: 14px;
-  z-index: 1002;
+  z-index: 999;
 }
 
 .lang-switch a {
@@ -67,67 +72,72 @@ header.hero {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* 5. Hamburger Button */
-#hamburger {
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: #00796b;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1001;
-  cursor: pointer;
-  padding: 4px 10px;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-#hamburger:hover {
-  transform: scale(1.2);
-}
-
-/* 6. Mobile Menu Overlay */
-#menu {
-  position: fixed;
-  top: 70px;
-  left: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.7); /* semi transparan */
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 20px;
-  display: none;
-  flex-direction: column;
-  gap: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  z-index: 1000;
-  transition: all 0.3s ease-in-out;
-}
-
-#menu.menu-open {
+/* 5. Desktop Menu (Optional) */
+.menu-grid {
   display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: white;
+  padding: 12px 10px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* 7. Menu Item */
-#menu a {
+.menu-grid a,
+.menu-dropdown {
   background: linear-gradient(135deg, #26c6da, #009688);
-  padding: 10px 16px;
-  border-radius: 12px;
   color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
-  text-align: center;
+  font-size: 14px;
   transition: all 0.3s ease;
 }
 
-#menu a:hover {
+.menu-grid a:hover,
+.menu-dropdown:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* 8. Description */
+/* 6. Dropdown */
+.menu-dropdown {
+  position: relative;
+}
+
+.menu-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 99;
+}
+
+.menu-dropdown-content a {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-dropdown-content a:hover {
+  background: #f0f0f0;
+}
+
+.menu-dropdown:hover .menu-dropdown-content {
+  display: block;
+}
+
+/* 7. Description */
 .intro-description {
   margin-top: 30px;
   text-align: justify;
@@ -136,7 +146,7 @@ header.hero {
   color: #444;
 }
 
-/* 9. Product Section */
+/* 8. Product Section */
 .section {
   padding: 50px 20px;
 }
@@ -180,7 +190,7 @@ header.hero {
   background: #00acc1;
 }
 
-/* 10. About & Contact */
+/* 9. About & Contact */
 footer, #about, #contact {
   background: #e0f2f1;
   padding: 40px 20px;
@@ -193,7 +203,7 @@ footer p {
   margin: 0;
 }
 
-/* 11. WhatsApp Floating Button */
+/* 10. WhatsApp Floating Button */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -204,28 +214,105 @@ footer p {
   z-index: 999;
 }
 
+/* =========================== */
+/* 11. Hamburger Menu Overlay  */
+/* =========================== */
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  display: none;
+  z-index: 999;
+  padding: 20px;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.mobile-menu a {
+  color: #00796b;
+  text-decoration: none;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #26c6da, #00acc1);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: #0097a7;
+}
+
+.mobile-menu .menu-dropdown {
+  position: relative;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  color: #00796b;
+}
+
+.mobile-menu .menu-dropdown-content {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 12px;
+}
+
+.mobile-menu .menu-dropdown-content a {
+  background: #e0f7f4;
+  color: #00796b;
+  font-weight: normal;
+}
+
+/* Hamburger Button */
+.hamburger {
+  position: fixed;
+  top: 14px;
+  left: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #00796b;
+  z-index: 1000;
+}
+
+/* Close Button */
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #00796b;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
 /* 12. Responsive */
-@media (min-width: 768px) {
-  #hamburger {
+@media (max-width: 600px) {
+  .menu-grid {
     display: none;
   }
 
-  #menu {
-    position: static;
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    background: transparent;
-    backdrop-filter: none;
-    box-shadow: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-
-  #menu a {
-    background: linear-gradient(135deg, #26c6da, #009688);
-    margin: 0 10px;
-    font-size: 14px;
-    padding: 8px 14px;
+  .lang-switch {
+    font-size: 12px;
+    top: 8px;
+    right: 8px;
   }
 }
