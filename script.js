@@ -1,44 +1,24 @@
-/* Untuk efek tampil/hilang menu transparan */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, 0.85); /* transparan */
-  width: 100%;
-  height: 100%;
-  padding: 80px 20px 20px;
-  display: none;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-  transition: opacity 0.3s ease;
-}
+// script.js
 
-.mobile-menu.show {
-  display: flex;
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const closeMenu = document.getElementById('closeMenu');
+  const mobileOverlay = document.getElementById('mobileOverlay');
 
-.hamburger {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
+  // Tampilkan overlay saat tombol hamburger diklik
+  hamburger.addEventListener('click', () => {
+    mobileOverlay.classList.add('active');
+  });
 
-.close-btn {
-  position: absolute;
-  top: 12px;
-  left: 16px;
-  font-size: 32px;
-  background: none;
-  border: none;
-  color: #00695c;
-  cursor: pointer;
-  z-index: 1001;
+  // Sembunyikan overlay saat tombol close diklik
+  closeMenu.addEventListener('click', () => {
+    mobileOverlay.classList.remove('active');
+  });
+
+  // Tutup menu jika klik di luar menu saat overlay aktif
+  mobileOverlay.addEventListener('click', (e) => {
+    if (e.target === mobileOverlay) {
+      mobileOverlay.classList.remove('active');
     }
+  });
+});
