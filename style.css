@@ -1,9 +1,12 @@
-/* === BASE === */
+/* style.css — Beukeuh Eksporind */
+/* Glossy Green Style dengan Efek Cantik dan Responsif */
+
+/* ======= BASE STYLE ======= */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+  background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
   color: #333;
   opacity: 0;
   transition: opacity 0.4s ease-in;
@@ -13,171 +16,218 @@ body.loaded {
   opacity: 1;
 }
 
-/* === GAYA LOGO ROUND === */
-.logo-round {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* === HEADER UTAMA === */
-.hero {
+/* ======= HEADER ======= */
+header.hero {
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  color: #1b5e20;
   text-align: center;
   padding: 40px 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 
-.tagline {
-  font-size: 1.1rem;
-  color: #4e944f;
-  margin-top: 8px;
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* === NAVIGASI GLASS === */
-.nav-glass {
+.hero h1 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* ======= LANGUAGE SWITCH ======= */
+.lang-switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  color: #2e7d32;
+  margin: 0 4px;
+}
+
+/* ======= MENU GRID ======= */
+.menu-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(12px);
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  gap: 12px;
+  background: transparent;
+  padding: 16px 10px;
   z-index: 10;
-}
-
-.nav-glass a,
-.nav-glass button {
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #2e7d32;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nav-glass a:hover,
-.nav-glass button:hover {
-  background: rgba(255,255,255,0.4);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transform: translateY(-2px);
-}
-
-/* === DROPDOWN === */
-.dropdown {
   position: relative;
 }
 
-.dropdown-content {
+.menu-grid a,
+.menu-dropdown {
+  background: linear-gradient(to bottom, #c8e6c9, #a5d6a7);
+  color: #2e7d32;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+}
+
+.menu-grid a:hover,
+.menu-dropdown:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ======= DROPDOWN ======= */
+.menu-dropdown-content {
   display: none;
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  top: 110%;
+  background: white;
+  top: 100%;
   left: 0;
   border-radius: 8px;
-  z-index: 99;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   min-width: 160px;
+  z-index: 999;
   padding: 8px 0;
 }
 
-.dropdown:hover .dropdown-content {
+.menu-dropdown:hover .menu-dropdown-content {
   display: block;
 }
 
-.dropdown-content a {
+.menu-dropdown-content a {
   display: block;
   padding: 10px 16px;
   color: #333;
   text-decoration: none;
   font-size: 14px;
+  transition: background 0.3s;
 }
 
-.dropdown-content a:hover {
-  background: #e8f5e9;
+.menu-dropdown-content a:hover {
+  background: #f1f8e9;
 }
 
-/* === SECTION GLASS (Deskripsi Utama) === */
-.glass-section {
+/* ======= SECTION CONTENT ======= */
+.section {
+  padding: 40px 20px;
+}
+
+.intro-description {
   max-width: 800px;
-  margin: 30px auto;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  margin: 0 auto;
+  font-size: 1rem;
   text-align: justify;
-  line-height: 1.6;
+  color: #444;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: #ffffffcc;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* === TOMBOL BAHASA POJOK KANAN === */
-.lang-switch {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
-  z-index: 1000;
-  font-weight: bold;
+/* ======= PRODUK GRID ======= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.lang-switch a {
-  color: #2e7d32;
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ======= BUTTON ======= */
+.btn-primary {
+  background: #66bb6a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
   text-decoration: none;
-  margin: 0 4px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-/* === TOMBOL WHATSAPP MENGAMBANG === */
+.btn-primary:hover {
+  background: #4caf50;
+  transition: background 0.3s ease;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  background: #81c784;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ======= WHATSAPP ICON ======= */
 .wa-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 48px;
-  height: 48px;
-  background: transparent;
-  z-index: 999;
-}
-
-.wa-float img {
-  width: 100%;
-  height: auto;
+  width: 52px;
+  height: 52px;
+  background: url('images/wa-icon.png') no-repeat center center / cover;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
-.wa-float img:hover {
-  transform: scale(1.1);
-}
-
-/* === RESPONSIVE (HP) === */
+/* ======= RESPONSIVE ======= */
 @media (max-width: 600px) {
-  .hero h1 {
-    font-size: 1.5rem;
+  .menu-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .nav-glass {
-    flex-direction: column;
-    align-items: center;
+  .menu-grid a,
+  .menu-dropdown {
+    font-size: 13px;
+    min-width: 100px;
   }
 
-  .glass-section {
-    padding: 20px;
-    margin: 20px 10px;
-  }
-
-  .dropdown-content {
-    left: auto;
-    right: 0;
+  .intro-description {
+    font-size: 0.95rem;
+    padding: 10px;
   }
 }
