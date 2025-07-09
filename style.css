@@ -118,7 +118,7 @@ header.hero {
   font-weight:500;
 }
 .menu-dropdown-content a:hover {
-  background: #f0f0f0;
+  background: none;
 }
 .menu-dropdown:hover .menu-dropdown-content {
   color: #00796b;
