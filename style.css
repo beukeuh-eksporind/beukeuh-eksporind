@@ -126,6 +126,9 @@ header.hero {
   color: #6a7d40;
   background-color: #f0f0f0;
 }
+.menu-dropdown:hover .menu-dropdown-content {
+  display: block;
+}
 
 /* 7. Intro Description */
 .intro-description {
