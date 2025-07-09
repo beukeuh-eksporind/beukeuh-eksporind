@@ -1,52 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium Indonesian Vanilla for Export - Beukeuh Eksporind">
-  <title>Vanilla | Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanili | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Tombol Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Pilihan Bahasa -->
+  <div class="lang-switch">
+    <a href="vanilla.html">🇮🇩 ID</a> | <a href="vanilla-en.html">🇬🇧 EN</a>
+  </div>
+
+  <!-- Header -->
   <header class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Beukeuh Eksporind Logo" style="height:48px;">
-      <h1>🌿 Premium Indonesian Vanilla</h1>
-      <p class="tagline">Aromatic, natural, and ready for global export.</p>
-      <a href="vanilla-id.html" class="btn-primary">🇮🇩 Bahasa Indonesia</a>
-    </div>
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <h1>Vanili</h1>
+    <p class="tagline">Aroma Alami dari Nusantara</p>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>Product Description</h2>
-      <p>Beukeuh Eksporind provides high-quality vanilla beans from tropical Indonesian plantations. Our vanilla is carefully harvested, sun-dried, and processed to preserve its natural aroma and flavor.</p>
+  <!-- Navigasi -->
+  <nav class="menu-grid" id="menu">
+    <a href="index.html">🏠 Beranda</a>
 
-      <h3>Specifications:</h3>
-      <ul>
-        <li>Grade: Gourmet / Extraction</li>
-        <li>Moisture: 30–35%</li>
-        <li>Length: 14–20 cm</li>
-        <li>Origin: West Java, Indonesia</li>
-      </ul>
+    <div class="menu-dropdown clickable">
+      <span>📦 Produk ▾</span>
+      <div class="menu-dropdown-content">
+        <a href="bentonite.html">🧱 Bentonit</a>
+        <a href="zeolite.html">🪨 Zeolit</a>
+        <a href="vanilla.html">🌿 Vanili</a>
+      </div>
+    </div>
 
-      <h3>Why Choose Our Vanilla?</h3>
-      <ul>
-        <li>Ethically sourced from local farmers</li>
-        <li>Rich aroma and long shelf life</li>
-        <li>Custom packaging available</li>
-      </ul>
+    <a href="gallery.html">🖼 Galeri</a>
+    <a href="#about">📖 Tentang</a>
+    <a href="#contact">📞 Kontak</a>
+  </nav>
 
-      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Contact for Order</a>
+  <!-- Deskripsi Produk -->
+  <section class="section container">
+    <h2>Apa Itu Vanili?</h2>
+    <p class="intro-description">
+      Vanili merupakan rempah bernilai tinggi yang berasal dari buah tanaman anggrek tropis. Kami menyediakan vanili kering berkualitas tinggi dari Indonesia, dengan aroma kuat dan warna alami cokelat gelap yang menarik.
+    </p>
+  </section>
+
+  <!-- Aplikasi Produk -->
+  <section class="section container">
+    <h2>Kegunaan Vanili</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Makanan & Minuman</h3>
+        <p>Sebagai perisa alami dalam industri makanan, minuman, dan kue-kue premium.</p>
+      </div>
+      <div class="card">
+        <h3>Farmasi & Kosmetik</h3>
+        <p>Digunakan dalam parfum, lotion, dan produk kesehatan karena aroma serta kandungan antioksidannya.</p>
+      </div>
+      <div class="card">
+        <h3>Ekspor & Industri Premium</h3>
+        <p>Produk ekspor bernilai tinggi dengan permintaan stabil di pasar internasional.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Tentang -->
+  <section class="section container" id="about">
+    <h2>Tentang Kami</h2>
+    <p class="intro-description">
+      Beukeuh Eksporind berkomitmen menyediakan rempah alami dari Indonesia untuk pasar global. Vanili kami dipanen dan dikeringkan secara hati-hati untuk menjaga kualitas dan aroma maksimal.
+    </p>
+  </section>
+
+  <!-- Kontak -->
+  <section class="section container" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p class="intro-description">
+      Tertarik dengan pembelian vanili dalam jumlah besar? Hubungi kami untuk informasi harga, sampel, dan detail produk.
+    </p>
+    <a href="https://wa.me/6281234567890" class="btn-primary" target="_blank">Chat via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-    </div>
+    <p>© 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
   </footer>
+
+  <!-- Tombol WhatsApp -->
+  <a href="https://wa.me/6281234567890" class="wa-float" target="_blank" aria-label="WhatsApp"></a>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
