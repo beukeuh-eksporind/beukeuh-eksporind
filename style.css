@@ -218,7 +218,7 @@ footer p {
   top: 14px;
   left: 14px;
   cursor: pointer;
-  z-index: 2000;
+  z-index: 99999;
   background: transparent;
   border: none;
 }
