@@ -63,10 +63,10 @@ header.hero {
 /* Language Switch */
 .lang-switch {
   position: fixed;
-  top: 12px;
+  top: 14px;
   right: 12px;
   font-size: 14px;
-  z-index: 999;
+  z-index: 99;
 }
 .lang-switch a {
   color: #5c6e3a;
@@ -87,7 +87,7 @@ header.hero {
   flex-wrap: wrap;
   background: white;
   padding: 12px 10px;
-  margin-top: -20px;
+  margin-top: 20px;
   position: relative;
   z-index: 99;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
