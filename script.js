@@ -1,21 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
+  const dropdown = document.querySelector('.menu-dropdown');
+  const trigger = dropdown.querySelector('.dropdown-trigger');
+  const menu = dropdown.querySelector('.menu-dropdown-content');
 
-  // Toggle menu saat hamburger diklik
-  hamburger.addEventListener('click', function () {
-    this.classList.toggle('change');
-    menu.classList.toggle('show');
+  // Toggle on click
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
   });
 
-  // Tutup menu jika klik di luar area menu & hamburger
-  document.addEventListener('click', function (e) {
-    if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
-      hamburger.classList.remove('change');
-      menu.classList.remove('show');
-    }
+  // Prevent closing when clicking inside dropdown
+  menu.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 
-  // Fade in body setelah load
-  document.body.classList.add('loaded');
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+  });
 });
