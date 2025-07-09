@@ -1,4 +1,4 @@
-// Hamburger toggle
+// Hamburger Toggle
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 
@@ -7,25 +7,25 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("change");
 });
 
-// Dropdown toggle (klik buka-tutup)
-const dropdown = document.querySelector(".menu-dropdown");
+// Dropdown (klik untuk buka/tutup)
+const dropdownTrigger = document.querySelector(".menu-dropdown > span");
 const dropdownContent = document.querySelector(".menu-dropdown-content");
 
-if (dropdown && dropdownContent) {
-  dropdown.addEventListener("click", (e) => {
-    e.stopPropagation(); // agar tidak langsung tertutup
+if (dropdownTrigger && dropdownContent) {
+  dropdownTrigger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Jangan tutup langsung
     dropdownContent.classList.toggle("open");
   });
 
-  // Tutup dropdown jika klik di luar
+  // Tutup jika klik di luar
   document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) {
+    if (!dropdownContent.contains(e.target) && !dropdownTrigger.contains(e.target)) {
       dropdownContent.classList.remove("open");
     }
   });
 }
 
-// Fade in body saat loaded
+// Fade-in saat halaman dimuat
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
