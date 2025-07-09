@@ -1,93 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="brand">
-        <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-        <div class="brand-name">
-          <h1>Beukeuh Eksporind</h1>
-          <p class="tagline">Natural Commodities from Indonesia</p>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="contact-id.html">🇮🇩 ID</a>
-        <a href="contact.html" class="active">🇬🇧 EN</a>
-      </div>
-      <nav class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <div class="dropdown">
-          <button class="dropdown-toggle">Products ▾</button>
-          <div class="dropdown-content">
-            <a href="bentonite.html">Bentonite</a>
-            <a href="vanilla.html">Vanilla</a>
-            <a href="cinnamon.html">Cinnamon</a>
-            <a href="coffee.html">Coffee</a>
-            <a href="charcoal.html">Charcoal</a>
-          </div>
-        </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <div class="overlay-menu" id="overlayMenu">
-    <button class="close-btn" onclick="toggleMenu()">&times;</button>
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-      <button class="dropdown-toggle" onclick="toggleDropdown()">Products ▾</button>
-      <div class="dropdown-content">
-        <a href="bentonite.html">Bentonite</a>
-        <a href="vanilla.html">Vanilla</a>
-        <a href="cinnamon.html">Cinnamon</a>
-        <a href="coffee.html">Coffee</a>
-        <a href="charcoal.html">Charcoal</a>
-      </div>
-    </div>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html" class="active">Contact</a>
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
 
-  <main class="container">
-    <h2>Contact Us</h2>
-    <p>Reach out to us for inquiries, export cooperation, or product information:</p>
-    <div class="contact-info">
-      <ul>
-        <li><strong>Email:</strong> info@beukeuh-eksporind.com</li>
-        <li><strong>Phone:</strong> +62 812 8254 1982</li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">Click here</a></li>
-        <li><strong>Office Address:</strong> Bandung, Indonesia</li>
-      </ul>
-    </div>
-    <a href="https://wa.me/6281282541982" class="whatsapp-button">Message Us on WhatsApp</a>
-    <a href="brochure.pdf" class="download-button" download>Download Company Brochure</a>
-  </main>
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="contact.html">🇮🇩 ID</a> | <a href="contact-en.html">🇬🇧 EN</a>
+  </div>
 
+  <!-- Header -->
+  <header class="hero">
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <h1>Hubungi Kami</h1>
+    <p class="tagline">Kemitraan yang jujur, produk yang berkualitas</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="menu-grid" id="menu">
+    <a href="index.html">🏠 Beranda</a>
+    <div class="menu-dropdown clickable">
+      <span>📦 Produk ▾</span>
+      <div class="menu-dropdown-content">
+        <a href="bentonite.html">🧱 Bentonit</a>
+        <a href="zeolite.html">🪨 Zeolit</a>
+        <a href="vanilla.html">🌿 Vanili</a>
+      </div>
+    </div>
+    <a href="gallery-id.html">🖼 Galeri</a>
+    <a href="about.html">📖 Tentang</a>
+    <a href="contact.html">📞 Kontak</a>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="section container">
+    <h2>Hubungi Kami</h2>
+    <p class="intro-description">
+      Jika Anda memiliki pertanyaan, kebutuhan khusus, atau ingin menjalin kerja sama ekspor, tim kami siap membantu. Kami melayani dengan cepat, profesional, dan transparan.
+    </p>
+
+    <ul class="intro-description">
+      <li><strong>Email:</strong> beukeuh.eksporind@gmail.com</li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">0812-8254-1982</a></li>
+      <li><strong>Alamat:</strong> Bandung, Jawa Barat – Indonesia</li>
+    </ul>
+
+    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">Chat via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank">
-    <img src="images/wa-icon.png" alt="WhatsApp" />
-  </a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="WhatsApp"></a>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("overlayMenu").classList.toggle("show");
-    }
-    function toggleDropdown() {
-      document.querySelector(".overlay-menu .dropdown").classList.toggle("open");
-    }
-  </script>
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
