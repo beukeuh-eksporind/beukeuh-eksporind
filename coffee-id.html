@@ -2,53 +2,81 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kopi Indonesia untuk ekspor – Beukeuh Eksporind" />
-  <title>Kopi | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kopi - Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="coffee-id.html">🇮🇩 ID</a> | <a href="coffee-en.html">🇬🇧 EN</a>
+  </div>
+
+  <!-- Header -->
   <header class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height: 48px" />
-      <h1>☕ Biji Kopi Indonesia</h1>
-      <p class="tagline">Aroma kuat, rasa khas, dari dataran tinggi tropis.</p>
-      <a href="coffee.html" class="btn-primary">🌐 English</a>
-    </div>
+    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+    <h1>Kopi</h1>
+    <p class="tagline">Ekspor Kopi Arabika & Robusta Premium</p>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>Deskripsi Produk</h2>
-      <p>
-        Kopi kami berasal dari kebun dataran tinggi di Jawa Barat dan Sumatra. Tumbuh di atas ketinggian 1.200 meter, menghasilkan cita rasa kompleks, aroma dalam, dan aftertaste yang lembut.
-      </p>
-
-      <h3>Spesifikasi:</h3>
-      <ul>
-        <li>Jenis: Arabika / Robusta (sesuai permintaan)</li>
-        <li>Kadar air: &lt; 13%</li>
-        <li>Proses: Basah / Kering</li>
-        <li>Asal: Jawa Barat & Sumatra, Indonesia</li>
-      </ul>
-
-      <h3>Keunggulan:</h3>
-      <ul>
-        <li>Dipetik tangan & dijemur alami</li>
-        <li>Green bean atau roasted tersedia</li>
-        <li>Kemasan dapat disesuaikan</li>
-      </ul>
-
-      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Hubungi untuk Order</a>
+  <!-- Menu -->
+  <nav class="menu-grid" id="menu">
+    <a href="index.html">🏠 Home</a>
+    <div class="menu-dropdown" id="productDropdown">
+      <span class="menu-toggle">📦 Produk ▾</span>
+      <div class="menu-dropdown-content" id="productMenu">
+        <a href="bentonite.html">🧱 Bentonite</a>
+        <a href="zeolite.html">🪨 Zeolite</a>
+        <a href="vanilla-id.html">🌿 Vanilla</a>
+        <a href="clove-id.html">🌸 Cengkeh</a>
+        <a href="coffee-id.html">☕ Kopi</a>
+        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+        <a href="charcoal-id.html">🔥 Arang</a>
+      </div>
     </div>
+    <a href="gallery.html">🖼 Gallery</a>
+    <a href="bentonite.html#about">📖 About</a>
+    <a href="bentonite.html#contact">📞 Contact</a>
+  </nav>
+
+  <!-- Konten Deskripsi -->
+  <section class="section container">
+    <h2>Kopi Indonesia Berkualitas</h2>
+    <p>
+      Indonesia dikenal sebagai salah satu produsen kopi terbaik di dunia. Beukeuh Eksporind menghadirkan kopi pilihan dari berbagai daerah penghasil utama seperti Sumatera, Jawa, dan Sulawesi.
+    </p>
+    <p>
+      Kami menyediakan kopi Arabika dan Robusta dengan kualitas ekspor, melalui proses pemetikan selektif, pengeringan alami, dan pengemasan higienis sesuai standar internasional. Baik untuk kebutuhan industri, kedai kopi, maupun pemanggang kopi global.
+    </p>
+
+    <h3>Spesifikasi Produk</h3>
+    <ul>
+      <li>Jenis: Arabika / Robusta</li>
+      <li>Bentuk: Green Bean / Roasted</li>
+      <li>Asal: Sumatera, Toraja, Jawa, Flores</li>
+      <li>Kadar air: ≤ 12%</li>
+      <li>Kemasan: 60 kg goni / vacuum pack</li>
+    </ul>
+
+    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">📦 Tanya Harga & Pengiriman</a>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
-    </div>
+    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
