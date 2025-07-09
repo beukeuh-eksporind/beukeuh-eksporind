@@ -1,83 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn about Beukeuh Eksporind, an ethical and sustainable exporter of Indonesia's natural commodities.">
-  <meta name="keywords" content="about us, beukeuh eksporind, indonesia exporter, ethical trade">
-  <meta name="author" content="Beukeuh Eksporind">
-  <title>About Us - Beukeuh Eksporind</title>
+  <title>Tentang Kami | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body onload="document.body.classList.add('loaded')">
+<body>
 
-  <!-- Language Switch -->
+  <!-- Tombol Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Switch Bahasa -->
   <div class="lang-switch">
-    <a href="about.html">🇬🇧EN</a> | <a href="tentang.html">🇮🇩ID</a>
+    <a href="about.html">🇮🇩 ID</a> | <a href="about-en.html">🇬🇧 EN</a>
   </div>
 
   <!-- Header -->
   <header class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Beukeuh Eksporind Logo" class="logo" style="border-radius: 12px;">
-      <h1>📖 About Us</h1>
-      <p class="tagline">Rooted in Nature, Committed to the World</p>
-    </div>
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <h1>Tentang Kami</h1>
+    <p class="tagline">Bersama untuk Masa Depan Ekspor Indonesia</p>
   </header>
 
-  <!-- Navigation -->
-  <div class="menu-grid">
-    <a href="index.html">🏠 Home</a>
-    <div class="menu-dropdown">
-      Products ▾
+  <!-- Navigasi -->
+  <nav class="menu-grid" id="menu">
+    <a href="index.html">🏠 Beranda</a>
+    <div class="menu-dropdown clickable">
+      <span>📦 Produk ▾</span>
       <div class="menu-dropdown-content">
-        <a href="bentonite-en.html">🪨 Bentonite</a>
-        <a href="vanilla.html">🌿 Vanilla</a>
-        <a href="cinnamon.html">🌳 Cinnamon</a>
-        <a href="coffee.html">☕ Coffee</a>
+        <a href="bentonite.html">🧱 Bentonit</a>
+        <a href="zeolite.html">🪨 Zeolit</a>
+        <a href="vanilla-id.html">🌿 Vanili</a>
       </div>
     </div>
-    <a href="gallery.html">🖼 Gallery</a>
-    <a href="about.html">📖 About</a>
-    <a href="index.html#contact">📞 Contact</a>
-  </div>
+    <a href="gallery-id.html">🖼 Galeri</a>
+    <a href="about.html">📖 Tentang</a>
+    <a href="#contact">📞 Kontak</a>
+  </nav>
 
-  <!-- About Content -->
-  <section class="section">
-    <div class="container">
-      <h2>Who We Are</h2>
-      <p style="text-align: justify;">
-        Beukeuh Eksporind is an Indonesian exporter dedicated to delivering premium natural commodities like vanilla, coffee, cinnamon, and bentonite to the global market. Our values are grounded in sustainable farming, fair trade practices, and deep respect for local farmers and the environment.
-      </p>
+  <!-- Tentang Kami -->
+  <section class="section container">
+    <h2>Profil Perusahaan</h2>
+    <p class="intro-description">
+      Beukeuh Eksporind adalah perusahaan eksportir Indonesia yang bergerak di bidang komoditas alami seperti bentonit, zeolit, dan vanili. Kami berdiri dengan komitmen untuk menghadirkan produk berkualitas tinggi yang memenuhi standar ekspor global, sekaligus mendukung pertumbuhan petani dan produsen lokal.
+    </p>
 
-      <h2>Our Mission</h2>
-      <p style="text-align: justify;">
-        We believe that the true wealth of a nation lies in its natural resources and its people. Our mission is to build strong partnerships with Indonesian farmers and producers, ensuring quality, transparency, and ethical sourcing in every product we export.
-      </p>
+    <p class="intro-description">
+      Kami percaya bahwa kekuatan Indonesia terletak pada kekayaan alam dan ketulusan kolaborasi. Melalui pendekatan transparan dan profesional, Beukeuh Eksporind membangun jembatan antara sumber daya lokal dan pasar internasional.
+    </p>
+  </section>
 
-      <h2>Our Commitment</h2>
-      <ul style="line-height: 1.8;">
-        <li>🌱 Eco-friendly and sustainable sourcing</li>
-        <li>🤝 Fair partnerships with local communities</li>
-        <li>🌍 Export-ready logistics and documentation</li>
-        <li>📦 Custom packaging and product traceability</li>
+  <!-- Visi & Misi -->
+  <section class="section container">
+    <h2>Visi & Misi</h2>
+    <ul class="intro-description">
+      <li><strong>Visi:</strong> Menjadi mitra terpercaya untuk komoditas ekspor Indonesia di pasar global.</li>
+      <li><strong>Misi:</strong></li>
+      <ul>
+        <li>Menyediakan produk ekspor berkualitas tinggi secara konsisten.</li>
+        <li>Mendukung kesejahteraan mitra petani dan produsen lokal.</li>
+        <li>Membangun relasi jangka panjang yang saling menguntungkan.</li>
       </ul>
+    </ul>
+  </section>
 
-      <a class="btn-primary" href="index.html">← Back to Home</a>
-    </div>
+  <!-- Kontak -->
+  <section class="section container" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p class="intro-description">
+      Ingin bermitra atau bertanya seputar produk kami? Tim kami siap membantu.
+    </p>
+    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">Hubungi via WhatsApp</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-    </div>
+    <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" title="Chat via WhatsApp">💬</a>
+  <!-- Tombol WA -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="WhatsApp"></a>
 
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
