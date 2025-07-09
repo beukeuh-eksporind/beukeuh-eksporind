@@ -106,7 +106,7 @@ header.hero {
   border-radius: 0;
   padding: 0;
   box-shadow: none;
-  min-width: 160px;
+  min-width: auto;
   z-index: 99;
 }
 .menu-dropdown-content a {
