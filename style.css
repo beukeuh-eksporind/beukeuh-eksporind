@@ -232,8 +232,8 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  .menu.grid {
+    display: none;
   }
   .menu-grid {
     flex-direction: column;
@@ -251,7 +251,9 @@ footer p {
   }
   .menu-grid.show {
     display: flex;
+    flex-direction: column;
   }
+}
   .menu-grid a,
   .menu-dropdown {
     width: 100%;
