@@ -2,54 +2,69 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kayu manis kualitas ekspor dari Indonesia – Beukeuh Eksporind" />
-  <title>Kayu Manis | Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kayu Manis - Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="cinnamon-id.html">🇮🇩ID</a> | <a href="cinnamon-en.html">🇬🇧EN</a>
+  </div>
+
+  <!-- Header -->
   <header class="hero">
-    <div class="container">
-      <img src="logo.png" alt="Logo Beukeuh Eksporind" style="height: 48px" />
-      <h1>🌳 Kayu Manis Indonesia</h1>
-      <p class="tagline">Aroma hangat alami dari dataran tinggi tropis.</p>
-      <a href="cinnamon.html" class="btn-primary">🌐 English</a>
-    </div>
+    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+    <h1>Kayu Manis</h1>
+    <p class="tagline">Rempah Hangat dari Alam Indonesia</p>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>Deskripsi Produk</h2>
-      <p>
-        Kayu manis kami dipanen secara alami dari pohon di Sumatra Barat dan Jawa. Diproses dengan pengeringan matahari dan disortir untuk memenuhi standar ekspor premium untuk makanan, kesehatan, dan kosmetik.
-      </p>
+  <!-- Menu -->
+  <nav class="menu-grid" id="menu">
+    <a href="index.html">🏠 Beranda</a>
 
-      <h3>Spesifikasi:</h3>
-      <ul>
-        <li>Jenis: Cinnamomum burmannii</li>
-        <li>Bentuk: Stick / Remuk / Bubuk</li>
-        <li>Kadar air: &lt; 14%</li>
-        <li>Warna: Coklat kemerahan</li>
-      </ul>
-
-      <h3>Aplikasi:</h3>
-      <ul>
-        <li>Pengharum makanan & minuman</li>
-        <li>Bahan baku minyak atsiri</li>
-        <li>Obat herbal & farmasi</li>
-        <li>Parfum dan dupa alami</li>
-      </ul>
-
-      <a href="https://wa.me/6281282541982" class="btn-primary">📦 Hubungi untuk Order</a>
+    <div class="menu-dropdown clickable">
+      <span>📦 Produk ▾</span>
+      <div class="menu-dropdown-content">
+        <a href="bentonite.html">🧱 Bentonite</a>
+        <a href="zeolite.html">🪨 Zeolite</a>
+        <a href="vanilla-id.html">🌿 Vanilla</a>
+        <a href="clove-id.html">🌸 Cengkeh</a>
+        <a href="coffee-id.html">☕ Kopi</a>
+        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+        <a href="charcoal-id.html">🔥 Arang</a>
+      </div>
     </div>
+
+    <a href="gallery.html">🖼 Galeri</a>
+    <a href="bentonite.html#about">📖 Tentang</a>
+    <a href="bentonite.html#contact">📞 Kontak</a>
+  </nav>
+
+  <!-- Deskripsi Produk -->
+  <section class="intro-description container">
+    <p>
+      Kayu manis Indonesia dikenal karena aroma hangat dan rasa khasnya yang kuat. Kami mengekspor kayu manis berkualitas tinggi dalam bentuk gulungan maupun bubuk untuk kebutuhan industri makanan, minuman, farmasi, dan kosmetik.
+    </p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Beukeuh Eksporind. Semua hak dilindungi.</p>
-    </div>
+    <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
