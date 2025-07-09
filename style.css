@@ -100,32 +100,30 @@ header.hero {
 /* 6. Dropdown */
 .menu-dropdown {
   position: relative;
-}
+  
 .menu-dropdown-content {
   display: none;
   position: absolute;
   top: 120%;
   left: 0;
-  background: transparent;
-  border-radius: 0;
+  background: none;
   padding: 0;
+  border-radius: 0;
   box-shadow: none;
-  min-width: auto;
   z-index: 99;
 }
+
 .menu-dropdown-content a {
   display: block;
-  padding: 6px 0;
-  color: white;
+  padding: 6px 10px;
+  margin-left: 10px;
+  color: #4a4a4a;
+  background: none;
   text-decoration: none;
-  font-weight:500;
 }
+
 .menu-dropdown-content a:hover {
-  text-decoration: none;
-  background: transparent;
-}
-.menu-dropdown:hover .menu-dropdown-content {
-  color: #00796b;
+  color: #6a7d40;
   background: none;
 }
 
