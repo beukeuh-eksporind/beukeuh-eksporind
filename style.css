@@ -63,7 +63,7 @@ header.hero {
 /* Language Switch */
 .lang-switch {
   position: fixed;
-  top: -10px;
+  top: 30px;
   right: 12px;
   font-size: 14px;
   z-index: 99;
