@@ -199,8 +199,8 @@ footer p {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 48px;
-  height: 48px;
+  width: clamp(48px, 6vw, 72px);
+  height: clamp(48px, 6vw, 72px);
   background: url('images/wa-icon.png') no-repeat center center / contain;
   z-index: 999;
 }
