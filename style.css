@@ -1,12 +1,11 @@
-/* style.css — Beukeuh Eksporind */
-/* Tema Hijau Olive Natural + Animasi Smooth Modern */
+/* Beukeuh Eksporind — style.css */
+/* Tema Olive Natural + Animasi Smooth */
 
-/* 1. Global */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f7ef; /* olive light */
+  background: #f5f7ef;
   color: #333;
   opacity: 0;
   transition: opacity 0.5s ease-in;
@@ -15,14 +14,31 @@ body.loaded {
   opacity: 1;
 }
 
-/* 2. Container */
+/* Animasi Fade-In-Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Container */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* 3. Header Hero */
+/* Header */
 header.hero {
   background: linear-gradient(135deg, #a8b971, #8c9b5a);
   color: white;
@@ -44,7 +60,7 @@ header.hero {
   margin-top: 8px;
 }
 
-/* 4. Language Switch */
+/* Language Switch */
 .lang-switch {
   position: fixed;
   top: 12px;
@@ -62,7 +78,8 @@ header.hero {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-/* 5. Menu Grid */
+
+/* Menu Grid */
 .menu-grid {
   display: flex;
   justify-content: center;
@@ -75,7 +92,6 @@ header.hero {
   z-index: 2;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
 .menu-grid a,
 .menu-dropdown {
   color: #4a4a4a;
@@ -84,25 +100,21 @@ header.hero {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  background: none; /* Hapus background warna */
+  background: none;
   transition: all 0.3s ease;
-  box-shadow: none;  /* Hapus bayangan */
+  box-shadow: none;
 }
-
 .menu-grid a:hover,
 .menu-dropdown:hover {
   transform: translateY(-2px);
-  color: #6a7d40; /* Warna olive lebih gelap saat hover */
-  background: none; /* Pastikan tidak ada warna latar saat hover */
-  box-shadow: none;
+  color: #6a7d40;
 }
 
-/* 6. Dropdown */
+/* Dropdown */
 .menu-dropdown {
   position: relative;
-  padding-bottom: 20px; /* supaya hover tidak cepat hilang */
+  padding-bottom: 20px;
 }
-
 .menu-dropdown-content {
   display: none;
   position: absolute;
@@ -110,13 +122,9 @@ header.hero {
   left: 0;
   background-color: transparent;
   padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  z-index: 99;
   min-width: 160px;
-  box-sizing: border-box;
+  z-index: 99;
 }
-
 .menu-dropdown-content a {
   display: block;
   padding: 10px 15px;
@@ -125,18 +133,15 @@ header.hero {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .menu-dropdown-content a:hover {
   color: #6a7d40;
   background-color: #f0f0f0;
 }
-
-/* ✅ Ini baris penting */
 .menu-dropdown:hover .menu-dropdown-content {
   display: block;
 }
 
-/* 7. Intro Description */
+/* Description */
 .intro-description {
   margin-top: 30px;
   text-align: justify;
@@ -145,7 +150,7 @@ header.hero {
   color: #444;
 }
 
-/* 8. Section + Product Cards */
+/* Section + Card */
 .section {
   padding: 50px 20px;
 }
@@ -183,7 +188,7 @@ header.hero {
   background: #6f7b45;
 }
 
-/* 9. About, Contact, Footer */
+/* About, Contact, Footer */
 footer, #about, #contact {
   background: #f1f4e5;
   padding: 40px 20px;
@@ -195,7 +200,7 @@ footer p {
   margin: 0;
 }
 
-/* 10. WhatsApp Floating Button */
+/* WhatsApp Button */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -206,7 +211,7 @@ footer p {
   z-index: 999;
 }
 
-/* 11. Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -241,7 +246,7 @@ footer p {
   transform: rotate(45deg) translate(-5px, -5px);
 }
 
-/* 12. Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -250,7 +255,8 @@ footer p {
   .menu-grid {
     flex-direction: column;
     align-items: flex-start;
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 60px;
     left: 14px;
@@ -275,8 +281,6 @@ footer p {
     position: relative;
     top: 0;
     left: 0;
-    box-shadow: none;
-    border-radius: 0;
     background: #f8f8f8;
   }
 
