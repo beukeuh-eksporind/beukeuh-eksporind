@@ -1,108 +1,118 @@
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contoh Menu Navigasi dengan Dropdown</title>
-    <style>
-        /* Styling untuk .menu-dropdown itu sendiri (elemen 'Products ▾') */
-        .menu-dropdown {
-            position: relative;
-            display: inline-block;
-            padding: 8px 15px;
-            cursor: pointer;
-            color: white; /* Tambahkan warna teks untuk menu utama dropdown */
-            text-decoration: none; /* Hilangkan garis bawah default */
-        }
-
-        /* Styling untuk kontainer dropdown (isi: Bentonite, Vanilla, dll.) */
-        .menu-dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 4px;
-            padding: 0;
-        }
-
-        /* Styling untuk tautan di dalam dropdown */
-        .menu-dropdown-content a {
-            color: #4a4a4a;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Styling saat tautan di dalam dropdown di-hover */
-        .menu-dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #6a7d40;
-        }
-
-        /* ATURAN PENTING: Menampilkan dropdown saat parent di-hover */
-        .menu-dropdown:hover .menu-dropdown-content {
-            display: block;
-        }
-
-        /* Styling untuk menu-grid (nav container Anda) */
-        .menu-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .menu-grid a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            transition: background-color 0.3s ease; /* Tambahkan transisi untuk hover */
-        }
-
-        .menu-grid a:hover {
-            background-color: #555;
-        }
-
-        /* Gaya dasar untuk body */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ekspor komoditas alam Indonesia: vanila, kopi, kayu manis, bentonit.">
+  <meta name="keywords" content="ekspor Indonesia, vanila, kopi, kayu manis, bentonit, beukeuh">
+  <meta name="author" content="Beukeuh Eksporind">
+  <title>Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body onload="document.body.classList.add('loaded')">
 
-    <nav class="menu-grid">
-        <a href="#home">Beranda</a>
-        <div class="menu-dropdown">
-            <a href="#products" class="dropbtn">Produk ▾</a>
-            <div class="menu-dropdown-content">
-                <a href="#bentonite">Bentonite</a>
-                <a href="#vanilla">Vanilla</a>
-                <a href="#cinnamon">Cinnamon</a>
-            </div>
-        </div>
-        <a href="#about">Tentang Kami</a>
-        <a href="#contact">Kontak</a>
-    </nav>
+  <!-- Tombol Bahasa -->
+  <div class="lang-switch">
+    <a href="index.html">🇬🇧EN</a> | <a href="index-id.html">🇮🇩ID</a>
+  </div>
 
-    <div class="content">
-        <h1>Selamat Datang di Website Kami</h1>
-        <p>Ini adalah contoh implementasi menu navigasi dengan dropdown menggunakan HTML dan CSS.</p>
+  <!-- Header -->
+  <header class="hero">
+    <div class="container">
+      <img src="images/logo.png" alt="Logo Beukeuh Eksporind" class="logo">
+      <h1>🌿 Beukeuh Eksporind</h1>
+      <p class="tagline">Komoditas Alami Indonesia untuk Dunia</p>
     </div>
+  </header>
+  
+  <!-- Tombol Hamburger -->
+<button class="hamburger" id="hamburger">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</button>
 
+  <!-- Navigasi Menu -->
+  <nav class="menu-grid" id="menu">
+    <a href="index-id.html">🏠 Beranda</a>
+    <div class="menu-dropdown">
+      Produk ▾
+      <div class="menu-dropdown-content">
+        <a href="bentonite.html">🪨 Bentonit</a>
+        <a href="vanilla.html">🌿 Vanila</a>
+        <a href="cinnamon.html">🌳 Kayu Manis</a>
+        <a href="coffee.html">☕ Kopi</a>
+      </div>
+    </div>
+    <a href="gallery.html">🖼 Galeri</a>
+    <a href="#about">📖 Tentang</a>
+    <a href="#contact">📞 Kontak</a>
+  </nav>
+
+  <!-- Deskripsi Singkat -->
+  <div class="intro-description">
+    <p>Beukeuh Eksporind adalah eksportir komoditas alam Indonesia seperti vanila, kopi, kayu manis, dan bentonit. Kami bekerja sama dengan petani lokal untuk menghadirkan produk berkualitas tinggi ke pasar global secara berkelanjutan dan etis.</p>
+  </div>
+
+  <!-- Produk Unggulan -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2>Produk Unggulan</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🪨 Bentonit</h3>
+          <p>Lempung industri berkualitas tinggi untuk berbagai aplikasi.</p>
+          <a class="btn-primary" href="bentonite.html">Lihat Detail</a>
+        </div>
+        <div class="card">
+          <h3>🌿 Vanila</h3>
+          <p>Vanila premium dari perkebunan tropis Indonesia.</p>
+          <a class="btn-primary" href="vanilla.html">Lihat Detail</a>
+        </div>
+        <div class="card">
+          <h3>🌳 Kayu Manis</h3>
+          <p>Kulit kayu manis alami dari daerah pegunungan yang bersih.</p>
+          <a class="btn-primary" href="cinnamon.html">Lihat Detail</a>
+        </div>
+        <div class="card">
+          <h3>☕ Kopi</h3>
+          <p>Biji kopi terpilih dari dataran tinggi Indonesia yang harum dan nikmat.</p>
+          <a class="btn-primary" href="coffee.html">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>Tentang Kami</h2>
+      <p style="text-align: justify;">Beukeuh Eksporind bekerja sama dengan petani di seluruh Indonesia untuk mengekspor sumber daya alam terbaik ke pasar internasional. Kami menjunjung tinggi transparansi dan keberlanjutan dalam perdagangan global.</p>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:info@beukeuheksporind.com">info@beukeuheksporind.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281282541982">+62 812 8254 1982</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <!-- Tombol WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float" title="Hubungi via WhatsApp"></a>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
