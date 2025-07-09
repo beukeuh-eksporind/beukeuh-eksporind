@@ -74,7 +74,7 @@ header.hero {
   font-weight: bold;
   margin: 0 4px;
   background: white;
-  padding: 4px 8px;
+  padding: 2px 4px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
