@@ -1,21 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const dropdown = document.querySelector('.menu-dropdown');
-  const trigger = dropdown.querySelector('.dropdown-trigger');
-  const menu = dropdown.querySelector('.menu-dropdown-content');
+// Saat halaman selesai load, tambahkan class 'loaded' ke body
+window.addEventListener('load', function () {
+  document.body.classList.add('loaded');
+});
 
-  // Toggle on click
-  trigger.addEventListener('click', (e) => {
-    e.stopPropagation();
+// Toggle menu mobile (hamburger)
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+hamburger.addEventListener('click', function () {
+  menu.classList.toggle('show');
+  closeDropdown(); // Tutup dropdown jika sedang terbuka
+});
+
+// Dropdown Produk (klik untuk toggle)
+const dropdown = document.querySelector('.menu-dropdown');
+
+if (dropdown) {
+  dropdown.addEventListener('click', function (e) {
+    e.stopPropagation(); // Mencegah close saat klik dalam dropdown
     dropdown.classList.toggle('open');
   });
 
-  // Prevent closing when clicking inside dropdown
-  menu.addEventListener('click', (e) => {
-    e.stopPropagation();
+  // Tutup dropdown jika klik di luar area
+  window.addEventListener('click', function (e) {
+    if (!dropdown.contains(e.target)) {
+      closeDropdown();
+    }
   });
+}
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', () => {
-    dropdown.classList.remove('open');
-  });
-});
+function closeDropdown() {
+  dropdown.classList.remove('open');
+}
