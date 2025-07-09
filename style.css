@@ -1,6 +1,7 @@
 /* Beukeuh Eksporind — style.css Final */
-/* Tema Olive Natural + DropDown Klik + Smooth UI */
+/* Tema Olive Natural + Smooth Minimal */
 
+/* 1. Global */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -14,7 +15,7 @@ body.loaded {
   opacity: 1;
 }
 
-/* Animasi */
+/* 2. Fade In Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -25,14 +26,14 @@ body.loaded {
   opacity: 0;
 }
 
-/* Container */
+/* 3. Container */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header */
+/* 4. Header */
 header.hero {
   background: linear-gradient(135deg, #a8b971, #8c9b5a);
   color: white;
@@ -54,13 +55,13 @@ header.hero {
   margin-top: 8px;
 }
 
-/* Language Switch */
+/* 5. Language Switch */
 .lang-switch {
   position: fixed;
-  top: 20px;
-  right: 16px;
+  top: 30px;
+  right: 12px;
   font-size: 14px;
-  z-index: 99;
+  z-index: 9999;
 }
 .lang-switch a {
   color: #5c6e3a;
@@ -73,37 +74,38 @@ header.hero {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Menu */
+/* 6. Menu Grid */
 .menu-grid {
   display: flex;
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(6px);
-  padding: 12px 8px;
+  padding: 12px 10px;
   margin-top: -40px;
   position: relative;
-  z-index: 9999;
+  z-index: 999;
   border-radius: 0 0 12px 12px;
 }
 .menu-grid a,
 .menu-dropdown {
   color: #4a4a4a;
-  padding: 4px 10px;
+  padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   background: none;
   transition: all 0.3s ease;
 }
 .menu-grid a:hover,
 .menu-dropdown:hover {
+  transform: translateY(-2px);
   color: #6a7d40;
 }
 
-/* Dropdown Produk */
+/* 7. Dropdown Menu (click version) */
 .menu-dropdown {
   position: relative;
   cursor: pointer;
@@ -113,30 +115,30 @@ header.hero {
   position: absolute;
   top: 100%;
   left: 0;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 9999;
-  min-width: 160px;
+  background: #fff;
   padding: 6px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 999;
+}
+.menu-dropdown-content.open {
+  display: block;
 }
 .menu-dropdown-content a {
   display: block;
-  padding: 10px 14px;
-  font-size: 14px;
-  color: #4a4a4a;
+  padding: 8px 16px;
+  color: #333;
   text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
 }
 .menu-dropdown-content a:hover {
-  background: #f0f0f0;
+  background-color: #f0f0f0;
   color: #6a7d40;
 }
-/* Tampilkan dropdown saat open */
-.menu-dropdown.open .menu-dropdown-content {
-  display: block;
-}
 
-/* Intro */
+/* 8. Intro Text */
 .intro-description {
   margin-top: 30px;
   text-align: justify;
@@ -145,7 +147,7 @@ header.hero {
   color: #444;
 }
 
-/* Section & Cards */
+/* 9. Produk Section */
 .section {
   padding: 40px 20px;
 }
@@ -165,9 +167,6 @@ header.hero {
 .card:hover {
   transform: translateY(-6px);
 }
-.card h3 {
-  margin-top: 0;
-}
 .btn-primary {
   display: inline-block;
   background: #8c9b5a;
@@ -183,7 +182,7 @@ header.hero {
   background: #6f7b45;
 }
 
-/* Footer */
+/* 10. Footer & Info Sections */
 footer, #about, #contact {
   background: #f1f4e5;
   padding: 40px 20px;
@@ -195,7 +194,7 @@ footer p {
   margin: 0;
 }
 
-/* WhatsApp */
+/* 11. WhatsApp Floating */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -206,70 +205,90 @@ footer p {
   z-index: 999;
 }
 
-/* Hamburger Icon */
+/* 12. Hamburger Icon */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   top: 14px;
   left: 14px;
-  cursor: pointer;
-  z-index: 99999;
-  background: transparent;
+  z-index: 9999;
+  background: none;
   border: none;
+  cursor: pointer;
 }
-.hamburger .bar {
-  width: 22px;
+.bar {
+  width: 24px;
   height: 3px;
   background-color: #5c6e3a;
   margin: 3px 0;
   border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Responsive */
+/* 13. Responsive */
 @media (max-width: 768px) {
-  .menu.grid {
-    display: none;
+  .hamburger {
+    display: flex;
   }
+
   .menu-grid {
     flex-direction: column;
     align-items: flex-start;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
     position: fixed;
     top: 60px;
     left: 14px;
     right: 14px;
     padding: 16px;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     display: none;
   }
+
   .menu-grid.show {
     display: flex;
-    flex-direction: column;
   }
-}
+
   .menu-grid a,
   .menu-dropdown {
     width: 100%;
     text-align: left;
   }
+
   .menu-dropdown-content {
     position: relative;
-    background: transparent;
+    background: #fff;
     box-shadow: none;
-    padding: 0;
+    border: 1px solid #eee;
+    border-radius: 6px;
   }
-  .menu-dropdown-content a {
-    padding: 8px 10px;
-    background: transparent;
+
+  .lang-switch {
+    font-size: 12px;
+    top: 8px;
+    right: 8px;
   }
-  .menu-dropdown-content a:hover {
-    background: #f0f0f0;
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-description {
+    font-size: 0.95rem;
   }
 }
