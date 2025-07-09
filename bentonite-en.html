@@ -2,75 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Export-quality bentonite from Indonesia for industrial and agricultural use.">
-  <meta name="keywords" content="bentonite, export Indonesia, natural commodities, Beukeuh Eksporind">
-  <meta name="author" content="Beukeuh Eksporind">
-  <title>Bentonite - Beukeuh Eksporind</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bentonite | Beukeuh Eksporind</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body class="loaded">
+<body>
 
-<div class="lang-switch">
-  <a href="bentonite-en.html">🇬🇧EN</a> | <a href="bentonite.html">🇮🇩ID</a>
-</div>
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 
-<header class="hero">
-  <div class="container">
-    <img src="images/bentonite.jpg" alt="Bentonite" class="logo" />
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="bentonite.html">ID</a> | <a href="bentonite-en.html">EN</a>
+  </div>
+
+  <!-- Header -->
+  <header class="hero">
+    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
     <h1>Bentonite</h1>
-    <p class="tagline">Versatile natural clay from Indonesia</p>
-  </div>
-</header>
-  
-<!-- Tombol Hamburger -->
-<button class="hamburger" id="hamburger">&#9776;</button>
+    <p class="tagline">Premium Indonesian Bentonite Export</p>
+  </header>
 
-<!-- Navigasi Menu -->
-<nav class="menu-grid" id="menu">
-  <a href="index.html">🏠 Home</a>
-  <div class="menu-dropdown">
-    Products ▾
-    <div class="menu-dropdown-content">
-      <a href="bentonite.html">🪨 Bentonite</a>
-      <a href="vanilla.html">🌿 Vanilla</a>
-      <a href="cinnamon.html">🌳 Cinnamon</a>
-      <a href="coffee.html">☕ Coffee</a>
+  <!-- Menu -->
+  <nav class="menu-grid" id="menu">
+    <a href="index-en.html">🏠 Home</a>
+
+    <div class="menu-dropdown clickable">
+      <span>📦 Products ▾</span>
+      <div class="menu-dropdown-content">
+        <a href="bentonite-en.html">🧱 Bentonite</a>
+        <a href="zeolite-en.html">🪨 Zeolite</a>
+      </div>
     </div>
-  </div>
-  <a href="gallery.html">🖼 Gallery</a>
-  <a href="#about">📖 About</a>
-  <a href="#contact">📞 Contact</a>
-</nav>
-<div class="container section">
-  <h2>Product Description</h2>
-  <p>Bentonite is a naturally occurring clay mineral widely used in drilling, purification, agriculture, and food processing industries. Our product is sourced from high-quality mines in Indonesia, processed under export standards, and packed to suit international market needs.</p>
 
-  <h3>General Specifications:</h3>
-  <ul>
-    <li>Color: Light gray to beige</li>
-    <li>Moisture content: &lt; 12%</li>
-    <li>Type: Sodium and calcium bentonite</li>
-    <li>Applications: Drilling, agriculture, cosmetics, animal feed</li>
-  </ul>
+    <a href="gallery.html">🖼 Gallery</a>
+    <a href="#about">📖 About</a>
+    <a href="#contact">📞 Contact</a>
+  </nav>
 
-  <h3>Packaging:</h3>
-  <p>Available in 25kg and 50kg bags, or customized bulk packaging.</p>
+  <!-- Description -->
+  <section class="section container">
+    <h2>What is Bentonite?</h2>
+    <p class="intro-description">
+      Bentonite is a natural clay formed from volcanic ash, known for its excellent absorption and binding properties. At Beukeuh Eksporind, we supply high-quality bentonite suitable for foundries, drilling fluids, wastewater treatment, agriculture, and more.
+    </p>
+  </section>
 
-  <div style="margin-top: 30px;">
-    <a href="gallery.html" class="btn-primary">🖼 View Gallery</a>
-    <a href="#contact" class="btn-primary">📞 Contact Us</a>
-  </div>
-</div>
+  <!-- Product Applications -->
+  <section class="section container">
+    <h2>Applications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Industrial Use</h3>
+        <p>Used as binder for foundry molds and as lubricant in drilling operations.</p>
+      </div>
+      <div class="card">
+        <h3>Agriculture</h3>
+        <p>Improves soil quality, acts as carrier for fertilizers and pesticides.</p>
+      </div>
+      <div class="card">
+        <h3>Water Treatment</h3>
+        <p>Effective in absorbing impurities and heavy metals from wastewater.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- About -->
+  <section class="section container" id="about">
+    <h2>About Us</h2>
+    <p class="intro-description">
+      Beukeuh Eksporind is a trusted mineral export company based in Indonesia. We are dedicated to providing sustainable and quality-controlled natural minerals to clients worldwide. Our mission is to bring the richness of Indonesia's earth to global industries.
+    </p>
+  </section>
 
-<a href="https://wa.me/6281282541982" class="wa-float" title="Chat via WhatsApp"></a>
-<script src="script.js"></script>
+  <!-- Contact -->
+  <section class="section container" id="contact">
+    <h2>Contact</h2>
+    <p class="intro-description">
+      Interested in our bentonite products? Reach out to us for pricing, specifications, or custom orders. We're happy to support your business needs.
+    </p>
+    <a href="https://wa.me/6281234567890" class="btn-primary" target="_blank">Contact via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281234567890" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
