@@ -99,8 +99,8 @@ header.hero {
 
 /* 6. Dropdown */
 .menu-dropdown-content {
-  display: absolute;
-  position: absolute;
+  display: block;
+  position: relative;
   top: 100%;
   left: 0;
   background-color: transparent;
