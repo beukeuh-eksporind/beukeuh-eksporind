@@ -62,7 +62,6 @@ header.hero {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 /* 5. Menu Grid */
 .menu-grid {
   display: flex;
@@ -76,21 +75,26 @@ header.hero {
   z-index: 2;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
 .menu-grid a,
 .menu-dropdown {
-  background: linear-gradient(135deg, #a8b971, #8c9b5a);
-  color: white;
+  color: #4a4a4a;
   padding: 6px 14px;
-  border-radius: 10px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  background: none; /* Hapus background warna */
   transition: all 0.3s ease;
+  box-shadow: none;  /* Hapus bayangan */
 }
+
 .menu-grid a:hover,
 .menu-dropdown:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  color: #6a7d40; /* Warna olive lebih gelap saat hover */
+  background: none; /* Pastikan tidak ada warna latar saat hover */
+  box-shadow: none;
 }
 
 /* 6. Dropdown */
