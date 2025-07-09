@@ -1,24 +1,31 @@
-// Toggle menu overlay
+// Hamburger toggle
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
-const dropdownToggle = document.querySelector(".dropdown-toggle");
-const dropdownContent = document.querySelector(".menu-dropdown-content");
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("show");
   hamburger.classList.toggle("change");
 });
 
-// Tutup dropdown saat klik luar
-document.addEventListener("click", function (e) {
-  if (!e.target.closest(".menu-dropdown")) {
-    dropdownContent.style.display = "none";
-  }
-});
+// Dropdown toggle (klik buka-tutup)
+const dropdown = document.querySelector(".menu-dropdown");
+const dropdownContent = document.querySelector(".menu-dropdown-content");
 
-// Toggle dropdown klik (bukan hover)
-dropdownToggle.addEventListener("click", function (e) {
-  e.stopPropagation();
-  dropdownContent.style.display =
-    dropdownContent.style.display === "block" ? "none" : "block";
+if (dropdown && dropdownContent) {
+  dropdown.addEventListener("click", (e) => {
+    e.stopPropagation(); // agar tidak langsung tertutup
+    dropdownContent.classList.toggle("open");
+  });
+
+  // Tutup dropdown jika klik di luar
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdownContent.classList.remove("open");
+    }
+  });
+}
+
+// Fade in body saat loaded
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
 });
