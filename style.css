@@ -87,7 +87,7 @@ header.hero {
   flex-wrap: wrap;
   background: white;
   padding: 12px 10px;
-  margin-top: -40px;
+  margin-top: -50px;
   position: relative;
   z-index: 99;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
