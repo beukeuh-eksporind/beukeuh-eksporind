@@ -125,10 +125,22 @@ header.hero {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: transparent;
-  padding: 0;
+  background-color: white;
+  padding: 8px 0;
   min-width: 160px;
   z-index: 999;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.3s ease;
+}
+
+.menu-dropdown.open .menu-dropdown-content {
+  display: block;
+}
+
+.menu-dropdown .dropdown-trigger {
+  cursor: pointer;
+  user-select: none;
 }
 .menu-dropdown-content a {
   display: block;
@@ -141,9 +153,6 @@ header.hero {
 .menu-dropdown-content a:hover {
   color: #6a7d40;
   background-color: #f0f0f0;
-}
-.menu-dropdown:hover .menu-dropdown-content {
-  display: block;
 }
 
 /* 8. Intro */
