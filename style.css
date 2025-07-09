@@ -80,7 +80,7 @@ header.hero {
 .menu-dropdown {
   background: linear-gradient(135deg, #a8b971, #8c9b5a);
   color: white;
-  padding: 8px 14px;
+  padding: 0;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
