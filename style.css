@@ -115,13 +115,8 @@ a {
 
 /* 4. Dropdown di Sidebar */
 .sidebar-dropdown {
-  position: relative;
-  cursor: pointer;
-}
-.sidebar-dropdown-content {
-  display: none;
+  display: flex;
   flex-direction: column;
-  margin-top: 6px;
 }
 .sidebar-dropdown > a {
   font-weight: bold;
@@ -133,14 +128,23 @@ a {
   display: block;
   transition: background 0.3s;
 }
-
 .sidebar-dropdown > a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
+.sidebar-dropdown-content {
+  display: none;
+  flex-direction: column;
+  margin-top: 6px;
+}
 .sidebar-dropdown-content a {
-  padding-left: 20px;
+  padding: 8px 20px;
   font-size: 14px;
   color: #666;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.sidebar-dropdown-content a:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 .sidebar-dropdown.open .sidebar-dropdown-content {
   display: flex;
