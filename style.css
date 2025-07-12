@@ -206,39 +206,41 @@ footer p {
 }
 
 /* 12. Hamburger Icon */
-.hamburger {
-  display: none;
+  .hamburger {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   position: fixed;
   top: 14px;
   left: 14px;
-  z-index: 9999;
-  background: none;
-  border: none;
+  z-index: 2000;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.bar {
-  width: 24px;
+
+.hamburger .bar {
+  width: 22px;
   height: 3px;
   background-color: #5c6e3a;
   margin: 3px 0;
+  transition: all 0.4s ease;
   border-radius: 2px;
-  transition: all 0.3s;
 }
+
 .hamburger.active .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 5px);
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
 .hamburger.active .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -5px);
 }
-
 /* 13. Responsive */
 @media (max-width: 768px) {
   .hamburger {
