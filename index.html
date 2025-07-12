@@ -7,16 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Hamburger -->
+  <!-- Hamburger Sidebar -->
   <label class="hamburger-menu">
-      <input type="checkbox" id="hamburger-toggle"/>
-    </label>
-  <div class="hamburger" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    <input type="checkbox" id="hamburgerToggle" />
+  </label>
+
+  <!-- Sidebar Menu -->
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <div class="sidebar-dropdown">
+        <span>📦 Produk ▾</span>
+        <div class="sidebar-dropdown-content">
+          <a href="bentonite.html">🧱 Bentonite</a>
+          <a href="zeolite.html">🪨 Zeolite</a>
+          <a href="vanilla-id.html">🌿 Vanilla</a>
+          <a href="clove-id.html">🌸 Cengkeh</a>
+          <a href="coffee-id.html">☕ Kopi</a>
+          <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+          <a href="charcoal-id.html">🔥 Arang</a>
+        </div>
+      </div>
+      <a href="gallery.html">🖼 Gallery</a>
+      <a href="bentonite.html#about">📖 About</a>
+      <a href="bentonite.html#contact">📞 Contact</a>
+    </nav>
+  </aside>
 
   <!-- Language Switch -->
   <div class="lang-switch">
@@ -29,29 +45,6 @@
     <h1>Beukeuh Eksporind</h1>
     <p class="tagline">Natural Mineral Export & Supply</p>
   </header>
-
-  <!-- Menu -->
-  <nav class="menu-grid" id="menu">
-    <a href="index.html">🏠 Home</a>
-
-    <!-- Dropdown Produk (Klik) -->
-    <div class="menu-dropdown" id="produkDropdown">
-      <span class="dropdown-toggle">📦 Produk ▾</span>
-      <div class="menu-dropdown-content">
-        <a href="bentonite.html">🧱 Bentonite</a>
-        <a href="zeolite.html">🪨 Zeolite</a>
-        <a href="vanilla-id.html">🌿 Vanilla</a>
-        <a href="clove-id.html">🌸 Cengkeh</a>
-        <a href="coffee-id.html">☕ Kopi</a>
-        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-        <a href="charcoal-id.html">🔥 Arang</a>
-      </div>
-    </div>
-
-    <a href="gallery.html">🖼 Gallery</a>
-    <a href="bentonite.html#about">📖 About</a>
-    <a href="bentonite.html#contact">📞 Contact</a>
-  </nav>
 
   <!-- Intro -->
   <section class="intro-description container">
@@ -83,9 +76,9 @@
   </footer>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+  <a href="https://wa.me/6281234567890" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
 
-  <!-- JavaScript -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
