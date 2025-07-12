@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", (e) => {
       e.stopPropagation();
       menu.classList.toggle("show");
-      hamburger.classList.toggle("change"); // 🔁 tambahkan ini
+      hamburger.classList.toggle("change"); // Tampilkan X
     });
 
     document.addEventListener("click", (e) => {
       if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
         menu.classList.remove("show");
-        hamburger.classList.remove("change"); // 🔁 tutup X juga
+        hamburger.classList.remove("change"); // Kembalikan ke garis 3
       }
     });
   }
 
-  // Dropdown Produk — klik untuk tampil/simpan
+  // Dropdown Produk (klik)
   const dropdownTrigger = document.querySelector(".menu-dropdown > span");
   const dropdownContent = document.querySelector(".menu-dropdown-content");
 
