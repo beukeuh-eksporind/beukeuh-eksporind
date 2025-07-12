@@ -2,40 +2,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   setTimeout(() => body.classList.add("loaded"), 100);
 
-  // Toggle Sidebar dari checkbox hamburger
-  const hamburgerInput = document.querySelector(".hamburger-menu input");
+  // Sidebar Toggle
+  const hamburger = document.getElementById("hamburger");
   const sidebar = document.querySelector(".sidebar");
 
-  if (hamburgerInput && sidebar) {
-    // Klik di luar sidebar akan menutup jika terbuka
+  if (hamburger && sidebar) {
+    hamburger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      sidebar.classList.toggle("open");
+    });
+
+    // Klik di luar sidebar untuk menutup
     document.addEventListener("click", (e) => {
-      if (
-        hamburgerInput.checked &&
-        !sidebar.contains(e.target) &&
-        !hamburgerInput.parentElement.contains(e.target)
-      ) {
-        hamburgerInput.checked = false;
+      if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+        sidebar.classList.remove("open");
       }
     });
   }
 
-  // Dropdown Produk
-  const dropdown = document.querySelector(".sidebar-dropdown");
-  const dropdownContent = document.querySelector(".sidebar-dropdown-content");
+  // Dropdown Produk (Klik)
+  const dropdownTrigger = document.querySelector(".menu-dropdown > span");
+  const dropdownContent = document.querySelector(".menu-dropdown-content");
 
-  if (dropdown && dropdownContent) {
-    dropdown.addEventListener("click", (e) => {
+  if (dropdownTrigger && dropdownContent) {
+    dropdownTrigger.addEventListener("click", (e) => {
       e.stopPropagation();
-      dropdown.classList.toggle("open");
+      dropdownContent.classList.toggle("open");
     });
 
-    // Tutup dropdown saat klik di luar
     document.addEventListener("click", (e) => {
       if (
-        dropdown.classList.contains("open") &&
-        !dropdown.contains(e.target)
+        !dropdownContent.contains(e.target) &&
+        !dropdownTrigger.contains(e.target)
       ) {
-        dropdown.classList.remove("open");
+        dropdownContent.classList.remove("open");
       }
     });
   }
