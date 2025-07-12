@@ -1,7 +1,7 @@
 /* Beukeuh Eksporind - style.css Final */
 /* Tema: Olive Natural + Sidebar Drawer */
 
-/* 1. Global */
+/* 1. Reset & Global */
 *,
 *::before,
 *::after {
@@ -26,18 +26,19 @@ a {
 
 /* 2. Hamburger Menu */
 :root {
-  --bar-width: 40px;
+  --bar-width: 32px;
   --bar-height: 4px;
   --gap: 6px;
-  --hamburger-margin: 14px;
+  --hamburger-margin: 16px;
   --animation-speed: 300ms ease;
-  --x-width: calc(var(--bar-height) * 3 + var(--gap) * 2);
 }
 
 .hamburger-menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: var(--gap);
+  width: max-content;
   position: fixed;
   top: var(--hamburger-margin);
   left: var(--hamburger-margin);
@@ -50,18 +51,20 @@ a {
   height: var(--bar-height);
   background: #333;
   border-radius: 999px;
-  position: relative;
   transition: all var(--animation-speed);
+  position: relative;
+  z-index: 2;
 }
 .hamburger-menu::before,
 .hamburger-menu::after {
-  content: '';
+  content: "";
   width: var(--bar-width);
   height: var(--bar-height);
   background: #333;
   border-radius: 999px;
-  position: relative;
   transition: all var(--animation-speed);
+  position: relative;
+  z-index: 2;
 }
 .hamburger-menu:has(input:checked)::before {
   transform: rotate(45deg) translate(6px, 6px);
@@ -73,15 +76,15 @@ a {
   opacity: 0;
 }
 
- /* 3. Sidebar */
+/* 3. Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 260px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.8);  /* Transparan putih */
-  backdrop-filter: blur(12px);           /* Efek blur */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
   color: #333;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -90,29 +93,22 @@ a {
   box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
-
-/* Aktifkan sidebar saat diberi class "open" */
 .sidebar.open {
   transform: translateX(0);
 }
-
-/* Navigasi sidebar */
 .sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-
 .sidebar nav a {
   font-weight: bold;
   color: #333;
   font-size: 15px;
   padding: 8px 12px;
   border-radius: 6px;
-  text-decoration: none;
   transition: background 0.3s;
 }
-
 .sidebar nav a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -130,7 +126,7 @@ a {
 .sidebar-dropdown-content a {
   padding-left: 20px;
   font-size: 14px;
-  color: #f0f0f0;
+  color: #666;
 }
 .sidebar-dropdown.open .sidebar-dropdown-content {
   display: flex;
