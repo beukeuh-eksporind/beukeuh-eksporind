@@ -2,25 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   setTimeout(() => body.classList.add("loaded"), 100);
 
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
+  // Hamburger Menu
+  const hamburgerInput = document.querySelector('.hamburger-menu input');
+  const menuGrid = document.getElementById('menu');
 
-  if (hamburger && menu) {
-    hamburger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      menu.classList.toggle("show");
-      hamburger.classList.toggle("change"); // Tampilkan X
+  if (hamburgerInput && menuGrid) {
+    hamburgerInput.addEventListener("change", () => {
+      menuGrid.classList.toggle("show", hamburgerInput.checked);
     });
 
     document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-        menu.classList.remove("show");
-        hamburger.classList.remove("change"); // Kembalikan ke garis 3
+      const isClickInside = menuGrid.contains(e.target) || hamburgerInput.contains(e.target);
+      if (!isClickInside) {
+        menuGrid.classList.remove("show");
+        hamburgerInput.checked = false;
       }
     });
   }
 
-  // Dropdown Produk (klik)
+  // Dropdown Produk
   const dropdownTrigger = document.querySelector(".menu-dropdown > span");
   const dropdownContent = document.querySelector(".menu-dropdown-content");
 
