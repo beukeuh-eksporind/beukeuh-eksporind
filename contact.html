@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kontak | Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="contact.html">🇮🇩 ID</a> | <a href="contact-en.html">🇬🇧 EN</a>
-  </div>
+    <!-- Sidebar Drawer -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
 
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Hubungi Kami</h1>
-    <p class="tagline">Kami siap melayani kebutuhan ekspor Anda</p>
-  </header>
-
-  <!-- Menu -->
-  <nav class="menu-grid" id="menu">
-    <a href="index.html">🏠 Home</a>
-    <div class="menu-dropdown clickable">
-      <span>📦 Produk ▾</span>
-      <div class="menu-dropdown-content">
-        <a href="bentonite.html">🧱 Bentonite</a>
-        <a href="zeolite.html">🪨 Zeolite</a>
-        <a href="vanilla-id.html">🌿 Vanilla</a>
-        <a href="clove-id.html">🌸 Cengkeh</a>
-        <a href="coffee-id.html">☕ Kopi</a>
-        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-        <a href="charcoal-id.html">🔥 Arang</a>
-      </div>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="contact.html">🇮🇩 ID</a> | <a href="contact-en.html">🇬🇧 EN</a>
     </div>
-    <a href="gallery.html">🖼 Gallery</a>
-    <a href="bentonite.html#about">📖 About</a>
-    <a href="contact.html">📞 Contact</a>
-  </nav>
 
-  <!-- Kontak -->
-  <section class="section container">
-    <h2>Alamat & Kontak</h2>
-    <p>
-      📍 <strong>Alamat:</strong> Daan Mogot KM 19, Tangerang, Banten  
-      <br>
-      📞 <strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">0812-8254-1982</a>
-      <br>
-      ✉️ <strong>Email:</strong> <a href="mailto:info@beukeuh.com">info@beukeuh.com</a>
-    </p>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
+      <h1>Hubungi Kami</h1>
+      <p class="tagline">Kami siap melayani kebutuhan ekspor mineral Anda</p>
+    </header>
 
-    <h2>Formulir Cepat</h2>
-    <p>Anda bisa langsung menghubungi kami via WhatsApp:</p>
-    <a href="https://wa.me/6281282541982?text=Halo%20Beukeuh%20Eksporind%2C%20saya%20tertarik%20dengan%20produk%20Anda." class="btn-primary" target="_blank">Hubungi via WhatsApp</a>
-  </section>
+    <!-- Konten Kontak -->
+    <section class="section container intro-description">
+      <p>
+        Silakan hubungi kami untuk penawaran harga, permintaan sampel, atau informasi lebih lanjut tentang produk dan layanan ekspor kami.
+      </p>
+      <ul style="line-height: 1.8;">
+        <li><strong>Email:</strong> beukeuh.eksporind@gmail.com</li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281282541982" target="_blank">+62 812 8254 1982</a></li>
+        <li><strong>Alamat:</strong> Kabupaten Garut, Jawa Barat, Indonesia</li>
+      </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
+    <!-- Call to Action -->
+    <section class="section container">
+      <h2>💬 Chat Langsung Sekarang</h2>
+      <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">Hubungi via WhatsApp</a>
+    </section>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
