@@ -90,6 +90,9 @@ a {
   box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
+.sidebar.open{
+  transform: translateX(0);
+}
 }
 .hamburger-menu:has(input:checked) + .sidebar {
   transform: translateX(0);
