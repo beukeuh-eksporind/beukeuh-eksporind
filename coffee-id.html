@@ -1,82 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kopi - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kopi - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="coffee-id.html">🇮🇩 ID</a> | <a href="coffee-en.html">🇬🇧 EN</a>
-  </div>
+    <!-- Sidebar Drawer -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
 
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Kopi</h1>
-    <p class="tagline">Ekspor Kopi Arabika & Robusta Premium</p>
-  </header>
-
-  <!-- Menu -->
-  <nav class="menu-grid" id="menu">
-    <a href="index.html">🏠 Home</a>
-    <div class="menu-dropdown" id="productDropdown">
-      <span class="menu-toggle">📦 Produk ▾</span>
-      <div class="menu-dropdown-content" id="productMenu">
-        <a href="bentonite.html">🧱 Bentonite</a>
-        <a href="zeolite.html">🪨 Zeolite</a>
-        <a href="vanilla-id.html">🌿 Vanilla</a>
-        <a href="clove-id.html">🌸 Cengkeh</a>
-        <a href="coffee-id.html">☕ Kopi</a>
-        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-        <a href="charcoal-id.html">🔥 Arang</a>
-      </div>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="coffee-id.html">🇮🇩 ID</a> | <a href="coffee-en.html">🇬🇧 EN</a>
     </div>
-    <a href="gallery.html">🖼 Gallery</a>
-    <a href="bentonite.html#about">📖 About</a>
-    <a href="bentonite.html#contact">📞 Contact</a>
-  </nav>
 
-  <!-- Konten Deskripsi -->
-  <section class="section container">
-    <h2>Kopi Indonesia Berkualitas</h2>
-    <p>
-      Indonesia dikenal sebagai salah satu produsen kopi terbaik di dunia. Beukeuh Eksporind menghadirkan kopi pilihan dari berbagai daerah penghasil utama seperti Sumatera, Jawa, dan Sulawesi.
-    </p>
-    <p>
-      Kami menyediakan kopi Arabika dan Robusta dengan kualitas ekspor, melalui proses pemetikan selektif, pengeringan alami, dan pengemasan higienis sesuai standar internasional. Baik untuk kebutuhan industri, kedai kopi, maupun pemanggang kopi global.
-    </p>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Kopi</h1>
+      <p class="tagline">Kopi Premium dari Indonesia untuk Pasar Ekspor</p>
+    </header>
 
-    <h3>Spesifikasi Produk</h3>
-    <ul>
-      <li>Jenis: Arabika / Robusta</li>
-      <li>Bentuk: Green Bean / Roasted</li>
-      <li>Asal: Sumatera, Toraja, Jawa, Flores</li>
-      <li>Kadar air: ≤ 12%</li>
-      <li>Kemasan: 60 kg goni / vacuum pack</li>
-    </ul>
+    <!-- Product Description -->
+    <section class="intro-description container">
+      <p>
+        Indonesia dikenal sebagai penghasil kopi berkualitas tinggi dengan aroma khas dan rasa yang mendalam. Kami menghadirkan biji kopi pilihan dari daerah penghasil terbaik.
+      </p>
+      <p>
+        Beukeuh Eksporind menyediakan biji kopi ekspor dalam bentuk roasted maupun green bean dengan standar kualitas internasional.
+      </p>
+    </section>
 
-    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">📦 Tanya Harga & Pengiriman</a>
-  </section>
+    <!-- Call to Action -->
+    <section class="section container">
+      <h2>Tertarik Memesan atau Bertanya Harga?</h2>
+      <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat WhatsApp Sekarang</a>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
 
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
