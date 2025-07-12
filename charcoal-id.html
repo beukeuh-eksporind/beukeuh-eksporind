@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arang - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arang - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    <!-- Sidebar Drawer -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="charcoal-id.html">🇮🇩ID</a> | <a href="charcoal-en.html">🇬🇧EN</a>
-  </div>
-
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Arang</h1>
-    <p class="tagline">Sumber Energi Alami dari Indonesia</p>
-  </header>
-
-  <!-- Menu -->
-  <nav class="menu-grid" id="menu">
-    <a href="index.html">🏠 Home</a>
-
-    <div class="menu-dropdown clickable">
-      <span>📦 Produk ▾</span>
-      <div class="menu-dropdown-content">
-        <a href="bentonite.html">🧱 Bentonite</a>
-        <a href="zeolite.html">🪨 Zeolite</a>
-        <a href="vanilla-id.html">🌿 Vanilla</a>
-        <a href="clove-id.html">🌸 Cengkeh</a>
-        <a href="coffee-id.html">☕ Kopi</a>
-        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-        <a href="charcoal-id.html">🔥 Arang</a>
-      </div>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="charcoal-id.html">🇮🇩 ID</a> | <a href="charcoal-en.html">🇬🇧 EN</a>
     </div>
 
-    <a href="gallery.html">🖼 Galeri</a>
-    <a href="bentonite.html#about">📖 Tentang</a>
-    <a href="bentonite.html#contact">📞 Kontak</a>
-  </nav>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Arang</h1>
+      <p class="tagline">Ekspor Arang Ramah Lingkungan dari Indonesia</p>
+    </header>
 
-  <!-- Deskripsi Produk -->
-  <section class="intro-description container">
-    <p>
-      Arang Indonesia dari sumber alami seperti tempurung kelapa dan kayu keras kami ekspor dengan kualitas premium. Produk ini cocok untuk kebutuhan BBQ, shisha, industri baja, dan filtrasi karbon aktif.
-    </p>
-  </section>
+    <!-- Product Description -->
+    <section class="intro-description container">
+      <p>
+        Arang kami dibuat dari kayu alami berkualitas tinggi dan diproses dengan emisi rendah tanpa bahan kimia tambahan. Arang ini membakar bersih dan tahan lama, cocok untuk keperluan memasak, BBQ, dan industri.
+      </p>
+      <p>
+        Beukeuh Eksporind menyediakan arang ekspor jenis lump dan briket yang memenuhi standar internasional.
+      </p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
+    <!-- Call to Action -->
+    <section class="section container">
+      <h2>Ingin Mengajukan Penawaran atau Pemesanan?</h2>
+      <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat via WhatsApp Sekarang</a>
+    </section>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
 
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
