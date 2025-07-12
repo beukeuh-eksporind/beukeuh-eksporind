@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="loaded">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="thank-you.html">🇮🇩 ID</a> | <a href="thank-you-en.html">🇬🇧 EN</a>
-  </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index-en.html">🏠 Home</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Products ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite-en.html">🧱 Bentonite</a>
+            <a href="zeolite-en.html">🪨 Zeolite</a>
+            <a href="vanilla-en.html">🌿 Vanilla</a>
+            <a href="clove-en.html">🌸 Clove</a>
+            <a href="coffee-en.html">☕ Coffee</a>
+            <a href="cinnamon-en.html">🌰 Cinnamon</a>
+            <a href="charcoal-en.html">🔥 Charcoal</a>
+          </div>
+        </div>
+        <a href="gallery-en.html">🖼 Gallery</a>
+        <a href="about-en.html">📖 About</a>
+        <a href="contact-en.html">📞 Contact</a>
+      </nav>
+    </aside>
 
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Thank You 🙏</h1>
-    <p class="tagline">Your message has been successfully sent</p>
-  </header>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="thank-you.html">🇮🇩 ID</a> | <a href="thank-you-en.html">🇬🇧 EN</a>
+    </div>
 
-  <!-- Content -->
-  <section class="section container">
-    <p>
-      Thank you for contacting <strong>Beukeuh Eksporind</strong>. Our team will review your message and get back to you shortly.
-    </p>
-    <p>
-      Meanwhile, feel free to explore our <a href="gallery-en.html" class="btn-primary">product gallery</a> or return to the <a href="index-en.html" class="btn-primary">homepage</a>.
-    </p>
-  </section>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Thank You!</h1>
+      <p class="tagline">Your message has been successfully sent</p>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
+    <!-- Thank You Message -->
+    <section class="section container intro-description">
+      <p>
+        Thank you for reaching out to Beukeuh Eksporind. We will respond to your message as soon as possible via email or WhatsApp.
+      </p>
+      <p>
+        For faster communication, please contact us directly via WhatsApp:
+      </p>
+      <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat on WhatsApp</a>
+    </section>
 
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
