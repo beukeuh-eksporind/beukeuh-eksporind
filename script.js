@@ -4,38 +4,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const hamburgerInput = document.querySelector(".hamburger-menu input");
   const sidebar = document.querySelector(".sidebar");
+  const dropdown = document.querySelector(".sidebar-dropdown");
 
-  // Toggle sidebar saat hamburger di-check
+  // Toggle sidebar saat hamburger diklik
   if (hamburgerInput && sidebar) {
     hamburgerInput.addEventListener("change", () => {
       sidebar.classList.toggle("open", hamburgerInput.checked);
     });
+  }
 
-    // Klik di luar sidebar untuk menutup
-    document.addEventListener("click", (e) => {
-      const isClickInsideSidebar = sidebar.contains(e.target);
-      const isClickHamburger = hamburgerInput.contains(e.target);
+  // Toggle dropdown menu "Produk"
+  if (dropdown) {
+    const toggleLink = dropdown.querySelector(".dropdown-toggle");
 
-      if (!isClickInsideSidebar && !isClickHamburger) {
-        sidebar.classList.remove("open");
-        hamburgerInput.checked = false;
-      }
+    toggleLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation(); // Hindari nutup dari event global
+      dropdown.classList.toggle("open");
     });
   }
 
-  // Dropdown sidebar untuk menu Produk
-  const dropdownTrigger = document.querySelector(".sidebar-dropdown");
-  if (dropdownTrigger) {
-    dropdownTrigger.addEventListener("click", (e) => {
-      e.stopPropagation();
-      dropdownTrigger.classList.toggle("open");
-    });
+  // Tutup semua jika klik di luar
+  document.addEventListener("click", (e) => {
+    const clickInsideSidebar = sidebar.contains(e.target);
+    const clickHamburger = hamburgerInput.contains(e.target);
+    const clickDropdown = dropdown && dropdown.contains(e.target);
 
-    // Klik di luar untuk menutup dropdown
-    document.addEventListener("click", (e) => {
-      if (!dropdownTrigger.contains(e.target)) {
-        dropdownTrigger.classList.remove("open");
-      }
-    });
-  }
+    if (!clickInsideSidebar && !clickHamburger) {
+      sidebar.classList.remove("open");
+      hamburgerInput.checked = false;
+    }
+
+    if (!clickDropdown) {
+      dropdown?.classList.remove("open");
+    }
+  });
 });
