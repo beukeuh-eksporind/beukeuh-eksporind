@@ -2,40 +2,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   setTimeout(() => body.classList.add("loaded"), 100);
 
-  // Hamburger Menu
-  const hamburgerInput = document.querySelector('.hamburger-menu input');
-  const menuGrid = document.getElementById('menu');
+  // Toggle Sidebar dari checkbox hamburger
+  const hamburgerInput = document.querySelector(".hamburger-menu input");
+  const sidebar = document.querySelector(".sidebar");
 
-  if (hamburgerInput && menuGrid) {
-    hamburgerInput.addEventListener("change", () => {
-      menuGrid.classList.toggle("show", hamburgerInput.checked);
-    });
-
+  if (hamburgerInput && sidebar) {
+    // Klik di luar sidebar akan menutup jika terbuka
     document.addEventListener("click", (e) => {
-      const isClickInside = menuGrid.contains(e.target) || hamburgerInput.contains(e.target);
-      if (!isClickInside) {
-        menuGrid.classList.remove("show");
+      if (
+        hamburgerInput.checked &&
+        !sidebar.contains(e.target) &&
+        !hamburgerInput.parentElement.contains(e.target)
+      ) {
         hamburgerInput.checked = false;
       }
     });
   }
 
   // Dropdown Produk
-  const dropdownTrigger = document.querySelector(".menu-dropdown > span");
-  const dropdownContent = document.querySelector(".menu-dropdown-content");
+  const dropdown = document.querySelector(".sidebar-dropdown");
+  const dropdownContent = document.querySelector(".sidebar-dropdown-content");
 
-  if (dropdownTrigger && dropdownContent) {
-    dropdownTrigger.addEventListener("click", (e) => {
+  if (dropdown && dropdownContent) {
+    dropdown.addEventListener("click", (e) => {
       e.stopPropagation();
-      dropdownContent.classList.toggle("open");
+      dropdown.classList.toggle("open");
     });
 
+    // Tutup dropdown saat klik di luar
     document.addEventListener("click", (e) => {
       if (
-        !dropdownContent.contains(e.target) &&
-        !dropdownTrigger.contains(e.target)
+        dropdown.classList.contains("open") &&
+        !dropdown.contains(e.target)
       ) {
-        dropdownContent.classList.remove("open");
+        dropdown.classList.remove("open");
       }
     });
   }
