@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.addEventListener("click", (e) => {
       e.stopPropagation();
       menu.classList.toggle("show");
+      hamburger.classList.toggle("change"); // 🔁 tambahkan ini
     });
 
     document.addEventListener("click", (e) => {
       if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
         menu.classList.remove("show");
+        hamburger.classList.remove("change"); // 🔁 tutup X juga
       }
     });
   }
