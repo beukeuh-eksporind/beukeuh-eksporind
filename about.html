@@ -1,83 +1,73 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang Kami - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Hamburger -->
-  <div class="hamburger" id="hamburger">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    <!-- Sidebar Drawer -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="about.html">🇮🇩ID</a> | <a href="about-en.html">🇬🇧EN</a>
-  </div>
-
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-    <h1>Tentang Kami</h1>
-    <p class="tagline">Eksplorasi Potensi Alam Indonesia</p>
-  </header>
-
-  <!-- Menu -->
-  <nav class="menu-grid" id="menu">
-    <a href="index.html">🏠 Beranda</a>
-
-    <div class="menu-dropdown clickable">
-      <span>📦 Produk ▾</span>
-      <div class="menu-dropdown-content">
-        <a href="bentonite.html">🧱 Bentonite</a>
-        <a href="zeolite.html">🪨 Zeolite</a>
-        <a href="vanilla-id.html">🌿 Vanilla</a>
-        <a href="clove-id.html">🌸 Cengkeh</a>
-        <a href="coffee-id.html">☕ Kopi</a>
-        <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-        <a href="charcoal-id.html">🔥 Arang</a>
-      </div>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="about.html">🇮🇩 ID</a> | <a href="about-en.html">🇬🇧 EN</a>
     </div>
 
-    <a href="gallery.html">🖼 Galeri</a>
-    <a href="about.html">📖 Tentang</a>
-    <a href="contact.html">📞 Kontak</a>
-  </nav>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Tentang Kami</h1>
+      <p class="tagline">Eksportir Mineral Alami dari Indonesia ke Dunia</p>
+    </header>
 
-  <!-- Konten Tentang -->
-  <section class="section container">
-    <h2>Visi & Misi</h2>
-    <p>
-      Beukeuh Eksporind hadir untuk menjadi jembatan antara potensi sumber daya alam Indonesia dengan pasar global. Kami bergerak dalam bidang ekspor mineral alami dan hasil bumi dengan komitmen terhadap keberlanjutan dan kualitas.
-    </p>
+    <!-- Tentang Kami -->
+    <section class="section container intro-description">
+      <p>
+        Beukeuh Eksporind adalah perusahaan yang bergerak dalam bidang ekspor berbagai mineral alami berkualitas seperti bentonite, zeolite, dan produk pertanian dari Indonesia ke pasar internasional. Kami berkomitmen menjaga kualitas produk, ketepatan pengiriman, dan prinsip keberlanjutan lingkungan.
+      </p>
+      <p>
+        Dengan jaringan petani, penambang, dan mitra logistik yang luas, kami mampu menyediakan produk dengan spesifikasi sesuai kebutuhan industri, baik dalam bentuk curah maupun kemasan ekspor.
+      </p>
+      <p>
+        Kami percaya bahwa potensi sumber daya alam Indonesia dapat menjadi solusi bagi berbagai sektor industri global, mulai dari pertanian organik, pengolahan air, hingga manufaktur modern.
+      </p>
+    </section>
 
-    <h3>Visi:</h3>
-    <p>
-      Menjadi perusahaan ekspor terpercaya yang memperkenalkan kekayaan alam Indonesia ke dunia.
-    </p>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
 
-    <h3>Misi:</h3>
-    <ul>
-      <li>Menjalin kemitraan jangka panjang dengan petani dan produsen lokal.</li>
-      <li>Mengutamakan kualitas dan standar internasional dalam setiap pengiriman.</li>
-      <li>Berkomitmen pada praktik bisnis berkelanjutan dan ramah lingkungan.</li>
-    </ul>
-  </section>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
