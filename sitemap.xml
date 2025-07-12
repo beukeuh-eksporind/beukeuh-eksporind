@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Beranda -->
+  <url>
+    <loc>https://beukeuh.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://beukeuh.com/index.html"/>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Produk -->
+  <url>
+    <loc>https://beukeuh.com/bentonite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/bentonite-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/zeolite.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/zeolite-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/vanilla-id.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/vanilla-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/clove-id.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/clove-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/coffee-id.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/coffee-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/cinnamon-id.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/cinnamon-en.html"/>
+  </url>
+  <url>
+    <loc>https://beukeuh.com/charcoal-id.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/charcoal-en.html"/>
+  </url>
+
+  <!-- Galeri -->
+  <url>
+    <loc>https://beukeuh.com/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/gallery-en.html"/>
+  </url>
+
+  <!-- Tentang Kami -->
+  <url>
+    <loc>https://beukeuh.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/about-en.html"/>
+  </url>
+
+  <!-- Kontak -->
+  <url>
+    <loc>https://beukeuh.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/contact-en.html"/>
+  </url>
+
+  <!-- Terima Kasih -->
+  <url>
+    <loc>https://beukeuh.com/thank-you.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beukeuh.com/thank-you-en.html"/>
+  </url>
+
+</urlset>
