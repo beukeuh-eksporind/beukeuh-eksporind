@@ -73,15 +73,15 @@ a {
   opacity: 0;
 }
 
-/* 3. Sidebar */
+ /* 3. Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 260px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.8); /* transparan putih */
-  backdrop-filter: blur(12px);         /* efek blur */
+  background: rgba(255, 255, 255, 0.8);  /* Transparan putih */
+  backdrop-filter: blur(12px);           /* Efek blur */
   color: #333;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -90,28 +90,31 @@ a {
   box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
-.sidebar.open{
+
+/* Aktifkan sidebar saat diberi class "open" */
+.sidebar.open {
   transform: translateX(0);
 }
-}
-.hamburger-menu:has(input:checked) + .sidebar {
-  transform: translateX(0);
-}
+
+/* Navigasi sidebar */
 .sidebar nav {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .sidebar nav a {
   font-weight: bold;
-  color: white;
+  color: #333;
   font-size: 15px;
   padding: 8px 12px;
   border-radius: 6px;
+  text-decoration: none;
   transition: background 0.3s;
 }
+
 .sidebar nav a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* 4. Dropdown di Sidebar */
