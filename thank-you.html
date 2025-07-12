@@ -1,39 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You - Beukeuh Eksporind</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="loaded">
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terima Kasih - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="thank-you.html">🇮🇩 ID</a> | <a href="thank-you-en.html">🇬🇧 EN</a>
-  </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
 
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Thank You 🙏</h1>
-    <p class="tagline">Your message has been successfully sent</p>
-  </header>
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="thank-you.html">🇮🇩 ID</a> | <a href="thank-you-en.html">🇬🇧 EN</a>
+    </div>
 
-  <!-- Content -->
-  <section class="section container">
-    <p>
-      Thank you for contacting <strong>Beukeuh Eksporind</strong>. Our team will review your message and get back to you shortly.
-    </p>
-    <p>
-      Meanwhile, feel free to explore our <a href="gallery-en.html" class="btn-primary">product gallery</a> or return to the <a href="index-en.html" class="btn-primary">homepage</a>.
-    </p>
-  </section>
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Terima Kasih!</h1>
+      <p class="tagline">Pesan Anda telah berhasil dikirim</p>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
+    <!-- Thank You Message -->
+    <section class="section container intro-description">
+      <p>
+        Terima kasih telah menghubungi Beukeuh Eksporind. Kami akan menanggapi pesan Anda secepatnya melalui email atau WhatsApp.
+      </p>
+      <p>
+        Untuk respon lebih cepat, silakan hubungi kami langsung melalui WhatsApp:
+      </p>
+      <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat Sekarang</a>
+    </section>
 
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
