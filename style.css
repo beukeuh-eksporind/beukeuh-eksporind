@@ -37,49 +37,73 @@ a {
   --hamburger-margin: 16px;
   --animation-speed: 300ms ease;
 }
-
 .hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--gap);
-  width: max-content;
   position: fixed;
-  top: var(--hamburger-margin);
-  left: var(--hamburger-margin);
-  z-index: 1001;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  z-index: 1001;
 }
+
 .hamburger-menu input {
   appearance: none;
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background: #333;
-  border-radius: 999px;
-  transition: all var(--animation-speed);
-  position: relative;
-  z-index: 2;
-}
-.hamburger-menu::before,
-.hamburger-menu::after {
-  content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background: #333;
-  border-radius: 999px;
-  transition: all var(--animation-speed);
-  position: relative;
-  z-index: 2;
-}
-.hamburger-menu:has(input:checked)::before {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-.hamburger-menu:has(input:checked)::after {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-.hamburger-menu:has(input:checked) input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 3;
   opacity: 0;
 }
+
+/* Bar Styles */
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: transform 0.4s ease, top 0.4s ease, opacity 0.4s ease;
+}
+
+/* Garis Tengah */
+.hamburger-menu input::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Garis Atas */
+.hamburger-menu::before {
+  top: 8px;
+}
+
+/* Garis Bawah */
+.hamburger-menu::after {
+  top: 20px;
+}
+
+/* Saat Aktif (Checked) */
+.hamburger-menu:has(input:checked)::before {
+  transform: rotate(45deg);
+  top: 14px;
+}
+
+.hamburger-menu:has(input:checked)::after {
+  transform: rotate(-45deg);
+  top: 14px;
+}
+
+.hamburger-menu:has(input:checked) input::before {
+  opacity: 0;
+}
+
 
 /* 3. Sidebar */
 .sidebar {
