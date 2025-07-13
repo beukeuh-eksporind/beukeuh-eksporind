@@ -52,3 +52,41 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1
 });
 fadeIns.forEach(el => observer.observe(el));
+// Statistik Counter Scroll
+const counters = document.querySelectorAll(".stat-number");
+let counterAnimated = false;
+
+function animateCounters() {
+  if (counterAnimated) return;
+
+  counters.forEach(counter => {
+    const target = +counter.dataset.target;
+    let current = 0;
+    const increment = target / 60;
+
+    const update = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = Math.floor(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target;
+      }
+    };
+    update();
+  });
+
+  counterAnimated = true;
+}
+
+function checkStatsInView() {
+  const statsSection = document.querySelector(".stats");
+  if (!statsSection) return;
+  const rect = statsSection.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    animateCounters();
+  }
+}
+
+window.addEventListener("scroll", checkStatsInView);
+window.addEventListener("load", checkStatsInView);
