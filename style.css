@@ -306,25 +306,41 @@ header.hero {
   padding: 0 10px 12px;
   color: #444;
 }
+/* GALERI */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
-  margin-top: 30px;
+  padding: 20px;
 }
 
-.gallery-grid img {
+.gallery-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-card img {
   width: 100%;
-  height: 150px;
-  object-fit: contain; /* atau 'contain' jika ingin tidak terpotong */
-  border-radius: 10px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  height: auto;
+  aspect-ratio: 4/3; /* Biar semua gambar proporsional */
+  object-fit: cover;
+  display: block;
 }
 
-.gallery-grid img:hover {
-  transform: translateY(-6px);
+.gallery-card p {
+  padding: 12px 8px;
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
 }
 /* 9. Footer */
 footer {
