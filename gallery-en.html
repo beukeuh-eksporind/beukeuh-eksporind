@@ -6,6 +6,30 @@
   <title>Gallery | Beukeuh Eksporind</title>
   <meta name="description" content="Explore product photos and packaging from Beukeuh Eksporind. High-quality export commodities like bentonite, zeolite, clove, and more.">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-grid a {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid a:hover {
+      transform: scale(1.03);
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <!-- Hamburger -->
@@ -47,27 +71,27 @@
     <p class="tagline">Our Product Showcase</p>
   </header>
 
-  <!-- Gallery Section -->
+  <!-- Gallery -->
   <section class="section container">
     <h2>Product Photos</h2>
-    <div class="grid">
+    <div class="gallery-grid">
       <a href="bentonite-detail-en.html">
-        <img src="images/bentonite.jpg" alt="Bentonite" style="width:100%; border-radius:12px;" />
+        <img src="images/bentonite.jpg" alt="Bentonite">
       </a>
       <a href="zeolite-en.html">
-        <img src="images/zeolite.jpg" alt="Zeolite" style="width:100%; border-radius:12px;" />
+        <img src="images/zeolite.jpg" alt="Zeolite">
       </a>
       <a href="clove-en.html">
-        <img src="images/clove.jpg" alt="Clove" style="width:100%; border-radius:12px;" />
+        <img src="images/clove.jpg" alt="Clove">
       </a>
       <a href="vanilla-en.html">
-        <img src="images/vanilla.jpg" alt="Vanilla" style="width:100%; border-radius:12px;" />
+        <img src="images/vanilla.jpg" alt="Vanilla">
       </a>
       <a href="coffee-en.html">
-        <img src="images/coffee.jpg" alt="Coffee" style="width:100%; border-radius:12px;" />
+        <img src="images/coffee.jpg" alt="Coffee">
       </a>
       <a href="charcoal-en.html">
-        <img src="images/charcoal.jpg" alt="Charcoal" style="width:100%; border-radius:12px;" />
+        <img src="images/charcoal.jpg" alt="Charcoal">
       </a>
     </div>
   </section>
