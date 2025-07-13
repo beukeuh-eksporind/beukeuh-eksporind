@@ -2,50 +2,115 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bentonite - Detail Produk | Beukeuh Eksporind</title>
+  <meta name="description" content="Detail produk bentonite ekspor dari Indonesia. Informasi lengkap tentang kualitas, kemasan, dan spesifikasi teknis bentonite.">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .product-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .product-info {
+      max-width: 800px;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .product-info h2 {
+      margin-top: 0;
+      color: #5c6e3a;
+    }
+    .info-list {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .info-list li {
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
 <body>
+  <!-- Hamburger -->
+  <label class="hamburger-menu">
+    <input type="checkbox" id="menu-toggle" />
+  </label>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html">🏠 Beranda</a>
+      <div class="sidebar-dropdown">
+        <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+        <div class="sidebar-dropdown-content">
+          <a href="bentonite.html">🧱 Bentonite</a>
+          <a href="zeolite.html">🪨 Zeolite</a>
+          <a href="vanilla-id.html">🌿 Vanilla</a>
+          <a href="clove-id.html">🌸 Cengkeh</a>
+          <a href="coffee-id.html">☕ Kopi</a>
+          <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+          <a href="charcoal-id.html">🔥 Arang</a>
+        </div>
+      </div>
+      <a href="gallery.html">🖼 Galeri</a>
+      <a href="about.html">📖 Tentang Kami</a>
+      <a href="contact.html">📞 Kontak</a>
+    </nav>
+  </aside>
+
+  <!-- Language Switch -->
+  <div class="lang-switch">
+    <a href="bentonite-detail.html">🇮🇩 ID</a> | <a href="bentonite-detail-en.html">🇬🇧 EN</a>
+  </div>
 
   <!-- Header -->
   <header class="hero">
     <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
     <h1>Detail Produk: Bentonite</h1>
-    <p class="tagline">Informasi lengkap produk bentonite kami</p>
+    <p class="tagline">Informasi Lengkap untuk Mitra Global</p>
   </header>
 
-  <!-- Konten Utama -->
+  <!-- Konten Detail -->
   <section class="section container">
-    <div class="grid">
-      <div>
-        <img src="images/bentonite-packaging.jpg" alt="Bentonite Packaging" style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);" />
-      </div>
-      <div>
-        <h2>Spesifikasi Produk</h2>
-        <ul style="line-height: 1.8;">
-          <li><strong>Jenis:</strong> Natural Bentonite</li>
-          <li><strong>Warna:</strong> Abu terang / coklat muda</li>
-          <li><strong>Bentuk:</strong> Powder & Granular</li>
-          <li><strong>Kelembaban Maks:</strong> ≤ 13%</li>
-          <li><strong>Kadar Montmorillonite:</strong> ≥ 75%</li>
+    <div class="product-detail">
+      <img src="images/bentonite-packaging.jpg" alt="Kemasan Bentonite">
+      <div class="product-info">
+        <h2>Bentonite Indonesia</h2>
+        <p>
+          Bentonite adalah mineral lempung alami dengan daya serap tinggi dan kemampuan membengkak yang luar biasa. Kami menyediakan bentonite kualitas ekspor untuk kebutuhan industri pengecoran logam, pengeboran, pengolahan air, pertanian, dan lainnya.
+        </p>
+
+        <ul class="info-list">
+          <li>📦 Kemasan: 25kg bag, 50kg bag, jumbo bag</li>
+          <li>🚢 Tonase pengiriman: hingga 25 ton/kontainer</li>
+          <li>🧪 Kualitas: Montmorillonite ≥ 75%</li>
+          <li>📍 Asal: Jawa Barat, Indonesia</li>
+          <li>📑 Sertifikasi: MSDS & COA tersedia</li>
         </ul>
 
-        <h3 style="margin-top:20px;">Detail Kemasan</h3>
-        <ul style="line-height: 1.8;">
-          <li><strong>Packing:</strong> 50 kg/sak atau jumbo bag 1 ton</li>
-          <li><strong>MOQ:</strong> 1 Kontainer 20 feet (±25 ton)</li>
-          <li><strong>Waktu Pengiriman:</strong> ±14 hari setelah PO</li>
-        </ul>
-
-        <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Tanya via WhatsApp</a>
+        <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Tanya & Order via WhatsApp</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
