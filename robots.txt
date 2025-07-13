@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /draft/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /test/
+Sitemap: https://beukeuh.com/sitemap.xml
