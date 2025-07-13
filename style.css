@@ -397,3 +397,41 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Spacing antar section utama - default untuk mobile */
+.section + .section {
+  margin-top: 40px;
+}
+
+.section.products {
+  margin-bottom: 30px;
+}
+
+.section.stats {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.section.cta {
+  margin-top: 40px;
+}
+
+/* RESPONSIVE SPACING UNTUK DESKTOP */
+@media (min-width: 768px) {
+  .section + .section {
+    margin-top: 80px;
+  }
+
+  .section.products {
+    margin-bottom: 50px;
+  }
+
+  .section.stats {
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .section.cta {
+    margin-top: 60px;
+  }
+}
