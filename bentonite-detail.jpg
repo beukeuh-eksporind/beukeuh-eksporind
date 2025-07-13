@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bentonite - Detail Produk | Beukeuh Eksporind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hero">
+    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+    <h1>Detail Produk: Bentonite</h1>
+    <p class="tagline">Informasi lengkap produk bentonite kami</p>
+  </header>
+
+  <!-- Konten Utama -->
+  <section class="section container">
+    <div class="grid">
+      <div>
+        <img src="images/bentonite-packaging.jpg" alt="Bentonite Packaging" style="width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);" />
+      </div>
+      <div>
+        <h2>Spesifikasi Produk</h2>
+        <ul style="line-height: 1.8;">
+          <li><strong>Jenis:</strong> Natural Bentonite</li>
+          <li><strong>Warna:</strong> Abu terang / coklat muda</li>
+          <li><strong>Bentuk:</strong> Powder & Granular</li>
+          <li><strong>Kelembaban Maks:</strong> ≤ 13%</li>
+          <li><strong>Kadar Montmorillonite:</strong> ≥ 75%</li>
+        </ul>
+
+        <h3 style="margin-top:20px;">Detail Kemasan</h3>
+        <ul style="line-height: 1.8;">
+          <li><strong>Packing:</strong> 50 kg/sak atau jumbo bag 1 ton</li>
+          <li><strong>MOQ:</strong> 1 Kontainer 20 feet (±25 ton)</li>
+          <li><strong>Waktu Pengiriman:</strong> ±14 hari setelah PO</li>
+        </ul>
+
+        <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Tanya via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>
+</body>
+</html>
