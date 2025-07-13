@@ -275,6 +275,25 @@ header.hero {
   padding: 0 10px 12px;
   color: #444;
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* atau 'contain' jika ingin tidak terpotong */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
 /* 9. Footer */
 footer {
   background: #f1f4e5;
