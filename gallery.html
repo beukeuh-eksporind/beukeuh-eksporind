@@ -4,40 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galeri Produk - Beukeuh Eksporind</title>
-  <meta name="description" content="Lihat koleksi produk ekspor Beukeuh Eksporind: bentonite, zeolite, cengkeh, dan lainnya.">
+  <meta name="description" content="Galeri produk ekspor Beukeuh Eksporind termasuk bentonite, zeolite, cengkeh, dan lainnya dalam kualitas ekspor.">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .gallery-item {
-      text-align: center;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery-item img:hover {
-      transform: scale(1.03);
-    }
-    .gallery-item p {
-      margin-top: 8px;
-      font-weight: bold;
-      color: #5c6e3a;
-    }
-  </style>
 </head>
 <body>
-  <!-- Hamburger Menu -->
+  <!-- Hamburger -->
   <label class="hamburger-menu">
-    <input type="checkbox" id="menu-toggle" />
+    <input type="checkbox" id="hamburger-toggle" />
   </label>
 
   <!-- Sidebar -->
@@ -71,48 +44,32 @@
   <header class="hero">
     <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
     <h1>Galeri Produk</h1>
-    <p class="tagline">Eksplorasi visual produk ekspor unggulan kami</p>
+    <p class="tagline">Menampilkan kualitas bahan baku ekspor kami</p>
   </header>
 
   <!-- Galeri -->
   <section class="section container">
+    <h2>Galeri Produk</h2>
     <div class="gallery-grid">
-      <div class="gallery-item">
+      <div class="gallery-card">
         <a href="bentonite-detail.html">
-          <img src="images/bentonite.jpg" alt="Bentonite">
+          <img src="images/bentonite.jpg" alt="Bentonite" />
         </a>
         <p>Bentonite</p>
       </div>
-      <div class="gallery-item">
-        <a href="zeolite.html">
-          <img src="images/zeolite.jpg" alt="Zeolite">
+      <div class="gallery-card">
+        <a href="zeolite-detail.html">
+          <img src="images/zeolite.jpg" alt="Zeolite" />
         </a>
         <p>Zeolite</p>
       </div>
-      <div class="gallery-item">
-        <a href="clove-id.html">
-          <img src="images/clove.jpg" alt="Cengkeh">
+      <div class="gallery-card">
+        <a href="clove-detail.html">
+          <img src="images/clove.jpg" alt="Cengkeh" />
         </a>
         <p>Cengkeh</p>
       </div>
-      <div class="gallery-item">
-        <a href="vanilla-id.html">
-          <img src="images/vanilla.jpg" alt="Vanilla">
-        </a>
-        <p>Vanilla</p>
-      </div>
-      <div class="gallery-item">
-        <a href="coffee-id.html">
-          <img src="images/coffee.jpg" alt="Kopi">
-        </a>
-        <p>Kopi</p>
-      </div>
-      <div class="gallery-item">
-        <a href="charcoal-id.html">
-          <img src="images/charcoal.jpg" alt="Arang">
-        </a>
-        <p>Arang</p>
-      </div>
+      <!-- Tambahkan produk lain sesuai kebutuhan -->
     </div>
   </section>
 
