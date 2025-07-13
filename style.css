@@ -93,11 +93,13 @@ a {
 .hamburger-menu:has(input:checked)::before {
   transform: rotate(45deg);
   top: 14px;
+  background: red;
 }
 
 .hamburger-menu:has(input:checked)::after {
   transform: rotate(-45deg);
   top: 14px;
+  background: red;
 }
 
 .hamburger-menu:has(input:checked) input::before {
