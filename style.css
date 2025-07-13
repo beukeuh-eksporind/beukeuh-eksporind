@@ -241,11 +241,11 @@ header.hero {
   margin-top: -10px; /* Atur lebih dekat ke elemen sebelumnya */
 }
 .section h2 {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .section p {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .product-grid {
