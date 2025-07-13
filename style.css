@@ -293,7 +293,7 @@ header.hero {
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.03);
+  transform: translateY(-6px);
 }
 /* 9. Footer */
 footer {
