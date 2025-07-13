@@ -1,87 +1,114 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeri Produk - Beukeuh Eksporind</title>
-  <meta name="description" content="Galeri produk ekspor Beukeuh Eksporind termasuk bentonite, zeolite, cengkeh, dan lainnya dalam kualitas ekspor.">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Hamburger -->
-  <label class="hamburger-menu">
-    <input type="checkbox" id="hamburger-toggle" />
-  </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri - Beukeuh Eksporind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Hamburger Menu -->
+    <label class="hamburger-menu">
+      <input type="checkbox" id="menu-toggle" />
+    </label>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <nav>
-      <a href="index.html">🏠 Beranda</a>
-      <div class="sidebar-dropdown">
-        <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
-        <div class="sidebar-dropdown-content">
-          <a href="bentonite.html">🧱 Bentonite</a>
-          <a href="zeolite.html">🪨 Zeolite</a>
-          <a href="vanilla-id.html">🌿 Vanilla</a>
-          <a href="clove-id.html">🌸 Cengkeh</a>
-          <a href="coffee-id.html">☕ Kopi</a>
-          <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-          <a href="charcoal-id.html">🔥 Arang</a>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html">🏠 Beranda</a>
+        <div class="sidebar-dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+          <div class="sidebar-dropdown-content">
+            <a href="bentonite.html">🧱 Bentonite</a>
+            <a href="zeolite.html">🪨 Zeolite</a>
+            <a href="vanilla-id.html">🌿 Vanilla</a>
+            <a href="clove-id.html">🌸 Cengkeh</a>
+            <a href="coffee-id.html">☕ Kopi</a>
+            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+            <a href="charcoal-id.html">🔥 Arang</a>
+          </div>
+        </div>
+        <a href="gallery.html">🖼 Galeri</a>
+        <a href="about.html">📖 Tentang Kami</a>
+        <a href="contact.html">📞 Kontak</a>
+      </nav>
+    </aside>
+
+    <!-- Language Switch -->
+    <div class="lang-switch">
+      <a href="gallery.html">🇮🇩 ID</a> | <a href="gallery-en.html">🇬🇧 EN</a>
+    </div>
+
+    <!-- Header -->
+    <header class="hero">
+      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+      <h1>Galeri Produk</h1>
+      <p class="tagline">Jelajahi produk ekspor unggulan kami</p>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section container">
+      <h2>Produk Ekspor Kami</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <a href="bentonite-detail.html">
+            <img src="images/bentonite.jpg" alt="Bentonite" />
+          </a>
+          <p>Bentonite</p>
+        </div>
+        <div class="gallery-card">
+          <a href="zeolite-detail.html">
+            <img src="images/zeolite.jpg" alt="Zeolite" />
+          </a>
+          <p>Zeolit</p>
+        </div>
+        <div class="gallery-card">
+          <a href="clove-detail.html">
+            <img src="images/clove.jpg" alt="Cengkeh" />
+          </a>
+          <p>Cengkeh</p>
+        </div>
+        <div class="gallery-card">
+          <a href="vanilla-detail.html">
+            <img src="images/vanilla.jpg" alt="Vanilla" />
+          </a>
+          <p>Vanili</p>
+        </div>
+        <div class="gallery-card">
+          <a href="coffee-detail.html">
+            <img src="images/coffee.jpg" alt="Kopi" />
+          </a>
+          <p>Kopi</p>
+        </div>
+        <div class="gallery-card">
+          <a href="cinnamon-detail.html">
+            <img src="images/cinnamon.jpg" alt="Kayu Manis" />
+          </a>
+          <p>Kayu Manis</p>
+        </div>
+        <div class="gallery-card">
+          <a href="charcoal-detail.html">
+            <img src="images/charcoal.jpg" alt="Arang" />
+          </a>
+          <p>Arang</p>
         </div>
       </div>
-      <a href="gallery.html">🖼 Galeri</a>
-      <a href="about.html">📖 Tentang Kami</a>
-      <a href="contact.html">📞 Kontak</a>
-    </nav>
-  </aside>
+    </section>
 
-  <!-- Language Switch -->
-  <div class="lang-switch">
-    <a href="gallery.html">🇮🇩 ID</a> | <a href="gallery-en.html">🇬🇧 EN</a>
-  </div>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+    </footer>
 
-  <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Galeri Produk</h1>
-    <p class="tagline">Menampilkan kualitas bahan baku ekspor kami</p>
-  </header>
+    <!-- WhatsApp Icon -->
+    <a
+      href="https://wa.me/6281282541982"
+      class="wa-float"
+      target="_blank"
+      aria-label="Chat via WhatsApp"
+    ></a>
 
-  <!-- Galeri -->
-  <section class="section container">
-    <h2>Galeri Produk</h2>
-    <div class="gallery-grid">
-      <div class="gallery-card">
-        <a href="bentonite-detail.html">
-          <img src="images/bentonite.jpg" alt="Bentonite" />
-        </a>
-        <p>Bentonite</p>
-      </div>
-      <div class="gallery-card">
-        <a href="zeolite-detail.html">
-          <img src="images/zeolite.jpg" alt="Zeolite" />
-        </a>
-        <p>Zeolite</p>
-      </div>
-      <div class="gallery-card">
-        <a href="clove-detail.html">
-          <img src="images/clove.jpg" alt="Cengkeh" />
-        </a>
-        <p>Cengkeh</p>
-      </div>
-      <!-- Tambahkan produk lain sesuai kebutuhan -->
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-  </footer>
-
-  <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
-
-  <!-- Script -->
-  <script src="script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
