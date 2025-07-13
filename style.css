@@ -315,7 +315,7 @@ header.hero {
 
 .gallery-grid img {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: contain; /* atau 'contain' jika ingin tidak terpotong */
   border-radius: 10px;
   margin-bottom: 12px;
