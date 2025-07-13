@@ -233,8 +233,8 @@ header.hero {
 
 /* 8. Produk Cards */
 .section {
-  padding: 30px 20px 20px;
-  margin-top: 20px;
+  padding: 30px 20px;
+  margin-top: 40px;
 }
 .grid {
   display: grid;
