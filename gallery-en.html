@@ -4,40 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Gallery - Beukeuh Eksporind</title>
-  <meta name="description" content="Explore the visual gallery of Beukeuh Eksporind's top export products: bentonite, zeolite, clove, and more.">
+  <meta name="description" content="Explore Beukeuh Eksporind's export product gallery including bentonite, zeolite, clove, and more with international quality.">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .gallery-item {
-      text-align: center;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery-item img:hover {
-      transform: scale(1.03);
-    }
-    .gallery-item p {
-      margin-top: 8px;
-      font-weight: bold;
-      color: #5c6e3a;
-    }
-  </style>
 </head>
 <body>
-  <!-- Hamburger Menu -->
+  <!-- Hamburger -->
   <label class="hamburger-menu">
-    <input type="checkbox" id="menu-toggle" />
+    <input type="checkbox" id="hamburger-toggle" />
   </label>
 
   <!-- Sidebar -->
@@ -71,48 +44,32 @@
   <header class="hero">
     <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
     <h1>Product Gallery</h1>
-    <p class="tagline">Discover the visual showcase of our top exported goods</p>
+    <p class="tagline">Showcasing our best export-quality materials</p>
   </header>
 
   <!-- Gallery Section -->
   <section class="section container">
+    <h2>Our Export Products</h2>
     <div class="gallery-grid">
-      <div class="gallery-item">
+      <div class="gallery-card">
         <a href="bentonite-detail-en.html">
-          <img src="images/bentonite.jpg" alt="Bentonite">
+          <img src="images/bentonite.jpg" alt="Bentonite" />
         </a>
         <p>Bentonite</p>
       </div>
-      <div class="gallery-item">
-        <a href="zeolite-en.html">
-          <img src="images/zeolite.jpg" alt="Zeolite">
+      <div class="gallery-card">
+        <a href="zeolite-detail-en.html">
+          <img src="images/zeolite.jpg" alt="Zeolite" />
         </a>
         <p>Zeolite</p>
       </div>
-      <div class="gallery-item">
-        <a href="clove-en.html">
-          <img src="images/clove.jpg" alt="Clove">
+      <div class="gallery-card">
+        <a href="clove-detail-en.html">
+          <img src="images/clove.jpg" alt="Clove" />
         </a>
         <p>Clove</p>
       </div>
-      <div class="gallery-item">
-        <a href="vanilla-en.html">
-          <img src="images/vanilla.jpg" alt="Vanilla">
-        </a>
-        <p>Vanilla</p>
-      </div>
-      <div class="gallery-item">
-        <a href="coffee-en.html">
-          <img src="images/coffee.jpg" alt="Coffee">
-        </a>
-        <p>Coffee</p>
-      </div>
-      <div class="gallery-item">
-        <a href="charcoal-en.html">
-          <img src="images/charcoal.jpg" alt="Charcoal">
-        </a>
-        <p>Charcoal</p>
-      </div>
+      <!-- Add more cards if needed -->
     </div>
   </section>
 
@@ -121,7 +78,7 @@
     <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WhatsApp Icon -->
+  <!-- WhatsApp -->
   <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
