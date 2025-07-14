@@ -226,7 +226,7 @@ header.hero {
 
 /* 7. Intro Text */
 .intro-description {
-  margin-top: -16px;
+  margin-top: -20px;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
@@ -301,7 +301,7 @@ header.hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 24px;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .stat-card {
