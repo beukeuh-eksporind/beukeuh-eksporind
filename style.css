@@ -624,7 +624,7 @@ footer p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
+  background: none;
   border: none;
   font-size: 24px;
   padding: 10px 14px;
