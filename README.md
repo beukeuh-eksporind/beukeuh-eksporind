@@ -7,7 +7,7 @@ Membawa komoditas alam Indonesia ke pasar dunia.
 
 ## 🚢 Produk Unggulan
 - 🧱 **Bentonit** – Bubuk halus tanah liat industri berkualitas tinggi  
-- 🌿 **Vanila** – Vanili premium dari perkebunan tropistropis sumatera
+- 🌿 **Vanila** – Vanili premium dari perkebunan tropistropis jawa, sumatera
 - 🌰 **Kayu Manis** – Kulit kayu manis kering alami  
 - ☕ **Kopi** – Biji kopi dari dataran tinggi Indonesia
 
