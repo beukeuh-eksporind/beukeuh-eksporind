@@ -226,7 +226,7 @@ header.hero {
 
 /* 7. Intro Text */
 .intro-description {
-  margin-top: 30px;
+  margin-top: 25px;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
@@ -238,14 +238,14 @@ header.hero {
 /* Umum untuk Section */
 .section {
   padding: 40px 16px;
-  margin-top: 24px;
+  margin-top: 15px;
 }
 
 /* Judul di Setiap Section */
 .section h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #2c2c2c;
 }
 
