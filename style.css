@@ -238,14 +238,14 @@ header.hero {
 /* Umum untuk Section */
 .section {
   padding: 40px 16px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 /* Judul di Setiap Section */
 .section h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: #2c2c2c;
 }
 
@@ -625,7 +625,7 @@ footer p {
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: 2px solid #808080;
+  border: 1px solid #808080;
   font-size: 40px;
   padding: 10px 14px;
   border-radius: 50%;
