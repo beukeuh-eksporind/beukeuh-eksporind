@@ -226,7 +226,7 @@ header.hero {
 
 /* 7. Intro Text */
 .intro-description {
-  margin-top: -12px;
+  margin-top: -16px;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
@@ -245,7 +245,7 @@ header.hero {
 .section h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
   color: #2c2c2c;
 }
 
