@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeri Produk | Beukeuh Eksporind</title>
-  <meta name="description" content="Galeri produk ekspor dari Beukeuh Eksporind: bentonite, zeolite, vanilla, cengkeh, dan lainnya. Lihat kualitas unggulan kami.">
+  <title>Galeri | Beukeuh Eksporind</title>
+  <meta name="description" content="Lihat galeri produk ekspor mineral alami dan pertanian berkualitas dari Indonesia.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -29,7 +29,7 @@
           <a href="charcoal-id.html">🔥 Arang</a>
         </div>
       </div>
-      <a href="gallery.html" class="active">🖼 Galeri</a>
+      <a href="gallery.html">🖼 Galeri</a>
       <a href="about.html">📖 Tentang Kami</a>
       <a href="contact.html">📞 Kontak</a>
     </nav>
@@ -43,59 +43,36 @@
   <!-- Header -->
   <header class="hero fade-in">
     <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-    <h1>Galeri Produk</h1>
-    <p class="tagline">Kualitas Ekspor Terbaik dari Indonesia</p>
+    <h1>Galeri</h1>
+    <p class="tagline">Menampilkan Produk Ekspor Unggulan Kami</p>
   </header>
 
   <!-- Galeri -->
   <section class="section container fade-in">
-    <h2>Galeri Produk Kami</h2>
-    <div class="gallery-wrapper">
-      <div class="gallery-arrow left">❮</div>
-      <div class="gallery-scroll">
-        <div class="gallery-item">
-          <img src="images/produk1.jpg" alt="Bentonite" />
-          <div class="gallery-caption">Bentonite</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk2.jpg" alt="Zeolite" />
-          <div class="gallery-caption">Zeolite</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk3.jpg" alt="Vanilla" />
-          <div class="gallery-caption">Vanilla</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk4.jpg" alt="Cengkeh" />
-          <div class="gallery-caption">Cengkeh</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk5.jpg" alt="Kopi" />
-          <div class="gallery-caption">Kopi</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk6.jpg" alt="Kayu Manis" />
-          <div class="gallery-caption">Kayu Manis</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk7.jpg" alt="Arang" />
-          <div class="gallery-caption">Arang</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk8.jpg" alt="Pasir Silika" />
-          <div class="gallery-caption">Pasir Silika</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk9.jpg" alt="Minyak Atsiri" />
-          <div class="gallery-caption">Minyak Atsiri</div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/produk10.jpg" alt="Gambir" />
-          <div class="gallery-caption">Gambir</div>
-        </div>
+    <div class="gallery-slider">
+      <button class="slider-btn prev plain" aria-label="Sebelumnya">&#10094;</button>
+      <div class="gallery-track">
+        <div class="gallery-item"><img src="images/gallery1.jpg" alt="Bentonite" /><p>Bentonite</p></div>
+        <div class="gallery-item"><img src="images/gallery2.jpg" alt="Zeolite" /><p>Zeolite</p></div>
+        <div class="gallery-item"><img src="images/gallery3.jpg" alt="Vanilla" /><p>Vanilla</p></div>
+        <div class="gallery-item"><img src="images/gallery4.jpg" alt="Cengkeh" /><p>Cengkeh</p></div>
+        <div class="gallery-item"><img src="images/gallery5.jpg" alt="Kopi" /><p>Kopi</p></div>
+        <div class="gallery-item"><img src="images/gallery6.jpg" alt="Kayu Manis" /><p>Kayu Manis</p></div>
+        <div class="gallery-item"><img src="images/gallery7.jpg" alt="Arang" /><p>Arang</p></div>
+        <div class="gallery-item"><img src="images/gallery8.jpg" alt="Zeolite Soil" /><p>Tanah Zeolit</p></div>
+        <div class="gallery-item"><img src="images/gallery9.jpg" alt="Bentonite Powder" /><p>Bubuk Bentonite</p></div>
+        <div class="gallery-item"><img src="images/gallery10.jpg" alt="Vanilla Export" /><p>Vanilla Ekspor</p></div>
       </div>
-      <div class="gallery-arrow right">❯</div>
+      <button class="slider-btn next plain" aria-label="Berikutnya">&#10095;</button>
     </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section container fade-in cta">
+    <h2>Tertarik dengan Produk Kami?</h2>
+    <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
+      💬 Chat via WhatsApp
+    </a>
   </section>
 
   <!-- Footer -->
@@ -103,6 +80,23 @@
     <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
+  <!-- WA Melayang -->
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
+
+  <!-- Script -->
+  <script>
+    const track = document.querySelector(".gallery-track");
+    const btnPrev = document.querySelector(".slider-btn.prev");
+    const btnNext = document.querySelector(".slider-btn.next");
+
+    btnNext.addEventListener("click", () => {
+      track.scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    btnPrev.addEventListener("click", () => {
+      track.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
