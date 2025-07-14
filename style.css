@@ -233,6 +233,27 @@ header.hero {
   color: #444;
 }
 
+/* === Hero Produk === */
+.hero-product {
+  background: linear-gradient(135deg, #cdd5b1, #9ba674);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-product-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-product-content p {
+  font-size: 1.1rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 /* 8. Produk & Statistik --- */
 
 /* Umum untuk Section */
