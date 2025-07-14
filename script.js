@@ -91,21 +91,3 @@ function checkStatsInView() {
 window.addEventListener("scroll", checkStatsInView);
 window.addEventListener("load", checkStatsInView);
 
-/* Tombol CTA Pulse */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(140, 155, 90, 0.5);
-  }
-  70% {
-    transform: scale(1.03);
-    box-shadow: 0 0 0 10px rgba(140, 155, 90, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(140, 155, 90, 0);
-  }
-}
-.pulse {
-  animation: pulse 2.5s infinite;
-}
