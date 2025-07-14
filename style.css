@@ -579,6 +579,32 @@ footer p {
   transform: translateY(-2px);
 }
 
+/* === List Fitur === */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+}
+.feature-list li::before {
+  content: "✔️ ";
+  color: #8c9b5a;
+}
+
+/* === Galeri Produk === */
+.product-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-gallery img {
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 /* === Animasi Pulse === */
 @keyframes pulse {
   0% {
