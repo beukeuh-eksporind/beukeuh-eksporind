@@ -1,114 +1,85 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galeri - Beukeuh Eksporind</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Hamburger Menu -->
-    <label class="hamburger-menu">
-      <input type="checkbox" id="menu-toggle" />
-    </label>
-
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-      <nav>
-        <a href="index.html">🏠 Beranda</a>
-        <div class="sidebar-dropdown">
-          <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
-          <div class="sidebar-dropdown-content">
-            <a href="bentonite.html">🧱 Bentonite</a>
-            <a href="zeolite.html">🪨 Zeolite</a>
-            <a href="vanilla-id.html">🌿 Vanilla</a>
-            <a href="clove-id.html">🌸 Cengkeh</a>
-            <a href="coffee-id.html">☕ Kopi</a>
-            <a href="cinnamon-id.html">🌰 Kayu Manis</a>
-            <a href="charcoal-id.html">🔥 Arang</a>
-          </div>
-        </div>
-        <a href="gallery.html">🖼 Galeri</a>
-        <a href="about.html">📖 Tentang Kami</a>
-        <a href="contact.html">📞 Kontak</a>
-      </nav>
-    </aside>
-
-    <!-- Language Switch -->
-    <div class="lang-switch">
-      <a href="gallery.html">🇮🇩 ID</a> | <a href="gallery-en.html">🇬🇧 EN</a>
-    </div>
-
-    <!-- Header -->
-    <header class="hero">
-      <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-      <h1>Galeri Produk</h1>
-      <p class="tagline">Jelajahi produk ekspor unggulan kami</p>
-    </header>
-
-    <!-- Gallery Section -->
-    <section class="section container">
-      <h2>Produk Ekspor Kami</h2>
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <a href="bentonite-detail.html">
-            <img src="images/bentonite.jpg" alt="Bentonite" />
-          </a>
-          <p>Bentonite</p>
-        </div>
-        <div class="gallery-card">
-          <a href="zeolite-detail.html">
-            <img src="images/zeolite.jpg" alt="Zeolite" />
-          </a>
-          <p>Zeolit</p>
-        </div>
-        <div class="gallery-card">
-          <a href="clove-detail.html">
-            <img src="images/clove.jpg" alt="Cengkeh" />
-          </a>
-          <p>Cengkeh</p>
-        </div>
-        <div class="gallery-card">
-          <a href="vanilla-detail.html">
-            <img src="images/vanilla.jpg" alt="Vanilla" />
-          </a>
-          <p>Vanili</p>
-        </div>
-        <div class="gallery-card">
-          <a href="coffee-detail.html">
-            <img src="images/coffee.jpg" alt="Kopi" />
-          </a>
-          <p>Kopi</p>
-        </div>
-        <div class="gallery-card">
-          <a href="cinnamon-detail.html">
-            <img src="images/cinnamon.jpg" alt="Kayu Manis" />
-          </a>
-          <p>Kayu Manis</p>
-        </div>
-        <div class="gallery-card">
-          <a href="charcoal-detail.html">
-            <img src="images/charcoal.jpg" alt="Arang" />
-          </a>
-          <p>Arang</p>
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri | Beukeuh Eksporind</title>
+  <meta name="description" content="Galeri foto produk ekspor mineral alami dan rempah-rempah Indonesia oleh Beukeuh Eksporind.">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .gallery-item {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <label class="hamburger-menu">
+    <input type="checkbox" id="menu-toggle" />
+  </label>  <!-- Sidebar -->  <aside class="sidebar">
+    <nav>
+      <a href="index.html">🏠 Beranda</a>
+      <div class="sidebar-dropdown">
+        <a href="javascript:void(0)" class="dropdown-toggle">📦 Produk ▾</a>
+        <div class="sidebar-dropdown-content">
+          <a href="bentonite.html">🧱 Bentonite</a>
+          <a href="zeolite.html">🪨 Zeolite</a>
+          <a href="vanilla-id.html">🌿 Vanilla</a>
+          <a href="clove-id.html">🌸 Cengkeh</a>
+          <a href="coffee-id.html">☕ Kopi</a>
+          <a href="cinnamon-id.html">🌰 Kayu Manis</a>
+          <a href="charcoal-id.html">🔥 Arang</a>
         </div>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
-    </footer>
-
-    <!-- WhatsApp Icon -->
-    <a
-      href="https://wa.me/6281282541982"
-      class="wa-float"
-      target="_blank"
-      aria-label="Chat via WhatsApp"
-    ></a>
-
-    <!-- Script -->
-    <script src="script.js"></script>
-  </body>
+      <a href="gallery.html">🖼 Galeri</a>
+      <a href="about.html">📖 Tentang Kami</a>
+      <a href="contact.html">📞 Kontak</a>
+    </nav>
+  </aside>  <!-- Language Switch -->  <div class="lang-switch">
+    <a href="gallery.html">🇮🇩 ID</a> | <a href="gallery-en.html">🇬🇧 EN</a>
+  </div>  <!-- Header -->  <header class="hero fade-in">
+    <h1>Galeri</h1>
+    <p class="tagline">Potret Produk & Kegiatan Ekspor Beukeuh Eksporind</p>
+  </header>  <!-- Galeri -->  <section class="section container fade-in">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/gallery1.jpg" alt="Ekspor Bentonite" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery2.jpg" alt="Packing Zeolite" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery3.jpg" alt="Vanilla Kering" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery4.jpg" alt="Cengkeh Siap Ekspor" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery5.jpg" alt="Gudang Pengemasan" />
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery6.jpg" alt="Kontainer Ekspor" />
+      </div>
+    </div>
+  </section>  <!-- Footer -->  <footer>
+    <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
+  </footer>  <script src="script.js"></script></body>
 </html>
