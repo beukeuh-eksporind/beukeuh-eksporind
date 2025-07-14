@@ -226,7 +226,7 @@ header.hero {
 
 /* 7. Intro Text */
 .intro-description {
-  margin-top: -20px;
+  margin-top: -15px;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
@@ -245,7 +245,7 @@ header.hero {
 .section h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 0px;
+  margin-bottom: -5px;
   color: #2c2c2c;
 }
 
@@ -254,7 +254,7 @@ header.hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .product-card {
@@ -294,14 +294,14 @@ header.hero {
 .section.stats {
   background: #f9f9f2;
   border-radius: 16px;
-  padding: 10px 16px;
+  padding: 18px 16px;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 24px;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 .stat-card {
