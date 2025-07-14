@@ -52,6 +52,7 @@
     <div class="gallery-slider">
       <button class="slider-btn prev" aria-label="Previous">&#10094;</button>
       <div class="gallery-track">
+        <!-- Isi galeri (sama seperti sebelumnya) -->
         <div class="gallery-item">
           <img src="images/gallery1.jpg" alt="Bentonite Sample" />
           <p>Bentonite</p>
@@ -97,7 +98,7 @@
     </div>
   </section>
 
-  <!-- Call to Action -->
+  <!-- CTA -->
   <section class="section container fade-in cta">
     <h2>Interested in Our Products?</h2>
     <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
@@ -111,9 +112,24 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
+  <script>
+    const track = document.querySelector(".gallery-track");
+    const btnPrev = document.querySelector(".slider-btn.prev");
+    const btnNext = document.querySelector(".slider-btn.next");
+
+    let scrollAmount = 0;
+
+    btnNext.addEventListener("click", () => {
+      track.scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    btnPrev.addEventListener("click", () => {
+      track.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
