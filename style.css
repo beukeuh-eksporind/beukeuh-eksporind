@@ -531,3 +531,55 @@ footer p {
 .pulse {
   animation: pulse 2.5s infinite;
 }
+
+/* === CTA WhatsApp Section === */
+.section.cta {
+  text-align: center;
+}
+.btn-primary {
+  display: inline-block;
+  background: #8c9b5a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-primary:hover {
+  background: #75884e;
+  transform: translateY(-2px);
+}
+
+/* === Animasi Pulse === */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(140, 155, 90, 0.5);
+  }
+  70% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 10px rgba(140, 155, 90, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(140, 155, 90, 0);
+  }
+}
+.pulse {
+  animation: pulse 2.5s infinite;
+}
+
+/* === Tombol WhatsApp Melayang === */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: clamp(60px, 10vw, 80px);
+  height: clamp(60px, 10vw, 80px);
+  background: url('images/wa-icon.png') no-repeat center center / contain;
+  z-index: 999;
+}
