@@ -52,6 +52,7 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1
 });
 fadeIns.forEach(el => observer.observe(el));
+
 // Statistik Counter Scroll
 const counters = document.querySelectorAll(".stat-number");
 let counterAnimated = false;
@@ -90,4 +91,3 @@ function checkStatsInView() {
 
 window.addEventListener("scroll", checkStatsInView);
 window.addEventListener("load", checkStatsInView);
-
