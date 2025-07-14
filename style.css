@@ -304,6 +304,10 @@ header.hero {
   margin-top: -50px;
 }
 
+.stats h2 {
+  margin-top: -20px;
+}
+
 .stat-card {
   background: white;
   padding: 16px;
