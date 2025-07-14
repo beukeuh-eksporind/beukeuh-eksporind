@@ -640,3 +640,8 @@ footer p {
 .slider-btn.prev { left: 0; }
 .slider-btn.next { right: 0; }
 
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
