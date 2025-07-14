@@ -233,11 +233,11 @@ header.hero {
   color: #444;
 }
 
-/* --- Blok 8: Produk & Statistik --- */
+/* 8. Produk & Statistik --- */
 
 /* Umum untuk Section */
 .section {
-  padding: 0px 0px;
+  padding: 0px 50px;
   margin-top: -10px;
 }
 
