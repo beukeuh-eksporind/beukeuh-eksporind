@@ -245,7 +245,7 @@ header.hero {
 .section h2 {
   text-align: center;
   font-size: 1.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: #2c2c2c;
 }
 
@@ -290,11 +290,11 @@ header.hero {
   padding: 0 8px 12px;
 }
 
-/* ---------- Statistik ---------- */
+/* Statistik */
 .section.stats {
   background: #f9f9f2;
   border-radius: 16px;
-  padding: 40px 16px;
+  padding: 20px 16px;
 }
 
 .stats-grid {
@@ -326,7 +326,7 @@ header.hero {
 /* 9. Footer */
 footer {
   background: #f1f4e5;
-  padding: 40px 20px;
+  padding: 30px 20px;
   color: #333;
   text-align: center;
   border-top: 1px solid #ccc;
