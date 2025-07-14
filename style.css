@@ -6,13 +6,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
   .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
-}
-}
-body {
+  }
+
+  body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
