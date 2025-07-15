@@ -610,7 +610,7 @@ footer p {
 .section p {
   text-align: justify;
   line-height: 1.8; /* bisa atur lebih besar jika ingin lebih lega */
-  margin-bottom: -5px; /* spasi antar paragraf */
+  margin-bottom: -70px; /* spasi antar paragraf */
 }
 
 /* === Galeri Produk === */
