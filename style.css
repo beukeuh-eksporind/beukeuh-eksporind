@@ -586,7 +586,7 @@ footer p {
   font-size: 1rem;
   color: #444;
   margin-top: 7px;
-  margin-bottom: 30px; /* Tambahkan ini untuk memberi ruang ke bawah */
+  margin-bottom: 10px; /* Tambahkan ini untuk memberi ruang ke bawah */
 }
 
 .feature-list li {
@@ -611,7 +611,7 @@ footer p {
 .section p {
   text-align: justify;
   line-height: 1.8;
-  margin-bottom: 20px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
+  margin-bottom: -100px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
 }
 
 /* === Galeri Produk === */
