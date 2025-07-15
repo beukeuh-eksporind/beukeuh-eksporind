@@ -622,7 +622,7 @@ footer p {
   justify-content: center;
 }
 .product-gallery img {
-  width: 260px;
+  width: 150px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
