@@ -585,16 +585,14 @@ footer p {
   padding-left: 0;
   font-size: 1rem;
   color: #444;
-  /* kita atur justify langsung di sini juga kalau mau */
-  text-align: justify;
 }
 
 .feature-list li {
   list-style: none;
   padding-left: 28px;
   position: relative;
-  margin-bottom: 10px;
-  line-height: 2; /* disarankan naikkan agar lebih enak dibaca */
+  margin-bottom: 5px;
+  line-height: 1.6; /* disarankan naikkan agar lebih enak dibaca */
 }
 
 .feature-list li::before {
@@ -604,6 +602,10 @@ footer p {
   left: 0;
   top: 0;
   font-size: 18px;
+}
+.section p,
+.feature-list {
+  text-align: justify;
 }
 
 /* === Galeri Produk === */
