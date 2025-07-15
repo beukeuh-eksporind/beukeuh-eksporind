@@ -3,10 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeolite | Beukeuh Eksporind - Natural Mineral Exporter</title>
-  <meta name="description" content="Beukeuh Eksporind supplies high-quality zeolite from Indonesia for water filtration, agriculture, and animal feed. Trusted global exporter of natural minerals." />
+  <title>Zeolite - Product Details | Beukeuh Eksporind</title>
+  <meta name="description" content="Export-grade zeolite product details from Indonesia. Complete information on quality, packaging, and technical specifications.">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <style>
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .product-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .product-info {
+      max-width: 800px;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .product-info h2 {
+      margin-top: 0;
+      color: #5c6e3a;
+    }
+    .info-list {
+      margin-top: 16px;
+      padding-left: 20px;
+    }
+    .info-list li {
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6a994e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #58813f;
+    }
+  </style>
 </head>
 <body>
   <!-- Hamburger Menu -->
@@ -14,8 +61,8 @@
     <input type="checkbox" id="menu-toggle" />
   </label>
 
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar" id="sidebar">
+  <!-- Sidebar -->
+  <aside class="sidebar">
     <nav>
       <a href="index-en.html">🏠 Home</a>
       <div class="sidebar-dropdown">
@@ -30,38 +77,47 @@
           <a href="charcoal-en.html">🔥 Charcoal</a>
         </div>
       </div>
-      <a href="gallery-en.html">🖼 Gallery</a>
-      <a href="about-en.html">📖 About</a>
-      <a href="contact-en.html">📞 Contact</a>
+      <a href="gallery.html">🖼 Gallery</a>
+      <a href="about.html">📖 About Us</a>
+      <a href="contact.html">📞 Contact</a>
     </nav>
   </aside>
 
   <!-- Language Switch -->
   <div class="lang-switch">
-    <a href="zeolite.html">🇮🇩 ID</a> | <a href="zeolite-en.html">🇬🇧 EN</a>
+    <a href="zeolite-detail.html">🇮🇩 ID</a> | <a href="zeolite-detail-en.html">🇬🇧 EN</a>
   </div>
 
   <!-- Header -->
-  <header class="hero">
+  <header class="hero fade-in">
     <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
-    <h1>Zeolite</h1>
-    <p class="tagline">Natural Multi-Purpose Mineral from Indonesia</p>
+    <h1>Product Detail: Zeolite</h1>
+    <p class="tagline">Complete Information for Export Partners</p>
   </header>
 
-  <!-- Product Description -->
-  <section class="intro-description container">
-    <p>
-      Zeolite is a naturally occurring mineral with a unique crystalline structure, known for its ability to absorb and exchange ions. It is widely used in water filtration, organic farming, and animal feed.
-    </p>
-    <p>
-      Our zeolite is sourced from the best mines in Indonesia and processed to meet global industrial standards.
-    </p>
-  </section>
+  <!-- Product Detail Section -->
+  <section class="section container fade-in">
+    <div class="product-detail">
+      <img src="images/zeolite-packaging.jpg" alt="Zeolite Packaging">
+      <div class="product-info">
+        <h2>Natural Zeolite from Indonesia</h2>
+        <p>
+          Zeolite is a porous natural mineral used in water filtration, organic agriculture, livestock feed, and wastewater treatment. We offer high-quality zeolite suitable for various industries with export-grade standards.
+        </p>
 
-  <!-- Call to Action -->
-  <section class="section container">
-    <h2>Interested in Quotation or Order?</h2>
-    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat via WhatsApp Now</a>
+        <ul class="info-list">
+          <li>📦 Packaging: 25kg bag, 50kg bag, jumbo bag</li>
+          <li>🚢 Shipping volume: up to 24 tons per container</li>
+          <li>🧪 Clinoptilolite content: ≥ 70%</li>
+          <li>📍 Origin: Sumedang & Tasikmalaya, West Java</li>
+          <li>📑 Certification: COA available upon request</li>
+        </ul>
+
+        <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
+          💬 Chat via WhatsApp
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -69,8 +125,8 @@
     <p>© 2025 Beukeuh Eksporind. All rights reserved.</p>
   </footer>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
   <script src="script.js"></script>
