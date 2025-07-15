@@ -24,18 +24,34 @@
       max-width: 800px;
       text-align: left;
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.8;
+      color: #333;
     }
     .product-info h2 {
       margin-top: 0;
       color: #5c6e3a;
     }
     .info-list {
-      margin-top: 10px;
+      margin-top: 16px;
       padding-left: 20px;
     }
     .info-list li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6a994e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #58813f;
     }
   </style>
 </head>
@@ -73,14 +89,14 @@
   </div>
 
   <!-- Header -->
-  <header class="hero">
+  <header class="hero fade-in">
     <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
     <h1>Detail Produk: Bentonite</h1>
-    <p class="tagline">Informasi Lengkap untuk partner ekspor</p>
+    <p class="tagline">Informasi Lengkap untuk Partner Ekspor</p>
   </header>
 
   <!-- Konten Detail -->
-  <section class="section container">
+  <section class="section container fade-in">
     <div class="product-detail">
       <img src="images/bentonite-packaging.jpg" alt="Kemasan Bentonite">
       <div class="product-info">
@@ -97,7 +113,9 @@
           <li>📑 Sertifikasi: MSDS & COA tersedia</li>
         </ul>
 
-        <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Tanya & Order via WhatsApp</a>
+        <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
+          💬 Tanya & Order via WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -108,7 +126,7 @@
   </footer>
 
   <!-- WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
   <script src="script.js"></script>
