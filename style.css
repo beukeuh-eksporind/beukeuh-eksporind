@@ -585,15 +585,6 @@ footer p {
   padding-left: 0;
   font-size: 1rem;
   color: #444;
-  line-height: 1.8;
-}
-
-/* === List Fitur === */
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1rem;
-  color: #444;
   /* kita atur justify langsung di sini juga kalau mau */
   text-align: justify;
 }
