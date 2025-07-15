@@ -588,12 +588,21 @@ footer p {
   line-height: 1.8;
 }
 
-.feature-list li {
+/* === List Fitur === */
+.feature-list {
   list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: #444;
+  /* kita atur justify langsung di sini juga kalau mau */
+  text-align: justify;
+}
+
+.feature-list li {
   padding-left: 28px;
   position: relative;
-  margin-bottom: 12px;
-  line-height: 1.6;
+  margin-bottom: 14px;
+  line-height: 2; /* disarankan naikkan agar lebih enak dibaca */
 }
 
 .feature-list li::before {
