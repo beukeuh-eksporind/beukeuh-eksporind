@@ -275,7 +275,7 @@ header.hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  margin-top: -30px;
+  margin-top: -20px;
 }
 
 .product-card {
@@ -609,7 +609,7 @@ footer p {
 .feature-list img {
   width: 180px; /* Atur sesuai kebutuhanmu */
   border-radius: 8px;
-  margin-top: 10px;
+  margin-top: -50px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -617,7 +617,7 @@ footer p {
 .section p {
   text-align: justify;
   line-height: 1.8;
-  margin-bottom: 20px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
+  margin-bottom: 30px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
 }
 
 /* === Galeri Produk === */
@@ -628,7 +628,7 @@ footer p {
   justify-content: center;
 }
 .product-gallery img {
-  width: 250px;
+  width: 260px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
