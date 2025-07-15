@@ -606,19 +606,18 @@ footer p {
   top: 0;
   font-size: 18px;
 }
-
-/* Paragraf umum dalam section */
-.section p {
-  text-align: justify;
-  line-height: 1.8;
-  margin-bottom: -100px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
-}
-
 .feature-list img {
   width: 180px; /* Atur sesuai kebutuhanmu */
   border-radius: 8px;
   margin-top: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Paragraf umum dalam section */
+.section p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 20px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
 }
 
 /* === Galeri Produk === */
