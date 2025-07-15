@@ -592,7 +592,7 @@ footer p {
   list-style: none;
   padding-left: 28px;
   position: relative;
-  margin-bottom: -10px; /* kamu bisa atur spasi antar list di sini */
+  margin-bottom: -70px; /* kamu bisa atur spasi antar list di sini */
   line-height: 1.8; /* ini untuk spasi antar baris dalam tiap item */
   text-align: justify; /* jika ingin justified juga */
 }
@@ -621,8 +621,8 @@ footer p {
   justify-content: center;
 }
 .product-gallery img {
-  width: 280px;
-  border-radius: 12px;
+  width: 260px;
+  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
