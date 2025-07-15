@@ -586,15 +586,16 @@ footer p {
   font-size: 1rem;
   color: #444;
   margin-top: 7px;
+  margin-bottom: 30px; /* Tambahkan ini untuk memberi ruang ke bawah */
 }
 
 .feature-list li {
   list-style: none;
   padding-left: 28px;
   position: relative;
-  margin-bottom: -25px; /* kamu bisa atur spasi antar list di sini */
-  line-height: 1.8; /* ini untuk spasi antar baris dalam tiap item */
-  text-align: justify; /* jika ingin justified juga */
+  margin-bottom: 12px;  /* Ganti dari -25px ke 12px agar antar item tidak tumpuk */
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .feature-list li::before {
@@ -606,11 +607,11 @@ footer p {
   font-size: 18px;
 }
 
-/* Hanya paragraf biasa dalam section */
+/* Paragraf umum dalam section */
 .section p {
   text-align: justify;
-  line-height: 1.8; /* bisa atur lebih besar jika ingin lebih lega */
-  margin-bottom: -100px; /* spasi antar paragraf */
+  line-height: 1.8;
+  margin-bottom: 20px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
 }
 
 /* === Galeri Produk === */
