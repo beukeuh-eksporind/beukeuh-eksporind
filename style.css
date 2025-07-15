@@ -592,7 +592,7 @@ footer p {
   list-style: none;
   padding-left: 28px;
   position: relative;
-  margin-bottom: 12px; /* kamu bisa atur spasi antar list di sini */
+  margin-bottom: -10px; /* kamu bisa atur spasi antar list di sini */
   line-height: 1.8; /* ini untuk spasi antar baris dalam tiap item */
   text-align: justify; /* jika ingin justified juga */
 }
