@@ -614,6 +614,13 @@ footer p {
   margin-bottom: -100px; /* Ganti dari -100px ke positif agar tidak ganggu struktur */
 }
 
+.feature-list img {
+  width: 180px; /* Atur sesuai kebutuhanmu */
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 /* === Galeri Produk === */
 .product-gallery {
   display: flex;
