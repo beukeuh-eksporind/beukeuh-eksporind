@@ -3,19 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kayu Manis | Beukeuh Eksporind - Eksportir Kayu Manis Indonesia</title>
-  <meta name="description" content="Kayu manis kualitas ekspor dari Indonesia dalam bentuk batang dan bubuk. Beukeuh Eksporind memasok cassia cinnamon untuk keperluan kuliner dan industri." />
+  <title>Kayu Manis - Detail Produk | Beukeuh Eksporind</title>
+  <meta name="description" content="Informasi lengkap tentang ekspor kayu manis Indonesia. Kualitas, jenis, kemasan, dan sertifikasi tersedia.">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <style>
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .product-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .product-info {
+      max-width: 800px;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .product-info h2 {
+      margin-top: 0;
+      color: #5c6e3a;
+    }
+    .info-list {
+      margin-top: 16px;
+      padding-left: 20px;
+    }
+    .info-list li {
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6a994e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #58813f;
+    }
+  </style>
 </head>
 <body>
-  <!-- Tombol Hamburger -->
+  <!-- Hamburger -->
   <label class="hamburger-menu">
     <input type="checkbox" id="menu-toggle" />
   </label>
 
-  <!-- Sidebar Navigasi -->
-  <aside class="sidebar" id="sidebar">
+  <!-- Sidebar -->
+  <aside class="sidebar">
     <nav>
       <a href="index.html">🏠 Beranda</a>
       <div class="sidebar-dropdown">
@@ -36,41 +83,50 @@
     </nav>
   </aside>
 
-  <!-- Pilih Bahasa -->
+  <!-- Language Switch -->
   <div class="lang-switch">
     <a href="cinnamon-id.html">🇮🇩 ID</a> | <a href="cinnamon-en.html">🇬🇧 EN</a>
   </div>
 
   <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-    <h1>Kayu Manis</h1>
-    <p class="tagline">Cassia Cinnamon Berkualitas Ekspor dari Indonesia</p>
+  <header class="hero fade-in">
+    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+    <h1>Detail Produk: Kayu Manis</h1>
+    <p class="tagline">Rempah Eksotis dari Hutan Tropis Indonesia</p>
   </header>
 
-  <!-- Deskripsi Produk -->
-  <section class="intro-description container">
-    <p>
-      Kayu manis Indonesia dikenal dengan aroma kuat, kandungan minyak tinggi, dan rasa yang kaya. Kami memasok cassia cinnamon dalam bentuk batang dan bubuk, cocok untuk industri kuliner, farmasi, dan lainnya.
-    </p>
-    <p>
-      Produk kami bersumber dari petani terpercaya dan diproses dengan kontrol kualitas ketat agar siap ekspor dan memenuhi standar internasional.
-    </p>
-  </section>
+  <!-- Konten Produk -->
+  <section class="section container fade-in">
+    <div class="product-detail">
+      <img src="images/cinnamon.jpg" alt="Kayu Manis Indonesia">
+      <div class="product-info">
+        <h2>Kayu Manis Indonesia</h2>
+        <p>
+          Kami mengekspor kayu manis alami dari Indonesia, termasuk jenis Cinnamomum burmannii dan Ceylon (Cinnamomum verum). Dipanen secara berkelanjutan dari wilayah Sumatra dan Jawa, produk kami dikenal dengan aroma manis yang kuat dan kualitas kulit yang tebal. Cocok untuk industri makanan, farmasi, dan kosmetik.
+        </p>
 
-  <!-- Ajakan Bertindak -->
-  <section class="section container">
-    <h2>Ingin Penawaran Harga atau Sampel?</h2>
-    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat via WhatsApp Sekarang</a>
+        <ul class="info-list">
+          <li>📦 Kemasan: 25kg karung atau sesuai permintaan</li>
+          <li>🌿 Jenis: Stick, broken, ground (bubuk)</li>
+          <li>🚢 Tonase: hingga 20 ton/kontainer</li>
+          <li>📍 Asal: Sumatra & Jawa</li>
+          <li>📑 Sertifikasi: COA, Phytosanitary, Certificate of Origin</li>
+        </ul>
+
+        <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
+          💬 Tanya & Order via WhatsApp
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Beukeuh Eksporind. Hak cipta dilindungi.</p>
+    <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <!-- Tombol WhatsApp -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Hubungi via WhatsApp"></a>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
   <script src="script.js"></script>
