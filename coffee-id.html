@@ -3,19 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kopi | Beukeuh Eksporind - Eksportir Kopi Indonesia</title>
-  <meta name="description" content="Kopi Arabika dan Robusta premium dari dataran tinggi Indonesia. Ekspor kopi kualitas tinggi dari Beukeuh Eksporind untuk kebutuhan roasting global Anda." />
+  <title>Kopi - Detail Produk | Beukeuh Eksporind</title>
+  <meta name="description" content="Detail produk kopi ekspor dari Indonesia. Informasi lengkap tentang jenis, kemasan, dan kualitas kopi.">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <style>
+    .product-detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .product-detail img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+    .product-info {
+      max-width: 800px;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    .product-info h2 {
+      margin-top: 0;
+      color: #5c6e3a;
+    }
+    .info-list {
+      margin-top: 16px;
+      padding-left: 20px;
+    }
+    .info-list li {
+      margin-bottom: 8px;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6a994e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #58813f;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hamburger Menu -->
+  <!-- Hamburger -->
   <label class="hamburger-menu">
     <input type="checkbox" id="menu-toggle" />
   </label>
 
   <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
+  <aside class="sidebar">
     <nav>
       <a href="index.html">🏠 Beranda</a>
       <div class="sidebar-dropdown">
@@ -42,26 +89,35 @@
   </div>
 
   <!-- Header -->
-  <header class="hero">
-    <img src="images/logo.png" alt="Logo Beukeuh" class="logo" />
-    <h1>Kopi</h1>
-    <p class="tagline">Biji Kopi Premium dari Dataran Tinggi Indonesia</p>
+  <header class="hero fade-in">
+    <img src="images/logo.png" alt="Beukeuh Logo" class="logo" />
+    <h1>Detail Produk: Kopi</h1>
+    <p class="tagline">Kualitas Ekspor dari Perkebunan Terbaik</p>
   </header>
 
-  <!-- Product Description -->
-  <section class="intro-description container">
-    <p>
-      Indonesia adalah rumah bagi biji kopi yang aromatik dan bercita rasa tinggi. Kami menyediakan kopi Arabika dan Robusta pilihan dari perkebunan terbaik di Sumatera, Jawa, dan Sulawesi.
-    </p>
-    <p>
-      Kopi ekspor kami mendukung kebutuhan roasting Anda dengan kualitas yang konsisten, aroma khas, dan rasa yang kuat. Pilih Beukeuh Eksporind untuk pasokan kopi global terpercaya.
-    </p>
-  </section>
+  <!-- Konten Detail -->
+  <section class="section container fade-in">
+    <div class="product-detail">
+      <img src="images/coffee.jpg" alt="Biji Kopi Indonesia">
+      <div class="product-info">
+        <h2>Kopi Indonesia</h2>
+        <p>
+          Kami mengekspor biji kopi berkualitas dari berbagai daerah di Indonesia, termasuk Gayo, Toraja, dan Jawa. Kopi kami dipilih dari hasil panen terbaik dengan karakter rasa yang kuat, aroma khas, dan kadar keasaman seimbang. Tersedia dalam bentuk green bean maupun roasted bean.
+        </p>
 
-  <!-- Call to Action -->
-  <section class="section container">
-    <h2>Tertarik dengan Penawaran atau Sampel?</h2>
-    <a href="https://wa.me/6281282541982" class="btn-primary" target="_blank">💬 Chat via WhatsApp Sekarang</a>
+        <ul class="info-list">
+          <li>📦 Kemasan: 1kg, 5kg, 60kg jute bag</li>
+          <li>🌱 Jenis: Arabika, Robusta (green bean & roasted)</li>
+          <li>🚢 Tonase pengiriman: hingga 19 ton/kontainer</li>
+          <li>📍 Asal: Gayo, Toraja, Jawa Barat</li>
+          <li>📑 Sertifikasi: COA & Origin Certificate tersedia</li>
+        </ul>
+
+        <a href="https://wa.me/6281282541982" class="btn-primary pulse" target="_blank">
+          💬 Tanya & Order via WhatsApp
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -69,8 +125,8 @@
     <p>© 2025 Beukeuh Eksporind. Seluruh hak cipta dilindungi.</p>
   </footer>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/6281282541982" class="wa-float" target="_blank" aria-label="Chat via WhatsApp"></a>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6281282541982" class="wa-float pulse" target="_blank" aria-label="Chat via WhatsApp"></a>
 
   <!-- Script -->
   <script src="script.js"></script>
